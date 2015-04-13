@@ -18,7 +18,7 @@
 @end
 
 @implementation NextPetFriendlyPlacesViewController
-@synthesize lblHeading,subCategoriesTableViewController;
+@synthesize lblHeading,subCategoriesTableViewController,resultsViewController,resultPetVC;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -47,7 +47,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    
+    
     [self showCustomeNav];
+    
+    self.view.backgroundColor = [UIColor colorWithRed:242/255.0 green:238/255.0 blue:223/255.0 alpha:1];
     
     Singleton *singleton = [Singleton sharedInstance];
    // [lblHeading setText:[NSString stringWithFormat:@"%@", singleton.selectedCategories.CategoryName]];
@@ -77,6 +81,16 @@
     }
     [subCategoriesTableViewController setDataSource:filteredArray];
     [subCategoriesTableViewController.tableView reloadData];
+}
+-(void)itemSelected:(Categories*)category {
+    
+    Singleton *singleton = [Singleton sharedInstance];
+    [singleton setSelectedSubCategories:category];
+    
+    resultPetVC = [[ResultPetFriendlyPlacesViewController alloc] init];
+    [self.navigationController pushViewController:resultPetVC animated:YES];
+    
+    
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

@@ -261,6 +261,8 @@
 		8ADDAEA61845A2F10068ED72 /* Icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8ADDAEA51845A2F10068ED72 /* Icon-60@2x.png */; };
 		8AF8150C183D768200088BE9 /* icon_7@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AF8150B183D768200088BE9 /* icon_7@2x.png */; };
 		8AF8150E183DA9D900088BE9 /* button_currentLocation_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AF8150D183DA9D900088BE9 /* button_currentLocation_selected.png */; };
+		EF02735F1ADBF85800B89609 /* ResultPetFriendlyPlacesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF02735E1ADBF85800B89609 /* ResultPetFriendlyPlacesViewController.m */; };
+		EF0273621ADC013400B89609 /* LocationPetFriendlyPlacesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF0273611ADC013400B89609 /* LocationPetFriendlyPlacesViewController.m */; };
 		EFA1B58E1AD8BB9B00F44CC1 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFA1B5881AD8BB9B00F44CC1 /* Bolts.framework */; };
 		EFA1B58F1AD8BB9B00F44CC1 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFA1B5891AD8BB9B00F44CC1 /* Parse.framework */; };
 		EFA1B5901AD8BB9B00F44CC1 /* ParseCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFA1B58A1AD8BB9B00F44CC1 /* ParseCrashReporting.framework */; };
@@ -606,6 +608,10 @@
 		8ADDAEA51845A2F10068ED72 /* Icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60@2x.png"; sourceTree = "<group>"; };
 		8AF8150B183D768200088BE9 /* icon_7@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon_7@2x.png"; path = "../icon_7@2x.png"; sourceTree = "<group>"; };
 		8AF8150D183DA9D900088BE9 /* button_currentLocation_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = button_currentLocation_selected.png; path = Images/button_currentLocation_selected.png; sourceTree = "<group>"; };
+		EF02735D1ADBF85800B89609 /* ResultPetFriendlyPlacesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultPetFriendlyPlacesViewController.h; sourceTree = "<group>"; };
+		EF02735E1ADBF85800B89609 /* ResultPetFriendlyPlacesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultPetFriendlyPlacesViewController.m; sourceTree = "<group>"; };
+		EF0273601ADC013400B89609 /* LocationPetFriendlyPlacesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationPetFriendlyPlacesViewController.h; sourceTree = "<group>"; };
+		EF0273611ADC013400B89609 /* LocationPetFriendlyPlacesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationPetFriendlyPlacesViewController.m; sourceTree = "<group>"; };
 		EFA1B5881AD8BB9B00F44CC1 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		EFA1B5891AD8BB9B00F44CC1 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = "parse-library-1.7.1/Parse.framework"; sourceTree = "<group>"; };
 		EFA1B58A1AD8BB9B00F44CC1 /* ParseCrashReporting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseCrashReporting.framework; sourceTree = "<group>"; };
@@ -1294,6 +1300,10 @@
 				EFC41CA61ADB8E3200978240 /* PetFriendlyPlacesViewController.m */,
 				EFC41CA81ADBC1C700978240 /* NextPetFriendlyPlacesViewController.h */,
 				EFC41CA91ADBC1C700978240 /* NextPetFriendlyPlacesViewController.m */,
+				EF02735D1ADBF85800B89609 /* ResultPetFriendlyPlacesViewController.h */,
+				EF02735E1ADBF85800B89609 /* ResultPetFriendlyPlacesViewController.m */,
+				EF0273601ADC013400B89609 /* LocationPetFriendlyPlacesViewController.h */,
+				EF0273611ADC013400B89609 /* LocationPetFriendlyPlacesViewController.m */,
 			);
 			name = Pet_Friendly_places;
 			sourceTree = "<group>";
@@ -1591,6 +1601,7 @@
 				2067BBA1153BDAAC004B3569 /* Locations.m in Sources */,
 				2067BBA9153CF0D7004B3569 /* LocationDetailViewController.m in Sources */,
 				2067BBAE153CFD4D004B3569 /* LocationTableViewController.m in Sources */,
+				EF02735F1ADBF85800B89609 /* ResultPetFriendlyPlacesViewController.m in Sources */,
 				2013CF911544E6430036A64C /* BSAddressComponent.m in Sources */,
 				2013CF921544E6430036A64C /* BSForwardGeocoder.m in Sources */,
 				2013CF931544E6430036A64C /* BSGoogleV3KmlParser.m in Sources */,
@@ -1610,6 +1621,7 @@
 				2082520315B63FEB00BDA88D /* PCArrayOfCategoryInfo.m in Sources */,
 				751222781ADA5D6600A1506B /* EnterMianViewController.m in Sources */,
 				2082520415B63FEB00BDA88D /* PCArrayOfLocationInfo.m in Sources */,
+				EF0273621ADC013400B89609 /* LocationPetFriendlyPlacesViewController.m in Sources */,
 				7512226D1ADA5D5E00A1506B /* PopView.m in Sources */,
 				2082520515B63FEB00BDA88D /* PCCategoryInfo.m in Sources */,
 				2082520615B63FEB00BDA88D /* PCLocationInfo.m in Sources */,

@@ -72,6 +72,8 @@
     return headerImageView;
 }
 
+
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
@@ -86,39 +88,46 @@
    return [dataSource count];
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return (SCREEN_HEIGHT - 60 - 100) / 4.0;
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     Categories *subcategories = (Categories*)[dataSource objectAtIndex:[indexPath row]];
         
     static NSString *CellIdentifier = @"Cell";
-    UILabel *roundedBall = [[UILabel alloc] init];
-    
-    
-    CGSize countSize = [[NSString stringWithFormat:@"%@", subcategories.CategoryCount] sizeWithFont:[UIFont boldSystemFontOfSize:12] constrainedToSize:CGSizeMake(100, 30) lineBreakMode:UILineBreakModeClip];
-    CGSize textSize = [[NSString stringWithFormat:@"%@", subcategories.CategoryName] sizeWithFont:[UIFont boldSystemFontOfSize:20] constrainedToSize:CGSizeMake(200, 30) lineBreakMode:UILineBreakModeClip];
-    textSize.width = textSize.width + 20;
+//    UILabel *roundedBall = [[UILabel alloc] init];
+//    
+//    
+//    CGSize countSize = [[NSString stringWithFormat:@"%@", subcategories.CategoryCount] sizeWithFont:[UIFont boldSystemFontOfSize:12] constrainedToSize:CGSizeMake(100, 30) lineBreakMode:UILineBreakModeClip];
+//    CGSize textSize = [[NSString stringWithFormat:@"%@", subcategories.CategoryName] sizeWithFont:[UIFont boldSystemFontOfSize:20] constrainedToSize:CGSizeMake(200, 30) lineBreakMode:UILineBreakModeClip];
+//    textSize.width = textSize.width + 20;
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
         [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
 
-        [roundedBall.layer setCornerRadius:8];
-        [roundedBall setFont:[UIFont boldSystemFontOfSize:12]];
-        [roundedBall setBackgroundColor:[UIColor colorWithRed:170/255.0 green:170/255.0 blue:170/255.0 alpha:1]];
-        [roundedBall setTextColor:[UIColor whiteColor]];
-        [roundedBall setTag:11];
-        [roundedBall setTextAlignment:NSTextAlignmentCenter];
-        [roundedBall.layer setCornerRadius:8];
-        [roundedBall setFrame:CGRectMake(textSize.width, 9, countSize.width + 20, 25)];
-        [cell.contentView addSubview:roundedBall];
-    }else {
-        roundedBall = (UILabel *)[cell.contentView viewWithTag:11];
-        [roundedBall setFrame:CGRectMake(textSize.width, 9, countSize.width + 20, 25)];
+//        [roundedBall.layer setCornerRadius:8];
+//        [roundedBall setFont:[UIFont boldSystemFontOfSize:12]];
+//        [roundedBall setBackgroundColor:[UIColor colorWithRed:170/255.0 green:170/255.0 blue:170/255.0 alpha:1]];
+//        [roundedBall setTextColor:[UIColor whiteColor]];
+//        [roundedBall setTag:11];
+//        [roundedBall setTextAlignment:NSTextAlignmentCenter];
+//        [roundedBall.layer setCornerRadius:8];
+//        [roundedBall setFrame:CGRectMake(textSize.width, 9, countSize.width + 20, 25)];
+//        [cell.contentView addSubview:roundedBall];
     }
+//    else {
+//        roundedBall = (UILabel *)[cell.contentView viewWithTag:11];
+//        [roundedBall setFrame:CGRectMake(textSize.width, 9, countSize.width + 20, 25)];
+//    }
 
-    [roundedBall setText:[NSString stringWithFormat:@"%@", subcategories.CategoryCount]];
-    [cell.textLabel setText:[NSString stringWithFormat:@"%@", subcategories.CategoryName]];           
+//    [roundedBall setText:[NSString stringWithFormat:@"%@", subcategories.CategoryCount]];
+    cell.backgroundColor = [UIColor clearColor];
+    [cell.textLabel setText:[NSString stringWithFormat:@"%@", subcategories.CategoryName]];
+    cell.textLabel.textAlignment = NSTextAlignmentCenter;
     [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
     
     return cell;

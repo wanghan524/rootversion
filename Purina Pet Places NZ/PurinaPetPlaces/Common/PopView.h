@@ -15,7 +15,7 @@
 @end
 
 @interface PopView : UIView
-@property(nonatomic,weak)id<dismissDelegate>delegate;
+@property(nonatomic,assign)id<dismissDelegate>delegate;
 
 -(instancetype)initWithFrame:(CGRect)frame;
 - (IBAction)dismissBtnClick:(id)sender;

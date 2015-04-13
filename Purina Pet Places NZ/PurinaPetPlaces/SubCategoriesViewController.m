@@ -93,6 +93,7 @@
     for (Categories* category in singletonArray) { 
         if (category.ParentCategoryId == parentId) {
             [filteredArray addObject:category];
+            
         }
     }
     [subCategoriesTableViewController setDataSource:filteredArray];
