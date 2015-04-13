@@ -1,0 +1,167 @@
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/purina-pet-places/!svn/ver/26/trunk/Purina%20Pet%20Places%20NZ/PurinaPetPlaces/Soap
+END
+SoapObject.h
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/purina-pet-places/!svn/ver/26/trunk/Purina%20Pet%20Places%20NZ/PurinaPetPlaces/Soap/SoapObject.h
+END
+NSData+Base64.h
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/purina-pet-places/!svn/ver/26/trunk/Purina%20Pet%20Places%20NZ/PurinaPetPlaces/Soap/NSData+Base64.h
+END
+NSMutableArray+Soap.m
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/purina-pet-places/!svn/ver/26/trunk/Purina%20Pet%20Places%20NZ/PurinaPetPlaces/Soap/NSMutableArray+Soap.m
+END
+SoapDelegate.h
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/purina-pet-places/!svn/ver/26/trunk/Purina%20Pet%20Places%20NZ/PurinaPetPlaces/Soap/SoapDelegate.h
+END
+SoapFault.h
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/purina-pet-places/!svn/ver/26/trunk/Purina%20Pet%20Places%20NZ/PurinaPetPlaces/Soap/SoapFault.h
+END
+SoapObject.m
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/purina-pet-places/!svn/ver/26/trunk/Purina%20Pet%20Places%20NZ/PurinaPetPlaces/Soap/SoapObject.m
+END
+NSData+Base64.m
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/purina-pet-places/!svn/ver/26/trunk/Purina%20Pet%20Places%20NZ/PurinaPetPlaces/Soap/NSData+Base64.m
+END
+SoapHandler.h
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/purina-pet-places/!svn/ver/26/trunk/Purina%20Pet%20Places%20NZ/PurinaPetPlaces/Soap/SoapHandler.h
+END
+SoapArray.h
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/purina-pet-places/!svn/ver/26/trunk/Purina%20Pet%20Places%20NZ/PurinaPetPlaces/Soap/SoapArray.h
+END
+Soap.h
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/purina-pet-places/!svn/ver/26/trunk/Purina%20Pet%20Places%20NZ/PurinaPetPlaces/Soap/Soap.h
+END
+SoapFault.m
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/purina-pet-places/!svn/ver/26/trunk/Purina%20Pet%20Places%20NZ/PurinaPetPlaces/Soap/SoapFault.m
+END
+SoapParameter.h
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/purina-pet-places/!svn/ver/26/trunk/Purina%20Pet%20Places%20NZ/PurinaPetPlaces/Soap/SoapParameter.h
+END
+SoapNil.h
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/purina-pet-places/!svn/ver/26/trunk/Purina%20Pet%20Places%20NZ/PurinaPetPlaces/Soap/SoapNil.h
+END
+SoapHandler.m
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/purina-pet-places/!svn/ver/26/trunk/Purina%20Pet%20Places%20NZ/PurinaPetPlaces/Soap/SoapHandler.m
+END
+SoapArray.m
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/purina-pet-places/!svn/ver/26/trunk/Purina%20Pet%20Places%20NZ/PurinaPetPlaces/Soap/SoapArray.m
+END
+Soap.m
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/purina-pet-places/!svn/ver/26/trunk/Purina%20Pet%20Places%20NZ/PurinaPetPlaces/Soap/Soap.m
+END
+SoapParameter.m
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/purina-pet-places/!svn/ver/26/trunk/Purina%20Pet%20Places%20NZ/PurinaPetPlaces/Soap/SoapParameter.m
+END
+SoapNil.m
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/purina-pet-places/!svn/ver/26/trunk/Purina%20Pet%20Places%20NZ/PurinaPetPlaces/Soap/SoapNil.m
+END
+SoapRequest.h
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/purina-pet-places/!svn/ver/26/trunk/Purina%20Pet%20Places%20NZ/PurinaPetPlaces/Soap/SoapRequest.h
+END
+SoapLiteral.h
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/purina-pet-places/!svn/ver/26/trunk/Purina%20Pet%20Places%20NZ/PurinaPetPlaces/Soap/SoapLiteral.h
+END
+SoapRequest.m
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/purina-pet-places/!svn/ver/26/trunk/Purina%20Pet%20Places%20NZ/PurinaPetPlaces/Soap/SoapRequest.m
+END
+SoapReachability.h
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/purina-pet-places/!svn/ver/26/trunk/Purina%20Pet%20Places%20NZ/PurinaPetPlaces/Soap/SoapReachability.h
+END
+SoapService.h
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/purina-pet-places/!svn/ver/26/trunk/Purina%20Pet%20Places%20NZ/PurinaPetPlaces/Soap/SoapService.h
+END
+SoapLiteral.m
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/purina-pet-places/!svn/ver/26/trunk/Purina%20Pet%20Places%20NZ/PurinaPetPlaces/Soap/SoapLiteral.m
+END
+NSMutableArray+Soap.h
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/purina-pet-places/!svn/ver/26/trunk/Purina%20Pet%20Places%20NZ/PurinaPetPlaces/Soap/NSMutableArray+Soap.h
+END
+SoapReachability.m
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/purina-pet-places/!svn/ver/26/trunk/Purina%20Pet%20Places%20NZ/PurinaPetPlaces/Soap/SoapReachability.m
+END
+SoapService.m
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/purina-pet-places/!svn/ver/26/trunk/Purina%20Pet%20Places%20NZ/PurinaPetPlaces/Soap/SoapService.m
+END

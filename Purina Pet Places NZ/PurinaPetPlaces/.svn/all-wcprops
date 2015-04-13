@@ -1,0 +1,491 @@
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/purina-pet-places/!svn/ver/35/trunk/Purina%20Pet%20Places%20NZ/PurinaPetPlaces
+END
+main.m
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/purina-pet-places/!svn/ver/26/trunk/Purina%20Pet%20Places%20NZ/PurinaPetPlaces/main.m
+END
+Categories.m
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/purina-pet-places/!svn/ver/26/trunk/Purina%20Pet%20Places%20NZ/PurinaPetPlaces/Categories.m
+END
+PurinaPetPlaces-Info.plist
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/purina-pet-places/!svn/ver/36/trunk/Purina%20Pet%20Places%20NZ/PurinaPetPlaces/PurinaPetPlaces-Info.plist
+END
+PetInfoProductsViewController.m
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/purina-pet-places/!svn/ver/35/trunk/Purina%20Pet%20Places%20NZ/PurinaPetPlaces/PetInfoProductsViewController.m
+END
+PetInfoTipsViewController.xib
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/purina-pet-places/!svn/ver/35/trunk/Purina%20Pet%20Places%20NZ/PurinaPetPlaces/PetInfoTipsViewController.xib
+END
+PetInfoTipsViewController.h
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/purina-pet-places/!svn/ver/28/trunk/Purina%20Pet%20Places%20NZ/PurinaPetPlaces/PetInfoTipsViewController.h
+END
+PetInfoMainScreenViewController.xib
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/purina-pet-places/!svn/ver/33/trunk/Purina%20Pet%20Places%20NZ/PurinaPetPlaces/PetInfoMainScreenViewController.xib
+END
+PetInfoTipsViewController.m
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/purina-pet-places/!svn/ver/28/trunk/Purina%20Pet%20Places%20NZ/PurinaPetPlaces/PetInfoTipsViewController.m
+END
+icon_PetInfo_7@2x.png
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/purina-pet-places/!svn/ver/33/trunk/Purina%20Pet%20Places%20NZ/PurinaPetPlaces/icon_PetInfo_7@2x.png
+END
+CustomNavigationBar.xib
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/purina-pet-places/!svn/ver/33/trunk/Purina%20Pet%20Places%20NZ/PurinaPetPlaces/CustomNavigationBar.xib
+END
+PetInfoTableViewController.h
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/purina-pet-places/!svn/ver/26/trunk/Purina%20Pet%20Places%20NZ/PurinaPetPlaces/PetInfoTableViewController.h
+END
+icon_Places_7@2x.png
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/purina-pet-places/!svn/ver/33/trunk/Purina%20Pet%20Places%20NZ/PurinaPetPlaces/icon_Places_7@2x.png
+END
+PurinaPetPlaces-Prefix.pch
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/purina-pet-places/!svn/ver/26/trunk/Purina%20Pet%20Places%20NZ/PurinaPetPlaces/PurinaPetPlaces-Prefix.pch
+END
+CustomNavigationBar.h
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/purina-pet-places/!svn/ver/26/trunk/Purina%20Pet%20Places%20NZ/PurinaPetPlaces/CustomNavigationBar.h
+END
+Entitlements.plist
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/purina-pet-places/!svn/ver/26/trunk/Purina%20Pet%20Places%20NZ/PurinaPetPlaces/Entitlements.plist
+END
+LocationTableViewController.h
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/purina-pet-places/!svn/ver/26/trunk/Purina%20Pet%20Places%20NZ/PurinaPetPlaces/LocationTableViewController.h
+END
+PetInfoTableViewController.m
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/purina-pet-places/!svn/ver/26/trunk/Purina%20Pet%20Places%20NZ/PurinaPetPlaces/PetInfoTableViewController.m
+END
+PetInfo.html
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/purina-pet-places/!svn/ver/28/trunk/Purina%20Pet%20Places%20NZ/PurinaPetPlaces/PetInfo.html
+END
+Icon-60@2x.png
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/purina-pet-places/!svn/ver/34/trunk/Purina%20Pet%20Places%20NZ/PurinaPetPlaces/Icon-60@2x.png
+END
+CustomNavigationBar.m
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/purina-pet-places/!svn/ver/33/trunk/Purina%20Pet%20Places%20NZ/PurinaPetPlaces/CustomNavigationBar.m
+END
+LocationTableViewController.m
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/purina-pet-places/!svn/ver/35/trunk/Purina%20Pet%20Places%20NZ/PurinaPetPlaces/LocationTableViewController.m
+END
+PetTipsCell.h
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/purina-pet-places/!svn/ver/26/trunk/Purina%20Pet%20Places%20NZ/PurinaPetPlaces/PetTipsCell.h
+END
+SubCategoriesViewController.xib
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/purina-pet-places/!svn/ver/33/trunk/Purina%20Pet%20Places%20NZ/PurinaPetPlaces/SubCategoriesViewController.xib
+END
+LocationDetailViewController.h
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/purina-pet-places/!svn/ver/26/trunk/Purina%20Pet%20Places%20NZ/PurinaPetPlaces/LocationDetailViewController.h
+END
+icon_map@2x.png
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/purina-pet-places/!svn/ver/34/trunk/Purina%20Pet%20Places%20NZ/PurinaPetPlaces/icon_map@2x.png
+END
+PetTipsCell.m
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/purina-pet-places/!svn/ver/26/trunk/Purina%20Pet%20Places%20NZ/PurinaPetPlaces/PetTipsCell.m
+END
+ConnectionViewController.h
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/purina-pet-places/!svn/ver/26/trunk/Purina%20Pet%20Places%20NZ/PurinaPetPlaces/ConnectionViewController.h
+END
+LocationDetailViewController.m
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/purina-pet-places/!svn/ver/26/trunk/Purina%20Pet%20Places%20NZ/PurinaPetPlaces/LocationDetailViewController.m
+END
+ResultsViewController.h
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/purina-pet-places/!svn/ver/26/trunk/Purina%20Pet%20Places%20NZ/PurinaPetPlaces/ResultsViewController.h
+END
+CatInfo.html
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/purina-pet-places/!svn/ver/28/trunk/Purina%20Pet%20Places%20NZ/PurinaPetPlaces/CatInfo.html
+END
+ResultsCell.h
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/purina-pet-places/!svn/ver/26/trunk/Purina%20Pet%20Places%20NZ/PurinaPetPlaces/ResultsCell.h
+END
+ConnectionViewController.m
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/purina-pet-places/!svn/ver/26/trunk/Purina%20Pet%20Places%20NZ/PurinaPetPlaces/ConnectionViewController.m
+END
+ResultsViewController.m
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/purina-pet-places/!svn/ver/26/trunk/Purina%20Pet%20Places%20NZ/PurinaPetPlaces/ResultsViewController.m
+END
+ResultsCell.m
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/purina-pet-places/!svn/ver/26/trunk/Purina%20Pet%20Places%20NZ/PurinaPetPlaces/ResultsCell.m
+END
+SubCategoriesTableViewController.h
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/purina-pet-places/!svn/ver/26/trunk/Purina%20Pet%20Places%20NZ/PurinaPetPlaces/SubCategoriesTableViewController.h
+END
+ResultsTableViewController.h
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/purina-pet-places/!svn/ver/26/trunk/Purina%20Pet%20Places%20NZ/PurinaPetPlaces/ResultsTableViewController.h
+END
+icon_Search_7@2x.png
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/purina-pet-places/!svn/ver/33/trunk/Purina%20Pet%20Places%20NZ/PurinaPetPlaces/icon_Search_7@2x.png
+END
+SubCategoriesTableViewController.m
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/purina-pet-places/!svn/ver/26/trunk/Purina%20Pet%20Places%20NZ/PurinaPetPlaces/SubCategoriesTableViewController.m
+END
+MapViewController.h
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/purina-pet-places/!svn/ver/26/trunk/Purina%20Pet%20Places%20NZ/PurinaPetPlaces/MapViewController.h
+END
+SearchTableViewController.h
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/purina-pet-places/!svn/ver/26/trunk/Purina%20Pet%20Places%20NZ/PurinaPetPlaces/SearchTableViewController.h
+END
+ResultsTableViewController.m
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/purina-pet-places/!svn/ver/26/trunk/Purina%20Pet%20Places%20NZ/PurinaPetPlaces/ResultsTableViewController.m
+END
+MapDetailsViewController.xib
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/purina-pet-places/!svn/ver/33/trunk/Purina%20Pet%20Places%20NZ/PurinaPetPlaces/MapDetailsViewController.xib
+END
+ViewController.h
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/purina-pet-places/!svn/ver/26/trunk/Purina%20Pet%20Places%20NZ/PurinaPetPlaces/ViewController.h
+END
+MapViewController.m
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/purina-pet-places/!svn/ver/34/trunk/Purina%20Pet%20Places%20NZ/PurinaPetPlaces/MapViewController.m
+END
+SearchTableViewController.m
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/purina-pet-places/!svn/ver/34/trunk/Purina%20Pet%20Places%20NZ/PurinaPetPlaces/SearchTableViewController.m
+END
+ViewController.m
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/purina-pet-places/!svn/ver/35/trunk/Purina%20Pet%20Places%20NZ/PurinaPetPlaces/ViewController.m
+END
+SplashScreenViewController.xib
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/purina-pet-places/!svn/ver/33/trunk/Purina%20Pet%20Places%20NZ/PurinaPetPlaces/SplashScreenViewController.xib
+END
+SplashScreenViewController.h
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/purina-pet-places/!svn/ver/26/trunk/Purina%20Pet%20Places%20NZ/PurinaPetPlaces/SplashScreenViewController.h
+END
+SplashScreenViewController.m
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/purina-pet-places/!svn/ver/35/trunk/Purina%20Pet%20Places%20NZ/PurinaPetPlaces/SplashScreenViewController.m
+END
+Reachability.h
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/purina-pet-places/!svn/ver/26/trunk/Purina%20Pet%20Places%20NZ/PurinaPetPlaces/Reachability.h
+END
+Singleton.h
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/purina-pet-places/!svn/ver/26/trunk/Purina%20Pet%20Places%20NZ/PurinaPetPlaces/Singleton.h
+END
+Reachability.m
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/purina-pet-places/!svn/ver/26/trunk/Purina%20Pet%20Places%20NZ/PurinaPetPlaces/Reachability.m
+END
+Singleton.m
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/purina-pet-places/!svn/ver/26/trunk/Purina%20Pet%20Places%20NZ/PurinaPetPlaces/Singleton.m
+END
+PetInfoMainScreenViewController.h
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/purina-pet-places/!svn/ver/26/trunk/Purina%20Pet%20Places%20NZ/PurinaPetPlaces/PetInfoMainScreenViewController.h
+END
+PetInfoMainScreenViewController.m
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/purina-pet-places/!svn/ver/33/trunk/Purina%20Pet%20Places%20NZ/PurinaPetPlaces/PetInfoMainScreenViewController.m
+END
+MyAnnotation.h
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/purina-pet-places/!svn/ver/26/trunk/Purina%20Pet%20Places%20NZ/PurinaPetPlaces/MyAnnotation.h
+END
+PurinaPetPlaces.entitlements
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/purina-pet-places/!svn/ver/26/trunk/Purina%20Pet%20Places%20NZ/PurinaPetPlaces/PurinaPetPlaces.entitlements
+END
+CategoriesViewController.h
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/purina-pet-places/!svn/ver/26/trunk/Purina%20Pet%20Places%20NZ/PurinaPetPlaces/CategoriesViewController.h
+END
+MyAnnotation.m
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/purina-pet-places/!svn/ver/26/trunk/Purina%20Pet%20Places%20NZ/PurinaPetPlaces/MyAnnotation.m
+END
+LocationDetailViewController.xib
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/purina-pet-places/!svn/ver/33/trunk/Purina%20Pet%20Places%20NZ/PurinaPetPlaces/LocationDetailViewController.xib
+END
+ConnectionViewController.xib
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/purina-pet-places/!svn/ver/35/trunk/Purina%20Pet%20Places%20NZ/PurinaPetPlaces/ConnectionViewController.xib
+END
+CategoriesViewController.m
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/purina-pet-places/!svn/ver/26/trunk/Purina%20Pet%20Places%20NZ/PurinaPetPlaces/CategoriesViewController.m
+END
+ResultsViewController.xib
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/purina-pet-places/!svn/ver/33/trunk/Purina%20Pet%20Places%20NZ/PurinaPetPlaces/ResultsViewController.xib
+END
+Locations.h
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/purina-pet-places/!svn/ver/26/trunk/Purina%20Pet%20Places%20NZ/PurinaPetPlaces/Locations.h
+END
+CategoriesTableViewController.h
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/purina-pet-places/!svn/ver/26/trunk/Purina%20Pet%20Places%20NZ/PurinaPetPlaces/CategoriesTableViewController.h
+END
+SubCategoriesViewController.h
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/purina-pet-places/!svn/ver/26/trunk/Purina%20Pet%20Places%20NZ/PurinaPetPlaces/SubCategoriesViewController.h
+END
+Locations.m
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/purina-pet-places/!svn/ver/35/trunk/Purina%20Pet%20Places%20NZ/PurinaPetPlaces/Locations.m
+END
+CategoriesTableViewController.m
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/purina-pet-places/!svn/ver/33/trunk/Purina%20Pet%20Places%20NZ/PurinaPetPlaces/CategoriesTableViewController.m
+END
+DogInfo.html
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/purina-pet-places/!svn/ver/28/trunk/Purina%20Pet%20Places%20NZ/PurinaPetPlaces/DogInfo.html
+END
+icon_Stock@2x.png
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/purina-pet-places/!svn/ver/33/trunk/Purina%20Pet%20Places%20NZ/PurinaPetPlaces/icon_Stock@2x.png
+END
+SubCategoriesViewController.m
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/purina-pet-places/!svn/ver/33/trunk/Purina%20Pet%20Places%20NZ/PurinaPetPlaces/SubCategoriesViewController.m
+END
+MapViewController.xib
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/purina-pet-places/!svn/ver/33/trunk/Purina%20Pet%20Places%20NZ/PurinaPetPlaces/MapViewController.xib
+END
+PetInfoTipsTableViewController.h
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/purina-pet-places/!svn/ver/26/trunk/Purina%20Pet%20Places%20NZ/PurinaPetPlaces/PetInfoTipsTableViewController.h
+END
+AppDelegate.h
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/purina-pet-places/!svn/ver/33/trunk/Purina%20Pet%20Places%20NZ/PurinaPetPlaces/AppDelegate.h
+END
+PetInfoTipsTableViewController.m
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/purina-pet-places/!svn/ver/26/trunk/Purina%20Pet%20Places%20NZ/PurinaPetPlaces/PetInfoTipsTableViewController.m
+END
+AppDelegate.m
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/purina-pet-places/!svn/ver/33/trunk/Purina%20Pet%20Places%20NZ/PurinaPetPlaces/AppDelegate.m
+END
+PetInfoProductsViewController.xib
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/purina-pet-places/!svn/ver/33/trunk/Purina%20Pet%20Places%20NZ/PurinaPetPlaces/PetInfoProductsViewController.xib
+END
+MapDetailsViewController.h
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/purina-pet-places/!svn/ver/26/trunk/Purina%20Pet%20Places%20NZ/PurinaPetPlaces/MapDetailsViewController.h
+END
+Categories.h
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/purina-pet-places/!svn/ver/26/trunk/Purina%20Pet%20Places%20NZ/PurinaPetPlaces/Categories.h
+END
+PetInfoProductsViewController.h
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/purina-pet-places/!svn/ver/28/trunk/Purina%20Pet%20Places%20NZ/PurinaPetPlaces/PetInfoProductsViewController.h
+END
+MapDetailsViewController.m
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/purina-pet-places/!svn/ver/26/trunk/Purina%20Pet%20Places%20NZ/PurinaPetPlaces/MapDetailsViewController.m
+END

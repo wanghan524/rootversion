@@ -1,0 +1,40 @@
+<html>
+	<head>
+		<title></title>
+        <style type="text/css">
+            body {font-family:Arial, Helvetica, sans-serif; margin: 0px; padding:0px;}
+            div#content {display: block; }
+            ul {padding:00px; margin:0px; }
+            li.alt {background-color:#fff;}
+            ul li {padding:20px; margin:0px; list-style: none; background-color:#f1f1f1;}
+            div.clear {clear:both};
+        </style>
+	</head>
+	<body>
+        <div id="content">
+        <ul>
+            <li><strong>General Health</strong><br /> Like humans, pets can occasionally become unwell or injured. If you see your cat or dog behaving unusually or notice any changes to their eating or drinking habits, it may be worth a visit to the vet.</li>
+            <li class="alt"><strong>General dry food convenience</strong><br />Commercially prepared dry pet foods are generally easy to store, stay fresh for longer and help keep feeding areas clean and hygienic.</li>
+            <li><strong>General dry food convenience</strong><br />Cats are especially sensitive to temperature and most don't like food straight from the fridge, so dry cat food is the perfect choice as it is always the right temperature.</li>
+            <li class="alt"><strong>Feeding to pet lifestyle and size</strong><br />Some pets have specific lifestyles or nutritional needs and a standard pet food formula isn't enough. Different sized dogs, overweight pets, highly active dogs, cats with urinary tract concerns and pets with sensitive systems need special diets. Your Vet can help you find the best food for your special pet.</li>
+            <li><strong>Complete and balanced dog</strong><br />Dogs are omnivores, meaning they can eat both animal and vegetable material. Feeding just meat and bones or table scraps will not provide all the nutrients your dog needs. Most vets agree that, a commercially produced, complete and balanced dry dog food is best for your dog.</li>
+            <li class="alt"><strong>Complete and balanced cat</strong><br />Cats are carnivores meaning they must eat animal sources of protein and fat to survive. But feeding just fresh meat or fish may not provide all the other nutrients your cat needs to help it reach its full potential. Most vets agree that, a commercially produced, complete and balanced dry cat food is best for your cat.</li>
+            <li><strong>Appropriate treating </strong><br />We all like to give our pets a treat but it is important to remember that just like us, too many snacks can ruin their waistline. Give 1- 4 treats per week (less if they are overweight) and look for low fat options. Always follow the on-pack feeding guidelines.</li>
+            <li class="alt"><strong>Pet obesity</strong><br />Like us pets can put on weight. You should be able to feel your pets' ribs but not see them and to see a waistline or “tucked up” abdomen when viewed from above or the side. Monitor their body condition regularly and adjust the amount of food you provide if necessary.</li>
+            <li><strong>Allergies</strong><br />Cats &amp; Dogs, like humans, can suffer from a wide range of allergies. The most common allergy is from flea bites. Food is not a common allergen but the right food may help make life more comfortable for your pet. Talk to your Vet about a diet to help with your pet's sensitivities.</li>
+            <li class="alt"><strong>Life stages</strong><br />The nutritional needs of our pets change over their lifetime. Puppies and kittens need a special diet to help them grow and develop properly. Senior pets are different again. Choosing a food specially formulated for the life stage of your pet, can help support your pet's well-being, health and vitality.</li>
+            <li><strong>Cats need cat food and dogs need dog food</strong><br />Rover probably loves eating the cat's food and Kitty may tease Rover by eating from his bowl - but be careful. Cat food is typically higher in calories than dog food so watch Rover's waistline if he eats it regularly and Kitty needs to eat cat food as it contains some essential nutrients not found in dog food. </li>
+            <li class="alt"><strong>Why premium and super premium food is better</strong><br />Premium quality foods may seem more expensive but the high quality nutrition they provide, often means you need to feed less and may mean a healthier pet with less vet visits.</li>
+            <li><strong>Fleas/Worming</strong><br />Flea eggs can lay dormant in your house for several months and the life cycles of fleas and worms are linked. Treating your pet for fleas and worms all year round will avoid infestations over summer.</li>
+            <li class="alt"><strong>Vaccinations</strong><br />Vaccinations are the only way to protect your pet against certain serious diseases. Regular vaccinations and health checks with your Veterinarian will help ensure the continued good health of your pet. </li>
+            <li><strong>Dental Care</strong><br />To help keep your pet's mouth and teeth healthy, brush your pet's teeth with a pet toothpaste and toothbrush. Feed a dry diet and take your pet for a dental clean at your Veterinary Clinic.</li>
+            <li class="alt"><strong>Exercising your dog</strong><br />Exercise is important for your dog's body and mind, and helps keep you fit too! Try going somewhere different for a walk, or play hide n seek. A well exercised dog is a well behaved dog.</li>
+            <li><strong>Fresh Water</strong><br />Water is an essential nutrient for your dog. A 10% loss of your dog's body water can cause serious illness. Always provide fresh cool water and be aware that your dog may drink more during the summer heat.</li>
+            <li class="alt"><strong>Toilet Training Puppies</strong><br />The key to toilet training puppies is consistency. Remember to take them outside frequently to avoid mistakes inside. Use a toileting command, and praise and treat them when they get it right.</li>
+            <li><strong>Introducing Puppies to food</strong><br />Feed puppies small meals two to three times daily. Stick to the same brand of complete and balanced food to avoid upsetting their tummies. Do not feed cows milk as many puppies are lactose intolerant.</li>
+            <li class="alt"><strong>Playing with Puppies</strong><br />Playing is an important part of your puppy's development. Choose a variety of durable toys that will survive puppy teeth, and put away the toys when you are finished so that your puppy won't get bored with them.</li>
+        </ul>
+        </div>
+
+	</body>
+</html>

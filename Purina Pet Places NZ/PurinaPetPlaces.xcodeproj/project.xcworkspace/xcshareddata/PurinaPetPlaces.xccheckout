@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>7C01AA36-FD82-47FA-B442-FA3109A5766D</string>
+	<key>IDESourceControlProjectName</key>
+	<string>PurinaPetPlaces</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>272C13D2-2DD9-4542-B9F7-FB9C609B4224</key>
+		<string>https://admission.svn.beanstalkapp.com/purina-pet-places/trunk/Purina%20Pet%20Places%20NZ</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>PurinaPetPlaces.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>272C13D2-2DD9-4542-B9F7-FB9C609B4224</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectRepositoryRootDictionary</key>
+	<dict>
+		<key>272C13D2-2DD9-4542-B9F7-FB9C609B4224</key>
+		<string>https://admission.svn.beanstalkapp.com/purina-pet-places</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://admission.svn.beanstalkapp.com/purina-pet-places/trunk/Purina%20Pet%20Places%20NZ/PurinaPetPlaces.xcodeproj</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>272C13D2-2DD9-4542-B9F7-FB9C609B4224</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryBranchesRelativeLocationKey</key>
+			<string>branches</string>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.subversion</string>
+			<key>IDESourceControlRepositoryTagsRelativeLocationKey</key>
+			<string>tags</string>
+			<key>IDESourceControlRepositoryTrunkRelativeLocationKey</key>
+			<string>trunk</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>272C13D2-2DD9-4542-B9F7-FB9C609B4224</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Purina Pet Places NZ</string>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -1,0 +1,126 @@
+//
+//  CategoriesTableViewController.m
+//  PurinaPetPlaces
+//
+//  Created by Josh Bruce on 4/04/12.
+//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+//
+
+#import "CategoriesTableViewController.h"
+#import "PCServices.h"
+#import <QuartzCore/QuartzCore.h>
+#import "Categories.h"
+#import "Singleton.h"
+
+@interface CategoriesTableViewController ()
+
+@end
+
+@implementation CategoriesTableViewController
+@synthesize categoryArray, delegate;
+
+- (id)initWithStyle:(UITableViewStyle)style
+{
+    self = [super initWithStyle:style];
+    if (self) {
+        [self.view setBackgroundColor:[UIColor clearColor]];
+    }
+    return self;
+}
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    /*
+    categoryArray = [NSMutableArray array];
+    Singleton *sharedSingleton = [Singleton sharedInstance];
+    [self setCategoryArray:sharedSingleton.currentCategories];
+    NSLog(@"%@", [sharedSingleton.currentCategories objectAtIndex:1]);
+    [self.tableView reloadData];
+     */
+
+}
+
+
+
+- (void)viewDidUnload
+{
+    [super viewDidUnload];
+
+}
+
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+{
+    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
+#pragma mark - Table view data source
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    Singleton *sharedSingleton = [Singleton sharedInstance];
+    return [sharedSingleton.currentCategories count];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *CellIdentifier = @"Cell";
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        UIImageView *iconTemplateView;
+        switch (indexPath.row) {
+            case 0:
+                iconTemplateView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"icon_accommodation.png"]];
+                break;
+            case 1:
+                iconTemplateView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"icon_parks.png"]];
+                break;
+            case 2:
+                iconTemplateView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"icon_cafes.png"]];
+                break;
+            case 3:
+                iconTemplateView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"icon_paw.png"]];
+                break;
+            case 4:
+                iconTemplateView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"icon_Stock.png"]];
+                break;
+        }
+    
+        
+        
+        [iconTemplateView setFrame:CGRectMake(8, 8, 33, 33)];
+        [cell addSubview:iconTemplateView];
+        [cell setIndentationLevel:4];
+    }
+
+    
+    [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
+    [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
+    
+    Singleton *sharedSingleton = [Singleton sharedInstance];
+    Categories *categories = (Categories*)[sharedSingleton.currentCategories objectAtIndex:[indexPath row]];
+    [cell.textLabel setText:categories.CategoryName];
+    return cell;
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 50;
+}
+
+#pragma mark - Table view delegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{    
+    Singleton *sharedSingleton = [Singleton sharedInstance];
+    Categories *categories = (Categories*)[sharedSingleton.currentCategories objectAtIndex:[indexPath row]];
+    [self.delegate itemSelected:categories];
+}
+
+@end
