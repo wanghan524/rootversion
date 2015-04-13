@@ -10,42 +10,31 @@
 	<string>PurinaPetPlaces</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>272C13D2-2DD9-4542-B9F7-FB9C609B4224</key>
-		<string>https://admission.svn.beanstalkapp.com/purina-pet-places/trunk/Purina%20Pet%20Places%20NZ</string>
+		<key>10E761137275E58747AE77D7D15BFEB82AEB5393</key>
+		<string>https://github.com/wanghan524/rootversion.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>PurinaPetPlaces.xcodeproj/project.xcworkspace</string>
+	<string>Purina Pet Places NZ/PurinaPetPlaces.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>272C13D2-2DD9-4542-B9F7-FB9C609B4224</key>
-		<string>../..</string>
-	</dict>
-	<key>IDESourceControlProjectRepositoryRootDictionary</key>
-	<dict>
-		<key>272C13D2-2DD9-4542-B9F7-FB9C609B4224</key>
-		<string>https://admission.svn.beanstalkapp.com/purina-pet-places</string>
+		<key>10E761137275E58747AE77D7D15BFEB82AEB5393</key>
+		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://admission.svn.beanstalkapp.com/purina-pet-places/trunk/Purina%20Pet%20Places%20NZ/PurinaPetPlaces.xcodeproj</string>
+	<string>https://github.com/wanghan524/rootversion.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>272C13D2-2DD9-4542-B9F7-FB9C609B4224</string>
+	<string>10E761137275E58747AE77D7D15BFEB82AEB5393</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
-			<key>IDESourceControlRepositoryBranchesRelativeLocationKey</key>
-			<string>branches</string>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
-			<string>public.vcs.subversion</string>
-			<key>IDESourceControlRepositoryTagsRelativeLocationKey</key>
-			<string>tags</string>
-			<key>IDESourceControlRepositoryTrunkRelativeLocationKey</key>
-			<string>trunk</string>
+			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>272C13D2-2DD9-4542-B9F7-FB9C609B4224</string>
+			<string>10E761137275E58747AE77D7D15BFEB82AEB5393</string>
 			<key>IDESourceControlWCCName</key>
-			<string>Purina Pet Places NZ</string>
+			<string>petplaces.ios-master%20second</string>
 		</dict>
 	</array>
 </dict>

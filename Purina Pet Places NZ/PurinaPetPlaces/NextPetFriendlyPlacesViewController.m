@@ -40,6 +40,7 @@
         
         
         [self.view addSubview:subCategoriesTableViewController.view];
+        NSLog(@"赵英超狗屎");
     }
     return self;
 }
