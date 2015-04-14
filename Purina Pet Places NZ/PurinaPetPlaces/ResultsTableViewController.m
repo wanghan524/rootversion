@@ -9,6 +9,7 @@
 #import "ResultsTableViewController.h"
 #import "PCPetCentricSvc.h"
 #import "Locations.h"
+#import "Singleton.h"
 
 @interface ResultsTableViewController ()
 
@@ -44,6 +45,27 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    return 100.0f;
+}
+
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+    
+    Singleton *singleton = [Singleton sharedInstance];
+    UIImageView * headerImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 100)];
+    headerImageView.backgroundColor = [UIColor greenColor];
+    
+    UILabel *titleLabel = [[UILabel alloc] initWithFrame:headerImageView.frame];
+    titleLabel.backgroundColor = [UIColor clearColor];
+    titleLabel.text = singleton.selectedSubCategories.CategoryName;
+    titleLabel.textAlignment = NSTextAlignmentCenter;
+    titleLabel.font = [UIFont systemFontOfSize:22];
+    titleLabel.textColor = [UIColor whiteColor];
+    [headerImageView addSubview:titleLabel];
+    return headerImageView;
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -66,6 +88,7 @@
         [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
         [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
     }
+    cell.backgroundColor = [UIColor clearColor];
 
     Locations *location = (Locations*)[dataSource objectAtIndex:[indexPath row]];
     

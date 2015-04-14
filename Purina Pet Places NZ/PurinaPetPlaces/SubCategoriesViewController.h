@@ -11,7 +11,7 @@
 #import "ResultsViewController.h"
 #import "Categories.h"
 
-@interface SubCategoriesViewController : UIViewController {
+@interface SubCategoriesViewController : UIViewController <SubCategoriesTableViewControllerDelegate>{
     SubCategoriesTableViewController    *subCategoriesTableViewController;
     ResultsViewController               *resultsViewController;
     NSString                            *parentCategory;
