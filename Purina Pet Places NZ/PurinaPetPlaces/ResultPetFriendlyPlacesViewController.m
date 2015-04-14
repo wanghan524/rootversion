@@ -28,7 +28,7 @@
     Locations *locationsClass = [Locations alloc];
     
     resultsTableViewController = [[ResultsTableViewController alloc] initWithStyle:UITableViewStylePlain];
-    [resultsTableViewController.view setFrame:CGRectMake(0, 60, SCREEN_WIDTH, SCREEN_HEIGHT - 60)];
+    [resultsTableViewController.view setFrame:CGRectMake(0, 64, SCREEN_WIDTH, SCREEN_HEIGHT - 64)];
     [resultsTableViewController setDelegate:self];
     
     [resultsTableViewController setDataSource:[locationsClass locationsByCategoryId:singletonClass.selectedSubCategories.CategoryId fromArray:singletonClass.locationListing]];

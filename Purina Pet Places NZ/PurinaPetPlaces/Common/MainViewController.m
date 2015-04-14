@@ -67,6 +67,7 @@
         self.menusTable = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH / 2 + 30, SCREEN_HEIGHT - navHeight) style:UITableViewStylePlain];
         self.menusTable.delegate = self;
         self.menusTable.dataSource = self;
+        self.menusTable.separatorStyle = UITableViewCellSeparatorStyleNone;
         self.menusTable.tableFooterView = [[UIView alloc]initWithFrame:CGRectZero];
         [self.darkView addSubview:self.menusTable];
         
@@ -88,11 +89,18 @@
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    
+     NSArray *imageNameArray = @[@"menu-home.jpg",@"menu-dog-pet-places.jpg",@"menu-photo-fun.jpg",@"menu-pet-friendly-places.jpg",@"menu-stockists.jpg",@"menu-tools.jpg",@"menu-pet-service.jpg",@"menu-tips.jpg",@"menu-products.jpg"];
     static NSString *iden = @"cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:iden];
     if(nil == cell)
     {
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:iden];
+        UIImageView *iconTemplateView = [[UIImageView alloc] initWithFrame:CGRectMake(8, 8, 33, 33)];
+        iconTemplateView.backgroundColor = [UIColor redColor];
+        iconTemplateView.image = [UIImage imageNamed:imageNameArray[indexPath.row]];
+        [cell.contentView addSubview:iconTemplateView];
+        [cell setIndentationLevel:4];
     }
     cell.textLabel.text = [self.menuArray objectAtIndex:indexPath.row];
     return cell;
@@ -112,7 +120,7 @@
 -(void)makeArray
 {
     self.imageArray = [[NSMutableArray alloc]initWithCapacity:0];
-    for(NSUInteger i = 0; i < 6; i++)
+    for(NSUInteger i = 0; i < 7; i++)
     {
         [self.imageArray addObject:[NSString stringWithFormat:@"%lu",(unsigned long)i]];
     }
@@ -132,15 +140,19 @@
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    NSArray *titleArray = @[@"Photo Fun",@"Pet Friendly Places",@"Stockists",@"Tools",@"Pet Services",@"Tips"];
+    NSArray *titleArray = @[@"Photo Fun",@"Pet Friendly Places",@"Stockists",@"Tools",@"Pet Services",@"Tips",@"Products"];
+    NSArray *imageNameArray = @[@"tile1-photo-fun.jpg",@"tile2-pet-friendly-places.jpg",@"tile3-stockist.jpg",@"tile4-tools.jpg",@"tile5-pet-service.jpg",@"tile6-tips.jpg",@"tile7-products.jpg"];
     static NSString *iden = @"UICollectionViewCell";
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:iden forIndexPath:indexPath];
     if(cell == nil)
     {
-        cell = [[UICollectionViewCell alloc]initWithFrame:CGRectMake(0,0,SCREEN_WIDTH/2, (self.residuHeigth - 100)/(self.imageArray.count))];
+        cell = [[UICollectionViewCell alloc]initWithFrame:CGRectMake(0,0,SCREEN_WIDTH/2, (self.residuHeigth - 70)/(self.imageArray.count))];
     }
-    cell.backgroundColor = [UIColor colorWithRed:((10 * indexPath.row) / 255.0) green:((20 * indexPath.row)/255.0) blue:((30 * indexPath.row)/255.0) alpha:1.0f];
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(cell.contentView.center.x - (cell.contentView.frame.size.width / 2.0), cell.contentView.center.y - (cell.contentView.frame.size.height / 2.0), cell.contentView.frame.size.width, cell.contentView.frame.size.height)];
+    UIImageView *backGroundImage = [[UIImageView alloc] initWithFrame:cell.frame];
+    backGroundImage.image = [UIImage imageNamed:imageNameArray[indexPath.row]];
+    cell.backgroundView = backGroundImage;
+    //cell.backgroundColor = [UIColor colorWithRed:((10 * indexPath.row) / 255.0) green:((20 * indexPath.row)/255.0) blue:((30 * indexPath.row)/255.0) alpha:1.0f];
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(cell.contentView.center.x - (cell.contentView.frame.size.width / 2.0), cell.contentView.center.y - (cell.contentView.frame.size.height / 2.0) + 30, cell.contentView.frame.size.width, cell.contentView.frame.size.height)];
     label.textColor = [UIColor whiteColor];
     label.textAlignment = NSTextAlignmentCenter;
     label.text = [NSString stringWithFormat:@"%@",titleArray[indexPath.row]];

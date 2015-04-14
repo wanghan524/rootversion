@@ -132,7 +132,7 @@
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
     UIImageView * headerImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 100)];
-    headerImageView.backgroundColor = [UIColor greenColor];
+    headerImageView.image = [UIImage imageNamed:@"pet-friendly-places-header.jpg"];
     
     UILabel *titleLabel = [[UILabel alloc] initWithFrame:headerImageView.frame];
     titleLabel.backgroundColor = [UIColor clearColor];

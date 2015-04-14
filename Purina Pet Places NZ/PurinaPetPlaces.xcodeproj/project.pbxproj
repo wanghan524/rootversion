@@ -273,6 +273,53 @@
 		EFC41CA41ADB866000978240 /* photoFunViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFC41CA21ADB866000978240 /* photoFunViewController.xib */; };
 		EFC41CA71ADB8E3200978240 /* PetFriendlyPlacesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFC41CA61ADB8E3200978240 /* PetFriendlyPlacesViewController.m */; };
 		EFC41CAA1ADBC1C700978240 /* NextPetFriendlyPlacesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFC41CA91ADBC1C700978240 /* NextPetFriendlyPlacesViewController.m */; };
+		EFCC0EC41ADCA7D8008676D7 /* btn-back.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EFCC0E951ADCA7D8008676D7 /* btn-back.jpg */; };
+		EFCC0EC51ADCA7D8008676D7 /* btn-menu.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EFCC0E961ADCA7D8008676D7 /* btn-menu.jpg */; };
+		EFCC0EC61ADCA7D8008676D7 /* btn-search.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EFCC0E971ADCA7D8008676D7 /* btn-search.jpg */; };
+		EFCC0EC71ADCA7D8008676D7 /* dropdown-arrow.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EFCC0E981ADCA7D8008676D7 /* dropdown-arrow.jpg */; };
+		EFCC0EC81ADCA7D8008676D7 /* menu-dog-pet-places.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EFCC0E991ADCA7D8008676D7 /* menu-dog-pet-places.jpg */; };
+		EFCC0EC91ADCA7D8008676D7 /* menu-home.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EFCC0E9A1ADCA7D8008676D7 /* menu-home.jpg */; };
+		EFCC0ECA1ADCA7D8008676D7 /* menu-pet-friendly-places.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EFCC0E9B1ADCA7D8008676D7 /* menu-pet-friendly-places.jpg */; };
+		EFCC0ECB1ADCA7D8008676D7 /* menu-pet-service.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EFCC0E9C1ADCA7D8008676D7 /* menu-pet-service.jpg */; };
+		EFCC0ECC1ADCA7D8008676D7 /* menu-photo-fun.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EFCC0E9D1ADCA7D8008676D7 /* menu-photo-fun.jpg */; };
+		EFCC0ECD1ADCA7D8008676D7 /* menu-products.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EFCC0E9E1ADCA7D8008676D7 /* menu-products.jpg */; };
+		EFCC0ECE1ADCA7D8008676D7 /* menu-stockists.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EFCC0E9F1ADCA7D8008676D7 /* menu-stockists.jpg */; };
+		EFCC0ECF1ADCA7D8008676D7 /* menu-tips.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EFCC0EA01ADCA7D8008676D7 /* menu-tips.jpg */; };
+		EFCC0ED01ADCA7D8008676D7 /* menu-tools.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EFCC0EA11ADCA7D8008676D7 /* menu-tools.jpg */; };
+		EFCC0ED11ADCA7D8008676D7 /* next-btn.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EFCC0EA21ADCA7D8008676D7 /* next-btn.jpg */; };
+		EFCC0ED21ADCA7D8008676D7 /* pet-care-service-header.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EFCC0EA31ADCA7D8008676D7 /* pet-care-service-header.jpg */; };
+		EFCC0ED31ADCA7D8008676D7 /* pet-care-service-purina-logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EFCC0EA41ADCA7D8008676D7 /* pet-care-service-purina-logo.jpg */; };
+		EFCC0ED41ADCA7D8008676D7 /* pet-friendly-places-header.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EFCC0EA51ADCA7D8008676D7 /* pet-friendly-places-header.jpg */; };
+		EFCC0ED51ADCA7D8008676D7 /* pet-places-logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EFCC0EA61ADCA7D8008676D7 /* pet-places-logo.jpg */; };
+		EFCC0ED61ADCA7D8008676D7 /* pet-service-header.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EFCC0EA71ADCA7D8008676D7 /* pet-service-header.jpg */; };
+		EFCC0ED71ADCA7D8008676D7 /* products-about-pro-plan.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EFCC0EA81ADCA7D8008676D7 /* products-about-pro-plan.jpg */; };
+		EFCC0ED81ADCA7D8008676D7 /* products-beggin.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EFCC0EA91ADCA7D8008676D7 /* products-beggin.jpg */; };
+		EFCC0ED91ADCA7D8008676D7 /* products-beneful.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EFCC0EAA1ADCA7D8008676D7 /* products-beneful.jpg */; };
+		EFCC0EDA1ADCA7D8008676D7 /* products-dog-chow.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EFCC0EAB1ADCA7D8008676D7 /* products-dog-chow.jpg */; };
+		EFCC0EDB1ADCA7D8008676D7 /* products-header.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EFCC0EAC1ADCA7D8008676D7 /* products-header.jpg */; };
+		EFCC0EDC1ADCA7D8008676D7 /* products-mighty-dog.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EFCC0EAD1ADCA7D8008676D7 /* products-mighty-dog.jpg */; };
+		EFCC0EDD1ADCA7D8008676D7 /* products-pro-plan.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EFCC0EAE1ADCA7D8008676D7 /* products-pro-plan.jpg */; };
+		EFCC0EDE1ADCA7D8008676D7 /* products-purina-one.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EFCC0EAF1ADCA7D8008676D7 /* products-purina-one.jpg */; };
+		EFCC0EDF1ADCA7D8008676D7 /* products-tux.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EFCC0EB01ADCA7D8008676D7 /* products-tux.jpg */; };
+		EFCC0EE01ADCA7D8008676D7 /* splash-page-add.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EFCC0EB11ADCA7D8008676D7 /* splash-page-add.jpg */; };
+		EFCC0EE11ADCA7D8008676D7 /* splash-page-cat.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EFCC0EB21ADCA7D8008676D7 /* splash-page-cat.jpg */; };
+		EFCC0EE21ADCA7D8008676D7 /* splash-page-dog.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EFCC0EB31ADCA7D8008676D7 /* splash-page-dog.jpg */; };
+		EFCC0EE31ADCA7D8008676D7 /* splash-page.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EFCC0EB41ADCA7D8008676D7 /* splash-page.jpg */; };
+		EFCC0EE41ADCA7D8008676D7 /* stockists-header.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EFCC0EB51ADCA7D8008676D7 /* stockists-header.jpg */; };
+		EFCC0EE51ADCA7D8008676D7 /* tile1-photo-fun.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EFCC0EB61ADCA7D8008676D7 /* tile1-photo-fun.jpg */; };
+		EFCC0EE61ADCA7D8008676D7 /* tile2-pet-friendly-places.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EFCC0EB71ADCA7D8008676D7 /* tile2-pet-friendly-places.jpg */; };
+		EFCC0EE71ADCA7D8008676D7 /* tile3-stockist.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EFCC0EB81ADCA7D8008676D7 /* tile3-stockist.jpg */; };
+		EFCC0EE81ADCA7D8008676D7 /* tile4-tools.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EFCC0EB91ADCA7D8008676D7 /* tile4-tools.jpg */; };
+		EFCC0EE91ADCA7D8008676D7 /* tile5-pet-service.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EFCC0EBA1ADCA7D8008676D7 /* tile5-pet-service.jpg */; };
+		EFCC0EEA1ADCA7D8008676D7 /* tile6-tips.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EFCC0EBB1ADCA7D8008676D7 /* tile6-tips.jpg */; };
+		EFCC0EEB1ADCA7D8008676D7 /* tile7-products.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EFCC0EBC1ADCA7D8008676D7 /* tile7-products.jpg */; };
+		EFCC0EEC1ADCA7D8008676D7 /* tips-article-separation-article.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EFCC0EBD1ADCA7D8008676D7 /* tips-article-separation-article.jpg */; };
+		EFCC0EED1ADCA7D8008676D7 /* tips-header.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EFCC0EBE1ADCA7D8008676D7 /* tips-header.jpg */; };
+		EFCC0EEE1ADCA7D8008676D7 /* tips-thumb-barking.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EFCC0EBF1ADCA7D8008676D7 /* tips-thumb-barking.jpg */; };
+		EFCC0EEF1ADCA7D8008676D7 /* tips-thumb-boredom.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EFCC0EC01ADCA7D8008676D7 /* tips-thumb-boredom.jpg */; };
+		EFCC0EF01ADCA7D8008676D7 /* tips-thumb-general-training.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EFCC0EC11ADCA7D8008676D7 /* tips-thumb-general-training.jpg */; };
+		EFCC0EF11ADCA7D8008676D7 /* tips-thumb-separation-anxiety.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EFCC0EC21ADCA7D8008676D7 /* tips-thumb-separation-anxiety.jpg */; };
+		EFCC0EF21ADCA7D8008676D7 /* tips-thumb-socialising-puppies.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EFCC0EC31ADCA7D8008676D7 /* tips-thumb-socialising-puppies.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -625,6 +672,53 @@
 		EFC41CA61ADB8E3200978240 /* PetFriendlyPlacesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PetFriendlyPlacesViewController.m; sourceTree = "<group>"; };
 		EFC41CA81ADBC1C700978240 /* NextPetFriendlyPlacesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NextPetFriendlyPlacesViewController.h; sourceTree = "<group>"; };
 		EFC41CA91ADBC1C700978240 /* NextPetFriendlyPlacesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NextPetFriendlyPlacesViewController.m; sourceTree = "<group>"; };
+		EFCC0E951ADCA7D8008676D7 /* btn-back.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "btn-back.jpg"; sourceTree = "<group>"; };
+		EFCC0E961ADCA7D8008676D7 /* btn-menu.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "btn-menu.jpg"; sourceTree = "<group>"; };
+		EFCC0E971ADCA7D8008676D7 /* btn-search.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "btn-search.jpg"; sourceTree = "<group>"; };
+		EFCC0E981ADCA7D8008676D7 /* dropdown-arrow.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "dropdown-arrow.jpg"; sourceTree = "<group>"; };
+		EFCC0E991ADCA7D8008676D7 /* menu-dog-pet-places.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "menu-dog-pet-places.jpg"; sourceTree = "<group>"; };
+		EFCC0E9A1ADCA7D8008676D7 /* menu-home.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "menu-home.jpg"; sourceTree = "<group>"; };
+		EFCC0E9B1ADCA7D8008676D7 /* menu-pet-friendly-places.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "menu-pet-friendly-places.jpg"; sourceTree = "<group>"; };
+		EFCC0E9C1ADCA7D8008676D7 /* menu-pet-service.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "menu-pet-service.jpg"; sourceTree = "<group>"; };
+		EFCC0E9D1ADCA7D8008676D7 /* menu-photo-fun.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "menu-photo-fun.jpg"; sourceTree = "<group>"; };
+		EFCC0E9E1ADCA7D8008676D7 /* menu-products.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "menu-products.jpg"; sourceTree = "<group>"; };
+		EFCC0E9F1ADCA7D8008676D7 /* menu-stockists.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "menu-stockists.jpg"; sourceTree = "<group>"; };
+		EFCC0EA01ADCA7D8008676D7 /* menu-tips.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "menu-tips.jpg"; sourceTree = "<group>"; };
+		EFCC0EA11ADCA7D8008676D7 /* menu-tools.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "menu-tools.jpg"; sourceTree = "<group>"; };
+		EFCC0EA21ADCA7D8008676D7 /* next-btn.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "next-btn.jpg"; sourceTree = "<group>"; };
+		EFCC0EA31ADCA7D8008676D7 /* pet-care-service-header.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "pet-care-service-header.jpg"; sourceTree = "<group>"; };
+		EFCC0EA41ADCA7D8008676D7 /* pet-care-service-purina-logo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "pet-care-service-purina-logo.jpg"; sourceTree = "<group>"; };
+		EFCC0EA51ADCA7D8008676D7 /* pet-friendly-places-header.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "pet-friendly-places-header.jpg"; sourceTree = "<group>"; };
+		EFCC0EA61ADCA7D8008676D7 /* pet-places-logo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "pet-places-logo.jpg"; sourceTree = "<group>"; };
+		EFCC0EA71ADCA7D8008676D7 /* pet-service-header.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "pet-service-header.jpg"; sourceTree = "<group>"; };
+		EFCC0EA81ADCA7D8008676D7 /* products-about-pro-plan.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "products-about-pro-plan.jpg"; sourceTree = "<group>"; };
+		EFCC0EA91ADCA7D8008676D7 /* products-beggin.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "products-beggin.jpg"; sourceTree = "<group>"; };
+		EFCC0EAA1ADCA7D8008676D7 /* products-beneful.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "products-beneful.jpg"; sourceTree = "<group>"; };
+		EFCC0EAB1ADCA7D8008676D7 /* products-dog-chow.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "products-dog-chow.jpg"; sourceTree = "<group>"; };
+		EFCC0EAC1ADCA7D8008676D7 /* products-header.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "products-header.jpg"; sourceTree = "<group>"; };
+		EFCC0EAD1ADCA7D8008676D7 /* products-mighty-dog.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "products-mighty-dog.jpg"; sourceTree = "<group>"; };
+		EFCC0EAE1ADCA7D8008676D7 /* products-pro-plan.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "products-pro-plan.jpg"; sourceTree = "<group>"; };
+		EFCC0EAF1ADCA7D8008676D7 /* products-purina-one.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "products-purina-one.jpg"; sourceTree = "<group>"; };
+		EFCC0EB01ADCA7D8008676D7 /* products-tux.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "products-tux.jpg"; sourceTree = "<group>"; };
+		EFCC0EB11ADCA7D8008676D7 /* splash-page-add.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "splash-page-add.jpg"; sourceTree = "<group>"; };
+		EFCC0EB21ADCA7D8008676D7 /* splash-page-cat.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "splash-page-cat.jpg"; sourceTree = "<group>"; };
+		EFCC0EB31ADCA7D8008676D7 /* splash-page-dog.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "splash-page-dog.jpg"; sourceTree = "<group>"; };
+		EFCC0EB41ADCA7D8008676D7 /* splash-page.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "splash-page.jpg"; sourceTree = "<group>"; };
+		EFCC0EB51ADCA7D8008676D7 /* stockists-header.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "stockists-header.jpg"; sourceTree = "<group>"; };
+		EFCC0EB61ADCA7D8008676D7 /* tile1-photo-fun.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "tile1-photo-fun.jpg"; sourceTree = "<group>"; };
+		EFCC0EB71ADCA7D8008676D7 /* tile2-pet-friendly-places.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "tile2-pet-friendly-places.jpg"; sourceTree = "<group>"; };
+		EFCC0EB81ADCA7D8008676D7 /* tile3-stockist.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "tile3-stockist.jpg"; sourceTree = "<group>"; };
+		EFCC0EB91ADCA7D8008676D7 /* tile4-tools.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "tile4-tools.jpg"; sourceTree = "<group>"; };
+		EFCC0EBA1ADCA7D8008676D7 /* tile5-pet-service.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "tile5-pet-service.jpg"; sourceTree = "<group>"; };
+		EFCC0EBB1ADCA7D8008676D7 /* tile6-tips.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "tile6-tips.jpg"; sourceTree = "<group>"; };
+		EFCC0EBC1ADCA7D8008676D7 /* tile7-products.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "tile7-products.jpg"; sourceTree = "<group>"; };
+		EFCC0EBD1ADCA7D8008676D7 /* tips-article-separation-article.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "tips-article-separation-article.jpg"; sourceTree = "<group>"; };
+		EFCC0EBE1ADCA7D8008676D7 /* tips-header.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "tips-header.jpg"; sourceTree = "<group>"; };
+		EFCC0EBF1ADCA7D8008676D7 /* tips-thumb-barking.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "tips-thumb-barking.jpg"; sourceTree = "<group>"; };
+		EFCC0EC01ADCA7D8008676D7 /* tips-thumb-boredom.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "tips-thumb-boredom.jpg"; sourceTree = "<group>"; };
+		EFCC0EC11ADCA7D8008676D7 /* tips-thumb-general-training.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "tips-thumb-general-training.jpg"; sourceTree = "<group>"; };
+		EFCC0EC21ADCA7D8008676D7 /* tips-thumb-separation-anxiety.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "tips-thumb-separation-anxiety.jpg"; sourceTree = "<group>"; };
+		EFCC0EC31ADCA7D8008676D7 /* tips-thumb-socialising-puppies.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "tips-thumb-socialising-puppies.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -854,6 +948,7 @@
 		2061F956152BD84E0030E20F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				EFCC0E941ADCA7D8008676D7 /* pet-places-images */,
 				8ADDAE9418459E5D0068ED72 /* App Icons */,
 				8A99384216E0450900614AAF /* Default-568h@2x.png */,
 				8A39380A183C3EE4005596BD /* Default@2x.png */,
@@ -1330,6 +1425,60 @@
 			path = "parse-library-1.7.1";
 			sourceTree = "<group>";
 		};
+		EFCC0E941ADCA7D8008676D7 /* pet-places-images */ = {
+			isa = PBXGroup;
+			children = (
+				EFCC0E951ADCA7D8008676D7 /* btn-back.jpg */,
+				EFCC0E961ADCA7D8008676D7 /* btn-menu.jpg */,
+				EFCC0E971ADCA7D8008676D7 /* btn-search.jpg */,
+				EFCC0E981ADCA7D8008676D7 /* dropdown-arrow.jpg */,
+				EFCC0E991ADCA7D8008676D7 /* menu-dog-pet-places.jpg */,
+				EFCC0E9A1ADCA7D8008676D7 /* menu-home.jpg */,
+				EFCC0E9B1ADCA7D8008676D7 /* menu-pet-friendly-places.jpg */,
+				EFCC0E9C1ADCA7D8008676D7 /* menu-pet-service.jpg */,
+				EFCC0E9D1ADCA7D8008676D7 /* menu-photo-fun.jpg */,
+				EFCC0E9E1ADCA7D8008676D7 /* menu-products.jpg */,
+				EFCC0E9F1ADCA7D8008676D7 /* menu-stockists.jpg */,
+				EFCC0EA01ADCA7D8008676D7 /* menu-tips.jpg */,
+				EFCC0EA11ADCA7D8008676D7 /* menu-tools.jpg */,
+				EFCC0EA21ADCA7D8008676D7 /* next-btn.jpg */,
+				EFCC0EA31ADCA7D8008676D7 /* pet-care-service-header.jpg */,
+				EFCC0EA41ADCA7D8008676D7 /* pet-care-service-purina-logo.jpg */,
+				EFCC0EA51ADCA7D8008676D7 /* pet-friendly-places-header.jpg */,
+				EFCC0EA61ADCA7D8008676D7 /* pet-places-logo.jpg */,
+				EFCC0EA71ADCA7D8008676D7 /* pet-service-header.jpg */,
+				EFCC0EA81ADCA7D8008676D7 /* products-about-pro-plan.jpg */,
+				EFCC0EA91ADCA7D8008676D7 /* products-beggin.jpg */,
+				EFCC0EAA1ADCA7D8008676D7 /* products-beneful.jpg */,
+				EFCC0EAB1ADCA7D8008676D7 /* products-dog-chow.jpg */,
+				EFCC0EAC1ADCA7D8008676D7 /* products-header.jpg */,
+				EFCC0EAD1ADCA7D8008676D7 /* products-mighty-dog.jpg */,
+				EFCC0EAE1ADCA7D8008676D7 /* products-pro-plan.jpg */,
+				EFCC0EAF1ADCA7D8008676D7 /* products-purina-one.jpg */,
+				EFCC0EB01ADCA7D8008676D7 /* products-tux.jpg */,
+				EFCC0EB11ADCA7D8008676D7 /* splash-page-add.jpg */,
+				EFCC0EB21ADCA7D8008676D7 /* splash-page-cat.jpg */,
+				EFCC0EB31ADCA7D8008676D7 /* splash-page-dog.jpg */,
+				EFCC0EB41ADCA7D8008676D7 /* splash-page.jpg */,
+				EFCC0EB51ADCA7D8008676D7 /* stockists-header.jpg */,
+				EFCC0EB61ADCA7D8008676D7 /* tile1-photo-fun.jpg */,
+				EFCC0EB71ADCA7D8008676D7 /* tile2-pet-friendly-places.jpg */,
+				EFCC0EB81ADCA7D8008676D7 /* tile3-stockist.jpg */,
+				EFCC0EB91ADCA7D8008676D7 /* tile4-tools.jpg */,
+				EFCC0EBA1ADCA7D8008676D7 /* tile5-pet-service.jpg */,
+				EFCC0EBB1ADCA7D8008676D7 /* tile6-tips.jpg */,
+				EFCC0EBC1ADCA7D8008676D7 /* tile7-products.jpg */,
+				EFCC0EBD1ADCA7D8008676D7 /* tips-article-separation-article.jpg */,
+				EFCC0EBE1ADCA7D8008676D7 /* tips-header.jpg */,
+				EFCC0EBF1ADCA7D8008676D7 /* tips-thumb-barking.jpg */,
+				EFCC0EC01ADCA7D8008676D7 /* tips-thumb-boredom.jpg */,
+				EFCC0EC11ADCA7D8008676D7 /* tips-thumb-general-training.jpg */,
+				EFCC0EC21ADCA7D8008676D7 /* tips-thumb-separation-anxiety.jpg */,
+				EFCC0EC31ADCA7D8008676D7 /* tips-thumb-socialising-puppies.jpg */,
+			);
+			path = "pet-places-images";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1386,19 +1535,28 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFCC0ECA1ADCA7D8008676D7 /* menu-pet-friendly-places.jpg in Resources */,
 				8ADDAE9F18459E5D0068ED72 /* Icon-60.png in Resources */,
 				2061F95A152BD84E0030E20F /* InfoPlist.strings in Resources */,
 				2061F966152BD84E0030E20F /* ViewController.xib in Resources */,
 				2061FA0F152C1ADF0030E20F /* SubCategoriesViewController.xib in Resources */,
 				2056DD6B1533C8E1004412AF /* MapViewController.xib in Resources */,
+				EFCC0ECD1ADCA7D8008676D7 /* menu-products.jpg in Resources */,
+				EFCC0EDC1ADCA7D8008676D7 /* products-mighty-dog.jpg in Resources */,
+				EFCC0EE11ADCA7D8008676D7 /* splash-page-cat.jpg in Resources */,
 				202F6325153505B300F583C0 /* background_navbar.png in Resources */,
+				EFCC0ED41ADCA7D8008676D7 /* pet-friendly-places-header.jpg in Resources */,
 				202F6326153505B300F583C0 /* background_navbar@2x.png in Resources */,
+				EFCC0EEE1ADCA7D8008676D7 /* tips-thumb-barking.jpg in Resources */,
 				202F632E153509BE00F583C0 /* CustomNavigationBar.xib in Resources */,
 				202F633D15355B0F00F583C0 /* pin_red.png in Resources */,
 				8AC9B5A71987033600CA7FE5 /* dog-chow.jpg in Resources */,
 				202F633E15355B0F00F583C0 /* pin_red@2x.png in Resources */,
 				202F6343153560CA00F583C0 /* MapDetailsViewController.xib in Resources */,
+				EFCC0ED31ADCA7D8008676D7 /* pet-care-service-purina-logo.jpg in Resources */,
 				202F634C15365CC400F583C0 /* icon_categoryTemplate.png in Resources */,
+				EFCC0EC41ADCA7D8008676D7 /* btn-back.jpg in Resources */,
+				EFCC0EED1ADCA7D8008676D7 /* tips-header.jpg in Resources */,
 				202F634D15365CC400F583C0 /* icon_categoryTemplate@2x.png in Resources */,
 				202F634F1536654A00F583C0 /* button_SuggestALocatoin.png in Resources */,
 				8A986854183D61E700CE36C6 /* icon_PetInfo_7@2x.png in Resources */,
@@ -1408,6 +1566,7 @@
 				203967131537A7E7009518F9 /* ResultsViewController.xib in Resources */,
 				2067BB9E153BAEB1004B3569 /* SplashScreenViewController.xib in Resources */,
 				2067BBAA153CF0D7004B3569 /* LocationDetailViewController.xib in Resources */,
+				EFCC0EE31ADCA7D8008676D7 /* splash-page.jpg in Resources */,
 				2067BBBD153D1926004B3569 /* icon_maps.png in Resources */,
 				8ADDAE9E18459E5D0068ED72 /* Icon-40@2x.png in Resources */,
 				2067BBBE153D1926004B3569 /* icon_maps@2x.png in Resources */,
@@ -1419,11 +1578,13 @@
 				2097D7F8154E463700972AD4 /* icon_PetInfo@2x.png in Resources */,
 				8ADDAE93184599AC0068ED72 /* icon_map@2x.png in Resources */,
 				751222771ADA5D6600A1506B /* EditViewController.xib in Resources */,
+				EFCC0EE61ADCA7D8008676D7 /* tile2-pet-friendly-places.jpg in Resources */,
 				20D75B28154F6885005C4F9B /* icon_PetInfo_disabled.png in Resources */,
 				8AC9B5A51987033600CA7FE5 /* dog-mighty-dog.jpg in Resources */,
 				20D75B29154F6885005C4F9B /* icon_PetInfo_disabled@2x.png in Resources */,
 				EFC41CA41ADB866000978240 /* photoFunViewController.xib in Resources */,
 				20D75B2F154F7197005C4F9B /* icon_Search_disabled.png in Resources */,
+				EFCC0EEB1ADCA7D8008676D7 /* tile7-products.jpg in Resources */,
 				20D75B30154F7197005C4F9B /* icon_Search_disabled@2x.png in Resources */,
 				20D75B31154F7197005C4F9B /* icon_Search.png in Resources */,
 				20D75B32154F7197005C4F9B /* icon_Search@2x.png in Resources */,
@@ -1431,14 +1592,19 @@
 				20D75B38154F726B005C4F9B /* icon_Places_disabled@2x.png in Resources */,
 				20D75B39154F726B005C4F9B /* icon_Places.png in Resources */,
 				8AC9B5B4199DA33200CA7FE5 /* icon-email.png in Resources */,
+				EFCC0ECC1ADCA7D8008676D7 /* menu-photo-fun.jpg in Resources */,
 				20D75B3A154F726B005C4F9B /* icon_Places@2x.png in Resources */,
 				20F0098A154F7D5E00AC6366 /* PetInfoTipsViewController.xib in Resources */,
 				8ADDAEA218459E5D0068ED72 /* Icon-76@2x.png in Resources */,
+				EFCC0ECB1ADCA7D8008676D7 /* menu-pet-service.jpg in Resources */,
+				EFCC0EC51ADCA7D8008676D7 /* btn-menu.jpg in Resources */,
 				20119A8F1550F000000DBCE8 /* PetInfoProductsViewController.xib in Resources */,
+				EFCC0ED81ADCA7D8008676D7 /* products-beggin.jpg in Resources */,
 				20119A971550F967000DBCE8 /* content_PetInfoLayout.png in Resources */,
 				20119A981550F967000DBCE8 /* content_PetInfoLayout@2x.png in Resources */,
 				8ADDAEA61845A2F10068ED72 /* Icon-60@2x.png in Resources */,
 				200AEA4B1552471600CDBF8E /* icon_accommodation.png in Resources */,
+				EFCC0EF01ADCA7D8008676D7 /* tips-thumb-general-training.jpg in Resources */,
 				200AEA4C1552471600CDBF8E /* icon_accommodation@2x.png in Resources */,
 				200AEA53155254BD00CDBF8E /* icon_cafes.png in Resources */,
 				200AEA54155254BD00CDBF8E /* icon_cafes@2x.png in Resources */,
@@ -1447,21 +1613,31 @@
 				200AEA57155254BD00CDBF8E /* icon_paw.png in Resources */,
 				200AEA58155254BD00CDBF8E /* icon_paw@2x.png in Resources */,
 				200AEA5A1552599200CDBF8E /* icon_holding1.png in Resources */,
+				EFCC0EDE1ADCA7D8008676D7 /* products-purina-one.jpg in Resources */,
+				EFCC0EEC1ADCA7D8008676D7 /* tips-article-separation-article.jpg in Resources */,
 				200AEA5D15525F0400CDBF8E /* icon_GeneralTips.png in Resources */,
 				8ABF8459183C65CA001B3E86 /* background_navbar_7@2x.png in Resources */,
 				200AEA5E15525F0400CDBF8E /* icon_GeneralTips@2x.png in Resources */,
 				20CB12391558D08E006D8C82 /* icon_CatTips.png in Resources */,
 				20CB123A1558D08E006D8C82 /* icon_CatTips@2x.png in Resources */,
+				EFCC0ED71ADCA7D8008676D7 /* products-about-pro-plan.jpg in Resources */,
 				20CB123B1558D08E006D8C82 /* icon_DogTips.png in Resources */,
+				EFCC0EDF1ADCA7D8008676D7 /* products-tux.jpg in Resources */,
 				8AC9B5AE1987033600CA7FE5 /* cat-chow.jpg in Resources */,
 				8ADDAEA318459E5D0068ED72 /* Icon-Small.png in Resources */,
+				EFCC0EE41ADCA7D8008676D7 /* stockists-header.jpg in Resources */,
 				20CB123C1558D08E006D8C82 /* icon_DogTips@2x.png in Resources */,
+				EFCC0EEF1ADCA7D8008676D7 /* tips-thumb-boredom.jpg in Resources */,
+				EFCC0EF11ADCA7D8008676D7 /* tips-thumb-separation-anxiety.jpg in Resources */,
+				EFCC0EC61ADCA7D8008676D7 /* btn-search.jpg in Resources */,
 				20352AB91559F2860010127A /* background_button.png in Resources */,
 				20352ABC1559F29E0010127A /* background_button@2x.png in Resources */,
 				8A986853183D61E700CE36C6 /* icon_Places_7@2x.png in Resources */,
 				20352AC31559F5BB0010127A /* background_button_disabled.png in Resources */,
+				EFCC0ED91ADCA7D8008676D7 /* products-beneful.jpg in Resources */,
 				20352AC41559F5BB0010127A /* background_button_disabled@2x.png in Resources */,
 				207458F5155A205E00DE6BF0 /* icon_PetProducts.png in Resources */,
+				EFCC0EC81ADCA7D8008676D7 /* menu-dog-pet-places.jpg in Resources */,
 				207458F6155A205E00DE6BF0 /* icon_PetProducts@2x.png in Resources */,
 				8A986858183D6A5400CE36C6 /* icon_Stock@2x.png in Resources */,
 				207458F7155A205E00DE6BF0 /* icon_PetTips.png in Resources */,
@@ -1477,9 +1653,13 @@
 				2071728E155B94030024C3D0 /* connection_step2.png in Resources */,
 				2071728F155B94030024C3D0 /* connection_step2@2x.png in Resources */,
 				20717290155B94030024C3D0 /* connection_step3.png in Resources */,
+				EFCC0EE21ADCA7D8008676D7 /* splash-page-dog.jpg in Resources */,
+				EFCC0EC71ADCA7D8008676D7 /* dropdown-arrow.jpg in Resources */,
 				20717291155B94030024C3D0 /* connection_step3@2x.png in Resources */,
 				20717292155B94030024C3D0 /* connection_step4.png in Resources */,
+				EFCC0EE81ADCA7D8008676D7 /* tile4-tools.jpg in Resources */,
 				8ADDAE9D18459E5D0068ED72 /* Icon-40.png in Resources */,
+				EFCC0EDB1ADCA7D8008676D7 /* products-header.jpg in Resources */,
 				20717293155B94030024C3D0 /* connection_step4@2x.png in Resources */,
 				8AC9B5A81987033600CA7FE5 /* dog-tux.jpg in Resources */,
 				20717296155CA1000024C3D0 /* button_retry.png in Resources */,
@@ -1490,15 +1670,19 @@
 				8AC9B5AC1987033600CA7FE5 /* cat-friskies.jpg in Resources */,
 				2048F1D1156094AE00F53848 /* background_gradient@2x.png in Resources */,
 				2096835D15BCED7B006B3908 /* button_BookABatch.png in Resources */,
+				EFCC0ED01ADCA7D8008676D7 /* menu-tools.jpg in Resources */,
 				2096835E15BCED7B006B3908 /* button_BookABatch@2x.png in Resources */,
 				20C12CD815CA15B8007C657F /* Entitlements.plist in Resources */,
+				EFCC0EC91ADCA7D8008676D7 /* menu-home.jpg in Resources */,
 				8A99383D16E03E9E00614AAF /* icon.png in Resources */,
+				EFCC0EE01ADCA7D8008676D7 /* splash-page-add.jpg in Resources */,
 				8A99383F16E03EA100614AAF /* icon@2x.png in Resources */,
 				8A99384116E0412800614AAF /* background_gradient-568h@2x.png in Resources */,
 				20C8EFFA170164190041533C /* PetInfo.html in Resources */,
 				20C8EFFE170175F50041533C /* CatInfo.html in Resources */,
 				20C8EFFF170175F50041533C /* DogInfo.html in Resources */,
 				8AC9B5AD1987033600CA7FE5 /* cat-fancy-feast.jpg in Resources */,
+				EFCC0ED51ADCA7D8008676D7 /* pet-places-logo.jpg in Resources */,
 				8AC9B5A61987033600CA7FE5 /* dog-beneful.jpg in Resources */,
 				20C8F0251702706D0041533C /* css.css in Resources */,
 				20C8F0261702706D0041533C /* cat-chow.png in Resources */,
@@ -1506,19 +1690,24 @@
 				20C8F0271702706D0041533C /* cat-fancy-feast.png in Resources */,
 				20C8F0281702706D0041533C /* cat-friskies.png in Resources */,
 				20C8F0291702706D0041533C /* cat-header.png in Resources */,
+				EFCC0EE71ADCA7D8008676D7 /* tile3-stockist.jpg in Resources */,
 				20C8F02A1702706D0041533C /* cat-one.png in Resources */,
 				20C8F02B1702706D0041533C /* cat-pro-plan.png in Resources */,
 				20C8F02C1702706D0041533C /* cat-products-small.jpg in Resources */,
+				EFCC0EDD1ADCA7D8008676D7 /* products-pro-plan.jpg in Resources */,
+				EFCC0EE51ADCA7D8008676D7 /* tile1-photo-fun.jpg in Resources */,
 				20C8F02D1702706D0041533C /* cat-tips-header.png in Resources */,
 				20C8F02E1702706D0041533C /* cat-tips-small.jpg in Resources */,
 				8AC9B5B01987033600CA7FE5 /* cat-pro-plan.jpg in Resources */,
 				20C8F02F1702706D0041533C /* cat-treats.png in Resources */,
 				20C8F0301702706D0041533C /* dog-beggin.png in Resources */,
+				EFCC0EF21ADCA7D8008676D7 /* tips-thumb-socialising-puppies.jpg in Resources */,
 				20C8F0311702706D0041533C /* dog-beneful.png in Resources */,
 				20C8F0321702706D0041533C /* dog-busy.png in Resources */,
 				20C8F0331702706D0041533C /* dog-chow.png in Resources */,
 				20C8F0341702706D0041533C /* dog-header.png in Resources */,
 				20C8F0351702706D0041533C /* dog-mighty.png in Resources */,
+				EFCC0EEA1ADCA7D8008676D7 /* tile6-tips.jpg in Resources */,
 				8ADDAEA418459E5D0068ED72 /* Icon-Small@2x.png in Resources */,
 				751222791ADA5D6600A1506B /* EnterMianViewController.xib in Resources */,
 				20C8F0361702706D0041533C /* dog-one.png in Resources */,
@@ -1526,21 +1715,27 @@
 				8AC9B5AA1987033600CA7FE5 /* dog-pro-plan.jpg in Resources */,
 				20C8F0371702706D0041533C /* dog-pro-plan.png in Resources */,
 				20C8F0381702706D0041533C /* dog-products-small.jpg in Resources */,
+				EFCC0ECE1ADCA7D8008676D7 /* menu-stockists.jpg in Resources */,
 				20C8F0391702706D0041533C /* dog-tips-header.png in Resources */,
 				20C8F03A1702706D0041533C /* dog-tips-small.jpg in Resources */,
 				20C8F03B1702706D0041533C /* dog-treats.png in Resources */,
 				20C8F03C1702706D0041533C /* dog-tux.png in Resources */,
 				8AC9B5A91987033600CA7FE5 /* dog-one.jpg in Resources */,
+				EFCC0ED61ADCA7D8008676D7 /* pet-service-header.jpg in Resources */,
 				20C8F03D1702706D0041533C /* general-tips-header.png in Resources */,
 				20C8F03E1702706D0041533C /* general-tips-small.jpg in Resources */,
 				8AC9B5B3199DA33200CA7FE5 /* icon-facebook.png in Resources */,
 				8AC9B5A41987033600CA7FE5 /* dog-treats.jpg in Resources */,
 				20C8F0401702706D0041533C /* icon-phone.png in Resources */,
+				EFCC0EDA1ADCA7D8008676D7 /* products-dog-chow.jpg in Resources */,
+				EFCC0ED21ADCA7D8008676D7 /* pet-care-service-header.jpg in Resources */,
 				8AF8150C183D768200088BE9 /* icon_7@2x.png in Resources */,
+				EFCC0ED11ADCA7D8008676D7 /* next-btn.jpg in Resources */,
 				8AF8150E183DA9D900088BE9 /* button_currentLocation_selected.png in Resources */,
 				20C8F0411702706D0041533C /* icon-visit.png in Resources */,
 				8AC9B5AF1987033600CA7FE5 /* cat-one.jpg in Resources */,
 				20C8F0421702706D0041533C /* purina-footer.png in Resources */,
+				EFCC0EE91ADCA7D8008676D7 /* tile5-pet-service.jpg in Resources */,
 				20C8F0431702706D0041533C /* products_cat.html in Resources */,
 				20C8F0441702706D0041533C /* products_dog.html in Resources */,
 				20C8F0451702706D0041533C /* tips_cat.html in Resources */,
@@ -1549,6 +1744,7 @@
 				8ADDAEA018459E5D0068ED72 /* Icon-60@2x.png in Resources */,
 				20C8F0471702706D0041533C /* tips_general.html in Resources */,
 				8ADDAEA118459E5D0068ED72 /* Icon-76.png in Resources */,
+				EFCC0ECF1ADCA7D8008676D7 /* menu-tips.jpg in Resources */,
 				8A393807183C3EA4005596BD /* Default-568h@2x.png in Resources */,
 				8A39380B183C3EE4005596BD /* Default@2x.png in Resources */,
 				8A393813183C5FC4005596BD /* Default.png in Resources */,
