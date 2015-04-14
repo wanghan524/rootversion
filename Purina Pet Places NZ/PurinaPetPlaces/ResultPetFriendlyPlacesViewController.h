@@ -10,6 +10,7 @@
 #import "ResultsTableViewController.h"
 #import "LocationDetailViewController.h"
 #import "Categories.h"
+#import "LocationPetFriendlyPlacesViewController.h"
 
 
 @interface ResultPetFriendlyPlacesViewController : ParentViewController{
@@ -20,5 +21,6 @@
 
 @property (nonatomic, retain) ResultsTableViewController *resultsTableViewController;
 @property (nonatomic, retain) Categories *selectedSubCategory;
+@property (nonatomic, strong) NSString *headerImageFlag;
 
 @end

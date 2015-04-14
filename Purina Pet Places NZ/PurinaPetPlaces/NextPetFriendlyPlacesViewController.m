@@ -39,7 +39,6 @@
         
         
         
-        [self.view addSubview:subCategoriesTableViewController.view];
         NSLog(@"赵英超狗屎");
     }
     return self;
@@ -65,10 +64,13 @@
     } else {
         [subCategoriesTableViewController.view setFrame:CGRectMake(0, 64, SCREEN_WIDTH, SCREEN_HEIGHT - 64)];
     }
-    
+    NSLog(@"subCategories : %@",self.headerImageFlag);
+    subCategoriesTableViewController.currentHeaderImageFlag = self.headerImageFlag;
     [subCategoriesTableViewController setDelegate:self];
     [subCategoriesTableViewController setDataSource:singleton.currentSubCategories];
     [self setDelegateByParentId:singleton.currentSubCategories withParentId:singleton.selectedCategories.CategoryId];
+    [self.view addSubview:subCategoriesTableViewController.view];
+
     // Do any additional setup after loading the view.
 }
 
@@ -88,6 +90,7 @@
     [singleton setSelectedSubCategories:category];
     
     resultPetVC = [[ResultPetFriendlyPlacesViewController alloc] init];
+    resultPetVC.headerImageFlag = self.headerImageFlag;
     [self.navigationController pushViewController:resultPetVC animated:YES];
     
     

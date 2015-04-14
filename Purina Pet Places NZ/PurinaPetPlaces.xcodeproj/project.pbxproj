@@ -215,9 +215,6 @@
 		751222781ADA5D6600A1506B /* EnterMianViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 751222741ADA5D6600A1506B /* EnterMianViewController.m */; };
 		751222791ADA5D6600A1506B /* EnterMianViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 751222751ADA5D6600A1506B /* EnterMianViewController.xib */; };
 		7512227F1ADC00B100A1506B /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7512227E1ADC00B100A1506B /* SearchViewController.m */; };
-		8A393807183C3EA4005596BD /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A99384216E0450900614AAF /* Default-568h@2x.png */; };
-		8A39380B183C3EE4005596BD /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A39380A183C3EE4005596BD /* Default@2x.png */; };
-		8A393813183C5FC4005596BD /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A393812183C5FC2005596BD /* Default.png */; };
 		8A986852183D61E700CE36C6 /* icon_Search_7@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A98684F183D61E700CE36C6 /* icon_Search_7@2x.png */; };
 		8A986853183D61E700CE36C6 /* icon_Places_7@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A986850183D61E700CE36C6 /* icon_Places_7@2x.png */; };
 		8A986854183D61E700CE36C6 /* icon_PetInfo_7@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A986851183D61E700CE36C6 /* icon_PetInfo_7@2x.png */; };
@@ -321,6 +318,13 @@
 		EFCC0EF01ADCA7D8008676D7 /* tips-thumb-general-training.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EFCC0EC11ADCA7D8008676D7 /* tips-thumb-general-training.jpg */; };
 		EFCC0EF11ADCA7D8008676D7 /* tips-thumb-separation-anxiety.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EFCC0EC21ADCA7D8008676D7 /* tips-thumb-separation-anxiety.jpg */; };
 		EFCC0EF21ADCA7D8008676D7 /* tips-thumb-socialising-puppies.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EFCC0EC31ADCA7D8008676D7 /* tips-thumb-socialising-puppies.jpg */; };
+		EFCC0EF41ADD18F4008676D7 /* location_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = EFCC0EF31ADD18F4008676D7 /* location_icon.png */; };
+		EFCC0EF61ADD2D8B008676D7 /* loading-splash-page.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EFCC0EF51ADD2D8B008676D7 /* loading-splash-page.jpg */; };
+		EFCC0EFA1ADD2ED2008676D7 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EFCC0EF71ADD2ED2008676D7 /* Default-568h@2x.png */; };
+		EFCC0EFB1ADD2ED2008676D7 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = EFCC0EF81ADD2ED2008676D7 /* Default.png */; };
+		EFCC0EFC1ADD2ED2008676D7 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EFCC0EF91ADD2ED2008676D7 /* Default@2x.png */; };
+		EFCC0EFF1ADD42C8008676D7 /* GrobleSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCC0EFE1ADD42C8008676D7 /* GrobleSingleton.m */; };
+		EFCC0F031ADD4566008676D7 /* ProductsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCC0F021ADD4566008676D7 /* ProductsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -611,8 +615,6 @@
 		751222751ADA5D6600A1506B /* EnterMianViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EnterMianViewController.xib; sourceTree = "<group>"; };
 		7512227D1ADC00B100A1506B /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
 		7512227E1ADC00B100A1506B /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
-		8A39380A183C3EE4005596BD /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../Default@2x.png"; sourceTree = "<group>"; };
-		8A393812183C5FC2005596BD /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../Default.png; sourceTree = "<group>"; };
 		8A98684F183D61E700CE36C6 /* icon_Search_7@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_Search_7@2x.png"; sourceTree = "<group>"; };
 		8A986850183D61E700CE36C6 /* icon_Places_7@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_Places_7@2x.png"; sourceTree = "<group>"; };
 		8A986851183D61E700CE36C6 /* icon_PetInfo_7@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_PetInfo_7@2x.png"; sourceTree = "<group>"; };
@@ -621,7 +623,6 @@
 		8A99383C16E03E9E00614AAF /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = ../icon.png; sourceTree = "<group>"; };
 		8A99383E16E03EA100614AAF /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon@2x.png"; path = "../icon@2x.png"; sourceTree = "<group>"; };
 		8A99384016E0412800614AAF /* background_gradient-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "background_gradient-568h@2x.png"; path = "Images/background_gradient-568h@2x.png"; sourceTree = "<group>"; };
-		8A99384216E0450900614AAF /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
 		8A99384616E04C9300614AAF /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		8A99384816E04CA800614AAF /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		8A99384A16E04CB000614AAF /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
@@ -722,6 +723,15 @@
 		EFCC0EC11ADCA7D8008676D7 /* tips-thumb-general-training.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "tips-thumb-general-training.jpg"; sourceTree = "<group>"; };
 		EFCC0EC21ADCA7D8008676D7 /* tips-thumb-separation-anxiety.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "tips-thumb-separation-anxiety.jpg"; sourceTree = "<group>"; };
 		EFCC0EC31ADCA7D8008676D7 /* tips-thumb-socialising-puppies.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "tips-thumb-socialising-puppies.jpg"; sourceTree = "<group>"; };
+		EFCC0EF31ADD18F4008676D7 /* location_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = location_icon.png; sourceTree = "<group>"; };
+		EFCC0EF51ADD2D8B008676D7 /* loading-splash-page.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "loading-splash-page.jpg"; sourceTree = "<group>"; };
+		EFCC0EF71ADD2ED2008676D7 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		EFCC0EF81ADD2ED2008676D7 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		EFCC0EF91ADD2ED2008676D7 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		EFCC0EFD1ADD42C8008676D7 /* GrobleSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GrobleSingleton.h; sourceTree = "<group>"; };
+		EFCC0EFE1ADD42C8008676D7 /* GrobleSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GrobleSingleton.m; sourceTree = "<group>"; };
+		EFCC0F011ADD4566008676D7 /* ProductsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductsViewController.h; sourceTree = "<group>"; };
+		EFCC0F021ADD4566008676D7 /* ProductsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -915,6 +925,7 @@
 		2061F955152BD84E0030E20F /* PurinaPetPlaces */ = {
 			isa = PBXGroup;
 			children = (
+				EFCC0F001ADD4542008676D7 /* Products */,
 				EF46E4851ADA7D7A00E59FD0 /* Photo_Fun */,
 				EF46E4841ADA7D6400E59FD0 /* Pet_Friendly_places */,
 				EF46E4831ADA7D5900E59FD0 /* Stockists */,
@@ -944,6 +955,8 @@
 				2061F956152BD84E0030E20F /* Supporting Files */,
 				2067BB94153BA627004B3569 /* Singleton.h */,
 				2067BB95153BA628004B3569 /* Singleton.m */,
+				EFCC0EFD1ADD42C8008676D7 /* GrobleSingleton.h */,
+				EFCC0EFE1ADD42C8008676D7 /* GrobleSingleton.m */,
 			);
 			path = PurinaPetPlaces;
 			sourceTree = "<group>";
@@ -953,9 +966,6 @@
 			children = (
 				EFCC0E941ADCA7D8008676D7 /* pet-places-images */,
 				8ADDAE9418459E5D0068ED72 /* App Icons */,
-				8A99384216E0450900614AAF /* Default-568h@2x.png */,
-				8A39380A183C3EE4005596BD /* Default@2x.png */,
-				8A393812183C5FC2005596BD /* Default.png */,
 				8A99383E16E03EA100614AAF /* icon@2x.png */,
 				8ADDAEA51845A2F10068ED72 /* Icon-60@2x.png */,
 				8A99383C16E03E9E00614AAF /* icon.png */,
@@ -1353,6 +1363,9 @@
 		8ADDAE9418459E5D0068ED72 /* App Icons */ = {
 			isa = PBXGroup;
 			children = (
+				EFCC0EF71ADD2ED2008676D7 /* Default-568h@2x.png */,
+				EFCC0EF81ADD2ED2008676D7 /* Default.png */,
+				EFCC0EF91ADD2ED2008676D7 /* Default@2x.png */,
 				8ADDAE9518459E5D0068ED72 /* Icon-40.png */,
 				8ADDAE9618459E5D0068ED72 /* Icon-40@2x.png */,
 				8ADDAE9718459E5D0068ED72 /* Icon-60.png */,
@@ -1433,6 +1446,8 @@
 		EFCC0E941ADCA7D8008676D7 /* pet-places-images */ = {
 			isa = PBXGroup;
 			children = (
+				EFCC0EF51ADD2D8B008676D7 /* loading-splash-page.jpg */,
+				EFCC0EF31ADD18F4008676D7 /* location_icon.png */,
 				EFCC0E951ADCA7D8008676D7 /* btn-back.jpg */,
 				EFCC0E961ADCA7D8008676D7 /* btn-menu.jpg */,
 				EFCC0E971ADCA7D8008676D7 /* btn-search.jpg */,
@@ -1482,6 +1497,15 @@
 				EFCC0EC31ADCA7D8008676D7 /* tips-thumb-socialising-puppies.jpg */,
 			);
 			path = "pet-places-images";
+			sourceTree = "<group>";
+		};
+		EFCC0F001ADD4542008676D7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EFCC0F011ADD4566008676D7 /* ProductsViewController.h */,
+				EFCC0F021ADD4566008676D7 /* ProductsViewController.m */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1587,6 +1611,7 @@
 				20D75B28154F6885005C4F9B /* icon_PetInfo_disabled.png in Resources */,
 				8AC9B5A51987033600CA7FE5 /* dog-mighty-dog.jpg in Resources */,
 				20D75B29154F6885005C4F9B /* icon_PetInfo_disabled@2x.png in Resources */,
+				EFCC0EF41ADD18F4008676D7 /* location_icon.png in Resources */,
 				EFC41CA41ADB866000978240 /* photoFunViewController.xib in Resources */,
 				20D75B2F154F7197005C4F9B /* icon_Search_disabled.png in Resources */,
 				EFCC0EEB1ADCA7D8008676D7 /* tile7-products.jpg in Resources */,
@@ -1619,6 +1644,7 @@
 				200AEA58155254BD00CDBF8E /* icon_paw@2x.png in Resources */,
 				200AEA5A1552599200CDBF8E /* icon_holding1.png in Resources */,
 				EFCC0EDE1ADCA7D8008676D7 /* products-purina-one.jpg in Resources */,
+				EFCC0EFA1ADD2ED2008676D7 /* Default-568h@2x.png in Resources */,
 				EFCC0EEC1ADCA7D8008676D7 /* tips-article-separation-article.jpg in Resources */,
 				200AEA5D15525F0400CDBF8E /* icon_GeneralTips.png in Resources */,
 				8ABF8459183C65CA001B3E86 /* background_navbar_7@2x.png in Resources */,
@@ -1637,12 +1663,15 @@
 				EFCC0EC61ADCA7D8008676D7 /* btn-search.jpg in Resources */,
 				20352AB91559F2860010127A /* background_button.png in Resources */,
 				20352ABC1559F29E0010127A /* background_button@2x.png in Resources */,
+				EFCC0EFB1ADD2ED2008676D7 /* Default.png in Resources */,
 				8A986853183D61E700CE36C6 /* icon_Places_7@2x.png in Resources */,
 				20352AC31559F5BB0010127A /* background_button_disabled.png in Resources */,
+				EFCC0EF61ADD2D8B008676D7 /* loading-splash-page.jpg in Resources */,
 				EFCC0ED91ADCA7D8008676D7 /* products-beneful.jpg in Resources */,
 				20352AC41559F5BB0010127A /* background_button_disabled@2x.png in Resources */,
 				207458F5155A205E00DE6BF0 /* icon_PetProducts.png in Resources */,
 				EFCC0EC81ADCA7D8008676D7 /* menu-dog-pet-places.jpg in Resources */,
+				EFCC0EFC1ADD2ED2008676D7 /* Default@2x.png in Resources */,
 				207458F6155A205E00DE6BF0 /* icon_PetProducts@2x.png in Resources */,
 				8A986858183D6A5400CE36C6 /* icon_Stock@2x.png in Resources */,
 				207458F7155A205E00DE6BF0 /* icon_PetTips.png in Resources */,
@@ -1750,9 +1779,6 @@
 				20C8F0471702706D0041533C /* tips_general.html in Resources */,
 				8ADDAEA118459E5D0068ED72 /* Icon-76.png in Resources */,
 				EFCC0ECF1ADCA7D8008676D7 /* menu-tips.jpg in Resources */,
-				8A393807183C3EA4005596BD /* Default-568h@2x.png in Resources */,
-				8A39380B183C3EE4005596BD /* Default@2x.png in Resources */,
-				8A393813183C5FC4005596BD /* Default.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1788,6 +1814,7 @@
 				2061FA0E152C1ADF0030E20F /* SubCategoriesViewController.m in Sources */,
 				7512227F1ADC00B100A1506B /* SearchViewController.m in Sources */,
 				2056DD6A1533C8E1004412AF /* MapViewController.m in Sources */,
+				EFCC0EFF1ADD42C8008676D7 /* GrobleSingleton.m in Sources */,
 				20322B9A1533D0B000E2B774 /* MyAnnotation.m in Sources */,
 				202F631F1535057700F583C0 /* CustomNavigationBar.m in Sources */,
 				202F6342153560CA00F583C0 /* MapDetailsViewController.m in Sources */,
@@ -1849,6 +1876,7 @@
 				2082521815B63FEB00BDA88D /* CXHTMLDocument.m in Sources */,
 				2082521915B63FEB00BDA88D /* CXMLDocument.m in Sources */,
 				2082521A15B63FEB00BDA88D /* CXMLDocument_CreationExtensions.m in Sources */,
+				EFCC0F031ADD4566008676D7 /* ProductsViewController.m in Sources */,
 				2082521B15B63FEB00BDA88D /* CXMLDocument_PrivateExtensions.m in Sources */,
 				2082521C15B63FEB00BDA88D /* CXMLElement.m in Sources */,
 				2082521D15B63FEB00BDA88D /* CXMLElement_CreationExtensions.m in Sources */,
