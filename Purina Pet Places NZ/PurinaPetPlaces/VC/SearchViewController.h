@@ -1,16 +1,14 @@
 //
-//  ParentViewController.h
-//  PetPlaces
+//  SearchViewController.h
+//  PurinaPetPlaces
 //
-//  Created by art_kernel_zyc on 15/4/12.
-//  Copyright (c) 2015年 art_kernel_zyc. All rights reserved.
+//  Created by art_kernel_zyc on 15/4/13.
+//
 //
 
 #import <UIKit/UIKit.h>
-#import "SearchViewController.h"
 extern CGFloat navHeight;
-
-@interface ParentViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
+@interface SearchViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
 @property(nonatomic,assign)CGFloat residuHeigth;
 @property(nonatomic,strong)UIImageView *lineImageView;
 @property(nonatomic,strong)UIButton *backButton;
@@ -18,15 +16,10 @@ extern CGFloat navHeight;
 @property(nonatomic,strong)UIButton *searchButton;
 @property(nonatomic,strong)UIImageView *petPlaceImageView;
 
-
--(void)hideCustomeNav;
--(void)showCustomeNav;
--(void)profileBtnClickOrGestureClip:(UIButton *)sender;
--(void)searchBtnClick:(UIButton *)sender;
-
 @property(nonatomic,strong)NSMutableArray *menuArray;
 
 @property(nonatomic,strong)UITableView *menusTable;
 
 @property(nonatomic,strong)UIView *darkView;
+
 @end

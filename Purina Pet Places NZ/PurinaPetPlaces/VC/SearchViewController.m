@@ -1,31 +1,27 @@
 //
-//  ParentViewController.m
-//  PetPlaces
+//  SearchViewController.m
+//  PurinaPetPlaces
 //
-//  Created by art_kernel_zyc on 15/4/12.
-//  Copyright (c) 2015年 art_kernel_zyc. All rights reserved.
+//  Created by art_kernel_zyc on 15/4/13.
+//
 //
 
-#import "ParentViewController.h"
+#import "SearchViewController.h"
 
-
-CGFloat navHeight;
-@interface ParentViewController ()
+@interface SearchViewController ()
 {
     BOOL clickStatus;
     @private
     CGFloat width,height,startPointY;
-    
-}
 
+}
 @end
 
-@implementation ParentViewController
+@implementation SearchViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     clickStatus = NO;
-    
     self.navigationController.navigationBar.hidden = YES;
     width = SCREEN_WIDTH;
     height = SCREEN_HEIGHT;
@@ -35,65 +31,47 @@ CGFloat navHeight;
         navHeight = 44;
     }
     else
-    if(CD(7))
-    {
-        startPointY = 20;
-        navHeight = 64;
-    }
+        if(CD(7))
+        {
+            startPointY = 20;
+            navHeight = 64;
+        }
 
-//    self.view.backgroundColor = [UIColor colorWithRed:242/255.0 green:238/255.0 blue:223/255.0 alpha:1];
-//    
-    //self.view.backgroundColor = [UIColor redColor];
-    
-}
--(void)hideCustomeNav
-{
-    
-    
+    [self showCustomeNav];
 }
 -(void)showCustomeNav
 {
-    
-    UIView *backGroundView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 64)];
-    backGroundView.backgroundColor = [UIColor colorWithRed:242/255.0 green:238/255.0 blue:223/255.0 alpha:1];
-    backGroundView.userInteractionEnabled = YES;
-    [self.view addSubview:backGroundView];
-    
-    
     self.lineImageView = [[UIImageView alloc]init];
     self.backButton = [UIButton buttonWithType:UIButtonTypeCustom];
     self.profileButton = [UIButton buttonWithType:UIButtonTypeCustom];
     self.searchButton = [UIButton buttonWithType:UIButtonTypeCustom];
     self.petPlaceImageView = [[UIImageView alloc]init];
     
-
+    
     [self.lineImageView setFrame:CGRectMake(0, startPointY , SCREEN_WIDTH, 5)];
     [self.lineImageView setBackgroundColor:[UIColor redColor]];
-    [backGroundView addSubview:self.lineImageView];
+    [self.view addSubview:self.lineImageView];
     
     [self.backButton setFrame:CGRectMake(10, CGRectGetMaxY(self.lineImageView.frame) + 5 , 30, 30)];
-    [self.backButton setBackgroundImage:[UIImage imageNamed:@"btn-back.jpg"] forState:UIControlStateNormal];
-    //[self.backButton setBackgroundColor:[UIColor blackColor]];
-    [backGroundView addSubview:self.backButton];
+    [self.backButton setBackgroundColor:[UIColor blackColor]];
+    [self.view addSubview:self.backButton];
     
     CGPoint point = self.view.center;
-    [self.petPlaceImageView setFrame:CGRectMake(point.x - 46, CGRectGetMaxY(self.lineImageView.frame) + 5, 92, 27)];
-    self.petPlaceImageView.image = [UIImage imageNamed:@"pet-places-logo.jpg"];
-    //[self.petPlaceImageView setBackgroundColor:[UIColor blueColor]];
-    [backGroundView addSubview:self.petPlaceImageView];
+    [self.petPlaceImageView setFrame:CGRectMake(point.x - 50, CGRectGetMaxY(self.lineImageView.frame) + 5, 100, 30)];
     
-
+    [self.petPlaceImageView setBackgroundColor:[UIColor blueColor]];
+    [self.view addSubview:self.petPlaceImageView];
+    
+    
     
     [self.searchButton setFrame:CGRectMake(SCREEN_WIDTH - 45 , CGRectGetMaxY(self.lineImageView.frame) + 5 , 30, 30)];
-    [self.searchButton setBackgroundImage:[UIImage imageNamed:@"btn-search.jpg"] forState:UIControlStateNormal];
-    //[self.searchButton setBackgroundColor:[UIColor blackColor]];
-    [backGroundView addSubview:self.searchButton];
-     [self.searchButton addTarget:self action:@selector(searchBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+    [self.searchButton setBackgroundColor:[UIColor blackColor]];
+    
+    [self.view addSubview:self.searchButton];
     
     [self.profileButton setFrame:CGRectMake(CGRectGetMinX(self.searchButton.frame) - 45 , CGRectGetMaxY(self.lineImageView.frame) + 5 , 30, 30)];
-    [self.profileButton setBackgroundImage:[UIImage imageNamed:@"btn-menu.jpg"] forState:UIControlStateNormal];
-    //[self.profileButton setBackgroundColor:[UIColor blackColor]];
-    [backGroundView addSubview:self.profileButton];
+    [self.profileButton setBackgroundColor:[UIColor blackColor]];
+    [self.view addSubview:self.profileButton];
     
     self.residuHeigth = SCREEN_HEIGHT - navHeight;
     
@@ -103,15 +81,6 @@ CGFloat navHeight;
     [self.view setBackgroundColor:[UIColor whiteColor]];
     
 }
-
-
--(void)searchBtnClick:(UIButton *)sender
-{
-    
-    
-}
-
-
 -(void)backBtnClick:(UIButton *)sender
 {
     if([self.navigationController.viewControllers count] > 0)
@@ -119,6 +88,11 @@ CGFloat navHeight;
         [self.navigationController popViewControllerAnimated:YES];
     }
     
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
 }
 
 -(void)profileBtnClickOrGestureClip:(UIButton *)sender
@@ -151,8 +125,6 @@ CGFloat navHeight;
 -(void)makeDarkView
 {
     
-    NSLog(@"navHeight : %lf",navHeight);
-    
     [UIView animateWithDuration:2.0 animations:^{
         self.darkView = [[UIView alloc]initWithFrame:CGRectMake(0, navHeight, SCREEN_WIDTH, SCREEN_HEIGHT - navHeight)];
         [self.darkView setBackgroundColor:[UIColor colorWithRed:86/255.f green:86/255.f blue:86/255.f alpha:0.7]];
@@ -163,9 +135,6 @@ CGFloat navHeight;
         self.menusTable = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH / 2 + 30, SCREEN_HEIGHT - navHeight) style:UITableViewStylePlain];
         self.menusTable.delegate = self;
         self.menusTable.dataSource = self;
-        self.menusTable.separatorStyle = UITableViewCellSeparatorStyleNone;
-        
-        
         self.menusTable.tableFooterView = [[UIView alloc]initWithFrame:CGRectZero];
         [self.darkView addSubview:self.menusTable];
         
@@ -186,21 +155,11 @@ CGFloat navHeight;
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
-    
-    NSArray *imageNameArray = @[@"menu-home.jpg",@"menu-dog-pet-places.jpg",@"menu-photo-fun.jpg",@"menu-pet-friendly-places.jpg",@"menu-stockists.jpg",@"menu-tools.jpg",@"menu-pet-service.jpg",@"menu-tips.jpg",@"menu-products.jpg"];
     static NSString *iden = @"cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:iden];
     if(nil == cell)
     {
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:iden];
-        
-        UIImageView *iconTemplateView = [[UIImageView alloc] initWithFrame:CGRectMake(8, 8, 33, 33)];
-        iconTemplateView.backgroundColor = [UIColor redColor];
-        iconTemplateView.image = [UIImage imageNamed:imageNameArray[indexPath.row]];
-        [cell.contentView addSubview:iconTemplateView];
-        [cell setIndentationLevel:4];
-        
     }
     cell.textLabel.text = [self.menuArray objectAtIndex:indexPath.row];
     return cell;
@@ -213,8 +172,4 @@ CGFloat navHeight;
 }
 
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    
-}
 @end
