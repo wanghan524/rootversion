@@ -11,7 +11,7 @@
 #import "photoFunViewController.h"
 
 #import "PetFriendlyPlacesViewController.h"
-
+#import  "SearchViewController.h"
 
 
 extern CGFloat navHeight;
@@ -29,5 +29,6 @@ extern CGFloat navHeight;
 @property(nonatomic,strong)UICollectionView *collectionView;
 
 @property(nonatomic,strong)UIButton *bottomButton;
+@property(nonatomic,strong)SearchViewController *searchVC;
 
 @end

@@ -26,6 +26,14 @@
     
 }
 
+-(void)searchBtnClick:(UIButton *)sender
+{
+    self.searchVC = [[SearchViewController alloc]init];
+    [self.navigationController pushViewController:self.searchVC animated:YES];
+    
+}
+
+
 -(void)profileBtnClickOrGestureClip:(UIButton *)sender
 {
     clickStatus = !clickStatus;

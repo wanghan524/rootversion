@@ -1,26 +1,23 @@
 //
-//  ParentViewController.m
-//  PetPlaces
+//  SearchViewController.m
+//  PurinaPetPlaces
 //
-//  Created by art_kernel_zyc on 15/4/12.
-//  Copyright (c) 2015年 art_kernel_zyc. All rights reserved.
+//  Created by art_kernel_zyc on 15/4/13.
+//
 //
 
-#import "ParentViewController.h"
+#import "SearchViewController.h"
 
-
-CGFloat navHeight;
-@interface ParentViewController ()
+@interface SearchViewController ()
 {
     BOOL clickStatus;
     @private
     CGFloat width,height,startPointY;
-    
-}
 
+}
 @end
 
-@implementation ParentViewController
+@implementation SearchViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -34,19 +31,13 @@ CGFloat navHeight;
         navHeight = 44;
     }
     else
-    if(CD(7))
-    {
-        startPointY = 20;
-        navHeight = 64;
-    }
+        if(CD(7))
+        {
+            startPointY = 20;
+            navHeight = 64;
+        }
 
-
-    
-}
--(void)hideCustomeNav
-{
-    
-    
+    [self showCustomeNav];
 }
 -(void)showCustomeNav
 {
@@ -56,7 +47,7 @@ CGFloat navHeight;
     self.searchButton = [UIButton buttonWithType:UIButtonTypeCustom];
     self.petPlaceImageView = [[UIImageView alloc]init];
     
-
+    
     [self.lineImageView setFrame:CGRectMake(0, startPointY , SCREEN_WIDTH, 5)];
     [self.lineImageView setBackgroundColor:[UIColor redColor]];
     [self.view addSubview:self.lineImageView];
@@ -71,11 +62,11 @@ CGFloat navHeight;
     [self.petPlaceImageView setBackgroundColor:[UIColor blueColor]];
     [self.view addSubview:self.petPlaceImageView];
     
-
+    
     
     [self.searchButton setFrame:CGRectMake(SCREEN_WIDTH - 45 , CGRectGetMaxY(self.lineImageView.frame) + 5 , 30, 30)];
     [self.searchButton setBackgroundColor:[UIColor blackColor]];
-    [self.searchButton addTarget:self action:@selector(searchBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+    
     [self.view addSubview:self.searchButton];
     
     [self.profileButton setFrame:CGRectMake(CGRectGetMinX(self.searchButton.frame) - 45 , CGRectGetMaxY(self.lineImageView.frame) + 5 , 30, 30)];
@@ -90,15 +81,6 @@ CGFloat navHeight;
     [self.view setBackgroundColor:[UIColor whiteColor]];
     
 }
-
-
--(void)searchBtnClick:(UIButton *)sender
-{
-    
-    
-}
-
-
 -(void)backBtnClick:(UIButton *)sender
 {
     if([self.navigationController.viewControllers count] > 0)
@@ -106,6 +88,11 @@ CGFloat navHeight;
         [self.navigationController popViewControllerAnimated:YES];
     }
     
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
 }
 
 -(void)profileBtnClickOrGestureClip:(UIButton *)sender
@@ -185,8 +172,4 @@ CGFloat navHeight;
 }
 
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    
-}
 @end
