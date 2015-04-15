@@ -215,11 +215,10 @@
 		751222781ADA5D6600A1506B /* EnterMianViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 751222741ADA5D6600A1506B /* EnterMianViewController.m */; };
 		751222791ADA5D6600A1506B /* EnterMianViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 751222751ADA5D6600A1506B /* EnterMianViewController.xib */; };
 		7512227F1ADC00B100A1506B /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7512227E1ADC00B100A1506B /* SearchViewController.m */; };
-		751222851ADD387300A1506B /* MySearchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 751222841ADD387300A1506B /* MySearchView.m */; };
-		7512228D1ADE2C0A00A1506B /* MySearchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7512228C1ADE2C0A00A1506B /* MySearchView.xib */; };
-		8A393807183C3EA4005596BD /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A99384216E0450900614AAF /* Default-568h@2x.png */; };
-		8A39380B183C3EE4005596BD /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A39380A183C3EE4005596BD /* Default@2x.png */; };
-		8A393813183C5FC4005596BD /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A393812183C5FC2005596BD /* Default.png */; };
+		751222851ADD387300A1506B /* (null) in Sources */ = {isa = PBXBuildFile; };
+		7512228D1ADE2C0A00A1506B /* (null) in Resources */ = {isa = PBXBuildFile; };
+		751222911ADE44B100A1506B /* MySearchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7512228F1ADE44B100A1506B /* MySearchView.m */; };
+		751222921ADE44B100A1506B /* MySearchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 751222901ADE44B100A1506B /* MySearchView.xib */; };
 		8A986852183D61E700CE36C6 /* icon_Search_7@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A98684F183D61E700CE36C6 /* icon_Search_7@2x.png */; };
 		8A986853183D61E700CE36C6 /* icon_Places_7@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A986850183D61E700CE36C6 /* icon_Places_7@2x.png */; };
 		8A986854183D61E700CE36C6 /* icon_PetInfo_7@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A986851183D61E700CE36C6 /* icon_PetInfo_7@2x.png */; };
@@ -620,6 +619,9 @@
 		751222751ADA5D6600A1506B /* EnterMianViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EnterMianViewController.xib; sourceTree = "<group>"; };
 		7512227D1ADC00B100A1506B /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
 		7512227E1ADC00B100A1506B /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
+		7512228E1ADE44B100A1506B /* MySearchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MySearchView.h; sourceTree = "<group>"; };
+		7512228F1ADE44B100A1506B /* MySearchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MySearchView.m; sourceTree = "<group>"; };
+		751222901ADE44B100A1506B /* MySearchView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MySearchView.xib; sourceTree = "<group>"; };
 		8A98684F183D61E700CE36C6 /* icon_Search_7@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_Search_7@2x.png"; sourceTree = "<group>"; };
 		8A986850183D61E700CE36C6 /* icon_Places_7@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_Places_7@2x.png"; sourceTree = "<group>"; };
 		8A986851183D61E700CE36C6 /* icon_PetInfo_7@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_PetInfo_7@2x.png"; sourceTree = "<group>"; };
@@ -930,6 +932,9 @@
 		2061F955152BD84E0030E20F /* PurinaPetPlaces */ = {
 			isa = PBXGroup;
 			children = (
+				7512228E1ADE44B100A1506B /* MySearchView.h */,
+				7512228F1ADE44B100A1506B /* MySearchView.m */,
+				751222901ADE44B100A1506B /* MySearchView.xib */,
 				EFCC0F001ADD4542008676D7 /* Products */,
 				EF46E4851ADA7D7A00E59FD0 /* Photo_Fun */,
 				EF46E4841ADA7D6400E59FD0 /* Pet_Friendly_places */,
@@ -1354,16 +1359,6 @@
 			path = VC;
 			sourceTree = "<group>";
 		};
-		751222821ADD384E00A1506B /* View */ = {
-			isa = PBXGroup;
-			children = (
-				7512228C1ADE2C0A00A1506B /* MySearchView.xib */,
-				751222831ADD387300A1506B /* MySearchView.h */,
-				751222841ADD387300A1506B /* MySearchView.m */,
-			);
-			name = View;
-			sourceTree = "<group>";
-		};
 		8ABF845A183C65D9001B3E86 /* iOS 7 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1615,6 +1610,7 @@
 				8ADDAE9E18459E5D0068ED72 /* Icon-40@2x.png in Resources */,
 				2067BBBE153D1926004B3569 /* icon_maps@2x.png in Resources */,
 				20ACEB97153FBAFF007B966B /* button_currentLocation.png in Resources */,
+				751222921ADE44B100A1506B /* MySearchView.xib in Resources */,
 				20ACEB9C153FEE2A007B966B /* pin_green.png in Resources */,
 				20ACEB9D153FEE2A007B966B /* pin_green@2x.png in Resources */,
 				2097D7F0154E1F1400972AD4 /* PetInfoMainScreenViewController.xib in Resources */,
@@ -1752,7 +1748,7 @@
 				20C8F0301702706D0041533C /* dog-beggin.png in Resources */,
 				EFCC0EF21ADCA7D8008676D7 /* tips-thumb-socialising-puppies.jpg in Resources */,
 				20C8F0311702706D0041533C /* dog-beneful.png in Resources */,
-				7512228D1ADE2C0A00A1506B /* MySearchView.xib in Resources */,
+				7512228D1ADE2C0A00A1506B /* (null) in Resources */,
 				20C8F0321702706D0041533C /* dog-busy.png in Resources */,
 				20C8F0331702706D0041533C /* dog-chow.png in Resources */,
 				20C8F0341702706D0041533C /* dog-header.png in Resources */,
@@ -1836,7 +1832,7 @@
 				202F6342153560CA00F583C0 /* MapDetailsViewController.m in Sources */,
 				751222631ADA5D4900A1506B /* ParentViewController.m in Sources */,
 				202F635915369DAF00F583C0 /* SearchTableViewController.m in Sources */,
-				751222851ADD387300A1506B /* MySearchView.m in Sources */,
+				751222851ADD387300A1506B /* (null) in Sources */,
 				203967121537A7E7009518F9 /* ResultsViewController.m in Sources */,
 				203967171537AAC2009518F9 /* ResultsTableViewController.m in Sources */,
 				2039671B1537BB11009518F9 /* ResultsCell.m in Sources */,
@@ -1844,6 +1840,7 @@
 				2067BB96153BA628004B3569 /* Singleton.m in Sources */,
 				2067BB9D153BAEB1004B3569 /* SplashScreenViewController.m in Sources */,
 				7512225C1ADA5D4000A1506B /* MenusCell.m in Sources */,
+				751222911ADE44B100A1506B /* MySearchView.m in Sources */,
 				2067BBA1153BDAAC004B3569 /* Locations.m in Sources */,
 				2067BBA9153CF0D7004B3569 /* LocationDetailViewController.m in Sources */,
 				2067BBAE153CFD4D004B3569 /* LocationTableViewController.m in Sources */,

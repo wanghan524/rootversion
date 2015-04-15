@@ -150,10 +150,6 @@ CGFloat navHeight;
 
 -(void)makeDarkView
 {
-    
-    NSLog(@"navHeight : %lf",navHeight);
-    
-    [UIView animateWithDuration:2.0 animations:^{
         self.darkView = [[UIView alloc]initWithFrame:CGRectMake(0, navHeight, SCREEN_WIDTH, SCREEN_HEIGHT - navHeight)];
         [self.darkView setBackgroundColor:[UIColor colorWithRed:86/255.f green:86/255.f blue:86/255.f alpha:0.7]];
         
@@ -175,8 +171,7 @@ CGFloat navHeight;
         {
             [self.menuArray addObject:arr[i]];
         }
-        
-    }];
+
     
 }
 
