@@ -215,6 +215,8 @@
 		751222781ADA5D6600A1506B /* EnterMianViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 751222741ADA5D6600A1506B /* EnterMianViewController.m */; };
 		751222791ADA5D6600A1506B /* EnterMianViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 751222751ADA5D6600A1506B /* EnterMianViewController.xib */; };
 		7512227F1ADC00B100A1506B /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7512227E1ADC00B100A1506B /* SearchViewController.m */; };
+		751222851ADD387300A1506B /* MySearchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 751222841ADD387300A1506B /* MySearchView.m */; };
+		7512228D1ADE2C0A00A1506B /* MySearchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7512228C1ADE2C0A00A1506B /* MySearchView.xib */; };
 		8A393807183C3EA4005596BD /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A99384216E0450900614AAF /* Default-568h@2x.png */; };
 		8A39380B183C3EE4005596BD /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A39380A183C3EE4005596BD /* Default@2x.png */; };
 		8A393813183C5FC4005596BD /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A393812183C5FC2005596BD /* Default.png */; };
@@ -611,6 +613,9 @@
 		751222751ADA5D6600A1506B /* EnterMianViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EnterMianViewController.xib; sourceTree = "<group>"; };
 		7512227D1ADC00B100A1506B /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
 		7512227E1ADC00B100A1506B /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
+		751222831ADD387300A1506B /* MySearchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MySearchView.h; sourceTree = "<group>"; };
+		751222841ADD387300A1506B /* MySearchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MySearchView.m; sourceTree = "<group>"; };
+		7512228C1ADE2C0A00A1506B /* MySearchView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MySearchView.xib; sourceTree = "<group>"; };
 		8A39380A183C3EE4005596BD /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../Default@2x.png"; sourceTree = "<group>"; };
 		8A393812183C5FC2005596BD /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../Default.png; sourceTree = "<group>"; };
 		8A98684F183D61E700CE36C6 /* icon_Search_7@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_Search_7@2x.png"; sourceTree = "<group>"; };
@@ -915,6 +920,7 @@
 		2061F955152BD84E0030E20F /* PurinaPetPlaces */ = {
 			isa = PBXGroup;
 			children = (
+				751222821ADD384E00A1506B /* View */,
 				EF46E4851ADA7D7A00E59FD0 /* Photo_Fun */,
 				EF46E4841ADA7D6400E59FD0 /* Pet_Friendly_places */,
 				EF46E4831ADA7D5900E59FD0 /* Stockists */,
@@ -1339,6 +1345,16 @@
 			path = VC;
 			sourceTree = "<group>";
 		};
+		751222821ADD384E00A1506B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7512228C1ADE2C0A00A1506B /* MySearchView.xib */,
+				751222831ADD387300A1506B /* MySearchView.h */,
+				751222841ADD387300A1506B /* MySearchView.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		8ABF845A183C65D9001B3E86 /* iOS 7 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1708,6 +1724,7 @@
 				20C8F0301702706D0041533C /* dog-beggin.png in Resources */,
 				EFCC0EF21ADCA7D8008676D7 /* tips-thumb-socialising-puppies.jpg in Resources */,
 				20C8F0311702706D0041533C /* dog-beneful.png in Resources */,
+				7512228D1ADE2C0A00A1506B /* MySearchView.xib in Resources */,
 				20C8F0321702706D0041533C /* dog-busy.png in Resources */,
 				20C8F0331702706D0041533C /* dog-chow.png in Resources */,
 				20C8F0341702706D0041533C /* dog-header.png in Resources */,
@@ -1793,6 +1810,7 @@
 				202F6342153560CA00F583C0 /* MapDetailsViewController.m in Sources */,
 				751222631ADA5D4900A1506B /* ParentViewController.m in Sources */,
 				202F635915369DAF00F583C0 /* SearchTableViewController.m in Sources */,
+				751222851ADD387300A1506B /* MySearchView.m in Sources */,
 				203967121537A7E7009518F9 /* ResultsViewController.m in Sources */,
 				203967171537AAC2009518F9 /* ResultsTableViewController.m in Sources */,
 				2039671B1537BB11009518F9 /* ResultsCell.m in Sources */,
@@ -1951,7 +1969,7 @@
 					"\"$(SRCROOT)/PurinaPetPlaces/Parse.framework\"",
 				);
 				INFOPLIST_FILE = "PurinaPetPlaces/PurinaPetPlaces-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/PurinaPetPlaces/Push Notifications/PARSE\"",
@@ -1987,7 +2005,7 @@
 					"\"$(SRCROOT)/PurinaPetPlaces/Parse.framework\"",
 				);
 				INFOPLIST_FILE = "PurinaPetPlaces/PurinaPetPlaces-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/PurinaPetPlaces/Push Notifications/PARSE\"",

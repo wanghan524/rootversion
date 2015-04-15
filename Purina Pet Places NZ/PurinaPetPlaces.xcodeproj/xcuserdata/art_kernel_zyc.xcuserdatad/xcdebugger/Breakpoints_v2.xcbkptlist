@@ -4,18 +4,28 @@
    version = "2.0">
    <Breakpoints>
       <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.ExceptionBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            scope = "0"
+            stopOnStyle = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "PurinaPetPlaces/SplashScreenViewController.m"
-            timestampString = "450519485.057942"
+            filePath = "PurinaPetPlaces/VC/SearchViewController.m"
+            timestampString = "450770294.35045"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "458"
-            endingLineNumber = "458"
-            landmarkName = "-LocationCountHandler:"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
+            landmarkName = "-showSearchView"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -25,13 +35,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "PurinaPetPlaces/SplashScreenViewController.m"
-            timestampString = "450519494.230886"
+            filePath = "PurinaPetPlaces/VC/SearchViewController.m"
+            timestampString = "450770338.000545"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "278"
-            endingLineNumber = "278"
-            landmarkName = "-handleAllCategories:"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "-viewDidLoad"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -41,13 +51,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "PurinaPetPlaces/SplashScreenViewController.m"
-            timestampString = "450519499.903722"
+            filePath = "PurinaPetPlaces/VC/SearchViewController.m"
+            timestampString = "450770341.256408"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "260"
-            endingLineNumber = "260"
-            landmarkName = "-handleAllSubCategories:"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "-viewDidLoad"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -57,13 +67,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "PurinaPetPlaces/SplashScreenViewController.m"
-            timestampString = "450519735.262499"
+            filePath = "PurinaPetPlaces/Common/MainViewController.m"
+            timestampString = "450770364.256621"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "120"
-            endingLineNumber = "120"
-            landmarkName = "-customloadView"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "-searchBtnClick:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

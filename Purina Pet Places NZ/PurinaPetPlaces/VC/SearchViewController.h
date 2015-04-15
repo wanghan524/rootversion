@@ -7,8 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MySearchView.h"
 extern CGFloat navHeight;
 @interface SearchViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
+
+@property(nonatomic,strong)MySearchView *searchMapView;
+
+
 @property(nonatomic,assign)CGFloat residuHeigth;
 @property(nonatomic,strong)UIImageView *lineImageView;
 @property(nonatomic,strong)UIButton *backButton;
@@ -21,5 +26,12 @@ extern CGFloat navHeight;
 @property(nonatomic,strong)UITableView *menusTable;
 
 @property(nonatomic,strong)UIView *darkView;
+
+
+///搜索中 category 需要的数据
+@property(nonatomic,strong)NSMutableArray *categoryArr;
+
+@property(nonatomic,strong)UIButton *searchCatagoryBtn;
+
 
 @end

@@ -57,6 +57,7 @@
             clickStatus = !clickStatus;
             [self.darkView removeFromSuperview];
             self.darkView = nil;
+            
         }
     }
 }
@@ -64,8 +65,9 @@
 
 -(void)makeDarkView
 {
-    
-    [UIView animateWithDuration:2.0 animations:^{
+    [UIView animateWithDuration:2 animations:^{
+        
+    } completion:^(BOOL finished) {
         self.darkView = [[UIView alloc]initWithFrame:CGRectMake(0, navHeight, SCREEN_WIDTH, SCREEN_HEIGHT - navHeight)];
         [self.darkView setBackgroundColor:[UIColor colorWithRed:86/255.f green:86/255.f blue:86/255.f alpha:0.7]];
         
@@ -90,7 +92,10 @@
     
 }
 
-
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    DLog(@"%@",[self.menuArray objectAtIndex:indexPath.row]);
+}
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return [self.menuArray count];
