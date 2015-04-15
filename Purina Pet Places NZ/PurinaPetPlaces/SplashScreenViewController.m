@@ -44,11 +44,11 @@
     
     if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPhone && [UIScreen mainScreen].bounds.size.height == 568)
     {
-        [splashScreen setImage:[UIImage imageNamed:@"Default-568h.png"]];
+        [splashScreen setImage:[UIImage imageNamed:@"loading-splash-page.jpg"]];
         
     }else {
         
-        [splashScreen setImage:[UIImage imageNamed:@"Default.png"]];
+        [splashScreen setImage:[UIImage imageNamed:@"loading-splash-page.jpg"]];
     }
     
     loadingBackgroundView = [[UIView alloc] initWithFrame:CGRectMake(20, 350, 280, 75)];
@@ -76,11 +76,11 @@
     
     if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPhone && [UIScreen mainScreen].bounds.size.height == 568)
     {
-        self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"Default-568h.png"]];
+        self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"loading-splash-page.jpg"]];
         
     }else {
         
-        self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"Default.png"]];
+        self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"loading-splash-page.jpg"]];
     }
     
     [self checkForConnectivity];

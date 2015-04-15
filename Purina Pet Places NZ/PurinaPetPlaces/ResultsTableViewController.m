@@ -54,7 +54,17 @@
     
     Singleton *singleton = [Singleton sharedInstance];
     UIImageView * headerImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 100)];
-    headerImageView.backgroundColor = [UIColor greenColor];
+    if ([self.currentHeaderImageFlag isEqualToString:@"Stockists"]) {
+        headerImageView.image = [UIImage imageNamed:@"stockists-header.jpg"];
+    }
+    else if ([self.currentHeaderImageFlag isEqualToString:@"Pet Services"]) {
+        headerImageView.image = [UIImage imageNamed:@"pet-service-header.jpg"];
+    }
+    
+    else{
+        headerImageView.image = [UIImage imageNamed:@"pet-friendly-places-header.jpg"];
+    }
+
     
     UILabel *titleLabel = [[UILabel alloc] initWithFrame:headerImageView.frame];
     titleLabel.backgroundColor = [UIColor clearColor];
@@ -93,10 +103,13 @@
     Locations *location = (Locations*)[dataSource objectAtIndex:[indexPath row]];
     
     [cell.textLabel setText:location.LocationName];
+    [cell.textLabel setTextColor:[UIColor grayColor]];
     if (location.LocationAddressLine1 != NULL) {
         [cell.detailTextLabel setText:[NSString stringWithFormat:@"%@, %@, %@", location.LocationAddressLine1, location.LocationAddressLine2, location.LocationAddressLine3]];
+        [cell.detailTextLabel setTextColor:[UIColor grayColor]];
     }else {
         [cell.detailTextLabel setText:@"www.bookabach.co.nz"];
+        [cell.detailTextLabel setTextColor:[UIColor grayColor]];
     }
      
     return cell;

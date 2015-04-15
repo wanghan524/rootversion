@@ -215,11 +215,7 @@
 		751222781ADA5D6600A1506B /* EnterMianViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 751222741ADA5D6600A1506B /* EnterMianViewController.m */; };
 		751222791ADA5D6600A1506B /* EnterMianViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 751222751ADA5D6600A1506B /* EnterMianViewController.xib */; };
 		7512227F1ADC00B100A1506B /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7512227E1ADC00B100A1506B /* SearchViewController.m */; };
-		751222851ADD387300A1506B /* MySearchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 751222841ADD387300A1506B /* MySearchView.m */; };
-		7512228D1ADE2C0A00A1506B /* MySearchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7512228C1ADE2C0A00A1506B /* MySearchView.xib */; };
-		8A393807183C3EA4005596BD /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A99384216E0450900614AAF /* Default-568h@2x.png */; };
-		8A39380B183C3EE4005596BD /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A39380A183C3EE4005596BD /* Default@2x.png */; };
-		8A393813183C5FC4005596BD /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A393812183C5FC2005596BD /* Default.png */; };
+ 0398291482d9575c1a9d030abd39dc9a941f7dc2
 		8A986852183D61E700CE36C6 /* icon_Search_7@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A98684F183D61E700CE36C6 /* icon_Search_7@2x.png */; };
 		8A986853183D61E700CE36C6 /* icon_Places_7@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A986850183D61E700CE36C6 /* icon_Places_7@2x.png */; };
 		8A986854183D61E700CE36C6 /* icon_PetInfo_7@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A986851183D61E700CE36C6 /* icon_PetInfo_7@2x.png */; };
@@ -620,6 +616,7 @@
 		751222751ADA5D6600A1506B /* EnterMianViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EnterMianViewController.xib; sourceTree = "<group>"; };
 		7512227D1ADC00B100A1506B /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
 		7512227E1ADC00B100A1506B /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
+ 0398291482d9575c1a9d030abd39dc9a941f7dc2
 		8A98684F183D61E700CE36C6 /* icon_Search_7@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_Search_7@2x.png"; sourceTree = "<group>"; };
 		8A986850183D61E700CE36C6 /* icon_Places_7@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_Places_7@2x.png"; sourceTree = "<group>"; };
 		8A986851183D61E700CE36C6 /* icon_PetInfo_7@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_PetInfo_7@2x.png"; sourceTree = "<group>"; };
@@ -930,7 +927,7 @@
 		2061F955152BD84E0030E20F /* PurinaPetPlaces */ = {
 			isa = PBXGroup;
 			children = (
-				EFCC0F001ADD4542008676D7 /* Products */,
+ 0398291482d9575c1a9d030abd39dc9a941f7dc2
 				EF46E4851ADA7D7A00E59FD0 /* Photo_Fun */,
 				EF46E4841ADA7D6400E59FD0 /* Pet_Friendly_places */,
 				EF46E4831ADA7D5900E59FD0 /* Stockists */,

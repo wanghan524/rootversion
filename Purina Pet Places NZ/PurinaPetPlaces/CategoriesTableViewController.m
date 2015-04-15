@@ -63,8 +63,8 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    Singleton *sharedSingleton = [Singleton sharedInstance];
-    return [sharedSingleton.currentCategories count];
+    //Singleton *sharedSingleton = [Singleton sharedInstance];
+    return 3;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath

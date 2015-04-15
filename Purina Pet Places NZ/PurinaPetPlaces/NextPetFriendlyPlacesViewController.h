@@ -23,4 +23,6 @@
 @property (nonatomic, strong) Categories *selectedCategory;
 @property (nonatomic, strong) UILabel *lblHeading;
 @property (nonatomic, strong) ResultPetFriendlyPlacesViewController *resultPetVC;
+
+@property (nonatomic, strong) NSString *headerImageFlag;
 @end

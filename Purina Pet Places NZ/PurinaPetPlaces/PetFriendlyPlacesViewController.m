@@ -67,6 +67,7 @@
 //    [self.navigationController pushViewController:subCategoriesViewController animated:YES];
     
     NextPetFriendlyPlacesViewController *nextPetPlaceVC = [[NextPetFriendlyPlacesViewController alloc] init];
+    nextPetPlaceVC.headerImageFlag = category.CategoryName;
     [self.navigationController pushViewController:nextPetPlaceVC animated:YES];
 }
 -(void)profileBtnClickOrGestureClip:(UIButton *)sender

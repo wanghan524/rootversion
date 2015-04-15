@@ -22,7 +22,7 @@
                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Up-5b-To2">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="315"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cat-pro-plan.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="6jj-io-l65">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tile1-photo-fun.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="6jj-io-l65">
                             <rect key="frame" x="0.0" y="64" width="320" height="204"/>
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Memories" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="10R-N9-gEt">
@@ -79,7 +79,7 @@
         </view>
     </objects>
     <resources>
-        <image name="cat-pro-plan.jpg" width="1169" height="970"/>
+        <image name="tile1-photo-fun.jpg" width="375" height="362"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

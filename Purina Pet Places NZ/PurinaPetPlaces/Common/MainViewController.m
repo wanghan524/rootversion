@@ -7,8 +7,10 @@
 //
 
 #import "MainViewController.h"
-
-
+#import "Singleton.h"
+#import "Categories.h"
+#import "NextPetFriendlyPlacesViewController.h"
+#import "ProductsViewController.h"
 
 
 @implementation MainViewController
@@ -200,6 +202,48 @@
         //[self presentViewController:photoFunVC animated:YES completion:nil];
         [self.navigationController pushViewController:petFriendlyPlacesVC animated:YES];
     }
+    
+    else if (indexPath.row == 2){
+        Singleton *singletonClass = [Singleton sharedInstance];
+        NSArray *currentCategories = [[NSArray alloc] initWithArray:singletonClass.currentCategories];
+        for (Categories *categories in currentCategories) {
+            NSLog(@"Categories name : %@",categories.CategoryName);
+            
+            if ([categories.CategoryName isEqualToString:@"Stockists"]) {
+                [singletonClass setSelectedCategories:categories];
+                NextPetFriendlyPlacesViewController *stockists = [[NextPetFriendlyPlacesViewController alloc] init];
+                stockists.headerImageFlag = categories.CategoryName;
+                [self.navigationController pushViewController:stockists animated:YES];
+                
+            }
+        }
+        
+        
+    }
+    
+    else if (indexPath.row == 4){
+        Singleton *singletonClass = [Singleton sharedInstance];
+        NSArray *currentCategories = [[NSArray alloc] initWithArray:singletonClass.currentCategories];
+        for (Categories *categories in currentCategories) {
+            NSLog(@"Categories name : %@",categories.CategoryName);
+            
+            if ([categories.CategoryName isEqualToString:@"Pet Services"]) {
+                [singletonClass setSelectedCategories:categories];
+                NextPetFriendlyPlacesViewController *stockists = [[NextPetFriendlyPlacesViewController alloc] init];
+                stockists.headerImageFlag = categories.CategoryName;
+                [self.navigationController pushViewController:stockists animated:YES];
+                
+            }
+        }
+        
+        
+    }
+    
+    else if (indexPath.row == 6) {
+        ProductsViewController *photoFunVC =  [[ProductsViewController alloc ] init];
+        //[self presentViewController:photoFunVC animated:YES completion:nil];
+        [self.navigationController pushViewController:photoFunVC animated:YES];
+    }
     DLog(@"%@",indexPath);
 }
 -(BOOL)collectionView:(UICollectionView *)collectionView shouldSelectItemAtIndexPath:(NSIndexPath *)indexPath
@@ -219,7 +263,7 @@
     self.collectionView = [[UICollectionView alloc]initWithFrame:CGRectMake(0,navHeight, SCREEN_WIDTH, self.residuHeigth - 70) collectionViewLayout:flowLayout];
     self.collectionView.delegate = self;
     self.collectionView.dataSource = self;
-    [self.collectionView setBackgroundColor:[UIColor clearColor]];
+    [self.collectionView setBackgroundColor:[UIColor colorWithRed:242/255.0 green:238/255.0 blue:223/255.0 alpha:1]];
     [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"UICollectionViewCell"];
     [self.view addSubview:self.collectionView];
     

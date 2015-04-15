@@ -8,8 +8,11 @@
 
 #import "EnterMianViewController.h"
 #import "MainViewController.h"
+#import "GrobleSingleton.h"
 
-@interface EnterMianViewController ()
+@interface EnterMianViewController (){
+    GrobleSingleton *globeSingle;
+}
 @property(nonatomic,strong)UIView *darkView;
 
 @end
@@ -18,6 +21,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    globeSingle = [GrobleSingleton sharedGlobleInstance];
     
     
     
@@ -77,6 +81,8 @@
 
 - (IBAction)dogBtnClick:(id)sender
 {
+    
+    globeSingle.globleCategory = @"dog";
     MainViewController *main = [[MainViewController alloc]init];
 
     [self.navigationController pushViewController:main
@@ -87,6 +93,8 @@
 
 - (IBAction)catBtnClick:(id)sender
 {
+    
+    globeSingle.globleCategory = @"cat";
     MainViewController *main = [[MainViewController alloc]init];
     
     [self.navigationController pushViewController:main

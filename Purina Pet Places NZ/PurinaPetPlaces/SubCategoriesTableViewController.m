@@ -60,7 +60,17 @@
     
     Singleton *singleton = [Singleton sharedInstance];
     UIImageView * headerImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 100)];
-    headerImageView.backgroundColor = [UIColor greenColor];
+    if ([self.currentHeaderImageFlag isEqualToString:@"Stockists"]) {
+        headerImageView.image = [UIImage imageNamed:@"stockists-header.jpg"];
+    }
+    else if ([self.currentHeaderImageFlag isEqualToString:@"Pet Services"]) {
+        headerImageView.image = [UIImage imageNamed:@"pet-service-header.jpg"];
+    }
+    
+    else{
+        headerImageView.image = [UIImage imageNamed:@"pet-friendly-places-header.jpg"];
+    }
+    
     
     UILabel *titleLabel = [[UILabel alloc] initWithFrame:headerImageView.frame];
     titleLabel.backgroundColor = [UIColor clearColor];
@@ -72,6 +82,25 @@
     return headerImageView;
 }
 
+- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
+    
+    if ([self.currentHeaderImageFlag isEqualToString:@"Pet Services"] || [self.currentHeaderImageFlag isEqualToString:@"Stockists"]) {
+        UIImageView *footerImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 50)];
+        footerImageView.backgroundColor = [UIColor redColor];
+        
+        UILabel *titleLabel = [[UILabel alloc] initWithFrame:footerImageView.frame];
+        titleLabel.backgroundColor = [UIColor clearColor];
+        titleLabel.text = @"RECOMMEND A PET FRIENDLY PLACE";
+        titleLabel.textAlignment = NSTextAlignmentCenter;
+        titleLabel.font = [UIFont systemFontOfSize:14];
+        titleLabel.textColor = [UIColor whiteColor];
+        [footerImageView addSubview:titleLabel];
+        return footerImageView;
+    }else{
+        return nil;
+    }
+    
+}
 
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -89,9 +118,38 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return (SCREEN_HEIGHT - 60 - 100) / 4.0;
+    
+    if ([self.currentHeaderImageFlag isEqualToString:@"Stockists"]) {
+        
+        if ([dataSource count] > 3) {
+            return (SCREEN_HEIGHT - 60 - 100 - 50) / 4.0;
+        }else{
+            return (SCREEN_HEIGHT - 60 - 100 - 50) / 3.0;
+        }
+    
+        
+    }else if([self.currentHeaderImageFlag isEqualToString:@"Pet Services"]){
+        if ([dataSource count] > 5) {
+            return (SCREEN_HEIGHT - 60 - 100 - 50) / 6.0;
+
+        }else{
+            return (SCREEN_HEIGHT - 60 - 100 - 50) / (float)[dataSource count];
+
+        }
+    }else{
+        return (SCREEN_HEIGHT - 60 - 100) / 4.0;
+
+    }
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
+    
+    if ([self.currentHeaderImageFlag isEqualToString:@"Pet Services"] || [self.currentHeaderImageFlag isEqualToString:@"Stockists"]) {
+    return 50.0f;
+    }else{
+        return 0;
+    }
+}
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     Categories *subcategories = (Categories*)[dataSource objectAtIndex:[indexPath row]];
@@ -128,6 +186,7 @@
     cell.backgroundColor = [UIColor clearColor];
     [cell.textLabel setText:[NSString stringWithFormat:@"%@", subcategories.CategoryName]];
     cell.textLabel.textAlignment = NSTextAlignmentCenter;
+    cell.textLabel.textColor = [UIColor grayColor];
     [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
     
     return cell;

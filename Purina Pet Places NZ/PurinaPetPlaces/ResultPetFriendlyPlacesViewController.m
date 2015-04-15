@@ -29,6 +29,7 @@
     
     resultsTableViewController = [[ResultsTableViewController alloc] initWithStyle:UITableViewStylePlain];
     [resultsTableViewController.view setFrame:CGRectMake(0, 64, SCREEN_WIDTH, SCREEN_HEIGHT - 64)];
+    resultsTableViewController.currentHeaderImageFlag = self.headerImageFlag;
     [resultsTableViewController setDelegate:self];
     
     [resultsTableViewController setDataSource:[locationsClass locationsByCategoryId:singletonClass.selectedSubCategories.CategoryId fromArray:singletonClass.locationListing]];
@@ -45,7 +46,7 @@
     Singleton *singletonClass = [Singleton sharedInstance];
     [singletonClass setSelectedLocation:selectedLocation];
     
-    LocationDetailViewController *locationDetailViewController = [[LocationDetailViewController alloc] initWithNibName:@"LocationDetailViewController" bundle:nil];
+    LocationPetFriendlyPlacesViewController *locationDetailViewController = [[LocationPetFriendlyPlacesViewController alloc] init];
     //[locationDetailViewController setSelectedLocation:selectedLocation];
     [self.navigationController pushViewController:locationDetailViewController animated:YES];
     

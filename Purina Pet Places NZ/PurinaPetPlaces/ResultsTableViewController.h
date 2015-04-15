@@ -21,5 +21,6 @@
 
 @property (nonatomic, retain) NSMutableArray *dataSource;
 @property (retain) id delegate;
+@property (nonatomic, strong) NSString *currentHeaderImageFlag;
 @end
  
