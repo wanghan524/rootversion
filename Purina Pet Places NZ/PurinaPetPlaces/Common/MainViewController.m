@@ -11,6 +11,7 @@
 #import "Categories.h"
 #import "NextPetFriendlyPlacesViewController.h"
 #import "ProductsViewController.h"
+#import "TipsViewController.h"
 
 
 @implementation MainViewController
@@ -161,9 +162,9 @@
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:iden forIndexPath:indexPath];
     if(cell == nil)
     {
-        cell = [[UICollectionViewCell alloc]initWithFrame:CGRectMake(0,0,SCREEN_WIDTH/2, (self.residuHeigth - 70)/(self.imageArray.count))];
+        cell = [[UICollectionViewCell alloc]initWithFrame:CGRectMake(0,0,SCREEN_WIDTH/2, (SCREEN_HEIGHT - 64 - 70)/(self.imageArray.count))];
     }
-    UIImageView *backGroundImage = [[UIImageView alloc] initWithFrame:cell.frame];
+    UIImageView *backGroundImage = [[UIImageView alloc] initWithFrame:CGRectMake(0,0,SCREEN_WIDTH/2, (SCREEN_HEIGHT - 64 - 70)/(self.imageArray.count))];
     backGroundImage.image = [UIImage imageNamed:imageNameArray[indexPath.row]];
     cell.backgroundView = backGroundImage;
     //cell.backgroundColor = [UIColor colorWithRed:((10 * indexPath.row) / 255.0) green:((20 * indexPath.row)/255.0) blue:((30 * indexPath.row)/255.0) alpha:1.0f];
@@ -181,7 +182,7 @@
 
 -(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    return CGSizeMake(SCREEN_WIDTH/2, (self.residuHeigth - 70)/((self.imageArray.count)/2));
+    return CGSizeMake(SCREEN_WIDTH/2, (SCREEN_HEIGHT - 64 - 70)/((self.imageArray.count)/2));
 }
 -(UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
 {
@@ -239,6 +240,12 @@
         
     }
     
+    else if (indexPath.row == 5) {
+        TipsViewController *tipsVC =  [[TipsViewController alloc ] init];
+        //[self presentViewController:photoFunVC animated:YES completion:nil];
+        [self.navigationController pushViewController:tipsVC animated:YES];
+    }
+    
     else if (indexPath.row == 6) {
         ProductsViewController *photoFunVC =  [[ProductsViewController alloc ] init];
         //[self presentViewController:photoFunVC animated:YES completion:nil];
@@ -255,12 +262,12 @@
 -(void)makeCollectionView
 {
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc]init];
-    [flowLayout setItemSize:CGSizeMake(SCREEN_WIDTH/2, (self.residuHeigth - 70)/((self.imageArray.count)/2))];
+    [flowLayout setItemSize:CGSizeMake(SCREEN_WIDTH/2, (SCREEN_HEIGHT - 64 - 70)/((self.imageArray.count)/2))];
     [flowLayout setScrollDirection:UICollectionViewScrollDirectionVertical];
     flowLayout.sectionInset = UIEdgeInsetsMake(0, 0, 0, 0);
     flowLayout.minimumInteritemSpacing = 0;
     flowLayout.minimumLineSpacing = 0;
-    self.collectionView = [[UICollectionView alloc]initWithFrame:CGRectMake(0,navHeight, SCREEN_WIDTH, self.residuHeigth - 70) collectionViewLayout:flowLayout];
+    self.collectionView = [[UICollectionView alloc]initWithFrame:CGRectMake(0,navHeight, SCREEN_WIDTH, SCREEN_HEIGHT - 64 - 70) collectionViewLayout:flowLayout];
     self.collectionView.delegate = self;
     self.collectionView.dataSource = self;
     [self.collectionView setBackgroundColor:[UIColor colorWithRed:242/255.0 green:238/255.0 blue:223/255.0 alpha:1]];

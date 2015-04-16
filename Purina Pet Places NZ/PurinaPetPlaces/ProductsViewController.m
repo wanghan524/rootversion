@@ -36,16 +36,23 @@
 -(void)makeCollectionView
 {
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc]init];
-    [flowLayout setItemSize:CGSizeMake(SCREEN_WIDTH/2, (self.residuHeigth - 70)/((self.imageArray.count)/2))];
+    [flowLayout setItemSize:CGSizeMake(SCREEN_WIDTH/2, (SCREEN_HEIGHT - 64 - 70)/((self.imageArray.count)/2))];
     [flowLayout setScrollDirection:UICollectionViewScrollDirectionVertical];
+    
+    flowLayout.headerReferenceSize = CGSizeMake(SCREEN_WIDTH, 100);
     flowLayout.sectionInset = UIEdgeInsetsMake(0, 0, 0, 0);
     flowLayout.minimumInteritemSpacing = 0;
     flowLayout.minimumLineSpacing = 0;
-    self.collectionView = [[UICollectionView alloc]initWithFrame:CGRectMake(0,navHeight, SCREEN_WIDTH, self.residuHeigth - 70) collectionViewLayout:flowLayout];
+    self.collectionView = [[UICollectionView alloc]initWithFrame:CGRectMake(0,64, SCREEN_WIDTH, SCREEN_HEIGHT - 64 - 70) collectionViewLayout:flowLayout];
     self.collectionView.delegate = self;
     self.collectionView.dataSource = self;
+    
+    
     [self.collectionView setBackgroundColor:[UIColor colorWithRed:242/255.0 green:238/255.0 blue:223/255.0 alpha:1]];
+    
     [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"UICollectionViewCell"];
+    [self.collectionView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"ReusableView"];
+    
     [self.view addSubview:self.collectionView];
     
 }
@@ -71,11 +78,11 @@
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:iden forIndexPath:indexPath];
     if(cell == nil)
     {
-        cell = [[UICollectionViewCell alloc]initWithFrame:CGRectMake(0,0,SCREEN_WIDTH/2 , (self.residuHeigth - 70)/((self.imageArray.count)/2.0 ))];
+        cell = [[UICollectionViewCell alloc]initWithFrame:CGRectMake(0,0,SCREEN_WIDTH/2 , (SCREEN_HEIGHT - 64 - 70)/((self.imageArray.count)/2.0 ))];
         cell.contentView.backgroundColor = [UIColor whiteColor];
         
     }
-    UIView *backView = [[UIView alloc] initWithFrame:CGRectMake(0,0,SCREEN_WIDTH/2, (self.residuHeigth - 70)/((self.imageArray.count)/2.0))];
+    UIView *backView = [[UIView alloc] initWithFrame:CGRectMake(0,0,SCREEN_WIDTH/2, (SCREEN_HEIGHT - 64 - 70)/((self.imageArray.count)/2.0))];
     backView.layer.borderColor = [UIColor grayColor].CGColor;
     backView.layer.borderWidth = 0.3;
     backView.backgroundColor = [UIColor whiteColor];
@@ -97,9 +104,30 @@
     return cell;
 }
 
+
+//头部显示的内容
+- (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath{
+    
+    UICollectionReusableView *headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"ReusableView" forIndexPath:indexPath];
+    
+    UIImageView * headerImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 100)];
+    headerImageView.image = [UIImage imageNamed:@"products-header.jpg"];
+    
+    UILabel *titleLabel = [[UILabel alloc] initWithFrame:headerImageView.frame];
+    titleLabel.backgroundColor = [UIColor clearColor];
+    titleLabel.text = @"Products";
+    titleLabel.textAlignment = NSTextAlignmentCenter;
+    titleLabel.font = [UIFont systemFontOfSize:22];
+    titleLabel.textColor = [UIColor whiteColor];
+    [headerImageView addSubview:titleLabel];
+    [headerView addSubview:headerImageView];
+    
+    return headerView;
+}
+
 -(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    return CGSizeMake(SCREEN_WIDTH/2, (self.residuHeigth - 70)/((self.imageArray.count)/2.0));
+    return CGSizeMake(SCREEN_WIDTH/2, (SCREEN_HEIGHT - 64 - 70)/((self.imageArray.count)/2.0));
 }
 -(UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
 {
