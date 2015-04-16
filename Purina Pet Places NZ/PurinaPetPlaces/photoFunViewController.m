@@ -154,6 +154,7 @@
         self.menusTable = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH / 2 + 30, SCREEN_HEIGHT - navHeight) style:UITableViewStylePlain];
         self.menusTable.delegate = self;
         self.menusTable.dataSource = self;
+        self.menusTable.separatorStyle = UITableViewCellSeparatorStyleNone;
         self.menusTable.tableFooterView = [[UIView alloc]initWithFrame:CGRectZero];
         [self.darkView addSubview:self.menusTable];
         
@@ -171,11 +172,18 @@
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    
+    NSArray *imageNameArray = @[@"menu-home.jpg",@"menu-dog-pet-places.jpg",@"menu-photo-fun.jpg",@"menu-pet-friendly-places.jpg",@"menu-stockists.jpg",@"menu-tools.jpg",@"menu-pet-service.jpg",@"menu-tips.jpg",@"menu-products.jpg"];
     static NSString *iden = @"cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:iden];
     if(nil == cell)
     {
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:iden];
+        UIImageView *iconTemplateView = [[UIImageView alloc] initWithFrame:CGRectMake(8, 8, 33, 33)];
+        iconTemplateView.backgroundColor = [UIColor redColor];
+        iconTemplateView.image = [UIImage imageNamed:imageNameArray[indexPath.row]];
+        [cell.contentView addSubview:iconTemplateView];
+        [cell setIndentationLevel:4];
     }
     cell.textLabel.text = [self.menuArray objectAtIndex:indexPath.row];
     return cell;

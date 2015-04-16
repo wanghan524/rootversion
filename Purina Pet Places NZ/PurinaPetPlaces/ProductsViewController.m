@@ -8,6 +8,7 @@
 
 #import "ProductsViewController.h"
 #import "GrobleSingleton.h"
+#import "ProductDetailViewController.h"
 
 @interface ProductsViewController (){
     GrobleSingleton *globelSingle;
@@ -50,6 +51,7 @@
 }
 
 #pragma mark collection delegate start
+
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
     return [self.imageArray count];
@@ -105,7 +107,13 @@
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
-    DLog(@" +++++ %@",indexPath);
+    NSArray *imageNameArray = @[@"pro-plan",@"purina-one",@"tux",@"dog-chow",@"mighty-dog",@"beneful",@"beggin"];
+    ProductDetailViewController *productDetailVC = [[ProductDetailViewController alloc] init];
+    productDetailVC.animalFlag = imageNameArray[indexPath.row];
+    productDetailVC.num = indexPath.row;
+    [self.navigationController pushViewController:productDetailVC animated:YES];
+
+    
 }
 -(void)makeBottomButton
 {
