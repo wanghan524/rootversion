@@ -12,6 +12,7 @@
 #import "NextPetFriendlyPlacesViewController.h"
 #import "ProductsViewController.h"
 #import "TipsViewController.h"
+#import "ToolsViewController.h"
 
 
 @implementation MainViewController
@@ -220,6 +221,12 @@
         }
         
         
+    }
+    
+    else if (indexPath.row == 3) {
+        ToolsViewController *toolsVC =  [[ToolsViewController alloc ] init];
+        
+        [self.navigationController pushViewController:toolsVC animated:YES];
     }
     
     else if (indexPath.row == 4){

@@ -22,7 +22,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     globeSingle = [GrobleSingleton sharedGlobleInstance];
-    
+    NSArray *currentArray = @[@"Cassius",@"Miffy",@"Jazz"];
+    globeSingle.animalArray = [NSMutableArray arrayWithArray:currentArray];
     
     
 }

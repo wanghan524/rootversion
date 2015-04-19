@@ -16,9 +16,18 @@ static GrobleSingleton * single = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         single = [[GrobleSingleton alloc] init];
+        single.animalArray = [[NSMutableArray alloc] init];
     });
     return single;
 }
 
 
+- (void)insertAnimalName:(NSString *)animalName{
+    [single.animalArray addObject:animalName];
+}
+
+
+- (NSArray *)getAllAnimalNameArray{
+    return single.animalArray;
+}
 @end

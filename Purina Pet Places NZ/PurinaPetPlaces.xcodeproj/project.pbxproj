@@ -265,6 +265,8 @@
 		8AF8150E183DA9D900088BE9 /* button_currentLocation_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AF8150D183DA9D900088BE9 /* button_currentLocation_selected.png */; };
 		EF02735F1ADBF85800B89609 /* ResultPetFriendlyPlacesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF02735E1ADBF85800B89609 /* ResultPetFriendlyPlacesViewController.m */; };
 		EF0273621ADC013400B89609 /* LocationPetFriendlyPlacesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF0273611ADC013400B89609 /* LocationPetFriendlyPlacesViewController.m */; };
+		EF3EEDEC1AE2175000B3B7F8 /* ToolsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3EEDEB1AE2175000B3B7F8 /* ToolsViewController.m */; };
+		EF3EEDEE1AE2451000B3B7F8 /* tools-header0.png in Resources */ = {isa = PBXBuildFile; fileRef = EF3EEDED1AE2451000B3B7F8 /* tools-header0.png */; };
 		EFA1B58E1AD8BB9B00F44CC1 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFA1B5881AD8BB9B00F44CC1 /* Bolts.framework */; };
 		EFA1B58F1AD8BB9B00F44CC1 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFA1B5891AD8BB9B00F44CC1 /* Parse.framework */; };
 		EFA1B5901AD8BB9B00F44CC1 /* ParseCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFA1B58A1AD8BB9B00F44CC1 /* ParseCrashReporting.framework */; };
@@ -369,6 +371,42 @@
 		EFCC0EF61ADD2D8B008676D7 /* loading-splash-page.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EFCC0EF51ADD2D8B008676D7 /* loading-splash-page.jpg */; };
 		EFCC0EFF1ADD42C8008676D7 /* GrobleSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCC0EFE1ADD42C8008676D7 /* GrobleSingleton.m */; };
 		EFCC0F031ADD4566008676D7 /* ProductsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCC0F021ADD4566008676D7 /* ProductsViewController.m */; };
+		EFCD3FB21AE0D2D1009CC7DA /* ellipsis.png in Resources */ = {isa = PBXBuildFile; fileRef = EFCD3F8E1AE0D2D1009CC7DA /* ellipsis.png */; };
+		EFCD3FB31AE0D2D1009CC7DA /* loading-splash-page.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EFCD3F8F1AE0D2D1009CC7DA /* loading-splash-page.jpg */; };
+		EFCD3FB41AE0D2D1009CC7DA /* pagination-square-active.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EFCD3F901AE0D2D1009CC7DA /* pagination-square-active.jpg */; };
+		EFCD3FB51AE0D2D1009CC7DA /* pagination-square.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EFCD3F911AE0D2D1009CC7DA /* pagination-square.jpg */; };
+		EFCD3FB61AE0D2D1009CC7DA /* photo-fun-balloons.png in Resources */ = {isa = PBXBuildFile; fileRef = EFCD3F921AE0D2D1009CC7DA /* photo-fun-balloons.png */; };
+		EFCD3FB71AE0D2D1009CC7DA /* photo-fun-camera.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EFCD3F931AE0D2D1009CC7DA /* photo-fun-camera.jpg */; };
+		EFCD3FB81AE0D2D1009CC7DA /* photo-fun-gift.png in Resources */ = {isa = PBXBuildFile; fileRef = EFCD3F941AE0D2D1009CC7DA /* photo-fun-gift.png */; };
+		EFCD3FB91AE0D2D1009CC7DA /* photo-fun-main.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EFCD3F951AE0D2D1009CC7DA /* photo-fun-main.jpg */; };
+		EFCD3FBA1AE0D2D1009CC7DA /* photo-fun-medal.png in Resources */ = {isa = PBXBuildFile; fileRef = EFCD3F961AE0D2D1009CC7DA /* photo-fun-medal.png */; };
+		EFCD3FBB1AE0D2D1009CC7DA /* photo-fun-pawprint.png in Resources */ = {isa = PBXBuildFile; fileRef = EFCD3F971AE0D2D1009CC7DA /* photo-fun-pawprint.png */; };
+		EFCD3FBC1AE0D2D1009CC7DA /* photo-fun-ribbon.png in Resources */ = {isa = PBXBuildFile; fileRef = EFCD3F981AE0D2D1009CC7DA /* photo-fun-ribbon.png */; };
+		EFCD3FBD1AE0D2D1009CC7DA /* photo-fun-saved-image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EFCD3F991AE0D2D1009CC7DA /* photo-fun-saved-image.jpg */; };
+		EFCD3FBE1AE0D2D1009CC7DA /* photo-fun-share-facebook.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EFCD3F9A1AE0D2D1009CC7DA /* photo-fun-share-facebook.jpg */; };
+		EFCD3FBF1AE0D2D1009CC7DA /* photo-fun-share-instagram.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EFCD3F9B1AE0D2D1009CC7DA /* photo-fun-share-instagram.jpg */; };
+		EFCD3FC01AE0D2D1009CC7DA /* photo-fun-share-twitter.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EFCD3F9C1AE0D2D1009CC7DA /* photo-fun-share-twitter.jpg */; };
+		EFCD3FC11AE0D2D1009CC7DA /* photo-fun-tennis-ball.png in Resources */ = {isa = PBXBuildFile; fileRef = EFCD3F9D1AE0D2D1009CC7DA /* photo-fun-tennis-ball.png */; };
+		EFCD3FC21AE0D2D1009CC7DA /* photo-fun-tool-dog-active.png in Resources */ = {isa = PBXBuildFile; fileRef = EFCD3F9E1AE0D2D1009CC7DA /* photo-fun-tool-dog-active.png */; };
+		EFCD3FC31AE0D2D1009CC7DA /* photo-fun-tool-dog.png in Resources */ = {isa = PBXBuildFile; fileRef = EFCD3F9F1AE0D2D1009CC7DA /* photo-fun-tool-dog.png */; };
+		EFCD3FC41AE0D2D1009CC7DA /* photo-fun-tool-frame-active.png in Resources */ = {isa = PBXBuildFile; fileRef = EFCD3FA01AE0D2D1009CC7DA /* photo-fun-tool-frame-active.png */; };
+		EFCD3FC51AE0D2D1009CC7DA /* photo-fun-tool-frame.png in Resources */ = {isa = PBXBuildFile; fileRef = EFCD3FA11AE0D2D1009CC7DA /* photo-fun-tool-frame.png */; };
+		EFCD3FC61AE0D2D1009CC7DA /* photo-fun-tool-wand-active.png in Resources */ = {isa = PBXBuildFile; fileRef = EFCD3FA21AE0D2D1009CC7DA /* photo-fun-tool-wand-active.png */; };
+		EFCD3FC71AE0D2D1009CC7DA /* photo-fun-tool-wand.png in Resources */ = {isa = PBXBuildFile; fileRef = EFCD3FA31AE0D2D1009CC7DA /* photo-fun-tool-wand.png */; };
+		EFCD3FC81AE0D2D1009CC7DA /* products-about-beggin.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EFCD3FA41AE0D2D1009CC7DA /* products-about-beggin.jpg */; };
+		EFCD3FC91AE0D2D1009CC7DA /* products-about-beneful.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EFCD3FA51AE0D2D1009CC7DA /* products-about-beneful.jpg */; };
+		EFCD3FCA1AE0D2D1009CC7DA /* products-about-cat-chow.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EFCD3FA61AE0D2D1009CC7DA /* products-about-cat-chow.jpg */; };
+		EFCD3FCB1AE0D2D1009CC7DA /* products-about-dog-chow.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EFCD3FA71AE0D2D1009CC7DA /* products-about-dog-chow.jpg */; };
+		EFCD3FCC1AE0D2D1009CC7DA /* products-about-fancy-feast.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EFCD3FA81AE0D2D1009CC7DA /* products-about-fancy-feast.jpg */; };
+		EFCD3FCD1AE0D2D1009CC7DA /* products-about-friskies.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EFCD3FA91AE0D2D1009CC7DA /* products-about-friskies.jpg */; };
+		EFCD3FCE1AE0D2D1009CC7DA /* products-about-mighty-dog.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EFCD3FAA1AE0D2D1009CC7DA /* products-about-mighty-dog.jpg */; };
+		EFCD3FCF1AE0D2D1009CC7DA /* products-about-pro-plan-cat.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EFCD3FAB1AE0D2D1009CC7DA /* products-about-pro-plan-cat.jpg */; };
+		EFCD3FD01AE0D2D1009CC7DA /* products-about-purina-one-cat.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EFCD3FAC1AE0D2D1009CC7DA /* products-about-purina-one-cat.jpg */; };
+		EFCD3FD11AE0D2D1009CC7DA /* products-about-purina-one-dog.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EFCD3FAD1AE0D2D1009CC7DA /* products-about-purina-one-dog.jpg */; };
+		EFCD3FD21AE0D2D1009CC7DA /* products-about-tux.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EFCD3FAE1AE0D2D1009CC7DA /* products-about-tux.jpg */; };
+		EFCD3FD31AE0D2D1009CC7DA /* tick.png in Resources */ = {isa = PBXBuildFile; fileRef = EFCD3FAF1AE0D2D1009CC7DA /* tick.png */; };
+		EFCD3FD41AE0D2D1009CC7DA /* tools-header.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EFCD3FB01AE0D2D1009CC7DA /* tools-header.jpg */; };
+		EFCD3FD51AE0D2D1009CC7DA /* tools-header2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EFCD3FB11AE0D2D1009CC7DA /* tools-header2.jpg */; };
 		EFF9EBBC1ADE846B00876341 /* dog-beneful.html in Resources */ = {isa = PBXBuildFile; fileRef = EFF9EBB51ADE846B00876341 /* dog-beneful.html */; };
 		EFF9EBBD1ADE846B00876341 /* dog-dog-chow.html in Resources */ = {isa = PBXBuildFile; fileRef = EFF9EBB61ADE846B00876341 /* dog-dog-chow.html */; };
 		EFF9EBBE1ADE846B00876341 /* dog-mighty-dog.html in Resources */ = {isa = PBXBuildFile; fileRef = EFF9EBB71ADE846B00876341 /* dog-mighty-dog.html */; };
@@ -721,6 +759,9 @@
 		EF02735E1ADBF85800B89609 /* ResultPetFriendlyPlacesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultPetFriendlyPlacesViewController.m; sourceTree = "<group>"; };
 		EF0273601ADC013400B89609 /* LocationPetFriendlyPlacesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationPetFriendlyPlacesViewController.h; sourceTree = "<group>"; };
 		EF0273611ADC013400B89609 /* LocationPetFriendlyPlacesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationPetFriendlyPlacesViewController.m; sourceTree = "<group>"; };
+		EF3EEDEA1AE2175000B3B7F8 /* ToolsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToolsViewController.h; sourceTree = "<group>"; };
+		EF3EEDEB1AE2175000B3B7F8 /* ToolsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToolsViewController.m; sourceTree = "<group>"; };
+		EF3EEDED1AE2451000B3B7F8 /* tools-header0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tools-header0.png"; sourceTree = "<group>"; };
 		EFA1B5881AD8BB9B00F44CC1 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		EFA1B5891AD8BB9B00F44CC1 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = "parse-library-1.7.1/Parse.framework"; sourceTree = "<group>"; };
 		EFA1B58A1AD8BB9B00F44CC1 /* ParseCrashReporting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseCrashReporting.framework; sourceTree = "<group>"; };
@@ -833,6 +874,42 @@
 		EFCC0EFE1ADD42C8008676D7 /* GrobleSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GrobleSingleton.m; sourceTree = "<group>"; };
 		EFCC0F011ADD4566008676D7 /* ProductsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductsViewController.h; sourceTree = "<group>"; };
 		EFCC0F021ADD4566008676D7 /* ProductsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductsViewController.m; sourceTree = "<group>"; };
+		EFCD3F8E1AE0D2D1009CC7DA /* ellipsis.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ellipsis.png; sourceTree = "<group>"; };
+		EFCD3F8F1AE0D2D1009CC7DA /* loading-splash-page.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "loading-splash-page.jpg"; sourceTree = "<group>"; };
+		EFCD3F901AE0D2D1009CC7DA /* pagination-square-active.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "pagination-square-active.jpg"; sourceTree = "<group>"; };
+		EFCD3F911AE0D2D1009CC7DA /* pagination-square.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "pagination-square.jpg"; sourceTree = "<group>"; };
+		EFCD3F921AE0D2D1009CC7DA /* photo-fun-balloons.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photo-fun-balloons.png"; sourceTree = "<group>"; };
+		EFCD3F931AE0D2D1009CC7DA /* photo-fun-camera.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "photo-fun-camera.jpg"; sourceTree = "<group>"; };
+		EFCD3F941AE0D2D1009CC7DA /* photo-fun-gift.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photo-fun-gift.png"; sourceTree = "<group>"; };
+		EFCD3F951AE0D2D1009CC7DA /* photo-fun-main.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "photo-fun-main.jpg"; sourceTree = "<group>"; };
+		EFCD3F961AE0D2D1009CC7DA /* photo-fun-medal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photo-fun-medal.png"; sourceTree = "<group>"; };
+		EFCD3F971AE0D2D1009CC7DA /* photo-fun-pawprint.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photo-fun-pawprint.png"; sourceTree = "<group>"; };
+		EFCD3F981AE0D2D1009CC7DA /* photo-fun-ribbon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photo-fun-ribbon.png"; sourceTree = "<group>"; };
+		EFCD3F991AE0D2D1009CC7DA /* photo-fun-saved-image.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "photo-fun-saved-image.jpg"; sourceTree = "<group>"; };
+		EFCD3F9A1AE0D2D1009CC7DA /* photo-fun-share-facebook.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "photo-fun-share-facebook.jpg"; sourceTree = "<group>"; };
+		EFCD3F9B1AE0D2D1009CC7DA /* photo-fun-share-instagram.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "photo-fun-share-instagram.jpg"; sourceTree = "<group>"; };
+		EFCD3F9C1AE0D2D1009CC7DA /* photo-fun-share-twitter.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "photo-fun-share-twitter.jpg"; sourceTree = "<group>"; };
+		EFCD3F9D1AE0D2D1009CC7DA /* photo-fun-tennis-ball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photo-fun-tennis-ball.png"; sourceTree = "<group>"; };
+		EFCD3F9E1AE0D2D1009CC7DA /* photo-fun-tool-dog-active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photo-fun-tool-dog-active.png"; sourceTree = "<group>"; };
+		EFCD3F9F1AE0D2D1009CC7DA /* photo-fun-tool-dog.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photo-fun-tool-dog.png"; sourceTree = "<group>"; };
+		EFCD3FA01AE0D2D1009CC7DA /* photo-fun-tool-frame-active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photo-fun-tool-frame-active.png"; sourceTree = "<group>"; };
+		EFCD3FA11AE0D2D1009CC7DA /* photo-fun-tool-frame.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photo-fun-tool-frame.png"; sourceTree = "<group>"; };
+		EFCD3FA21AE0D2D1009CC7DA /* photo-fun-tool-wand-active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photo-fun-tool-wand-active.png"; sourceTree = "<group>"; };
+		EFCD3FA31AE0D2D1009CC7DA /* photo-fun-tool-wand.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photo-fun-tool-wand.png"; sourceTree = "<group>"; };
+		EFCD3FA41AE0D2D1009CC7DA /* products-about-beggin.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "products-about-beggin.jpg"; sourceTree = "<group>"; };
+		EFCD3FA51AE0D2D1009CC7DA /* products-about-beneful.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "products-about-beneful.jpg"; sourceTree = "<group>"; };
+		EFCD3FA61AE0D2D1009CC7DA /* products-about-cat-chow.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "products-about-cat-chow.jpg"; sourceTree = "<group>"; };
+		EFCD3FA71AE0D2D1009CC7DA /* products-about-dog-chow.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "products-about-dog-chow.jpg"; sourceTree = "<group>"; };
+		EFCD3FA81AE0D2D1009CC7DA /* products-about-fancy-feast.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "products-about-fancy-feast.jpg"; sourceTree = "<group>"; };
+		EFCD3FA91AE0D2D1009CC7DA /* products-about-friskies.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "products-about-friskies.jpg"; sourceTree = "<group>"; };
+		EFCD3FAA1AE0D2D1009CC7DA /* products-about-mighty-dog.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "products-about-mighty-dog.jpg"; sourceTree = "<group>"; };
+		EFCD3FAB1AE0D2D1009CC7DA /* products-about-pro-plan-cat.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "products-about-pro-plan-cat.jpg"; sourceTree = "<group>"; };
+		EFCD3FAC1AE0D2D1009CC7DA /* products-about-purina-one-cat.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "products-about-purina-one-cat.jpg"; sourceTree = "<group>"; };
+		EFCD3FAD1AE0D2D1009CC7DA /* products-about-purina-one-dog.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "products-about-purina-one-dog.jpg"; sourceTree = "<group>"; };
+		EFCD3FAE1AE0D2D1009CC7DA /* products-about-tux.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "products-about-tux.jpg"; sourceTree = "<group>"; };
+		EFCD3FAF1AE0D2D1009CC7DA /* tick.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tick.png; sourceTree = "<group>"; };
+		EFCD3FB01AE0D2D1009CC7DA /* tools-header.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "tools-header.jpg"; sourceTree = "<group>"; };
+		EFCD3FB11AE0D2D1009CC7DA /* tools-header2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "tools-header2.jpg"; sourceTree = "<group>"; };
 		EFF9EBB51ADE846B00876341 /* dog-beneful.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "dog-beneful.html"; sourceTree = "<group>"; };
 		EFF9EBB61ADE846B00876341 /* dog-dog-chow.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "dog-dog-chow.html"; sourceTree = "<group>"; };
 		EFF9EBB71ADE846B00876341 /* dog-mighty-dog.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "dog-mighty-dog.html"; sourceTree = "<group>"; };
@@ -1080,6 +1157,7 @@
 		2061F956152BD84E0030E20F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				EFCD3F8D1AE0D2D1009CC7DA /* pet-places-app-new-images */,
 				EFA56CE01ADF890F00A915E8 /* tips-images_final */,
 				EFCC0E941ADCA7D8008676D7 /* pet-places-images */,
 				8ADDAE9418459E5D0068ED72 /* App Icons */,
@@ -1519,6 +1597,8 @@
 		EF46E4821ADA7D5000E59FD0 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				EF3EEDEA1AE2175000B3B7F8 /* ToolsViewController.h */,
+				EF3EEDEB1AE2175000B3B7F8 /* ToolsViewController.m */,
 			);
 			name = Tools;
 			sourceTree = "<group>";
@@ -1681,6 +1761,50 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		EFCD3F8D1AE0D2D1009CC7DA /* pet-places-app-new-images */ = {
+			isa = PBXGroup;
+			children = (
+				EFCD3F8E1AE0D2D1009CC7DA /* ellipsis.png */,
+				EFCD3F8F1AE0D2D1009CC7DA /* loading-splash-page.jpg */,
+				EFCD3F901AE0D2D1009CC7DA /* pagination-square-active.jpg */,
+				EFCD3F911AE0D2D1009CC7DA /* pagination-square.jpg */,
+				EFCD3F921AE0D2D1009CC7DA /* photo-fun-balloons.png */,
+				EFCD3F931AE0D2D1009CC7DA /* photo-fun-camera.jpg */,
+				EFCD3F941AE0D2D1009CC7DA /* photo-fun-gift.png */,
+				EFCD3F951AE0D2D1009CC7DA /* photo-fun-main.jpg */,
+				EFCD3F961AE0D2D1009CC7DA /* photo-fun-medal.png */,
+				EFCD3F971AE0D2D1009CC7DA /* photo-fun-pawprint.png */,
+				EFCD3F981AE0D2D1009CC7DA /* photo-fun-ribbon.png */,
+				EFCD3F991AE0D2D1009CC7DA /* photo-fun-saved-image.jpg */,
+				EFCD3F9A1AE0D2D1009CC7DA /* photo-fun-share-facebook.jpg */,
+				EFCD3F9B1AE0D2D1009CC7DA /* photo-fun-share-instagram.jpg */,
+				EFCD3F9C1AE0D2D1009CC7DA /* photo-fun-share-twitter.jpg */,
+				EFCD3F9D1AE0D2D1009CC7DA /* photo-fun-tennis-ball.png */,
+				EFCD3F9E1AE0D2D1009CC7DA /* photo-fun-tool-dog-active.png */,
+				EFCD3F9F1AE0D2D1009CC7DA /* photo-fun-tool-dog.png */,
+				EFCD3FA01AE0D2D1009CC7DA /* photo-fun-tool-frame-active.png */,
+				EFCD3FA11AE0D2D1009CC7DA /* photo-fun-tool-frame.png */,
+				EFCD3FA21AE0D2D1009CC7DA /* photo-fun-tool-wand-active.png */,
+				EFCD3FA31AE0D2D1009CC7DA /* photo-fun-tool-wand.png */,
+				EFCD3FA41AE0D2D1009CC7DA /* products-about-beggin.jpg */,
+				EFCD3FA51AE0D2D1009CC7DA /* products-about-beneful.jpg */,
+				EFCD3FA61AE0D2D1009CC7DA /* products-about-cat-chow.jpg */,
+				EFCD3FA71AE0D2D1009CC7DA /* products-about-dog-chow.jpg */,
+				EFCD3FA81AE0D2D1009CC7DA /* products-about-fancy-feast.jpg */,
+				EFCD3FA91AE0D2D1009CC7DA /* products-about-friskies.jpg */,
+				EFCD3FAA1AE0D2D1009CC7DA /* products-about-mighty-dog.jpg */,
+				EFCD3FAB1AE0D2D1009CC7DA /* products-about-pro-plan-cat.jpg */,
+				EFCD3FAC1AE0D2D1009CC7DA /* products-about-purina-one-cat.jpg */,
+				EFCD3FAD1AE0D2D1009CC7DA /* products-about-purina-one-dog.jpg */,
+				EFCD3FAE1AE0D2D1009CC7DA /* products-about-tux.jpg */,
+				EFCD3FAF1AE0D2D1009CC7DA /* tick.png */,
+				EF3EEDED1AE2451000B3B7F8 /* tools-header0.png */,
+				EFCD3FB01AE0D2D1009CC7DA /* tools-header.jpg */,
+				EFCD3FB11AE0D2D1009CC7DA /* tools-header2.jpg */,
+			);
+			path = "pet-places-app-new-images";
+			sourceTree = "<group>";
+		};
 		EFF9EBB41ADE846B00876341 /* every_dog_html */ = {
 			isa = PBXGroup;
 			children = (
@@ -1755,6 +1879,7 @@
 				8ADDAE9F18459E5D0068ED72 /* Icon-60.png in Resources */,
 				EFA56D0E1ADF890F00A915E8 /* tips-articles-cats14.jpg in Resources */,
 				EFA56D161ADF890F00A915E8 /* tips-articles-cats7.jpg in Resources */,
+				EFCD3FD21AE0D2D1009CC7DA /* products-about-tux.jpg in Resources */,
 				2061F95A152BD84E0030E20F /* InfoPlist.strings in Resources */,
 				2061F966152BD84E0030E20F /* ViewController.xib in Resources */,
 				2061FA0F152C1ADF0030E20F /* SubCategoriesViewController.xib in Resources */,
@@ -1768,8 +1893,10 @@
 				EFCC0ED41ADCA7D8008676D7 /* pet-friendly-places-header.jpg in Resources */,
 				202F6326153505B300F583C0 /* background_navbar@2x.png in Resources */,
 				EFCC0EEE1ADCA7D8008676D7 /* tips-thumb-4.jpg in Resources */,
+				EFCD3FD31AE0D2D1009CC7DA /* tick.png in Resources */,
 				202F632E153509BE00F583C0 /* CustomNavigationBar.xib in Resources */,
 				202F633D15355B0F00F583C0 /* pin_red.png in Resources */,
+				EFCD3FD51AE0D2D1009CC7DA /* tools-header2.jpg in Resources */,
 				8AC9B5A71987033600CA7FE5 /* dog-chow.jpg in Resources */,
 				EFA56D101ADF890F00A915E8 /* tips-articles-cats16.jpg in Resources */,
 				EFA56D2E1ADF890F00A915E8 /* tips-articles-general7.jpg in Resources */,
@@ -1778,19 +1905,23 @@
 				EFCC0ED31ADCA7D8008676D7 /* pet-care-service-purina-logo.jpg in Resources */,
 				202F634C15365CC400F583C0 /* icon_categoryTemplate.png in Resources */,
 				EFCC0EC41ADCA7D8008676D7 /* btn-back.jpg in Resources */,
+				EFCD3FCA1AE0D2D1009CC7DA /* products-about-cat-chow.jpg in Resources */,
 				EFCC0EED1ADCA7D8008676D7 /* tips-header.jpg in Resources */,
 				EFA56D1E1ADF890F00A915E8 /* tips-articles-general10.jpg in Resources */,
 				202F634D15365CC400F583C0 /* icon_categoryTemplate@2x.png in Resources */,
 				202F634F1536654A00F583C0 /* button_SuggestALocatoin.png in Resources */,
+				EFCD3FC61AE0D2D1009CC7DA /* photo-fun-tool-wand-active.png in Resources */,
 				8A986854183D61E700CE36C6 /* icon_PetInfo_7@2x.png in Resources */,
 				202F6351153665DC00F583C0 /* button_SuggestALocatoin@2x.png in Resources */,
 				202F635415366A6800F583C0 /* feature_DogForRecommend.png in Resources */,
 				202F635515366A6800F583C0 /* feature_DogForRecommend@2x.png in Resources */,
+				EFCD3FB91AE0D2D1009CC7DA /* photo-fun-main.jpg in Resources */,
 				203967131537A7E7009518F9 /* ResultsViewController.xib in Resources */,
 				2067BB9E153BAEB1004B3569 /* SplashScreenViewController.xib in Resources */,
 				2067BBAA153CF0D7004B3569 /* LocationDetailViewController.xib in Resources */,
 				EFCC0EE31ADCA7D8008676D7 /* splash-page.jpg in Resources */,
 				EFA56D141ADF890F00A915E8 /* tips-articles-cats5.jpg in Resources */,
+				EFCD3FC71AE0D2D1009CC7DA /* photo-fun-tool-wand.png in Resources */,
 				2067BBBD153D1926004B3569 /* icon_maps.png in Resources */,
 				8ADDAE9E18459E5D0068ED72 /* Icon-40@2x.png in Resources */,
 				2067BBBE153D1926004B3569 /* icon_maps@2x.png in Resources */,
@@ -1799,6 +1930,7 @@
 				20ACEB9C153FEE2A007B966B /* pin_green.png in Resources */,
 				20ACEB9D153FEE2A007B966B /* pin_green@2x.png in Resources */,
 				EFA56D1A1ADF890F00A915E8 /* tips-articles-dogs2.jpg in Resources */,
+				EF3EEDEE1AE2451000B3B7F8 /* tools-header0.png in Resources */,
 				EFA56D221ADF890F00A915E8 /* tips-articles-general14.jpg in Resources */,
 				2097D7F0154E1F1400972AD4 /* PetInfoMainScreenViewController.xib in Resources */,
 				2097D7F7154E463700972AD4 /* icon_PetInfo.png in Resources */,
@@ -1806,10 +1938,12 @@
 				8ADDAE93184599AC0068ED72 /* icon_map@2x.png in Resources */,
 				EFA56D0A1ADF890F00A915E8 /* tips-articles-cats10.jpg in Resources */,
 				751222771ADA5D6600A1506B /* EditViewController.xib in Resources */,
+				EFCD3FB71AE0D2D1009CC7DA /* photo-fun-camera.jpg in Resources */,
 				EFCC0EE61ADCA7D8008676D7 /* tile2-pet-friendly-places.jpg in Resources */,
 				EFA56D1C1ADF890F00A915E8 /* tips-articles-dogs4.jpg in Resources */,
 				EFA56D291ADF890F00A915E8 /* tips-articles-general20.jpg in Resources */,
 				20D75B28154F6885005C4F9B /* icon_PetInfo_disabled.png in Resources */,
+				EFCD3FB41AE0D2D1009CC7DA /* pagination-square-active.jpg in Resources */,
 				EFA56D271ADF890F00A915E8 /* tips-articles-general19.jpg in Resources */,
 				EFA56D241ADF890F00A915E8 /* tips-articles-general16.jpg in Resources */,
 				EFA56D131ADF890F00A915E8 /* tips-articles-cats4.jpg in Resources */,
@@ -1818,6 +1952,8 @@
 				EFCC0EF41ADD18F4008676D7 /* location_icon.png in Resources */,
 				EFA56D301ADF890F00A915E8 /* tips-articles-general9.jpg in Resources */,
 				EFC41CA41ADB866000978240 /* photoFunViewController.xib in Resources */,
+				EFCD3FCF1AE0D2D1009CC7DA /* products-about-pro-plan-cat.jpg in Resources */,
+				EFCD3FD11AE0D2D1009CC7DA /* products-about-purina-one-dog.jpg in Resources */,
 				EFF9EBBE1ADE846B00876341 /* dog-mighty-dog.html in Resources */,
 				20D75B2F154F7197005C4F9B /* icon_Search_disabled.png in Resources */,
 				EFCC0EEB1ADCA7D8008676D7 /* tile7-products.jpg in Resources */,
@@ -1833,6 +1969,7 @@
 				20D75B3A154F726B005C4F9B /* icon_Places@2x.png in Resources */,
 				20F0098A154F7D5E00AC6366 /* PetInfoTipsViewController.xib in Resources */,
 				8ADDAEA218459E5D0068ED72 /* Icon-76@2x.png in Resources */,
+				EFCD3FB31AE0D2D1009CC7DA /* loading-splash-page.jpg in Resources */,
 				EFCC0ECB1ADCA7D8008676D7 /* menu-pet-service.jpg in Resources */,
 				EFCC0EC51ADCA7D8008676D7 /* btn-menu.jpg in Resources */,
 				20119A8F1550F000000DBCE8 /* PetInfoProductsViewController.xib in Resources */,
@@ -1846,13 +1983,16 @@
 				200AEA4C1552471600CDBF8E /* icon_accommodation@2x.png in Resources */,
 				200AEA53155254BD00CDBF8E /* icon_cafes.png in Resources */,
 				200AEA54155254BD00CDBF8E /* icon_cafes@2x.png in Resources */,
+				EFCD3FB21AE0D2D1009CC7DA /* ellipsis.png in Resources */,
 				EFF9EBC91ADE940100876341 /* Default-568h@2x.png in Resources */,
 				200AEA55155254BD00CDBF8E /* icon_parks.png in Resources */,
 				EFF9EBC11ADE846B00876341 /* dog-beggin.html in Resources */,
 				200AEA56155254BD00CDBF8E /* icon_parks@2x.png in Resources */,
 				200AEA57155254BD00CDBF8E /* icon_paw.png in Resources */,
 				200AEA58155254BD00CDBF8E /* icon_paw@2x.png in Resources */,
+				EFCD3FB81AE0D2D1009CC7DA /* photo-fun-gift.png in Resources */,
 				200AEA5A1552599200CDBF8E /* icon_holding1.png in Resources */,
+				EFCD3FBE1AE0D2D1009CC7DA /* photo-fun-share-facebook.jpg in Resources */,
 				EFCC0EDE1ADCA7D8008676D7 /* products-purina-one.jpg in Resources */,
 				EFCC0EEC1ADCA7D8008676D7 /* tips-article-separation-article.jpg in Resources */,
 				200AEA5D15525F0400CDBF8E /* icon_GeneralTips.png in Resources */,
@@ -1866,20 +2006,25 @@
 				EFCC0EDF1ADCA7D8008676D7 /* products-tux.jpg in Resources */,
 				8AC9B5AE1987033600CA7FE5 /* cat-chow.jpg in Resources */,
 				8ADDAEA318459E5D0068ED72 /* Icon-Small.png in Resources */,
+				EFCD3FC51AE0D2D1009CC7DA /* photo-fun-tool-frame.png in Resources */,
 				EFF9EBBD1ADE846B00876341 /* dog-dog-chow.html in Resources */,
 				EFCC0EE41ADCA7D8008676D7 /* stockists-header.jpg in Resources */,
 				20CB123C1558D08E006D8C82 /* icon_DogTips@2x.png in Resources */,
 				EFCC0EEF1ADCA7D8008676D7 /* tips-thumb-5.jpg in Resources */,
 				EFCC0EF11ADCA7D8008676D7 /* tips-thumb-3.jpg in Resources */,
 				EFCC0EC61ADCA7D8008676D7 /* btn-search.jpg in Resources */,
+				EFCD3FBA1AE0D2D1009CC7DA /* photo-fun-medal.png in Resources */,
 				20352AB91559F2860010127A /* background_button.png in Resources */,
 				20352ABC1559F29E0010127A /* background_button@2x.png in Resources */,
 				8A986853183D61E700CE36C6 /* icon_Places_7@2x.png in Resources */,
 				20352AC31559F5BB0010127A /* background_button_disabled.png in Resources */,
+				EFCD3FC21AE0D2D1009CC7DA /* photo-fun-tool-dog-active.png in Resources */,
 				EFCC0EF61ADD2D8B008676D7 /* loading-splash-page.jpg in Resources */,
 				EFCC0ED91ADCA7D8008676D7 /* products-beneful.jpg in Resources */,
 				20352AC41559F5BB0010127A /* background_button_disabled@2x.png in Resources */,
+				EFCD3FCB1AE0D2D1009CC7DA /* products-about-dog-chow.jpg in Resources */,
 				207458F5155A205E00DE6BF0 /* icon_PetProducts.png in Resources */,
+				EFCD3FCC1AE0D2D1009CC7DA /* products-about-fancy-feast.jpg in Resources */,
 				EFCC0EC81ADCA7D8008676D7 /* menu-dog-pet-places.jpg in Resources */,
 				207458F6155A205E00DE6BF0 /* icon_PetProducts@2x.png in Resources */,
 				8A986858183D6A5400CE36C6 /* icon_Stock@2x.png in Resources */,
@@ -1887,11 +2032,14 @@
 				EFA56D1D1ADF890F00A915E8 /* tips-articles-general1.jpg in Resources */,
 				207458F8155A205E00DE6BF0 /* icon_PetTips@2x.png in Resources */,
 				207458FC155A3A1500DE6BF0 /* background_tabbar.png in Resources */,
+				EFCD3FC31AE0D2D1009CC7DA /* photo-fun-tool-dog.png in Resources */,
 				EFA56D191ADF890F00A915E8 /* tips-articles-dogs1.jpg in Resources */,
+				EFCD3FBD1AE0D2D1009CC7DA /* photo-fun-saved-image.jpg in Resources */,
 				207458FD155A3A1500DE6BF0 /* background_tabbar@2x.png in Resources */,
 				20717277155B83D00024C3D0 /* background_connection.png in Resources */,
 				20717278155B83D00024C3D0 /* background_connection@2x.png in Resources */,
 				EFA56D111ADF890F00A915E8 /* tips-articles-cats2.jpg in Resources */,
+				EFCD3FCE1AE0D2D1009CC7DA /* products-about-mighty-dog.jpg in Resources */,
 				2071727D155B85580024C3D0 /* ConnectionViewController.xib in Resources */,
 				2071728C155B94030024C3D0 /* connection_step1.png in Resources */,
 				2071728D155B94030024C3D0 /* connection_step1@2x.png in Resources */,
@@ -1904,6 +2052,7 @@
 				EFA56D1B1ADF890F00A915E8 /* tips-articles-dogs3.jpg in Resources */,
 				EFCC0EC71ADCA7D8008676D7 /* dropdown-arrow.jpg in Resources */,
 				20717291155B94030024C3D0 /* connection_step3@2x.png in Resources */,
+				EFCD3FB51AE0D2D1009CC7DA /* pagination-square.jpg in Resources */,
 				20717292155B94030024C3D0 /* connection_step4.png in Resources */,
 				EFCC0EE81ADCA7D8008676D7 /* tile4-tools.jpg in Resources */,
 				8ADDAE9D18459E5D0068ED72 /* Icon-40.png in Resources */,
@@ -1912,12 +2061,15 @@
 				20717293155B94030024C3D0 /* connection_step4@2x.png in Resources */,
 				8AC9B5A81987033600CA7FE5 /* dog-tux.jpg in Resources */,
 				20717296155CA1000024C3D0 /* button_retry.png in Resources */,
+				EFCD3FC01AE0D2D1009CC7DA /* photo-fun-share-twitter.jpg in Resources */,
 				8AC9B5AB1987033600CA7FE5 /* cat-treats.jpg in Resources */,
+				EFCD3FBC1AE0D2D1009CC7DA /* photo-fun-ribbon.png in Resources */,
 				20717297155CA1000024C3D0 /* button_retry@2x.png in Resources */,
 				2048F1D0156094AE00F53848 /* background_gradient.png in Resources */,
 				8A986857183D6A5400CE36C6 /* icon_Stock.png in Resources */,
 				8AC9B5AC1987033600CA7FE5 /* cat-friskies.jpg in Resources */,
 				2048F1D1156094AE00F53848 /* background_gradient@2x.png in Resources */,
+				EFCD3FD01AE0D2D1009CC7DA /* products-about-purina-one-cat.jpg in Resources */,
 				2096835D15BCED7B006B3908 /* button_BookABatch.png in Resources */,
 				EFCC0ED01ADCA7D8008676D7 /* menu-tools.jpg in Resources */,
 				EFA56D151ADF890F00A915E8 /* tips-articles-cats6.jpg in Resources */,
@@ -1931,6 +2083,7 @@
 				EFA56D211ADF890F00A915E8 /* tips-articles-general13.jpg in Resources */,
 				20C8EFFA170164190041533C /* PetInfo.html in Resources */,
 				20C8EFFE170175F50041533C /* CatInfo.html in Resources */,
+				EFCD3FC81AE0D2D1009CC7DA /* products-about-beggin.jpg in Resources */,
 				20C8EFFF170175F50041533C /* DogInfo.html in Resources */,
 				8AC9B5AD1987033600CA7FE5 /* cat-fancy-feast.jpg in Resources */,
 				EFCC0ED51ADCA7D8008676D7 /* pet-places-logo.jpg in Resources */,
@@ -1939,6 +2092,7 @@
 				EFA56D0C1ADF890F00A915E8 /* tips-articles-cats12.jpg in Resources */,
 				20C8F0261702706D0041533C /* cat-chow.png in Resources */,
 				7512226E1ADA5D5E00A1506B /* PopView.xib in Resources */,
+				EFCD3FBF1AE0D2D1009CC7DA /* photo-fun-share-instagram.jpg in Resources */,
 				20C8F0271702706D0041533C /* cat-fancy-feast.png in Resources */,
 				20C8F0281702706D0041533C /* cat-friskies.png in Resources */,
 				20C8F0291702706D0041533C /* cat-header.png in Resources */,
@@ -1964,6 +2118,7 @@
 				EFF9EBC21ADE846B00876341 /* dog-tux.html in Resources */,
 				20C8F0351702706D0041533C /* dog-mighty.png in Resources */,
 				EFCC0EEA1ADCA7D8008676D7 /* tile6-tips.jpg in Resources */,
+				EFCD3FC11AE0D2D1009CC7DA /* photo-fun-tennis-ball.png in Resources */,
 				8ADDAEA418459E5D0068ED72 /* Icon-Small@2x.png in Resources */,
 				751222791ADA5D6600A1506B /* EnterMianViewController.xib in Resources */,
 				20C8F0361702706D0041533C /* dog-one.png in Resources */,
@@ -1972,14 +2127,17 @@
 				20C8F0371702706D0041533C /* dog-pro-plan.png in Resources */,
 				EFA56D2F1ADF890F00A915E8 /* tips-articles-general8.jpg in Resources */,
 				20C8F0381702706D0041533C /* dog-products-small.jpg in Resources */,
+				EFCD3FB61AE0D2D1009CC7DA /* photo-fun-balloons.png in Resources */,
 				EFCC0ECE1ADCA7D8008676D7 /* menu-stockists.jpg in Resources */,
 				20C8F0391702706D0041533C /* dog-tips-header.png in Resources */,
+				EFCD3FC41AE0D2D1009CC7DA /* photo-fun-tool-frame-active.png in Resources */,
 				20C8F03A1702706D0041533C /* dog-tips-small.jpg in Resources */,
 				EFA56D231ADF890F00A915E8 /* tips-articles-general15.jpg in Resources */,
 				20C8F03B1702706D0041533C /* dog-treats.png in Resources */,
 				20C8F03C1702706D0041533C /* dog-tux.png in Resources */,
 				EFA56D2D1ADF890F00A915E8 /* tips-articles-general6.jpg in Resources */,
 				8AC9B5A91987033600CA7FE5 /* dog-one.jpg in Resources */,
+				EFCD3FD41AE0D2D1009CC7DA /* tools-header.jpg in Resources */,
 				EFA56D2A1ADF890F00A915E8 /* tips-articles-general3.jpg in Resources */,
 				EFCC0ED61ADCA7D8008676D7 /* pet-service-header.jpg in Resources */,
 				20C8F03D1702706D0041533C /* general-tips-header.png in Resources */,
@@ -1995,6 +2153,7 @@
 				8AF8150C183D768200088BE9 /* icon_7@2x.png in Resources */,
 				EFA56D2B1ADF890F00A915E8 /* tips-articles-general4.jpg in Resources */,
 				EFCC0ED11ADCA7D8008676D7 /* next-btn.jpg in Resources */,
+				EFCD3FBB1AE0D2D1009CC7DA /* photo-fun-pawprint.png in Resources */,
 				EFF9EBCB1ADE940100876341 /* Default@2x.png in Resources */,
 				8AF8150E183DA9D900088BE9 /* button_currentLocation_selected.png in Resources */,
 				EFF9EBBF1ADE846B00876341 /* dog-purina-one.html in Resources */,
@@ -2003,6 +2162,7 @@
 				8AC9B5AF1987033600CA7FE5 /* cat-one.jpg in Resources */,
 				20C8F0421702706D0041533C /* purina-footer.png in Resources */,
 				EFCC0EE91ADCA7D8008676D7 /* tile5-pet-service.jpg in Resources */,
+				EFCD3FC91AE0D2D1009CC7DA /* products-about-beneful.jpg in Resources */,
 				20C8F0431702706D0041533C /* products_cat.html in Resources */,
 				EFA56D2C1ADF890F00A915E8 /* tips-articles-general5.jpg in Resources */,
 				20C8F0441702706D0041533C /* products_dog.html in Resources */,
@@ -2011,6 +2171,7 @@
 				20C8F0461702706D0041533C /* tips_dog.html in Resources */,
 				8AC9B5B6199DAAA500CA7FE5 /* icon-mail.png in Resources */,
 				8ADDAEA018459E5D0068ED72 /* Icon-60@2x.png in Resources */,
+				EFCD3FCD1AE0D2D1009CC7DA /* products-about-friskies.jpg in Resources */,
 				20C8F0471702706D0041533C /* tips_general.html in Resources */,
 				EFA56D0D1ADF890F00A915E8 /* tips-articles-cats13.jpg in Resources */,
 				8ADDAEA118459E5D0068ED72 /* Icon-76.png in Resources */,
@@ -2102,6 +2263,7 @@
 				2082520B15B63FEB00BDA88D /* NSMutableArray+Soap.m in Sources */,
 				2082520C15B63FEB00BDA88D /* Soap.m in Sources */,
 				2082520D15B63FEB00BDA88D /* SoapArray.m in Sources */,
+				EF3EEDEC1AE2175000B3B7F8 /* ToolsViewController.m in Sources */,
 				2082520E15B63FEB00BDA88D /* SoapFault.m in Sources */,
 				2082520F15B63FEB00BDA88D /* SoapHandler.m in Sources */,
 				2082521015B63FEB00BDA88D /* SoapLiteral.m in Sources */,

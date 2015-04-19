@@ -12,6 +12,12 @@
 
 @property (nonatomic, strong) NSString *globleCategory;
 
+@property (nonatomic, strong) NSMutableArray *animalArray;
+
 +(id)sharedGlobleInstance;
+
+- (void)insertAnimalName:(NSString *)animalName;
+
+- (NSArray *)getAllAnimalNameArray;
 
 @end
