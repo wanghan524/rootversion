@@ -104,6 +104,10 @@
         region.span.latitudeDelta = distance / 111320;
         region.span.longitudeDelta = 0.0;
         
+        //MACoordinateSpan span = MACoordinateSpanMake(0.008 0.008);
+//        MKCoordinateSpan spans = MKCoordinateSpanMake(0.008, 0.008);
+//        region.span = spans;
+        
         [self.theMapView setRegion:region animated:TRUE];
         [self.theMapView regionThatFits:region];
         
@@ -123,9 +127,10 @@
 
 -(void)zoomToFitMapAnnotations:(MKMapView*)mapView
 {
+
     if([mapView.annotations count] == 0)
         return;
-    
+//    mapView.region.span.latitudeDelta = 0;
     CLLocationCoordinate2D topLeftCoord;
     topLeftCoord.latitude = -90;
     topLeftCoord.longitude = 180;

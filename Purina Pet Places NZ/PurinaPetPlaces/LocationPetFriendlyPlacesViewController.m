@@ -28,6 +28,7 @@
     if (self) {
         Singleton *singletonClass = [Singleton sharedInstance];
         selectedLocation = singletonClass.selectedLocation;
+    
     }
     return self;
 }
