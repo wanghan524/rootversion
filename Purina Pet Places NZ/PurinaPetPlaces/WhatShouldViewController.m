@@ -93,7 +93,7 @@
     self.nextButton = [UIButton buttonWithType:UIButtonTypeCustom];
     self.nextButton.frame = CGRectMake((SCREEN_WIDTH / 5.0) * 1.5, SCREEN_HEIGHT - 50, (SCREEN_WIDTH / 5.0) * 3.5, 50);
     self.nextButton.backgroundColor = [UIColor redColor];
-    [self.nextButton addTarget:self action:@selector(nextButtonClick) forControlEvents:UIControlEventTouchUpInside];
+    [self.nextButton addTarget:self action:@selector(nextButtonClick:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:self.nextButton];
     
     nextLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, (SCREEN_WIDTH / 5.0) * 3.5, 50)];
@@ -112,6 +112,10 @@
     // Do any additional setup after loading the view.
 }
 
+-(void)nextButtonClick:(UIButton *)sender
+{
+    
+}
 
 #pragma mark - 
 #pragma mark - tableViewDatasourse and delegate
