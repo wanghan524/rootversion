@@ -7,9 +7,12 @@
 //
 
 #import "ToolsViewController.h"
+#import "PetHealthViewController.h"
+#import "WhatShouldViewController.h"
+#import "ProductsViewController.h"
 
 @interface ToolsViewController ()<UITableViewDataSource,UITableViewDelegate>{
-    NSArray *titleArray;;
+    NSArray *titleArray;
 }
 
 
@@ -113,6 +116,21 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    if(0 == indexPath.row){
+        PetHealthViewController *petHealthVC = [[PetHealthViewController alloc] init];
+        [self.navigationController pushViewController:petHealthVC animated:NO];
+        
+    }
+    else if (1 == indexPath.row){
+        WhatShouldViewController *whatShouldVC = [[WhatShouldViewController alloc] init];
+        [self.navigationController pushViewController:whatShouldVC animated:NO];
+    }
+    
+    else if (2 == indexPath.row){
+        ProductsViewController *productVC = [[ProductsViewController alloc] init];
+        [self.navigationController pushViewController:productVC animated:NO];
+    }
    
 }
 

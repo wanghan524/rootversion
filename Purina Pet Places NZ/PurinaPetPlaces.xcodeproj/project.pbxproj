@@ -267,6 +267,9 @@
 		EF0273621ADC013400B89609 /* LocationPetFriendlyPlacesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF0273611ADC013400B89609 /* LocationPetFriendlyPlacesViewController.m */; };
 		EF3EEDEC1AE2175000B3B7F8 /* ToolsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3EEDEB1AE2175000B3B7F8 /* ToolsViewController.m */; };
 		EF3EEDEE1AE2451000B3B7F8 /* tools-header0.png in Resources */ = {isa = PBXBuildFile; fileRef = EF3EEDED1AE2451000B3B7F8 /* tools-header0.png */; };
+		EF62CCBF1AE3812B00296A73 /* PetHealthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF62CCBE1AE3812B00296A73 /* PetHealthViewController.m */; };
+		EF62CCC21AE3813F00296A73 /* WhatShouldViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF62CCC11AE3813F00296A73 /* WhatShouldViewController.m */; };
+		EF62CCC51AE38E6F00296A73 /* PetHealthDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF62CCC41AE38E6F00296A73 /* PetHealthDetailViewController.m */; };
 		EFA1B58E1AD8BB9B00F44CC1 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFA1B5881AD8BB9B00F44CC1 /* Bolts.framework */; };
 		EFA1B58F1AD8BB9B00F44CC1 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFA1B5891AD8BB9B00F44CC1 /* Parse.framework */; };
 		EFA1B5901AD8BB9B00F44CC1 /* ParseCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFA1B58A1AD8BB9B00F44CC1 /* ParseCrashReporting.framework */; };
@@ -762,6 +765,12 @@
 		EF3EEDEA1AE2175000B3B7F8 /* ToolsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToolsViewController.h; sourceTree = "<group>"; };
 		EF3EEDEB1AE2175000B3B7F8 /* ToolsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToolsViewController.m; sourceTree = "<group>"; };
 		EF3EEDED1AE2451000B3B7F8 /* tools-header0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tools-header0.png"; sourceTree = "<group>"; };
+		EF62CCBD1AE3812B00296A73 /* PetHealthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PetHealthViewController.h; sourceTree = "<group>"; };
+		EF62CCBE1AE3812B00296A73 /* PetHealthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PetHealthViewController.m; sourceTree = "<group>"; };
+		EF62CCC01AE3813F00296A73 /* WhatShouldViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WhatShouldViewController.h; sourceTree = "<group>"; };
+		EF62CCC11AE3813F00296A73 /* WhatShouldViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WhatShouldViewController.m; sourceTree = "<group>"; };
+		EF62CCC31AE38E6F00296A73 /* PetHealthDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PetHealthDetailViewController.h; sourceTree = "<group>"; };
+		EF62CCC41AE38E6F00296A73 /* PetHealthDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PetHealthDetailViewController.m; sourceTree = "<group>"; };
 		EFA1B5881AD8BB9B00F44CC1 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		EFA1B5891AD8BB9B00F44CC1 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = "parse-library-1.7.1/Parse.framework"; sourceTree = "<group>"; };
 		EFA1B58A1AD8BB9B00F44CC1 /* ParseCrashReporting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseCrashReporting.framework; sourceTree = "<group>"; };
@@ -1599,6 +1608,12 @@
 			children = (
 				EF3EEDEA1AE2175000B3B7F8 /* ToolsViewController.h */,
 				EF3EEDEB1AE2175000B3B7F8 /* ToolsViewController.m */,
+				EF62CCBD1AE3812B00296A73 /* PetHealthViewController.h */,
+				EF62CCBE1AE3812B00296A73 /* PetHealthViewController.m */,
+				EF62CCC31AE38E6F00296A73 /* PetHealthDetailViewController.h */,
+				EF62CCC41AE38E6F00296A73 /* PetHealthDetailViewController.m */,
+				EF62CCC01AE3813F00296A73 /* WhatShouldViewController.h */,
+				EF62CCC11AE3813F00296A73 /* WhatShouldViewController.m */,
 			);
 			name = Tools;
 			sourceTree = "<group>";
@@ -2256,6 +2271,7 @@
 				7512226D1ADA5D5E00A1506B /* PopView.m in Sources */,
 				2082520515B63FEB00BDA88D /* PCCategoryInfo.m in Sources */,
 				2082520615B63FEB00BDA88D /* PCLocationInfo.m in Sources */,
+				EF62CCC51AE38E6F00296A73 /* PetHealthDetailViewController.m in Sources */,
 				2082520715B63FEB00BDA88D /* PCPetCentricSvc.m in Sources */,
 				2082520815B63FEB00BDA88D /* PCServices.m in Sources */,
 				2082520915B63FEB00BDA88D /* Soap+Prefix.m in Sources */,
@@ -2266,9 +2282,11 @@
 				EF3EEDEC1AE2175000B3B7F8 /* ToolsViewController.m in Sources */,
 				2082520E15B63FEB00BDA88D /* SoapFault.m in Sources */,
 				2082520F15B63FEB00BDA88D /* SoapHandler.m in Sources */,
+				EF62CCC21AE3813F00296A73 /* WhatShouldViewController.m in Sources */,
 				2082521015B63FEB00BDA88D /* SoapLiteral.m in Sources */,
 				2082521115B63FEB00BDA88D /* SoapNil.m in Sources */,
 				2082521215B63FEB00BDA88D /* SoapObject.m in Sources */,
+				EF62CCBF1AE3812B00296A73 /* PetHealthViewController.m in Sources */,
 				2082521315B63FEB00BDA88D /* SoapParameter.m in Sources */,
 				7512226C1ADA5D5E00A1506B /* MainViewController.m in Sources */,
 				EFC41CAA1ADBC1C700978240 /* NextPetFriendlyPlacesViewController.m in Sources */,

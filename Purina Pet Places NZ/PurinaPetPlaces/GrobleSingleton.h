@@ -14,6 +14,8 @@
 
 @property (nonatomic, strong) NSMutableArray *animalArray;
 
+@property (nonatomic, strong) NSString *selectedAnimalName;
+
 +(id)sharedGlobleInstance;
 
 - (void)insertAnimalName:(NSString *)animalName;
