@@ -8,6 +8,14 @@
 
 #import "ParentViewController.h"
 
-@interface WhatShouldViewController : ParentViewController
+@interface WhatShouldViewController : ParentViewController{
+    BOOL clickStatus;
+}
+
+@property(nonatomic,strong)NSMutableArray *menuArray;
+
+@property(nonatomic,strong)UITableView *menusTable;
+
+@property(nonatomic,strong)UIView *darkView;
 
 @end

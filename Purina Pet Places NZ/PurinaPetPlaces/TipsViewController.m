@@ -46,6 +46,9 @@
 #pragma mark - Table view data source
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (tableView == self.menusTable) {
+        return 44;
+    }
     return (SCREEN_HEIGHT - 64 - 100) / 2.0;
 }
 
@@ -57,12 +60,17 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     //Singleton *sharedSingleton = [Singleton sharedInstance];
+    if (tableView == self.menusTable) {
+        return self.menuArray.count;
+    }
     return 2;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
+    
+    NSArray *imageNameArray = @[@"menu-home.jpg",@"menu-dog-pet-places.jpg",@"menu-photo-fun.jpg",@"menu-pet-friendly-places.jpg",@"menu-stockists.jpg",@"menu-tools.jpg",@"menu-pet-service.jpg",@"menu-tips.jpg",@"menu-products.jpg"];
     
     titleArray = [[NSArray alloc] init];
     
@@ -81,21 +89,36 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
         cell.backgroundColor = [UIColor clearColor];
         
-        UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, (SCREEN_HEIGHT - 64 - 100) / 2.0 / 2.0- 20, cell.frame.size.width, 40)];
-        titleLabel.backgroundColor = [UIColor clearColor];
-        titleLabel.text = titleArray[indexPath.row];
-        titleLabel.textAlignment = NSTextAlignmentCenter;
-        titleLabel.font = [UIFont systemFontOfSize:20];
-        titleLabel.textColor = [UIColor grayColor];
-        [cell.contentView addSubview:titleLabel];
+        if (tableView == self.menusTable) {
+            UIImageView *iconTemplateView = [[UIImageView alloc] initWithFrame:CGRectMake(8, 8, 33, 33)];
+            iconTemplateView.backgroundColor = [UIColor redColor];
+            iconTemplateView.image = [UIImage imageNamed:imageNameArray[indexPath.row]];
+            [cell.contentView addSubview:iconTemplateView];
+            [cell setIndentationLevel:4];
+            
+            cell.textLabel.text = [self.menuArray objectAtIndex:indexPath.row];
+        }
+        
+        if (tableView == self.myTableView) {
+            UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, (SCREEN_HEIGHT - 64 - 100) / 2.0 / 2.0- 20, cell.frame.size.width, 40)];
+            titleLabel.backgroundColor = [UIColor clearColor];
+            titleLabel.text = titleArray[indexPath.row];
+            titleLabel.textAlignment = NSTextAlignmentCenter;
+            titleLabel.font = [UIFont systemFontOfSize:20];
+            titleLabel.textColor = [UIColor grayColor];
+            [cell.contentView addSubview:titleLabel];
+            UIView *backView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, (SCREEN_HEIGHT - 64 - 100) / 2.0)];
+            backView.backgroundColor = [UIColor whiteColor];
+            cell.selectedBackgroundView = backView;
+        }
+        
+        
         //
         //        [iconTemplateView setFrame:CGRectMake(8, 8, 33, 33)];
         //        [cell addSubview:iconTemplateView];
         [cell setIndentationLevel:4];
     }
-    UIView *backView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, (SCREEN_HEIGHT - 64 - 100) / 2.0)];
-    backView.backgroundColor = [UIColor whiteColor];
-    cell.selectedBackgroundView = backView;
+    
     
     
     [cell setSelectionStyle:UITableViewCellSelectionStyleDefault];
@@ -105,6 +128,9 @@
     return cell;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    if (tableView == self.menusTable) {
+        return 1;
+    }
     return 100.0f;
 }
 
@@ -113,6 +139,9 @@
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+    if (tableView == self.menusTable) {
+        return nil;
+    }
     UIImageView * headerImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 100)];
     headerImageView.image = [UIImage imageNamed:@"tips-header.jpg"];
     
@@ -127,10 +156,75 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    if (tableView == self.menusTable) {
+        return ;
+    }
+    
     NSLog(@"titleArray : %@",titleArray[indexPath.row]);
     TipsContentViewController *tipsVC = [[TipsContentViewController alloc] init];
     tipsVC.currentTitle = titleArray[indexPath.row];
     [self.navigationController pushViewController:tipsVC animated:YES];
+}
+
+
+#pragma mark -
+#pragma mark - 侧滑
+-(void)profileBtnClickOrGestureClip:(UIButton *)sender
+{
+    clickStatus = !clickStatus;
+    if(clickStatus == YES)
+    {[self makeDarkView];}
+    else
+    {
+        [self.darkView removeFromSuperview];
+        self.darkView = nil;
+    }
+    
+}
+
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    UITouch *touch = [touches anyObject];
+    if(self.darkView != nil)
+    {
+        if(touch.view == self.darkView)
+        {
+            clickStatus = !clickStatus;
+            [self.darkView removeFromSuperview];
+            self.darkView = nil;
+        }
+    }
+}
+
+
+-(void)makeDarkView
+{
+    
+    //[UIView animateWithDuration:2.0 animations:^{
+    self.darkView = [[UIView alloc]initWithFrame:CGRectMake(0, navHeight, SCREEN_WIDTH, SCREEN_HEIGHT - navHeight)];
+    [self.darkView setBackgroundColor:[UIColor colorWithRed:86/255.f green:86/255.f blue:86/255.f alpha:0.7]];
+    
+    
+    [self.view addSubview:self.darkView];
+    
+    self.menusTable = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH / 2 + 30, SCREEN_HEIGHT - navHeight) style:UITableViewStylePlain];
+    self.menusTable.tag = 100;
+    self.menusTable.delegate = self;
+    self.menusTable.dataSource = self;
+    self.menusTable.separatorStyle = UITableViewCellSeparatorStyleNone;
+    self.menusTable.tableFooterView = [[UIView alloc]initWithFrame:CGRectZero];
+    [self.darkView addSubview:self.menusTable];
+    
+    self.menuArray = [[NSMutableArray alloc]initWithCapacity:0];
+    NSArray *arr = @[@"Home",@"Dog Pet Places",@"Photo Fun",@"Pet Friendly Places",@"Stockists",@"Tools",@"Pet Service",@"Tips",@"Products"];
+    for(NSUInteger i = 0; i < [arr count]; i++)
+    {
+        [self.menuArray addObject:arr[i]];
+    }
+    
+    //}];
+    
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
