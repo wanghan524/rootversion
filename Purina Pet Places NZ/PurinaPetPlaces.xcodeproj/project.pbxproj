@@ -265,6 +265,7 @@
 		8AF8150E183DA9D900088BE9 /* button_currentLocation_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AF8150D183DA9D900088BE9 /* button_currentLocation_selected.png */; };
 		EF02735F1ADBF85800B89609 /* ResultPetFriendlyPlacesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF02735E1ADBF85800B89609 /* ResultPetFriendlyPlacesViewController.m */; };
 		EF0273621ADC013400B89609 /* LocationPetFriendlyPlacesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF0273611ADC013400B89609 /* LocationPetFriendlyPlacesViewController.m */; };
+		EF047EED1AF3A98F00DADFCA /* PieChatView.m in Sources */ = {isa = PBXBuildFile; fileRef = EF047EEC1AF3A98F00DADFCA /* PieChatView.m */; };
 		EF3EEDEC1AE2175000B3B7F8 /* ToolsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3EEDEB1AE2175000B3B7F8 /* ToolsViewController.m */; };
 		EF3EEDEE1AE2451000B3B7F8 /* tools-header0.png in Resources */ = {isa = PBXBuildFile; fileRef = EF3EEDED1AE2451000B3B7F8 /* tools-header0.png */; };
 		EF62CCBF1AE3812B00296A73 /* PetHealthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF62CCBE1AE3812B00296A73 /* PetHealthViewController.m */; };
@@ -762,6 +763,8 @@
 		EF02735E1ADBF85800B89609 /* ResultPetFriendlyPlacesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultPetFriendlyPlacesViewController.m; sourceTree = "<group>"; };
 		EF0273601ADC013400B89609 /* LocationPetFriendlyPlacesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationPetFriendlyPlacesViewController.h; sourceTree = "<group>"; };
 		EF0273611ADC013400B89609 /* LocationPetFriendlyPlacesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationPetFriendlyPlacesViewController.m; sourceTree = "<group>"; };
+		EF047EEB1AF3A98F00DADFCA /* PieChatView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PieChatView.h; sourceTree = "<group>"; };
+		EF047EEC1AF3A98F00DADFCA /* PieChatView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PieChatView.m; sourceTree = "<group>"; };
 		EF3EEDEA1AE2175000B3B7F8 /* ToolsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToolsViewController.h; sourceTree = "<group>"; };
 		EF3EEDEB1AE2175000B3B7F8 /* ToolsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToolsViewController.m; sourceTree = "<group>"; };
 		EF3EEDED1AE2451000B3B7F8 /* tools-header0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tools-header0.png"; sourceTree = "<group>"; };
@@ -1610,6 +1613,8 @@
 				EF3EEDEB1AE2175000B3B7F8 /* ToolsViewController.m */,
 				EF62CCBD1AE3812B00296A73 /* PetHealthViewController.h */,
 				EF62CCBE1AE3812B00296A73 /* PetHealthViewController.m */,
+				EF047EEB1AF3A98F00DADFCA /* PieChatView.h */,
+				EF047EEC1AF3A98F00DADFCA /* PieChatView.m */,
 				EF62CCC31AE38E6F00296A73 /* PetHealthDetailViewController.h */,
 				EF62CCC41AE38E6F00296A73 /* PetHealthDetailViewController.m */,
 				EF62CCC01AE3813F00296A73 /* WhatShouldViewController.h */,
@@ -2259,6 +2264,7 @@
 				20F00989154F7D5E00AC6366 /* PetInfoTipsViewController.m in Sources */,
 				20F00997154FC65B00AC6366 /* PetTipsCell.m in Sources */,
 				20119A8E1550F000000DBCE8 /* PetInfoProductsViewController.m in Sources */,
+				EF047EED1AF3A98F00DADFCA /* PieChatView.m in Sources */,
 				20717270155B56D20024C3D0 /* Reachability.m in Sources */,
 				EFC41CA71ADB8E3200978240 /* PetFriendlyPlacesViewController.m in Sources */,
 				EFA56CDF1ADF848300A915E8 /* TipsViewController.m in Sources */,

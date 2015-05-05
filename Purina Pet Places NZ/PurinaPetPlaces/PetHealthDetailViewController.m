@@ -16,6 +16,7 @@
 @end
 
 @implementation PetHealthDetailViewController
+@synthesize pieview;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -25,6 +26,43 @@
     [self showCustomeNav];
     
     self.view.backgroundColor = [UIColor colorWithRed:242/255.0 green:238/255.0 blue:223/255.0 alpha:1];
+    
+    
+    NSMutableArray * floatarray = [[NSMutableArray alloc] initWithCapacity:8];
+    
+    float a = 10.0;
+    float b = 10.0;
+    float c = 10.0;
+    float d = 10.0;
+    float e = 10.0;
+    float f = 10.0;
+    float g = 10.0;
+    float h = 10.0;
+    
+    float abcdefgh = a+b+c+d+e+f+g+h;
+    float aa = a/abcdefgh;
+    float bb = b/abcdefgh;
+    float cc = c/abcdefgh;
+    float dd = d/abcdefgh;
+    float ee = e/abcdefgh;
+    float ff = f/abcdefgh;
+    float gg = g/abcdefgh;
+    float hh = h/abcdefgh;
+
+    [floatarray addObject:[[NSString alloc] initWithFormat:@"%f",aa]];
+    [floatarray addObject:[[NSString alloc] initWithFormat:@"%f",bb]];
+    [floatarray addObject:[[NSString alloc] initWithFormat:@"%f",cc]];
+    [floatarray addObject:[[NSString alloc] initWithFormat:@"%f",dd]];
+    [floatarray addObject:[[NSString alloc] initWithFormat:@"%f",ee]];
+    [floatarray addObject:[[NSString alloc] initWithFormat:@"%f",ff]];
+    [floatarray addObject:[[NSString alloc] initWithFormat:@"%f",gg]];
+    [floatarray addObject:[[NSString alloc] initWithFormat:@"%f",hh]];
+
+    
+    //
+    pieview = [[PieChatView alloc] initWithFrame:CGRectMake(0.0, 0.0, SCREEN_WIDTH , SCREEN_HEIGHT)  withNum:[floatarray count] withArray:floatarray];
+    //pieview.center = CGPointMake(160, 240);
+    [self.view addSubview:pieview];
 
     // Do any additional setup after loading the view.
 }

@@ -7,7 +7,10 @@
 //
 
 #import "ParentViewController.h"
+#import "PieChatView.h"
 
 @interface PetHealthDetailViewController : ParentViewController
 
+
+@property (nonatomic, strong) PieChatView *pieview;
 @end
