@@ -20,6 +20,7 @@
 //        [self makeCateGoryTable];
         _btnArr = [[NSMutableArray alloc]initWithCapacity:0];
         [self makeBtnClickTarget];
+    
     }
     return self;
 }
@@ -111,6 +112,12 @@
 
 -(void)makeCateGoryTable
 {
+    
+    if (self.cateGoryMuArr == nil) {
+        self.cateGoryMuArr = [[NSMutableArray alloc] initWithObjects:@"Accommodation",@"Parks & Beaches",@"Restaurants & Cafes",@"Pet Services",@"Stockists", nil];
+        
+    }
+    
     self.cateGoryTable = [[UITableView alloc]initWithFrame:CGRectMake(self.cateGoryLabel.frame.origin.x,CGRectGetMaxY(self.cateGoryLabel.frame), self.cateGoryLabel.frame.size.width, 100) style:UITableViewStylePlain];
     self.cateGoryTable.delegate = self;
     self.cateGoryTable.dataSource = self;
@@ -139,6 +146,7 @@
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
+    
     return (self.cateGoryMuArr == nil)?0:([self.cateGoryMuArr count]);
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -147,6 +155,7 @@
 }
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+   
     static NSString *cateGoryIden = @"cateGoryIden";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cateGoryIden];
     if(nil == cell)

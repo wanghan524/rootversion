@@ -8,12 +8,24 @@
 
 #import <UIKit/UIKit.h>
 #import "MySearchView.h"
+#import <MapKit/MapKit.h>
+#import "BSForwardGeocoder.h"
+#import "BSKmlResult.h"
+
 extern CGFloat navHeight;
-@interface SearchViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
+@interface SearchViewController : UIViewController<UITableViewDataSource,UITableViewDelegate,BSForwardGeocoderDelegate,CLLocationManagerDelegate>{
+    CLLocationManager       *currentUserLocation;
+    UIView                  *blackLoadingScreen;
+    BSForwardGeocoder       *forwardGeocoder;
+    BOOL                    update;
+    NSString                *selectedCategory;
+}
 
 @property(nonatomic,strong)MySearchView *searchMapView;
-
-
+@property (nonatomic, retain) NSString *selectedCategory;
+@property (nonatomic, retain) CLLocationManager *currentUserLocation;
+@property (nonatomic, retain) UIView *blackLoadingScreen;
+@property (nonatomic, retain) BSForwardGeocoder *forwardGeocoder;
 @property(nonatomic,assign)CGFloat residuHeigth;
 @property(nonatomic,strong)UIImageView *lineImageView;
 @property(nonatomic,strong)UIButton *backButton;

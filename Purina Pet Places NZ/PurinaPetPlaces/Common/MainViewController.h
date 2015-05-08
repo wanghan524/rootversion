@@ -14,6 +14,7 @@
 #import  "SearchViewController.h"
 
 
+
 extern CGFloat navHeight;
 @interface MainViewController : ParentViewController<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout,UITableViewDataSource,UITableViewDelegate>
 @property(nonatomic,strong)NSMutableArray *menuArray;

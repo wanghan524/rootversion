@@ -7,6 +7,8 @@
 //
 
 #import "SearchViewController.h"
+#import "Singleton.h"
+#import "MapViewController.h"
 
 @interface SearchViewController ()
 {
@@ -20,9 +22,10 @@
 @end
 
 @implementation SearchViewController
-
+@synthesize forwardGeocoder,blackLoadingScreen,currentUserLocation;
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self initBack];
     clickStatus = NO;
     self.navigationController.navigationBar.hidden = YES;
     width = SCREEN_WIDTH;
@@ -48,6 +51,29 @@
     
 }
 
+- (void)initBack{
+    
+    update = TRUE;
+    blackLoadingScreen = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.height, self.view.frame.size.height)];
+    [blackLoadingScreen setBackgroundColor:[UIColor colorWithRed:0/255.0 green:0/255.0 blue:0/255.0 alpha:0.9f]];
+    [blackLoadingScreen setTag:2];
+    
+    UILabel *loading = [[UILabel alloc] initWithFrame:CGRectMake(0, 367/2, 320, 40)];
+    [loading setText:@"Searching"];
+    [loading setFont:[UIFont boldSystemFontOfSize:30]];
+    [loading setTextColor:[UIColor whiteColor]];
+    [loading setBackgroundColor:[UIColor clearColor]];
+    [loading setTextAlignment:UITextAlignmentCenter];
+    [loading setShadowColor:[UIColor darkGrayColor]];
+    
+    UIActivityIndicatorView *benActivity = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+    //[benActivity setColor:[UIColor whiteColor]];
+    [benActivity setCenter:CGPointMake(160, (367/2)-30)];
+    [benActivity startAnimating];
+    
+    [blackLoadingScreen addSubview:benActivity];
+    [blackLoadingScreen addSubview:loading];
+}
 
 -(void)showSearchBtn
 {
@@ -62,6 +88,39 @@
 -(void)searchCataGoryBtnClick:(UIButton *)sender
 {
     DLog(@"dianji");
+    //tfSuburb = (UITextField *)[self.tableView viewWithTag:1];
+    
+    if (self.searchMapView.suburbTxt.text.length <= 0) {
+        UIAlertView *warningText = [[UIAlertView alloc] initWithTitle:nil message:@"Please enter a Suburb, Region or Postcode" delegate:self cancelButtonTitle:@"Close" otherButtonTitles:nil, nil];
+        [warningText show];
+    }else {
+        update = TRUE;
+        [self.view addSubview:blackLoadingScreen];
+        NSString *augString = [NSString stringWithFormat:@"%@, New Zealand", self.searchMapView.suburbTxt.text];
+        
+        if (self.forwardGeocoder == nil)
+            self.forwardGeocoder = [[BSForwardGeocoder alloc] initWithDelegate:self];
+        
+        if ([self.searchMapView.suburbTxt.text isEqualToString:@"Current Location"]) {
+            currentUserLocation = [[CLLocationManager alloc] init];
+            [currentUserLocation setDelegate:self];
+            [currentUserLocation startUpdatingLocation];
+        } else {
+            [self.forwardGeocoder forwardGeocodeWithQuery:augString regionBiasing:nil success:^(NSArray *results) {
+                [self forwardGeocodingDidSucceed:self.forwardGeocoder withResults:results];
+            } failure:^(int status, NSString *errorMessage) {
+                if (status == G_GEO_NETWORK_ERROR) {
+                    [self forwardGeocoderConnectionDidFail:self.forwardGeocoder withErrorMessage:errorMessage];
+                    [blackLoadingScreen removeFromSuperview];
+                } else {
+                    [self forwardGeocodingDidFail:self.forwardGeocoder withErrorCode:status andErrorMessage:errorMessage];
+                    [blackLoadingScreen removeFromSuperview];
+                }
+            }];
+            
+        }
+    }
+
 }
 
 
@@ -272,5 +331,145 @@
     
 }
 
+#pragma mark - BSForwardGeocoderDelegate methods
 
+- (void)forwardGeocoderConnectionDidFail:(BSForwardGeocoder *)geocoder withErrorMessage:(NSString *)errorMessage
+{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error!" message:errorMessage delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+    [alert show];
+}
+
+
+- (void)forwardGeocodingDidSucceed:(BSForwardGeocoder *)geocoder withResults:(NSArray *)results
+{
+    
+    //tfSearchTerm = (UITextField *)[self.tableView viewWithTag:3];
+    BSKmlResult *place = [results objectAtIndex:0];
+    
+    
+    CLGeocoder *forwardGeo = [[CLGeocoder alloc] init];
+    CLLocation *reverseLocation = [[CLLocation alloc] initWithLatitude:place.latitude longitude:place.longitude];
+    
+    CGFloat distanceFromLocation;
+//    switch (segDistance.selectedSegmentIndex) {
+//        case 0:
+//            distanceFromLocation = 1.0;
+//            break;
+//        case 1:
+//            distanceFromLocation = 5.0;
+//            break;
+//        case 2:
+//            distanceFromLocation = 10.0;
+//            break;
+//    }
+    distanceFromLocation = [self.searchMapView.currentDistanceStr floatValue];
+    
+    NSLog(@"Searching For: %f / %f", reverseLocation.coordinate.latitude, reverseLocation.coordinate.longitude);
+    
+    [forwardGeo reverseGeocodeLocation:reverseLocation completionHandler:^(NSArray* placemarks, NSError* error){
+        NSLog(@"Placemarks %i", placemarks.count);
+        if (placemarks.count >= 1) {
+            CLPlacemark *placemarkresult = [[CLPlacemark alloc] initWithPlacemark:[placemarks objectAtIndex:0]];
+            CLLocation *placemarkLocation = [[CLLocation alloc] initWithLatitude:placemarkresult.location.coordinate.latitude longitude:placemarkresult.location.coordinate.longitude];
+            
+            Singleton *singletonClass = [Singleton sharedInstance];
+            int locationsCount = 0;
+            
+            
+            for (Locations *location in singletonClass.locationListing) {
+                if (![location.LocationLongLat isEqualToString:@""]) {
+                    
+                    
+                    NSArray *longLatSplit = [location.LocationLongLat componentsSeparatedByString:@","];
+                    
+                    CLLocationCoordinate2D theCoordinate;
+                    theCoordinate.latitude = [[longLatSplit objectAtIndex:0] doubleValue];
+                    theCoordinate.longitude = [[longLatSplit objectAtIndex:1] doubleValue];
+                    
+                    CLLocation *currentScanLoc = [[CLLocation alloc] initWithLatitude:theCoordinate.latitude longitude:theCoordinate.longitude];
+                    CLLocationDistance distance = [placemarkLocation distanceFromLocation:currentScanLoc];
+                    
+                    if ([self.searchMapView.searchTermTxt.text length] > 0) {
+                        NSRange range = [location.LocationName rangeOfString:self.searchMapView.searchTermTxt.text options:NSCaseInsensitiveSearch];
+                        if (distance / 1000 <= distanceFromLocation && [location.LocationCategoryName isEqualToString:selectedCategory] && range.location != NSNotFound) {
+                            locationsCount ++;
+                        }
+                    }else {
+                        if (distance / 1000 <= distanceFromLocation && [location.LocationCategoryName isEqualToString:selectedCategory]) {
+                            locationsCount ++;
+                        }
+                    }
+                }
+            }
+            
+            [blackLoadingScreen removeFromSuperview];
+            
+            
+            
+            
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Sorry" message:@"No results found" delegate:nil cancelButtonTitle:@"Close" otherButtonTitles: nil];
+            
+            if (locationsCount > 0)
+                [self pushMapView:placemarkresult distance:distanceFromLocation];
+            else
+                [alert show];
+        }else {
+            NSLog(@"nogo?");
+        }
+        
+        
+        
+        
+        
+        
+    }];
+    
+    
+    
+}
+
+- (void)forwardGeocodingDidFail:(BSForwardGeocoder *)geocoder withErrorCode:(int)errorCode andErrorMessage:(NSString *)errorMessage
+{
+    NSString *message = @"";
+    
+    switch (errorCode) {
+        case G_GEO_BAD_KEY:
+            message = @"The API key is invalid.";
+            break;
+            
+        case G_GEO_UNKNOWN_ADDRESS:
+            message = [NSString stringWithFormat:@"Sorry, location could not be found"];
+            [blackLoadingScreen removeFromSuperview];
+            break;
+            
+        case G_GEO_TOO_MANY_QUERIES:
+            message = @"Too many queries has been made for this API key.";
+            break;
+            
+        case G_GEO_SERVER_ERROR:
+            message = @"Server error, please try again.";
+            break;
+            
+            
+        default:
+            break;
+    }
+    
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Information"
+                                                    message:message
+                                                   delegate:nil
+                                          cancelButtonTitle:@"OK"
+                                          otherButtonTitles: nil];
+    [alert show];
+    [blackLoadingScreen removeFromSuperview];
+}
+
+-(void)pushMapView:(CLPlacemark *)placemarkresult distance:(CGFloat)distanceFromLocation {
+    MapViewController *mapViewController = [[MapViewController alloc] initWithNibName:@"MapViewController" bundle:nil];
+    [mapViewController setSearchResult:placemarkresult];
+    [mapViewController setPassedCategory:selectedCategory];
+    [mapViewController setPassedSearchString:self.searchMapView.searchTermTxt.text];
+    [mapViewController setPassedDistance:distanceFromLocation];
+    [self.navigationController pushViewController:mapViewController animated:YES];
+}
 @end
