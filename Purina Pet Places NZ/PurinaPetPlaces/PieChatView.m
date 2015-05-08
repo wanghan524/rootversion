@@ -421,6 +421,8 @@ static float deltaAngle;
 }
 
 
+
+
 #pragma mark - 
 #pragma mark - 点击圆形区域
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
@@ -435,13 +437,78 @@ static float deltaAngle;
     
     if (CGPathContainsPoint(path, NULL, delta, NO)) {
         NSLog(@"包含这个点");
+        
+        //[self setNeedsDisplay];
+        float distanceX = delta.x - centerX;
+        float distanceY = centerY - delta.y;
+        float xiebian = sqrtf(distanceX * distanceX + distanceY*distanceY);
+        
+        float radius1 = asin(distanceX / xiebian);
     
+        float angle = RADIANS_TO_DEGREES(radius1);
+        
+        int index;
+        
+        //NSLog(@"angle : %lf",angle);
+        if ((centerY - delta.y) > 0 ) {
+            if(angle >= 67.5 && angle <= 90.0f){
+                index = 0;
+                NSLog(@"0");
+            }
+            else if (angle >= 22.5 && angle < 67.5){
+                index = 7;
+                NSLog(@"1");
+            }
+            else if (angle >= -22.5 && angle < 22.5){
+                index = 6;
+                NSLog(@"2");
+            }
+            else if (angle >= -67.5 && angle < -22.5){
+                index = 5;
+                NSLog(@"3");
+            }
+            else if (angle >= -90.0 && angle < -67.5){
+                index = 4;
+                NSLog(@"4");
+            }
+            
+                
+            
+            
+        }else{
+            
+            if(angle >= 67.5 && angle <= 90.0f){
+                index = 0;
+                NSLog(@"0");
+            }
+            else if (angle >= 22.5 && angle < 67.5){
+                index = 1;
+                NSLog(@"7");
+            }
+            else if (angle >= -22.5 && angle < 22.5){
+                index = 2;
+                NSLog(@"6");
+            }
+            else if (angle >= -67.5 && angle < -22.5){
+                index = 3;
+                NSLog(@"5");
+            }
+            else if (angle >= -90.0 && angle < -67.5){
+                index = 4;
+                NSLog(@"4");
+            }
+            
+            
+        }
+        
+        
+        
         
         {
             UIGraphicsBeginImageContext(CGSizeMake(SCREEN_WIDTH, SCREEN_HEIGHT - 64));
             CGContextRef context = UIGraphicsGetCurrentContext();
-            CGFloat startAngle = 2 * M_PI * 1 / 8 - ((22.5) / 180.0 * M_PI);//开始的角度
-            CGFloat endAngle = 2* M_PI * 2 / 8 - ((22.5) / 180.0 * M_PI);//结束的角度
+            CGFloat startAngle = 2 * M_PI * index / 8 - ((22.5) / 180.0 * M_PI);//开始的角度
+            CGFloat endAngle = 2* M_PI * (index + 1) / 8 - ((22.5) / 180.0 * M_PI);//结束的角度
             NSLog(@"startAngle : %f  endAngle: %f",RADIANS_TO_DEGREES(startAngle),RADIANS_TO_DEGREES(endAngle));
             CGMutablePathRef path = CGPathCreateMutable();//创建一个类型为CGMutablePathRef的可变路径，并返回其句柄。每次使用完这个路径，我们都应该为它做善后工作
             
