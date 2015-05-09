@@ -41,7 +41,7 @@
     
     UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 75 - 30, SCREEN_WIDTH, 60)];
     titleLabel.text = @"What should I feed my dog";
-    titleLabel.font = [UIFont systemFontOfSize:24];
+    titleLabel.font = [UIFont fontWithName:@"Antenna" size:24];
     titleLabel.textAlignment = NSTextAlignmentCenter;
     titleLabel.textColor = [UIColor whiteColor];
     [titleBackImageView addSubview:titleLabel];
@@ -85,7 +85,7 @@
     visitLabel.textColor = [UIColor whiteColor];
     visitLabel.numberOfLines = 0;
     visitLabel.textAlignment = NSTextAlignmentCenter;
-    visitLabel.font = [UIFont systemFontOfSize:15];
+    visitLabel.font = [UIFont fontWithName:@"Antenna" size:15];
     [self.view addSubview:visitLabel];
     
     
@@ -101,7 +101,7 @@
     nextLabel.text = @"NEXT";
     nextLabel.textColor = [UIColor whiteColor];
     nextLabel.textAlignment = NSTextAlignmentCenter;
-    nextLabel.font = [UIFont systemFontOfSize:15];
+    nextLabel.font = [UIFont fontWithName:@"Antenna" size:15];
     nextLabel.numberOfLines = 0;
     [self.nextButton addSubview:nextLabel];
     
@@ -163,7 +163,7 @@
     NSArray *titleArray = @[@"Select Profile",@"I'm looking for",@"Size",@"Does your pet need specialty food?",@"Sort by price"];
     UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 80)];
     
-    titleLabel.font = [UIFont systemFontOfSize:22];
+    titleLabel.font = [UIFont fontWithName:@"Antenna" size:22];
     titleLabel.textAlignment = NSTextAlignmentCenter;
     titleLabel.textColor = [UIColor grayColor];
     titleLabel.text = [titleArray objectAtIndex:(tableView.tag -200)];
@@ -192,7 +192,7 @@
         iconTemplateView.image = [UIImage imageNamed:imageNameArray[indexPath.row]];
         [cell.contentView addSubview:iconTemplateView];
         [cell setIndentationLevel:4];
-        
+        cell.textLabel.font = [UIFont fontWithName:@"Antenna" size:10];
         cell.textLabel.text = [self.menuArray objectAtIndex:indexPath.row];
     }else{
         NSArray *nowContentArray = [[NSArray alloc] init];
@@ -211,6 +211,7 @@
             UILabel *contentLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, (SCREEN_WIDTH / 3.0) * 2, (SCREEN_HEIGHT - 64 - 150 - 50 - 40 - 80 - 30) / 3.0)];
             contentLabel.textColor = [UIColor grayColor];
             contentLabel.text = [nowContentArray objectAtIndex:indexPath.row];
+            contentLabel.font = [UIFont fontWithName:@"Antenna" size:10];
             contentLabel.textAlignment = NSTextAlignmentCenter;
             [cell.contentView addSubview:contentLabel];
             
@@ -230,6 +231,7 @@
             cell.textLabel.text = [nowContentArray objectAtIndex:indexPath.row];
             cell.textLabel.textAlignment = NSTextAlignmentCenter;
             cell.textLabel.textColor = [UIColor grayColor];
+            cell.textLabel.font = [UIFont fontWithName:@"Antenna" size:10];
         }
     }
    

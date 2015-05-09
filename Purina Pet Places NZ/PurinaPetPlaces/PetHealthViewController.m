@@ -35,7 +35,8 @@
     
     UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 75 - 30, SCREEN_WIDTH, 60)];
     titleLabel.text = @"Pet Health Compass";
-    titleLabel.font = [UIFont systemFontOfSize:24];
+
+    titleLabel.font = [UIFont fontWithName:@"Antenna" size:24];
     titleLabel.textAlignment = NSTextAlignmentCenter;
     titleLabel.textColor = [UIColor whiteColor];
     [titleBackImageView addSubview:titleLabel];
@@ -63,7 +64,7 @@
     nextLabel.text = @"NEXT";
     nextLabel.textColor = [UIColor whiteColor];
     nextLabel.textAlignment = NSTextAlignmentCenter;
-    nextLabel.font = [UIFont systemFontOfSize:20];
+    nextLabel.font = [UIFont fontWithName:@"Antenna" size:20];
     nextLabel.numberOfLines = 0;
     [nextButton addSubview:nextLabel];
     
@@ -104,12 +105,12 @@
         iconTemplateView.image = [UIImage imageNamed:imageNameArray[indexPath.row]];
         [cell.contentView addSubview:iconTemplateView];
         [cell setIndentationLevel:4];
-        
+        cell.textLabel.font = [UIFont fontWithName:@"Antenna" size:10];
         cell.textLabel.text = [self.menuArray objectAtIndex:indexPath.row];
     }else{
         cell.textLabel.text = [[globleSingleton getAllAnimalNameArray] objectAtIndex:indexPath.row];
         cell.textLabel.textColor = [UIColor grayColor];
-        cell.textLabel.font = [UIFont systemFontOfSize:17];
+        cell.textLabel.font = [UIFont fontWithName:@"Antenna" size:17];
         cell.backgroundColor = [UIColor clearColor];
         cell.textLabel.textAlignment = NSTextAlignmentCenter;
     }
@@ -126,7 +127,7 @@
     UILabel *headerLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 80)];
     headerLabel.text = @"Select Dog Profile";
     headerLabel.textAlignment = NSTextAlignmentCenter;
-    headerLabel.font = [UIFont systemFontOfSize:20];
+    headerLabel.font = [UIFont fontWithName:@"Antenna" size:20];
     return headerLabel;
 }
 
@@ -140,7 +141,99 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
     if (tableView == self.menusTable) {
-        return ;
+        
+        if(self.darkView != nil)
+        {
+            
+            clickStatus = !clickStatus;
+            [self.darkView removeFromSuperview];
+            self.darkView = nil;
+            
+        }
+        
+        
+        if(indexPath.row == 0)
+        {
+            [self.navigationController popToRootViewControllerAnimated:YES];
+        }else
+            if(indexPath.row == 1)
+            {
+                
+            }else
+                
+                if (indexPath.row == 2) {
+                    
+                    
+                    photoFunViewController *photoFunVC =  [[photoFunViewController alloc] initWithNibName:@"photoFunViewController" bundle:nil];
+                    //[self presentViewController:photoFunVC animated:YES completion:nil];
+                    [self.navigationController pushViewController:photoFunVC animated:YES];
+                }
+        
+                else if (indexPath.row == 3) {
+                    PetFriendlyPlacesViewController *petFriendlyPlacesVC =  [[PetFriendlyPlacesViewController alloc ] init];
+                    //[self presentViewController:photoFunVC animated:YES completion:nil];
+                    [self.navigationController pushViewController:petFriendlyPlacesVC animated:YES];
+                }
+        
+                else if (indexPath.row == 4){
+                    Singleton *singletonClass = [Singleton sharedInstance];
+                    NSArray *currentCategories = [[NSArray alloc] initWithArray:singletonClass.currentCategories];
+                    for (Categories *categories in currentCategories) {
+                        NSLog(@"Categories name : %@",categories.CategoryName);
+                        
+                        if ([categories.CategoryName isEqualToString:@"Stockists"]) {
+                            [singletonClass setSelectedCategories:categories];
+                            NextPetFriendlyPlacesViewController *stockists = [[NextPetFriendlyPlacesViewController alloc] init];
+                            stockists.headerImageFlag = categories.CategoryName;
+                            [self.navigationController pushViewController:stockists animated:YES];
+                            
+                        }
+                    }
+                    
+                    
+                }
+        
+                else if (indexPath.row == 5) {
+                    ToolsViewController *toolsVC =  [[ToolsViewController alloc ] init];
+                    
+                    [self.navigationController pushViewController:toolsVC animated:YES];
+                }
+        
+                else if (indexPath.row == 6){
+                    Singleton *singletonClass = [Singleton sharedInstance];
+                    NSArray *currentCategories = [[NSArray alloc] initWithArray:singletonClass.currentCategories];
+                    for (Categories *categories in currentCategories) {
+                        NSLog(@"Categories name : %@",categories.CategoryName);
+                        
+                        if ([categories.CategoryName isEqualToString:@"Pet Services"]) {
+                            [singletonClass setSelectedCategories:categories];
+                            NextPetFriendlyPlacesViewController *stockists = [[NextPetFriendlyPlacesViewController alloc] init];
+                            stockists.headerImageFlag = categories.CategoryName;
+                            [self.navigationController pushViewController:stockists animated:YES];
+                            
+                        }
+                    }
+                    
+                    
+                }
+        
+                else if (indexPath.row == 7) {
+                    TipsViewController *tipsVC =  [[TipsViewController alloc ] init];
+                    //[self presentViewController:photoFunVC animated:YES completion:nil];
+                    [self.navigationController pushViewController:tipsVC animated:YES];
+                }
+        
+                else if (indexPath.row == 8) {
+                    ProductsViewController *photoFunVC =  [[ProductsViewController alloc ] init];
+                    //[self presentViewController:photoFunVC animated:YES completion:nil];
+                    [self.navigationController pushViewController:photoFunVC animated:YES];
+                }
+        DLog(@"%@",indexPath);
+        
+        
+        
+
+        
     }
     
     globleSingleton.selectedAnimalName = [[globleSingleton getAllAnimalNameArray] objectAtIndex:indexPath.row];
@@ -150,6 +243,7 @@
 
 - (void)nextButtonClick{
     PetHealthDetailViewController *petHealthDetailVC = [[PetHealthDetailViewController alloc] init];
+    
     [self.navigationController pushViewController:petHealthDetailVC animated:NO];
 }
 

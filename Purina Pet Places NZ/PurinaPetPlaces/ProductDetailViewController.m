@@ -45,7 +45,7 @@
     visitLabel.textColor = [UIColor whiteColor];
     visitLabel.numberOfLines = 0;
     visitLabel.textAlignment = NSTextAlignmentCenter;
-    visitLabel.font = [UIFont systemFontOfSize:15];
+    visitLabel.font = [UIFont fontWithName:@"Antenna" size:15];
     [self.view addSubview:visitLabel];
     
     self.nextButton = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -59,7 +59,7 @@
     nextLabel.text = @"NEXT PRODUCT";
     nextLabel.textColor = [UIColor whiteColor];
     nextLabel.textAlignment = NSTextAlignmentCenter;
-    nextLabel.font = [UIFont systemFontOfSize:15];
+    nextLabel.font = [UIFont fontWithName:@"Antenna" size:15];
     nextLabel.numberOfLines = 0;
     [self.nextButton addSubview:nextLabel];
     
@@ -98,6 +98,7 @@
         
         [petProductsWebview loadHTMLString:htmlString baseURL:baseURL];
         nextLabel.text = @"LAST ONE";
+        nextLabel.font = [UIFont fontWithName:@"Antenna" size:15];
         nextImage.image = [UIImage imageNamed:@""];
         nextImage.backgroundColor = [UIColor clearColor];
     

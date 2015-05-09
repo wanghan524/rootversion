@@ -103,7 +103,7 @@
         titleLabel.backgroundColor = [UIColor clearColor];
         titleLabel.text = categories.CategoryName;
         titleLabel.textAlignment = NSTextAlignmentCenter;
-        titleLabel.font = [UIFont systemFontOfSize:18];
+        titleLabel.font = [UIFont fontWithName:@"Antenna" size:18];
         titleLabel.textColor = [UIColor grayColor];
         [cell.contentView addSubview:titleLabel];
 //        
@@ -138,7 +138,7 @@
     titleLabel.backgroundColor = [UIColor clearColor];
     titleLabel.text = @"Pet Friendly Places";
     titleLabel.textAlignment = NSTextAlignmentCenter;
-    titleLabel.font = [UIFont systemFontOfSize:22];
+    titleLabel.font = [UIFont fontWithName:@"Antenna" size:22];
     titleLabel.textColor = [UIColor whiteColor];
     [headerImageView addSubview:titleLabel];
     return headerImageView;
@@ -152,7 +152,7 @@
     titleLabel.backgroundColor = [UIColor clearColor];
     titleLabel.text = @"RECOMMEND A PET FRIENDLY PLACE";
     titleLabel.textAlignment = NSTextAlignmentCenter;
-    titleLabel.font = [UIFont systemFontOfSize:14];
+    titleLabel.font = [UIFont fontWithName:@"Antenna" size:14];
     titleLabel.textColor = [UIColor whiteColor];
     [footerImageView addSubview:titleLabel];
     return footerImageView;

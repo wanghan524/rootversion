@@ -172,6 +172,20 @@
     NSString *selectStr = (self.cateGoryMuArr == nil)?@"":([self.cateGoryMuArr objectAtIndex:indexPath.row]);
     self.cateGoryLabel.text = selectStr;
     
+    if(self.cateGoryTable == nil)
+    {
+        [self makeCateGoryTable];
+        [self.cateGoryTable setHidden:NO];
+        
+    }
+    else
+    {
+        BOOL isVisible = self.cateGoryTable.hidden;
+        [self.cateGoryTable setHidden:!isVisible];
+    }
+
+    
+    
 }
 
 

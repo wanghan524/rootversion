@@ -70,7 +70,7 @@
     titleLabel.backgroundColor = [UIColor clearColor];
     titleLabel.text = singleton.selectedSubCategories.CategoryName;
     titleLabel.textAlignment = NSTextAlignmentCenter;
-    titleLabel.font = [UIFont systemFontOfSize:22];
+    titleLabel.font = [UIFont fontWithName:@"Antenna" size:22];
     titleLabel.textColor = [UIColor whiteColor];
     [headerImageView addSubview:titleLabel];
     return headerImageView;
@@ -104,12 +104,15 @@
     
     [cell.textLabel setText:location.LocationName];
     [cell.textLabel setTextColor:[UIColor grayColor]];
+    cell.textLabel.font = [UIFont fontWithName:@"Antenna" size:14];
     if (location.LocationAddressLine1 != NULL) {
         [cell.detailTextLabel setText:[NSString stringWithFormat:@"%@, %@, %@", location.LocationAddressLine1, location.LocationAddressLine2, location.LocationAddressLine3]];
         [cell.detailTextLabel setTextColor:[UIColor grayColor]];
+        cell.detailTextLabel.font = [UIFont fontWithName:@"Antenna" size:10];
     }else {
         [cell.detailTextLabel setText:@"www.bookabach.co.nz"];
         [cell.detailTextLabel setTextColor:[UIColor grayColor]];
+        cell.detailTextLabel.font = [UIFont fontWithName:@"Antenna" size:10];
     }
      
     return cell;

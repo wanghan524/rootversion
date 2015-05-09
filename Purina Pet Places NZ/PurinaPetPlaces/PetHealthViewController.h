@@ -18,4 +18,6 @@
 
 @property(nonatomic,strong)UIView *darkView;
 
+@property(nonatomic,copy)NSString *nameStr;
+
 @end

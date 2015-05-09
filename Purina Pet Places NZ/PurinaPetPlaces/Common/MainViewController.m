@@ -29,7 +29,7 @@
     clickStatus = NO;
     
 }
-
+/*
 -(void)searchBtnClick:(UIButton *)sender
 {
     self.searchVC = [[SearchViewController alloc]init];
@@ -119,17 +119,19 @@
         [cell.contentView addSubview:iconTemplateView];
         [cell setIndentationLevel:4];
     }
+    cell.textLabel.font = [UIFont fontWithName:@"Antenna" size:10];
     cell.textLabel.text = [self.menuArray objectAtIndex:indexPath.row];
     return cell;
 }
 
-
+*/
 
 -(void)makeBottomButton
 {
     self.bottomButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [self.bottomButton setFrame:CGRectMake(0, CGRectGetMaxY(self.collectionView.frame), SCREEN_WIDTH, 70)];
     [self.bottomButton setTitle:@"FREE PET ADVICE" forState:UIControlStateNormal];
+    [self.bottomButton.titleLabel setFont:[UIFont fontWithName:@"Antenna" size:18]];
     [self.bottomButton setBackgroundColor:[UIColor redColor]];
     [self.view addSubview:self.bottomButton];
 }
@@ -172,6 +174,7 @@
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(cell.contentView.center.x - (cell.contentView.frame.size.width / 2.0), cell.contentView.center.y - (cell.contentView.frame.size.height / 2.0) + 30, cell.contentView.frame.size.width, cell.contentView.frame.size.height)];
     label.textColor = [UIColor whiteColor];
     label.textAlignment = NSTextAlignmentCenter;
+    label.font = [UIFont fontWithName:@"Antenna" size:15];
     label.text = [NSString stringWithFormat:@"%@",titleArray[indexPath.row]];
     
     for (id subView in cell.contentView.subviews) {

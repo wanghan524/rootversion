@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "SearchViewController.h"
+
 extern CGFloat navHeight;
 
 @interface ParentViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
@@ -17,7 +18,7 @@ extern CGFloat navHeight;
 @property(nonatomic,strong)UIButton *profileButton;
 @property(nonatomic,strong)UIButton *searchButton;
 @property(nonatomic,strong)UIImageView *petPlaceImageView;
-
+@property(nonatomic,strong)SearchViewController *searchVC;
 
 -(void)hideCustomeNav;
 -(void)showCustomeNav;

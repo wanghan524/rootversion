@@ -52,7 +52,7 @@
     titleLabel.text = [[self.DisplayTipsCurrent objectAtIndex:self.indexNumber] objectAtIndex:0];
     titleLabel.textColor = [UIColor whiteColor];
     titleLabel.textAlignment = NSTextAlignmentCenter;
-    titleLabel.font = [UIFont systemFontOfSize:22];
+    titleLabel.font = [UIFont fontWithName:@"Antenna" size:22];
     [headerImageView addSubview:titleLabel];
     
     
@@ -64,7 +64,7 @@
     contentLabel.text = [[self.DisplayTipsCurrent objectAtIndex:self.indexNumber] objectAtIndex:1];
     contentLabel.numberOfLines = 0;
     
-    contentLabel.font = [UIFont systemFontOfSize:15];
+    contentLabel.font = [UIFont fontWithName:@"Antenna" size:15];
     [contentBackView addSubview:contentLabel];
     
     
@@ -79,7 +79,7 @@
     nextLabel.text = @"NEXT TIP";
     nextLabel.textColor = [UIColor whiteColor];
     nextLabel.textAlignment = NSTextAlignmentCenter;
-    nextLabel.font = [UIFont systemFontOfSize:15];
+    nextLabel.font = [UIFont fontWithName:@"Antenna" size:15];
     nextLabel.numberOfLines = 0;
     [self.nextButton addSubview:nextLabel];
     
@@ -95,7 +95,10 @@
     if (self.indexNumber <= self.DisplayTipsCurrent.count - 2) {
         self.indexNumber ++;
         titleLabel.text = [[self.DisplayTipsCurrent objectAtIndex:self.indexNumber] objectAtIndex:0];
+        
+        titleLabel.font = [UIFont fontWithName:@"Antenna" size:22];
         contentLabel.text = [[self.DisplayTipsCurrent objectAtIndex:self.indexNumber] objectAtIndex:1];
+        contentLabel.font = [UIFont fontWithName:@"Antenna" size:20];
         if ([self.currentCategory isEqualToString:@"General"]) {
             headerImageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"tips-articles-general%d.jpg",self.indexNumber + 1]];
         }
@@ -110,6 +113,7 @@
         
     }else{
         nextLabel.text = @"LAST ONE";
+        nextLabel.font = [UIFont fontWithName:@"Antenna" size:22];
         nextImage.image = [UIImage imageNamed:@""];
         nextImage.backgroundColor = [UIColor clearColor];
     }

@@ -16,10 +16,10 @@
 
 
 extern CGFloat navHeight;
-@interface MainViewController : ParentViewController<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout,UITableViewDataSource,UITableViewDelegate>
+@interface MainViewController : ParentViewController<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout>
 @property(nonatomic,strong)NSMutableArray *menuArray;
 
-@property(nonatomic,strong)UITableView *menusTable;
+//@property(nonatomic,strong)UITableView *menusTable;
 
 @property(nonatomic,strong)UIView *darkView;
 

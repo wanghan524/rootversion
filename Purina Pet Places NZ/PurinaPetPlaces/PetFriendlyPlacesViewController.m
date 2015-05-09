@@ -70,6 +70,7 @@
     nextPetPlaceVC.headerImageFlag = category.CategoryName;
     [self.navigationController pushViewController:nextPetPlaceVC animated:YES];
 }
+/*
 -(void)profileBtnClickOrGestureClip:(UIButton *)sender
 {
     clickStatus = !clickStatus;
@@ -155,7 +156,7 @@
     
 }
 
-
+*/
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

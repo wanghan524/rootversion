@@ -36,6 +36,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     
+    
     [Parse setApplicationId:@"63djxv7dFYyhSC0jfMRTxIUAAbOKYh3oJyHpTB07" clientKey:@"2nytrJ095cqeJKoF4Xzp6ufzY1fKDc0b6asQ6NF7"];
     
     // Under App Delegate Let the device know we want to receive push notifications

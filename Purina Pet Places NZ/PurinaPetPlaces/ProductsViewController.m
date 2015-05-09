@@ -117,7 +117,7 @@
     titleLabel.backgroundColor = [UIColor clearColor];
     titleLabel.text = @"Products";
     titleLabel.textAlignment = NSTextAlignmentCenter;
-    titleLabel.font = [UIFont systemFontOfSize:22];
+    titleLabel.font = [UIFont fontWithName:@"Antenna" size:22];
     titleLabel.textColor = [UIColor whiteColor];
     [headerImageView addSubview:titleLabel];
     [headerView addSubview:headerImageView];
@@ -148,6 +148,7 @@
     self.bottomButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [self.bottomButton setFrame:CGRectMake(0, CGRectGetMaxY(self.collectionView.frame), SCREEN_WIDTH, 70)];
     [self.bottomButton setTitle:@"FREE PET ADVICE" forState:UIControlStateNormal];
+    [self.bottomButton.titleLabel setFont:[UIFont fontWithName:@"Antenna" size:18]];
     [self.bottomButton setBackgroundColor:[UIColor redColor]];
     [self.view addSubview:self.bottomButton];
 }

@@ -48,7 +48,7 @@
 
 @end
 
-#define KRadiusPortion 0.92
+#define KRadiusPortion 0.9
 #define nFloat(x) [NSNumber numberWithFloat:x]
 
 @interface BptPieChart ()
@@ -403,13 +403,13 @@ static float deltaAngle;
 }
 
 - (void)initWheel{
-    container = [[UIView alloc] initWithFrame:self.frame];
-    
-    BptPieChart *chart = [[BptPieChart alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_WIDTH)];
+    container = [[UIView alloc] initWithFrame:self.bounds];
+    NSArray *nameArr = @[@"Desexing",@"Shots1",@"Shots2",@"Shots3",@"Worming",@"Flea treatment",@"Yearly shots",@"Check ups"];
+    BptPieChart *chart = [[BptPieChart alloc] initWithFrame:self.bounds];
     
     for (int i = 0 ; i < pie.count; i++) {
-        NSString *slicePortion = [pie objectAtIndex:i];
-        [chart addSlicePortion:[slicePortion floatValue] withName:slicePortion];
+        NSString *slicePortion = nameArr[i];
+        [chart addSlicePortion:[pie[i] floatValue] withName:slicePortion];
     }
     
     chart.layer.anchorPoint = CGPointMake(0.5f, 0.5f);//称为"定位点","锚点",决定着CALayer身上的哪个点会在position属性所指的位置，以自己的左上角为原点(0,0),它的x,y取值范围都是0~1,默认值为(0.5,0.5)

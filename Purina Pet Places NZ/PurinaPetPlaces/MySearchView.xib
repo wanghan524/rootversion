@@ -1,10 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Antenna-ExtraLight.otf">
+            <string>Antenna-ExtraLight</string>
+            <string>Antenna-ExtraLight</string>
+        </mutableArray>
+        <mutableArray key="Antenna-Regular.otf">
+            <string>Antenna-Regular</string>
+            <string>Antenna-Regular</string>
+            <string>Antenna-Regular</string>
+            <string>Antenna-Regular</string>
+            <string>Antenna-Regular</string>
+            <string>Antenna-Regular</string>
+            <string>Antenna-Regular</string>
+            <string>Antenna-Regular</string>
+            <string>Antenna-Regular</string>
+        </mutableArray>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -13,8 +30,8 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NBw-yy-kX0">
-                    <rect key="frame" x="118" y="90" width="85" height="24"/>
-                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                    <rect key="frame" x="115" y="90" width="89.5" height="24"/>
+                    <fontDescription key="fontDescription" name="Antenna-Regular" family="Antenna" pointSize="20"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
@@ -23,7 +40,7 @@
                     <constraints>
                         <constraint firstAttribute="height" constant="24" id="95h-5Y-PV5"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                    <fontDescription key="fontDescription" name="Antenna-Regular" family="Antenna" pointSize="20"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
@@ -32,26 +49,28 @@
                     <constraints>
                         <constraint firstAttribute="height" constant="24" id="CBP-XB-l80"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                    <fontDescription key="fontDescription" name="Antenna-Regular" family="Antenna" pointSize="20"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Distance in Kilometers" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1i4-qc-Bta">
-                    <rect key="frame" x="57" y="299" width="207" height="24"/>
-                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                    <rect key="frame" x="49" y="299" width="223" height="20"/>
+                    <fontDescription key="fontDescription" name="Antenna-Regular" family="Antenna" pointSize="20"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bUN-xg-KgA">
-                    <rect key="frame" x="57" y="328" width="69" height="30"/>
+                    <rect key="frame" x="57" y="324" width="69" height="30"/>
                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" name="Antenna-Regular" family="Antenna" pointSize="15"/>
                     <state key="normal" title="1">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G2h-w4-wl6">
-                    <rect key="frame" x="125" y="328" width="69" height="30"/>
+                    <rect key="frame" x="125" y="324" width="69" height="30"/>
                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" name="Antenna-Regular" family="Antenna" pointSize="15"/>
                     <state key="normal" title="5">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
@@ -94,7 +113,7 @@
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="VD1-cp-pTO"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                    <fontDescription key="fontDescription" name="Antenna-ExtraLight" family="Antenna" pointSize="27"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Suburb,Region or Poscode" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="S6s-eQ-SpH">
@@ -104,12 +123,13 @@
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="0PL-aa-Tg7"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                    <fontDescription key="fontDescription" name="Antenna-ExtraLight" family="Antenna" pointSize="27"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xyk-gb-f4V">
-                    <rect key="frame" x="193" y="328" width="69" height="30"/>
+                    <rect key="frame" x="193" y="324" width="69" height="30"/>
                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" name="Antenna-Regular" family="Antenna" pointSize="15"/>
                     <state key="normal" title="10">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
@@ -119,13 +139,13 @@
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enter Your Search " textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ys7-75-K6p">
                             <rect key="frame" x="19" y="8" width="301" height="30"/>
-                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                            <fontDescription key="fontDescription" name="Antenna-Regular" family="Antenna" pointSize="20"/>
                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="  Criteria Below" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hwU-cm-NIE">
                             <rect key="frame" x="34" y="40" width="254" height="30"/>
-                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                            <fontDescription key="fontDescription" name="Antenna-Regular" family="Antenna" pointSize="20"/>
                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
@@ -140,19 +160,19 @@
             <constraints>
                 <constraint firstItem="G2h-w4-wl6" firstAttribute="leading" secondItem="bUN-xg-KgA" secondAttribute="trailing" constant="-1" id="1YD-yQ-6Vd"/>
                 <constraint firstAttribute="trailing" secondItem="xyk-gb-f4V" secondAttribute="trailing" constant="58" id="1jw-fd-S0U"/>
-                <constraint firstAttribute="centerX" secondItem="1i4-qc-Bta" secondAttribute="centerX" id="2Y4-o9-SUI"/>
+                <constraint firstAttribute="centerX" secondItem="1i4-qc-Bta" secondAttribute="centerX" constant="-0.5" id="2Y4-o9-SUI"/>
                 <constraint firstItem="sud-pT-4tW" firstAttribute="leading" secondItem="36R-b5-kAg" secondAttribute="leading" constant="109" id="3al-YP-bb0"/>
                 <constraint firstItem="xyk-gb-f4V" firstAttribute="top" secondItem="1i4-qc-Bta" secondAttribute="bottom" constant="5" id="4WA-QD-mva"/>
                 <constraint firstAttribute="centerX" secondItem="qYg-vh-ElX" secondAttribute="centerX" id="6PN-J3-7If"/>
                 <constraint firstAttribute="trailing" secondItem="IdS-lh-o44" secondAttribute="trailing" constant="40" id="7fo-id-WNl"/>
                 <constraint firstItem="bUN-xg-KgA" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="36R-b5-kAg" secondAttribute="leading" constant="57" id="8D5-OE-PBb"/>
-                <constraint firstAttribute="trailing" secondItem="1i4-qc-Bta" secondAttribute="trailing" constant="56" id="8R6-6e-g6e"/>
+                <constraint firstAttribute="trailing" secondItem="1i4-qc-Bta" secondAttribute="trailing" constant="48" id="8R6-6e-g6e"/>
                 <constraint firstItem="S6s-eQ-SpH" firstAttribute="leading" secondItem="36R-b5-kAg" secondAttribute="leading" constant="24" id="8ym-DW-Uj1"/>
                 <constraint firstAttribute="trailing" secondItem="sud-pT-4tW" secondAttribute="trailing" constant="109" id="ARO-2F-ndf"/>
                 <constraint firstAttribute="trailing" secondItem="S6s-eQ-SpH" secondAttribute="trailing" constant="40" id="GX2-tA-VIi"/>
                 <constraint firstItem="G2h-w4-wl6" firstAttribute="width" secondItem="bUN-xg-KgA" secondAttribute="width" id="Jfe-2J-elN"/>
                 <constraint firstAttribute="centerX" secondItem="sud-pT-4tW" secondAttribute="centerX" id="KjW-DJ-aBN"/>
-                <constraint firstItem="1i4-qc-Bta" firstAttribute="leading" secondItem="36R-b5-kAg" secondAttribute="leading" constant="57" id="L4W-Ey-YyN"/>
+                <constraint firstItem="1i4-qc-Bta" firstAttribute="leading" secondItem="36R-b5-kAg" secondAttribute="leading" constant="49" id="L4W-Ey-YyN"/>
                 <constraint firstItem="IdS-lh-o44" firstAttribute="leading" secondItem="36R-b5-kAg" secondAttribute="leading" constant="24" id="Lac-s0-5SS"/>
                 <constraint firstAttribute="trailing" secondItem="l8K-HG-lwm" secondAttribute="trailing" id="MZP-va-9Pg"/>
                 <constraint firstItem="G2h-w4-wl6" firstAttribute="width" secondItem="bUN-xg-KgA" secondAttribute="height" multiplier="23:10" id="OnA-ZB-sMf"/>

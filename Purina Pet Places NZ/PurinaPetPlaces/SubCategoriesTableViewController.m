@@ -76,7 +76,7 @@
     titleLabel.backgroundColor = [UIColor clearColor];
     titleLabel.text = singleton.selectedCategories.CategoryName;
     titleLabel.textAlignment = NSTextAlignmentCenter;
-    titleLabel.font = [UIFont systemFontOfSize:22];
+    titleLabel.font = [UIFont fontWithName:@"Antenna" size:22];
     titleLabel.textColor = [UIColor whiteColor];
     [headerImageView addSubview:titleLabel];
     return headerImageView;
@@ -92,7 +92,7 @@
         titleLabel.backgroundColor = [UIColor clearColor];
         titleLabel.text = @"RECOMMEND A PET FRIENDLY PLACE";
         titleLabel.textAlignment = NSTextAlignmentCenter;
-        titleLabel.font = [UIFont systemFontOfSize:14];
+        titleLabel.font = [UIFont fontWithName:@"Antenna" size:14];
         titleLabel.textColor = [UIColor whiteColor];
         [footerImageView addSubview:titleLabel];
         return footerImageView;
@@ -185,6 +185,7 @@
 //    [roundedBall setText:[NSString stringWithFormat:@"%@", subcategories.CategoryCount]];
     cell.backgroundColor = [UIColor clearColor];
     [cell.textLabel setText:[NSString stringWithFormat:@"%@", subcategories.CategoryName]];
+    cell.textLabel.font = [UIFont fontWithName:@"Antenna" size:14];
     cell.textLabel.textAlignment = NSTextAlignmentCenter;
     cell.textLabel.textColor = [UIColor grayColor];
     [cell setSelectionStyle:UITableViewCellSelectionStyleNone];

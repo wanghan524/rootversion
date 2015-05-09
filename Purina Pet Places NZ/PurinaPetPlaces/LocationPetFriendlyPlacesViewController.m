@@ -46,6 +46,7 @@
     titleLabel.backgroundColor = [UIColor whiteColor];
     titleLabel.textAlignment = NSTextAlignmentCenter;
     titleLabel.text = singletonClass.selectedLocation.LocationName;
+    titleLabel.font = [UIFont fontWithName:@"Antenna" size:16];
 
     [self.view addSubview:titleLabel];
     
@@ -123,13 +124,13 @@
         CLLocationDistance distance = [userLoc distanceFromLocation:selectedLoc];
         
         MKCoordinateRegion region;
-        region.center.latitude = (userLoc.coordinate.latitude + selectedLoc.coordinate.latitude) / 2.0;
-        region.center.longitude = (userLoc.coordinate.longitude + selectedLoc.coordinate.longitude) / 2.0;
-        region.span.latitudeDelta = distance / 111320;
-        region.span.longitudeDelta = 0.0;
+        region.center.latitude = selectedLoc.coordinate.latitude;
+        region.center.longitude = selectedLoc.coordinate.longitude;
+        region.span.latitudeDelta = 0.1;
+        region.span.longitudeDelta = 0.1;
         
         [self.theMapView setRegion:region animated:TRUE];
-        [self.theMapView regionThatFits:region];
+//        [self.theMapView regionThatFits:region];
         
     }
     
@@ -207,13 +208,13 @@
     UILabel *whereLabel = [[UILabel alloc] initWithFrame:CGRectMake(55, 10, (SCREEN_WIDTH / 5.0) * 3 - 55, 10)];
     whereLabel.text = @"Where?";
     whereLabel.textColor = [UIColor grayColor];
-    whereLabel.font = [UIFont systemFontOfSize:13];
+    whereLabel.font = [UIFont fontWithName:@"Antenna" size:13];
     [whereBackgroundView addSubview:whereLabel];
     
     UILabel *whereContentLabel = [[UILabel alloc] initWithFrame:CGRectMake(55, 10, (SCREEN_WIDTH / 5.0) * 3 - 55, 70)];
     whereContentLabel.text = [NSString stringWithFormat:@"%@ %@ %@ %@", singletonClass.selectedLocation.LocationAddressLine1, singletonClass.selectedLocation.LocationAddressLine2, singletonClass.selectedLocation.LocationAddressLine3, singletonClass.selectedLocation.LocationAddressLine4 ];
     whereContentLabel.numberOfLines = 0;
-    whereContentLabel.font = [UIFont systemFontOfSize:15];
+    whereContentLabel.font = [UIFont fontWithName:@"Antenna" size:15];
     whereContentLabel.textColor = [UIColor blackColor];
     [whereBackgroundView addSubview:whereContentLabel];
     
@@ -226,12 +227,12 @@
     UILabel *contectLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 10, (SCREEN_WIDTH / 5.0) * 2 - 10, 10)];
     contectLabel.text = @"Contact";
     contectLabel.textColor = [UIColor grayColor];
-    contectLabel.font = [UIFont systemFontOfSize:13];
+    contectLabel.font = [UIFont fontWithName:@"Antenna" size:13];
     [photoBackgroundView addSubview:contectLabel];
     
     UILabel *contectcontentLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 25, (SCREEN_WIDTH / 5.0) * 2 - 20, 20)];
     contectcontentLabel.text = singletonClass.selectedLocation.LocationPhoneNumber;
-    contectcontentLabel.font = [UIFont systemFontOfSize:15];
+    contectcontentLabel.font = [UIFont fontWithName:@"Antenna" size:15];
     contectcontentLabel.textColor = [UIColor blackColor];
     [photoBackgroundView addSubview:contectcontentLabel];
     
@@ -299,11 +300,11 @@
         }
         
         MyAnnotation *myannotation = (MyAnnotation *)annotation;
-        UIButton *disclosureButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
-        disclosureButton.tintColor = [UIColor redColor];
+//        UIButton *disclosureButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+//        disclosureButton.tintColor = [UIColor redColor];
         //        [aView setRightCalloutAccessoryView:[UIButton buttonWithType:UIButtonTypeDetailDisclosure]];
         [aView setTag:myannotation.locationId];
-        [aView setRightCalloutAccessoryView:disclosureButton];
+//        [aView setRightCalloutAccessoryView:disclosureButton];
         
         //[(UIButton*)aView.rightCalloutAccessoryView addTarget:self action:@selector(showDetails:) forControlEvents:UIControlEventTouchUpInside];
         [aView setCanShowCallout:YES];

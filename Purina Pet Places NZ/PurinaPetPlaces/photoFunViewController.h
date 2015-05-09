@@ -7,10 +7,12 @@
 //
 
 #import "ParentViewController.h"
+#import "ImageItem.h"
+#import "DBHelper.h"
 
 extern CGFloat navHeight;
 
-@interface photoFunViewController : ParentViewController<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout,UITableViewDataSource,UITableViewDelegate>
+@interface photoFunViewController : ParentViewController<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout,UITableViewDataSource,UITableViewDelegate,UINavigationControllerDelegate,UIImagePickerControllerDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *toolBackImage;
 @property (weak, nonatomic) IBOutlet UIButton *savedImageBtn;
 @property (weak, nonatomic) IBOutlet UIButton *cameraBtn;

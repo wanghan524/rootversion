@@ -2,6 +2,14 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>UIAppFonts</key>
+	<array>
+		<string>MetaSerifOT-BookItalic.otf</string>
+		<string>MetaSerifOT-Book.otf</string>
+		<string>Antenna-Regular.otf</string>
+		<string>Antenna-ExtraLight.otf</string>
+		<string>Antenna-Bold.otf</string>
+	</array>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>

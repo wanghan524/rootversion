@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Antenna-Regular.otf">
+            <string>Antenna-Regular</string>
+            <string>Antenna-Regular</string>
+        </mutableArray>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="photoFunViewController">
             <connections>
@@ -19,7 +25,7 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Up-5b-To2">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Up-5b-To2">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="315"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tile1-photo-fun.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="6jj-io-l65">
@@ -27,7 +33,7 @@
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Memories" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="10R-N9-gEt">
                             <rect key="frame" x="0.0" y="268" width="320" height="47"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <fontDescription key="fontDescription" name="Antenna-Regular" family="Antenna" pointSize="19"/>
                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
@@ -35,7 +41,7 @@
                             <rect key="frame" x="54" y="140" width="83" height="70"/>
                             <color key="backgroundColor" red="1" green="0.20207175660000001" blue="0.16807516950000001" alpha="1" colorSpace="calibratedRGB"/>
                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                            <state key="normal" title="SAVED IMAGE">
+                            <state key="normal" backgroundImage="saveImage.png">
                                 <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
@@ -47,7 +53,7 @@
                             <rect key="frame" x="180" y="140" width="83" height="70"/>
                             <color key="backgroundColor" red="1" green="0.20207175660000001" blue="0.16807516950000001" alpha="1" colorSpace="calibratedRGB"/>
                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                            <state key="normal" title="CAMERA">
+                            <state key="normal" backgroundImage="camera.png">
                                 <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
@@ -56,15 +62,23 @@
                             </connections>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Photo Fun" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BFa-Dy-dku">
-                            <rect key="frame" x="110" y="86" width="100" height="30"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                            <rect key="frame" x="100" y="86" width="120" height="30"/>
+                            <fontDescription key="fontDescription" name="Antenna-Regular" family="Antenna" pointSize="20"/>
                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7S5-Au-sfh">
+                            <rect key="frame" x="0.0" y="314" width="320" height="1"/>
+                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
                     </subviews>
                     <color key="backgroundColor" red="0.94901960780000005" green="0.93333333330000001" blue="0.87450980389999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="320" id="Bqz-Va-bBm"/>
+                        <constraint firstAttribute="height" constant="315" id="zRN-yM-Uxd"/>
+                    </constraints>
                 </view>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="ddU-SN-tI9">
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="ddU-SN-tI9">
                     <rect key="frame" x="0.0" y="315" width="320" height="253"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="U91-ES-pGI">
                         <size key="itemSize" width="100" height="120"/>
@@ -75,10 +89,22 @@
                 </collectionView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-            <point key="canvasLocation" x="340" y="281"/>
+            <constraints>
+                <constraint firstItem="4Up-5b-To2" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Tkg-eF-hdi"/>
+                <constraint firstItem="ddU-SN-tI9" firstAttribute="top" secondItem="4Up-5b-To2" secondAttribute="bottom" id="Xaz-zi-IP0"/>
+                <constraint firstAttribute="trailing" secondItem="ddU-SN-tI9" secondAttribute="trailing" id="fap-Dx-dcv"/>
+                <constraint firstItem="4Up-5b-To2" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="hJ7-tL-FVs"/>
+                <constraint firstAttribute="bottom" secondItem="ddU-SN-tI9" secondAttribute="bottom" id="rTm-oM-4Sg"/>
+                <constraint firstAttribute="trailing" secondItem="4Up-5b-To2" secondAttribute="trailing" id="seb-1x-HnQ"/>
+                <constraint firstItem="ddU-SN-tI9" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="vc9-ke-faD"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="323" y="185"/>
         </view>
     </objects>
     <resources>
+        <image name="camera.png" width="192" height="192"/>
+        <image name="saveImage.png" width="192" height="192"/>
         <image name="tile1-photo-fun.jpg" width="375" height="362"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

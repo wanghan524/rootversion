@@ -10,6 +10,7 @@
 #import "GrobleSingleton.h"
 #import "TipsContentViewController.h"
 
+
 @interface TipsViewController (){
     GrobleSingleton *globleSingle;
     NSArray *titleArray;
@@ -95,7 +96,7 @@
             iconTemplateView.image = [UIImage imageNamed:imageNameArray[indexPath.row]];
             [cell.contentView addSubview:iconTemplateView];
             [cell setIndentationLevel:4];
-            
+            cell.textLabel.font = [UIFont fontWithName:@"Antenna" size:10];
             cell.textLabel.text = [self.menuArray objectAtIndex:indexPath.row];
         }
         
@@ -104,7 +105,7 @@
             titleLabel.backgroundColor = [UIColor clearColor];
             titleLabel.text = titleArray[indexPath.row];
             titleLabel.textAlignment = NSTextAlignmentCenter;
-            titleLabel.font = [UIFont systemFontOfSize:20];
+            titleLabel.font = [UIFont fontWithName:@"Antenna" size:20];
             titleLabel.textColor = [UIColor grayColor];
             [cell.contentView addSubview:titleLabel];
             UIView *backView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, (SCREEN_HEIGHT - 64 - 100) / 2.0)];
@@ -149,7 +150,7 @@
     titleLabel.backgroundColor = [UIColor clearColor];
     titleLabel.text = @"Tips";
     titleLabel.textAlignment = NSTextAlignmentCenter;
-    titleLabel.font = [UIFont systemFontOfSize:22];
+    titleLabel.font = [UIFont fontWithName:@"Antenna" size:22];
     titleLabel.textColor = [UIColor whiteColor];
     [headerImageView addSubview:titleLabel];
     return headerImageView;
@@ -158,6 +159,94 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
     if (tableView == self.menusTable) {
+        if(self.darkView != nil)
+        {
+            
+            clickStatus = !clickStatus;
+            [self.darkView removeFromSuperview];
+            self.darkView = nil;
+            
+        }
+        
+        
+        if(indexPath.row == 0)
+        {
+            [self.navigationController popToRootViewControllerAnimated:YES];
+        }else
+            if(indexPath.row == 1)
+            {
+                
+            }else
+                
+                if (indexPath.row == 2) {
+                    
+                    
+                    photoFunViewController *photoFunVC =  [[photoFunViewController alloc] initWithNibName:@"photoFunViewController" bundle:nil];
+                    //[self presentViewController:photoFunVC animated:YES completion:nil];
+                    [self.navigationController pushViewController:photoFunVC animated:YES];
+                }
+        
+                else if (indexPath.row == 3) {
+                    PetFriendlyPlacesViewController *petFriendlyPlacesVC =  [[PetFriendlyPlacesViewController alloc ] init];
+                    //[self presentViewController:photoFunVC animated:YES completion:nil];
+                    [self.navigationController pushViewController:petFriendlyPlacesVC animated:YES];
+                }
+        
+                else if (indexPath.row == 4){
+                    Singleton *singletonClass = [Singleton sharedInstance];
+                    NSArray *currentCategories = [[NSArray alloc] initWithArray:singletonClass.currentCategories];
+                    for (Categories *categories in currentCategories) {
+                        NSLog(@"Categories name : %@",categories.CategoryName);
+                        
+                        if ([categories.CategoryName isEqualToString:@"Stockists"]) {
+                            [singletonClass setSelectedCategories:categories];
+                            NextPetFriendlyPlacesViewController *stockists = [[NextPetFriendlyPlacesViewController alloc] init];
+                            stockists.headerImageFlag = categories.CategoryName;
+                            [self.navigationController pushViewController:stockists animated:YES];
+                            
+                        }
+                    }
+                    
+                    
+                }
+        
+                else if (indexPath.row == 5) {
+                    ToolsViewController *toolsVC =  [[ToolsViewController alloc ] init];
+                    
+                    [self.navigationController pushViewController:toolsVC animated:YES];
+                }
+        
+                else if (indexPath.row == 6){
+                    Singleton *singletonClass = [Singleton sharedInstance];
+                    NSArray *currentCategories = [[NSArray alloc] initWithArray:singletonClass.currentCategories];
+                    for (Categories *categories in currentCategories) {
+                        NSLog(@"Categories name : %@",categories.CategoryName);
+                        
+                        if ([categories.CategoryName isEqualToString:@"Pet Services"]) {
+                            [singletonClass setSelectedCategories:categories];
+                            NextPetFriendlyPlacesViewController *stockists = [[NextPetFriendlyPlacesViewController alloc] init];
+                            stockists.headerImageFlag = categories.CategoryName;
+                            [self.navigationController pushViewController:stockists animated:YES];
+                            
+                        }
+                    }
+                    
+                    
+                }
+        
+                else if (indexPath.row == 7) {
+                    TipsViewController *tipsVC =  [[TipsViewController alloc ] init];
+                    //[self presentViewController:photoFunVC animated:YES completion:nil];
+                    [self.navigationController pushViewController:tipsVC animated:YES];
+                }
+        
+                else if (indexPath.row == 8) {
+                    ProductsViewController *photoFunVC =  [[ProductsViewController alloc ] init];
+                    //[self presentViewController:photoFunVC animated:YES completion:nil];
+                    [self.navigationController pushViewController:photoFunVC animated:YES];
+                }
+        DLog(@"%@",indexPath);
+
         return ;
     }
     

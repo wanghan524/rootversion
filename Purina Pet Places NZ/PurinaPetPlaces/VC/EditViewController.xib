@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Antenna-Regular.otf">
+            <string>Antenna-Regular</string>
+            <string>Antenna-Regular</string>
+        </mutableArray>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EditViewController">
             <connections>
@@ -25,9 +31,9 @@
                     </constraints>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cib-US-Mi8">
-                    <rect key="frame" x="189" y="311" width="96" height="100"/>
+                    <rect key="frame" x="189" y="307" width="96" height="100"/>
                     <color key="backgroundColor" red="1" green="0.69703944780000004" blue="0.20154638220000001" alpha="1" colorSpace="calibratedRGB"/>
-                    <state key="normal" title="CAT" backgroundImage="splash-page-cat.jpg">
+                    <state key="normal" backgroundImage="cats.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
@@ -35,9 +41,9 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jKn-Lj-BpR">
-                    <rect key="frame" x="36" y="311" width="96" height="100"/>
+                    <rect key="frame" x="36" y="307" width="96" height="100"/>
                     <color key="backgroundColor" red="0.73338984419910613" green="0.37874002991641464" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                    <state key="normal" title="DOG" backgroundImage="splash-page-dog.jpg">
+                    <state key="normal" backgroundImage="dogs.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
@@ -45,8 +51,8 @@
                     </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I HAVE A" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ItE-hf-7Xy">
-                    <rect key="frame" x="122" y="263" width="76" height="23"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                    <rect key="frame" x="119" y="263" width="82.5" height="19"/>
+                    <fontDescription key="fontDescription" name="Antenna-Regular" family="Antenna" pointSize="19"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
@@ -56,7 +62,7 @@
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="abK-Uk-SdJ"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                    <fontDescription key="fontDescription" name="Antenna-Regular" family="Antenna" pointSize="20"/>
                     <state key="normal" title="EDIT">
                         <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -90,8 +96,8 @@
         </view>
     </objects>
     <resources>
-        <image name="splash-page-cat.jpg" width="205" height="147"/>
-        <image name="splash-page-dog.jpg" width="205" height="147"/>
+        <image name="cats.png" width="280" height="360"/>
+        <image name="dogs.png" width="280" height="360"/>
         <image name="splash-page.jpg" width="750" height="647"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

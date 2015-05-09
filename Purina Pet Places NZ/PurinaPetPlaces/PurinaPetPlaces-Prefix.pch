@@ -12,4 +12,17 @@
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
 #import "DEFINE.h"
+#import "PetHealthViewController.h"
+#import "WhatShouldViewController.h"
+#import "ProductsViewController.h"
+#import "TipsContentViewController.h"
+#import "SearchViewController.h"
+#import "photoFunViewController.h"
+#import "Singleton.h"
+#import "Categories.h"
+#import "NextPetFriendlyPlacesViewController.h"
+#import "ProductsViewController.h"
+#import "TipsViewController.h"
+#import "ToolsViewController.h"
+#import "PetFriendlyPlacesViewController.h"
 #endif

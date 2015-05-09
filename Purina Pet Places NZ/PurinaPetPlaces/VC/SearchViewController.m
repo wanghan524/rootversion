@@ -60,7 +60,7 @@
     
     UILabel *loading = [[UILabel alloc] initWithFrame:CGRectMake(0, 367/2, 320, 40)];
     [loading setText:@"Searching"];
-    [loading setFont:[UIFont boldSystemFontOfSize:30]];
+    [loading setFont:[UIFont fontWithName:@"Antenna" size:30]];
     [loading setTextColor:[UIColor whiteColor]];
     [loading setBackgroundColor:[UIColor clearColor]];
     [loading setTextAlignment:UITextAlignmentCenter];
@@ -80,6 +80,7 @@
     self.searchCatagoryBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     [self.searchCatagoryBtn setFrame:CGRectMake(0, SCREEN_HEIGHT - 50, SCREEN_WIDTH, 50)];
     [self.searchCatagoryBtn setTitle:@"Search" forState:UIControlStateNormal];
+    self.searchCatagoryBtn.titleLabel.font = [UIFont fontWithName:@"Antenna" size:22];
     [self.searchCatagoryBtn setBackgroundColor:[UIColor redColor]];
     [self.searchCatagoryBtn addTarget:self action:@selector(searchCataGoryBtnClick:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:self.searchCatagoryBtn];
@@ -208,7 +209,7 @@
     
     CGPoint point = self.view.center;
     [self.petPlaceImageView setFrame:CGRectMake(point.x - 46, CGRectGetMaxY(self.lineImageView.frame) + 5, 92, 27)];
-    self.petPlaceImageView.image = [UIImage imageNamed:@"pet-places-logo.jpg"];
+    self.petPlaceImageView.image = [UIImage imageNamed:@"petcentric2-logo.png"];
     //[self.petPlaceImageView setBackgroundColor:[UIColor blueColor]];
     [backGroundView addSubview:self.petPlaceImageView];
     
@@ -321,6 +322,7 @@
         [cell.contentView addSubview:iconTemplateView];
         [cell setIndentationLevel:4];
     }
+    cell.textLabel.font = [UIFont fontWithName:@"Antenna" size:10];
     cell.textLabel.text = [self.menuArray objectAtIndex:indexPath.row];
     return cell;
 }
@@ -328,6 +330,98 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     NSLog(@"cell lable: %@",cell.textLabel.text);
+    
+    if(self.darkView != nil)
+    {
+        
+        clickStatus = !clickStatus;
+        [self.darkView removeFromSuperview];
+        self.darkView = nil;
+        
+    }
+    
+    
+    if(indexPath.row == 0)
+    {
+        [self.navigationController popToRootViewControllerAnimated:YES];
+    }else
+        if(indexPath.row == 1)
+        {
+            
+        }else
+            
+            if (indexPath.row == 2) {
+                
+                
+                photoFunViewController *photoFunVC =  [[photoFunViewController alloc] initWithNibName:@"photoFunViewController" bundle:nil];
+                //[self presentViewController:photoFunVC animated:YES completion:nil];
+                [self.navigationController pushViewController:photoFunVC animated:YES];
+            }
+    
+            else if (indexPath.row == 3) {
+                PetFriendlyPlacesViewController *petFriendlyPlacesVC =  [[PetFriendlyPlacesViewController alloc ] init];
+                //[self presentViewController:photoFunVC animated:YES completion:nil];
+                [self.navigationController pushViewController:petFriendlyPlacesVC animated:YES];
+            }
+    
+            else if (indexPath.row == 4){
+                Singleton *singletonClass = [Singleton sharedInstance];
+                NSArray *currentCategories = [[NSArray alloc] initWithArray:singletonClass.currentCategories];
+                for (Categories *categories in currentCategories) {
+                    NSLog(@"Categories name : %@",categories.CategoryName);
+                    
+                    if ([categories.CategoryName isEqualToString:@"Stockists"]) {
+                        [singletonClass setSelectedCategories:categories];
+                        NextPetFriendlyPlacesViewController *stockists = [[NextPetFriendlyPlacesViewController alloc] init];
+                        stockists.headerImageFlag = categories.CategoryName;
+                        [self.navigationController pushViewController:stockists animated:YES];
+                        
+                    }
+                }
+                
+                
+            }
+    
+            else if (indexPath.row == 5) {
+                ToolsViewController *toolsVC =  [[ToolsViewController alloc ] init];
+                
+                [self.navigationController pushViewController:toolsVC animated:YES];
+            }
+    
+            else if (indexPath.row == 6){
+                Singleton *singletonClass = [Singleton sharedInstance];
+                NSArray *currentCategories = [[NSArray alloc] initWithArray:singletonClass.currentCategories];
+                for (Categories *categories in currentCategories) {
+                    NSLog(@"Categories name : %@",categories.CategoryName);
+                    
+                    if ([categories.CategoryName isEqualToString:@"Pet Services"]) {
+                        [singletonClass setSelectedCategories:categories];
+                        NextPetFriendlyPlacesViewController *stockists = [[NextPetFriendlyPlacesViewController alloc] init];
+                        stockists.headerImageFlag = categories.CategoryName;
+                        [self.navigationController pushViewController:stockists animated:YES];
+                        
+                    }
+                }
+                
+                
+            }
+    
+            else if (indexPath.row == 7) {
+                TipsViewController *tipsVC =  [[TipsViewController alloc ] init];
+                //[self presentViewController:photoFunVC animated:YES completion:nil];
+                [self.navigationController pushViewController:tipsVC animated:YES];
+            }
+    
+            else if (indexPath.row == 8) {
+                ProductsViewController *photoFunVC =  [[ProductsViewController alloc ] init];
+                //[self presentViewController:photoFunVC animated:YES completion:nil];
+                [self.navigationController pushViewController:photoFunVC animated:YES];
+            }
+    DLog(@"%@",indexPath);
+    
+
+    
+    
     
 }
 
