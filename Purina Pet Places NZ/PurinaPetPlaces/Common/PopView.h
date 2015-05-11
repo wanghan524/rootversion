@@ -16,7 +16,10 @@
 
 @interface PopView : UIView
 @property(nonatomic,assign)id<dismissDelegate>delegate;
+@property (weak, nonatomic) IBOutlet UITextField *name;
+@property (weak, nonatomic) IBOutlet UITextField *dateTimes;
 
+@property (weak, nonatomic) IBOutlet UITextField *breed;
 -(instancetype)initWithFrame:(CGRect)frame;
 - (IBAction)dismissBtnClick:(id)sender;
 

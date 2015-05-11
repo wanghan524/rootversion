@@ -9,6 +9,7 @@
 #import "PetHealthViewController.h"
 #import "GrobleSingleton.h"
 #import "PetHealthDetailViewController.h"
+#import "PetItem.h"
 
 @interface PetHealthViewController ()<UITableViewDataSource,UITableViewDelegate>{
     UILabel *nextLabel;
@@ -108,7 +109,8 @@
         cell.textLabel.font = [UIFont fontWithName:@"Antenna" size:10];
         cell.textLabel.text = [self.menuArray objectAtIndex:indexPath.row];
     }else{
-        cell.textLabel.text = [[globleSingleton getAllAnimalNameArray] objectAtIndex:indexPath.row];
+        PetItem *item = [[globleSingleton getAllAnimalNameArray]objectAtIndex:indexPath.row];
+        cell.textLabel.text = item.name;
         cell.textLabel.textColor = [UIColor grayColor];
         cell.textLabel.font = [UIFont fontWithName:@"Antenna" size:17];
         cell.backgroundColor = [UIColor clearColor];

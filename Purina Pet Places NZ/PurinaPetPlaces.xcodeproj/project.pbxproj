@@ -215,7 +215,6 @@
 		751222781ADA5D6600A1506B /* EnterMianViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 751222741ADA5D6600A1506B /* EnterMianViewController.m */; };
 		751222791ADA5D6600A1506B /* EnterMianViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 751222751ADA5D6600A1506B /* EnterMianViewController.xib */; };
 		7512227F1ADC00B100A1506B /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7512227E1ADC00B100A1506B /* SearchViewController.m */; };
-		751222851ADD387300A1506B /* (null) in Sources */ = {isa = PBXBuildFile; };
 		7512228D1ADE2C0A00A1506B /* (null) in Resources */ = {isa = PBXBuildFile; };
 		751222911ADE44B100A1506B /* MySearchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7512228F1ADE44B100A1506B /* MySearchView.m */; };
 		751222921ADE44B100A1506B /* MySearchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 751222901ADE44B100A1506B /* MySearchView.xib */; };
@@ -277,9 +276,7 @@
 		A4CEB7611AFDE08F005BBEA0 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = A4CEB7591AFDE08F005BBEA0 /* FMDatabasePool.m */; };
 		A4CEB7621AFDE08F005BBEA0 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = A4CEB75B1AFDE08F005BBEA0 /* FMDatabaseQueue.m */; };
 		A4CEB7631AFDE08F005BBEA0 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = A4CEB75E1AFDE08F005BBEA0 /* FMResultSet.m */; };
-		A4CEB7671AFDE0CF005BBEA0 /* DBHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A4CEB7661AFDE0CF005BBEA0 /* DBHelper.m */; };
 		A4CEB76D1AFDE786005BBEA0 /* ImageItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A4CEB76C1AFDE786005BBEA0 /* ImageItem.m */; };
-		A4CEB7701AFE087F005BBEA0 /* editCameraVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A4CEB76F1AFE087F005BBEA0 /* editCameraVC.m */; };
 		A4CEB78C1AFE130B005BBEA0 /* 31.png in Resources */ = {isa = PBXBuildFile; fileRef = A4CEB7751AFE130B005BBEA0 /* 31.png */; };
 		A4CEB78D1AFE130B005BBEA0 /* 32.png in Resources */ = {isa = PBXBuildFile; fileRef = A4CEB7761AFE130B005BBEA0 /* 32.png */; };
 		A4CEB78E1AFE130B005BBEA0 /* 33.png in Resources */ = {isa = PBXBuildFile; fileRef = A4CEB7771AFE130B005BBEA0 /* 33.png */; };
@@ -310,6 +307,10 @@
 		A4CEB7B61AFE98EE005BBEA0 /* dogtu.png in Resources */ = {isa = PBXBuildFile; fileRef = A4CEB7B31AFE98EE005BBEA0 /* dogtu.png */; };
 		A4CEB7B71AFE98EE005BBEA0 /* bang.png in Resources */ = {isa = PBXBuildFile; fileRef = A4CEB7B41AFE98EE005BBEA0 /* bang.png */; };
 		A4CEB7B81AFE98EE005BBEA0 /* kuagn.png in Resources */ = {isa = PBXBuildFile; fileRef = A4CEB7B51AFE98EE005BBEA0 /* kuagn.png */; };
+		A4CEB7CD1B01019C005BBEA0 /* PetItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A4CEB7CC1B01019C005BBEA0 /* PetItem.m */; };
+		A4CEB7CF1B0107B3005BBEA0 /* photoFunViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFC41CA11ADB866000978240 /* photoFunViewController.m */; };
+		A4CEB7D01B010889005BBEA0 /* editCameraVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A4CEB76F1AFE087F005BBEA0 /* editCameraVC.m */; };
+		A4CEB7D11B0108AE005BBEA0 /* DBHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A4CEB7661AFDE0CF005BBEA0 /* DBHelper.m */; };
 		EF02735F1ADBF85800B89609 /* ResultPetFriendlyPlacesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF02735E1ADBF85800B89609 /* ResultPetFriendlyPlacesViewController.m */; };
 		EF0273621ADC013400B89609 /* LocationPetFriendlyPlacesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF0273611ADC013400B89609 /* LocationPetFriendlyPlacesViewController.m */; };
 		EF047EED1AF3A98F00DADFCA /* PieChatView.m in Sources */ = {isa = PBXBuildFile; fileRef = EF047EEC1AF3A98F00DADFCA /* PieChatView.m */; };
@@ -367,7 +368,6 @@
 		EFA56D301ADF890F00A915E8 /* tips-articles-general9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EFA56D081ADF890F00A915E8 /* tips-articles-general9.jpg */; };
 		EFA56D331ADFA69300A915E8 /* TipsContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFA56D321ADFA69300A915E8 /* TipsContentViewController.m */; };
 		EFA56D361ADFB3F000A915E8 /* DisplayTipsContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFA56D351ADFB3F000A915E8 /* DisplayTipsContentViewController.m */; };
-		EFC41CA31ADB866000978240 /* photoFunViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFC41CA11ADB866000978240 /* photoFunViewController.m */; };
 		EFC41CA41ADB866000978240 /* photoFunViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFC41CA21ADB866000978240 /* photoFunViewController.xib */; };
 		EFC41CA71ADB8E3200978240 /* PetFriendlyPlacesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFC41CA61ADB8E3200978240 /* PetFriendlyPlacesViewController.m */; };
 		EFC41CAA1ADBC1C700978240 /* NextPetFriendlyPlacesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFC41CA91ADBC1C700978240 /* NextPetFriendlyPlacesViewController.m */; };
@@ -863,6 +863,8 @@
 		A4CEB7B31AFE98EE005BBEA0 /* dogtu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dogtu.png; sourceTree = "<group>"; };
 		A4CEB7B41AFE98EE005BBEA0 /* bang.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bang.png; sourceTree = "<group>"; };
 		A4CEB7B51AFE98EE005BBEA0 /* kuagn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kuagn.png; sourceTree = "<group>"; };
+		A4CEB7CB1B01019C005BBEA0 /* PetItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PetItem.h; sourceTree = "<group>"; };
+		A4CEB7CC1B01019C005BBEA0 /* PetItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PetItem.m; sourceTree = "<group>"; };
 		EF02735D1ADBF85800B89609 /* ResultPetFriendlyPlacesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultPetFriendlyPlacesViewController.h; sourceTree = "<group>"; };
 		EF02735E1ADBF85800B89609 /* ResultPetFriendlyPlacesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultPetFriendlyPlacesViewController.m; sourceTree = "<group>"; };
 		EF0273601ADC013400B89609 /* LocationPetFriendlyPlacesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationPetFriendlyPlacesViewController.h; sourceTree = "<group>"; };
@@ -1745,6 +1747,8 @@
 				A4CEB7661AFDE0CF005BBEA0 /* DBHelper.m */,
 				A4CEB76B1AFDE786005BBEA0 /* ImageItem.h */,
 				A4CEB76C1AFDE786005BBEA0 /* ImageItem.m */,
+				A4CEB7CB1B01019C005BBEA0 /* PetItem.h */,
+				A4CEB7CC1B01019C005BBEA0 /* PetItem.m */,
 			);
 			name = DataBaseHelp;
 			sourceTree = "<group>";
@@ -2470,13 +2474,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4CEB7D11B0108AE005BBEA0 /* DBHelper.m in Sources */,
+				A4CEB7D01B010889005BBEA0 /* editCameraVC.m in Sources */,
+				A4CEB7CF1B0107B3005BBEA0 /* photoFunViewController.m in Sources */,
 				2061F95C152BD84E0030E20F /* main.m in Sources */,
 				2061F960152BD84E0030E20F /* AppDelegate.m in Sources */,
 				2061F963152BD84E0030E20F /* ViewController.m in Sources */,
 				2061FA02152BFB8D0030E20F /* CategoriesTableViewController.m in Sources */,
 				2061FA0A152C188E0030E20F /* SubCategoriesTableViewController.m in Sources */,
 				A4CEB7601AFDE08F005BBEA0 /* FMDatabaseAdditions.m in Sources */,
-				A4CEB7671AFDE0CF005BBEA0 /* DBHelper.m in Sources */,
 				A4CEB7631AFDE08F005BBEA0 /* FMResultSet.m in Sources */,
 				2061FA0E152C1ADF0030E20F /* SubCategoriesViewController.m in Sources */,
 				7512227F1ADC00B100A1506B /* SearchViewController.m in Sources */,
@@ -2487,7 +2493,6 @@
 				202F6342153560CA00F583C0 /* MapDetailsViewController.m in Sources */,
 				751222631ADA5D4900A1506B /* ParentViewController.m in Sources */,
 				202F635915369DAF00F583C0 /* SearchTableViewController.m in Sources */,
-				751222851ADD387300A1506B /* (null) in Sources */,
 				203967121537A7E7009518F9 /* ResultsViewController.m in Sources */,
 				EFF9EBC51ADE849B00876341 /* ProductDetailViewController.m in Sources */,
 				203967171537AAC2009518F9 /* ResultsTableViewController.m in Sources */,
@@ -2520,7 +2525,6 @@
 				20717270155B56D20024C3D0 /* Reachability.m in Sources */,
 				EFC41CA71ADB8E3200978240 /* PetFriendlyPlacesViewController.m in Sources */,
 				EFA56CDF1ADF848300A915E8 /* TipsViewController.m in Sources */,
-				EFC41CA31ADB866000978240 /* photoFunViewController.m in Sources */,
 				2071727C155B85580024C3D0 /* ConnectionViewController.m in Sources */,
 				2082520315B63FEB00BDA88D /* PCArrayOfCategoryInfo.m in Sources */,
 				751222781ADA5D6600A1506B /* EnterMianViewController.m in Sources */,
@@ -2558,7 +2562,7 @@
 				2082521A15B63FEB00BDA88D /* CXMLDocument_CreationExtensions.m in Sources */,
 				EFCC0F031ADD4566008676D7 /* ProductsViewController.m in Sources */,
 				2082521B15B63FEB00BDA88D /* CXMLDocument_PrivateExtensions.m in Sources */,
-				A4CEB7701AFE087F005BBEA0 /* editCameraVC.m in Sources */,
+				A4CEB7CD1B01019C005BBEA0 /* PetItem.m in Sources */,
 				A4CEB7621AFDE08F005BBEA0 /* FMDatabaseQueue.m in Sources */,
 				A4CEB76D1AFDE786005BBEA0 /* ImageItem.m in Sources */,
 				2082521C15B63FEB00BDA88D /* CXMLElement.m in Sources */,

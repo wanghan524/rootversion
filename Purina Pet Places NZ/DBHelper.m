@@ -70,6 +70,18 @@ static DBHelper *single = nil;
         {
             DLog(@"create table ok");
         }
+        
+        NSString *petTable = @"create table if not exists petTable (uid INTEGER PRIMARY KEY AUTOINCREMENT,name TEXT,dateTimes TEXT,breed TEXT)";
+        BOOL r = [self.db executeUpdate:petTable];
+        if(!r)
+        {
+            DLog(@"create table error;");
+        }
+        else
+        {
+            DLog(@"create table ok");
+        }
+        
     }
     [self.db close];
 }
@@ -93,6 +105,28 @@ static DBHelper *single = nil;
     }
     return nil;
 }
+
+-(NSMutableArray *)browsePetItem
+{
+    if([self.db open])
+    {
+        NSMutableArray *arr = [[NSMutableArray alloc]initWithCapacity:0];
+        NSString *sql = @"select * from petTable order by dateTimes desc";
+        FMResultSet *rs = [self.db executeQuery:sql];
+        while ([rs next]) {
+            PetItem *model = [[PetItem alloc]init];
+            model.uid = [rs intForColumn:@"uid"];
+            model.name = [rs stringForColumn:@"name"];
+            model.dateTimes = [rs stringForColumn:@"dateTimes"];
+            model.breed = [rs stringForColumn:@"breed"];
+            [arr addObject:model];
+        }
+        return arr;
+    }
+    return nil;
+
+}
+
 -(BOOL)updateImageItem:(ImageItem *)item
 {
     if(item == nil)return NO;
@@ -112,6 +146,28 @@ static DBHelper *single = nil;
     }
     [self.db close];
     return NO;
+}
+
+-(BOOL)updatePetItem:(PetItem *)item
+{
+    if(item == nil)return NO;
+    if([self.db open])
+    {
+        NSString *updateSQL = [NSString stringWithFormat:@"update petTable set name = '%@',dateTimes = '%@',breed = '%@' where uid = '%lu'",item.name,item.dateTimes,item.breed,(unsigned long)item.uid];
+        if([self.db executeUpdate:updateSQL])
+        {
+            [self.db close];
+            return YES;
+        }
+        else
+        {
+            [self.db close];
+            return NO;
+        }
+    }
+    [self.db close];
+    return NO;
+
 }
 
 -(BOOL)insertImageItem:(ImageItem *)item
@@ -137,4 +193,28 @@ static DBHelper *single = nil;
     return NO;
 }
 
+
+-(BOOL)insertPetItem:(PetItem *)item
+{
+    if(item == nil)
+        return NO;
+    if([self.db open])
+    {
+        NSString *insertSQL = [NSString stringWithFormat:@"insert into petTable (name,dateTimes,breed) values ('%@','%@','%@')",item.name,item.dateTimes,item.breed];
+        if([self.db executeUpdate:insertSQL])
+        {
+            [self.db close];
+            return YES;
+        }
+        else
+        {
+            [self.db close];
+            return NO;
+        }
+        
+    }
+    [self.db close];
+    return NO;
+
+}
 @end

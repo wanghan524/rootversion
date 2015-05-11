@@ -9,6 +9,7 @@
 #import "PetHealthDetailViewController.h"
 #import "GrobleSingleton.h"
 #import "MoreActionView.h"
+#import "PetItem.h"
 
 @interface PetHealthDetailViewController (){
     GrobleSingleton *globleSingleton;
@@ -63,7 +64,7 @@
     [floatarray addObject:[[NSString alloc] initWithFormat:@"%f",hh]];
 
     UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(0, 64, SCREEN_WIDTH, 30)];
-    label.text = globleSingleton.selectedAnimalName;
+    label.text = ((PetItem *)(globleSingleton.selectedAnimalName)).name;
     label.font = [UIFont fontWithName:@"Antenna" size:20];
     label.textAlignment = NSTextAlignmentCenter;
     label.textColor = [UIColor blackColor];

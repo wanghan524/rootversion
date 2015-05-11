@@ -10,7 +10,10 @@
 #import "PopView.h"
 @interface EnterMianViewController : ParentViewController<dismissDelegate>
 @property(nonatomic,strong)PopView *pop;
+@property (weak, nonatomic) IBOutlet UILabel *two;
+@property (weak, nonatomic) IBOutlet UILabel *three;
 
+@property (weak, nonatomic) IBOutlet UILabel *one;
 - (IBAction)petAddBtnClick:(id)sender;
 
 - (IBAction)petOneBtnClick:(id)sender;
@@ -22,5 +25,6 @@
 - (IBAction)dogBtnClick:(id)sender;
 
 - (IBAction)catBtnClick:(id)sender;
-
+-(void)dismissDarkView;
+-(void)makePop;
 @end

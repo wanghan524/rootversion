@@ -23,6 +23,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EnterMianViewController">
             <connections>
+                <outlet property="one" destination="qGG-jR-213" id="rMQ-vs-fuK"/>
+                <outlet property="three" destination="upM-Je-mEf" id="lcb-uB-ljD"/>
+                <outlet property="two" destination="VZb-kh-2nA" id="W9s-xb-Qgu"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

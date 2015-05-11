@@ -123,8 +123,9 @@
         [self loadEmUp];
     } else {
         
-    EditViewController *editVC = [[EditViewController alloc] initWithNibName:@"EditViewController" bundle:nil];
+    EnterMianViewController *editVC = [[EnterMianViewController alloc] initWithNibName:@"EnterMianViewController" bundle:nil];
     //[self.navigationController pushViewController:editVC animated:YES];
+        [editVC makePop];
         [self presentViewController:editVC animated:YES completion:nil];
 #if 0
     

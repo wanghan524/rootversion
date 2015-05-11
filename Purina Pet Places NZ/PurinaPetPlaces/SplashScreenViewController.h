@@ -13,6 +13,8 @@
 #import "PetInfoMainScreenViewController.h"
 #import "ConnectionViewController.h"
 #import "EditViewController.h"
+#import "PopView.h"
+#import "EnterMianViewController.h"
 
 @interface SplashScreenViewController : UIViewController <UIAlertViewDelegate> {
     UITabBarController              *tabBarController;

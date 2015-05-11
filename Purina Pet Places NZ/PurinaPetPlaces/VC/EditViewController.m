@@ -8,6 +8,7 @@
 
 #import "EditViewController.h"
 #import "EnterMianViewController.h"
+#import "MainViewController.h"
 
 @interface EditViewController ()
 
@@ -44,28 +45,29 @@
 
 - (IBAction)EditButtonclick:(id)sender {
     
-    EnterMianViewController *enterVC = [[EnterMianViewController alloc] init];
-    UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:enterVC];
+//    EnterMianViewController *enterVC = [[EnterMianViewController alloc] init];
+//    UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:enterVC];
     
-    [self presentViewController:nav animated:YES completion:nil];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (IBAction)SelecteDog:(id)sender {
     
-    EnterMianViewController *enterVC = [[EnterMianViewController alloc] init];
+    MainViewController *enterVC = [[MainViewController alloc] init];
     
-    UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:enterVC];
-    
-    [self presentViewController:nav animated:YES completion:nil];
-
+//    UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:enterVC];
+//    
+//    [self presentViewController:nav animated:YES completion:nil];
+    [self.navigationController pushViewController:enterVC animated:YES];
 }
 
 - (IBAction)SelectedCat:(id)sender {
-    EnterMianViewController *enterVC = [[EnterMianViewController alloc] init];
+    MainViewController *enterVC = [[MainViewController alloc] init];
     
-    UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:enterVC];
+//    UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:enterVC];
     
-    [self presentViewController:nav animated:YES completion:nil];
+//    [self presentViewController:nav animated:YES completion:nil];
+    [self.navigationController pushViewController:enterVC animated:YES];
 
 }
 @end

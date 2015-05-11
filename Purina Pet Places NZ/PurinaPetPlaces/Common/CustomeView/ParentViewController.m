@@ -302,7 +302,7 @@ CGFloat navHeight;
         [self.navigationController pushViewController:photoFunVC animated:YES];
     }
     DLog(@"%@",indexPath);
-
+    
     
 }
 
