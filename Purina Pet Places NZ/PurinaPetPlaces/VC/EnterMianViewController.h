@@ -8,12 +8,15 @@
 
 #import "ParentViewController.h"
 #import "PopView.h"
-@interface EnterMianViewController : ParentViewController<dismissDelegate>
+@interface EnterMianViewController : ParentViewController<dismissDelegate,UITextFieldDelegate>
 @property(nonatomic,strong)PopView *pop;
 @property (weak, nonatomic) IBOutlet UILabel *two;
 @property (weak, nonatomic) IBOutlet UILabel *three;
 
 @property (weak, nonatomic) IBOutlet UILabel *one;
+@property (weak, nonatomic) IBOutlet UIButton *addBtn;
+
+
 - (IBAction)petAddBtnClick:(id)sender;
 
 - (IBAction)petOneBtnClick:(id)sender;

@@ -19,6 +19,7 @@ extern CGFloat navHeight;
 @property(nonatomic,strong)UIButton *searchButton;
 @property(nonatomic,strong)UIImageView *petPlaceImageView;
 @property(nonatomic,strong)SearchViewController *searchVC;
+@property(nonatomic,strong)NSString *flag;
 
 -(void)hideCustomeNav;
 -(void)showCustomeNav;

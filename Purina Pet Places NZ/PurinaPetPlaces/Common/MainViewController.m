@@ -22,6 +22,7 @@
 -(void)viewDidLoad
 {
     [super viewDidLoad];
+    self.flag = @"nav";
     [self showCustomeNav];
     [self makeArray];
     [self makeCollectionView];

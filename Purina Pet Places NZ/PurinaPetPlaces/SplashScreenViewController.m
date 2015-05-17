@@ -20,6 +20,7 @@
 #import "AppDelegate.h"
 
 
+
 @interface SplashScreenViewController ()
 
 @end
@@ -118,15 +119,30 @@
 }
 
 - (void)customloadView {
+    
+    DBHelper *dbHelper = [DBHelper sharedInstance];
+    
+//    NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
+//    NSArray *categories = [userDefault arrayForKey:CATEGORIES];
+    
     Singleton* sharedSingleton = [Singleton sharedInstance];
     if (sharedSingleton.currentCategories.count == 0) {
         [self loadEmUp];
     } else {
         
     EnterMianViewController *editVC = [[EnterMianViewController alloc] initWithNibName:@"EnterMianViewController" bundle:nil];
+        
+    EditViewController *edit = [[EditViewController alloc]initWithNibName:@"EditViewController" bundle:nil];
+        
     //[self.navigationController pushViewController:editVC animated:YES];
-        [editVC makePop];
+        
+    if (dbHelper.browsePetItem.count > 0) {
         [self presentViewController:editVC animated:YES completion:nil];
+    }else{
+        [self presentViewController:edit animated:YES completion:nil];
+    }
+        //[editVC makePop];
+        
 #if 0
     
     NSString *iconPlaces = @"icon_Places_7.png";

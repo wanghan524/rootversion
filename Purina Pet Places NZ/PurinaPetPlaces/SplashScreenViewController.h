@@ -7,6 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+
+#define CATEGORIES @"categories"
+#define DOGS @"dogs"
+#define CATS @"cats"
+
+
 #import "ViewController.h"
 
 #import "SearchTableViewController.h"
@@ -15,6 +21,7 @@
 #import "EditViewController.h"
 #import "PopView.h"
 #import "EnterMianViewController.h"
+#import "DBHelper.h"
 
 @interface SplashScreenViewController : UIViewController <UIAlertViewDelegate> {
     UITabBarController              *tabBarController;

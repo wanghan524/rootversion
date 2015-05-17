@@ -7,6 +7,7 @@
 //
 
 #import "ParentViewController.h"
+#import "GrobleSingleton.h"
 
 @interface EditViewController : ParentViewController
 @property (weak, nonatomic) IBOutlet UIImageView *titleImageView;

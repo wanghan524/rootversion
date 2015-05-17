@@ -26,4 +26,9 @@
 #import "TipsViewController.h"
 #import "ToolsViewController.h"
 #import "PetFriendlyPlacesViewController.h"
+
+
+#define CATEGORIES @"categories"
+#define DOGS @"dogs"
+#define CATS @"cats"
 #endif

@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="Antenna-Regular.otf">
-            <string>Antenna-Regular</string>
             <string>Antenna-Regular</string>
         </mutableArray>
     </customFonts>
@@ -27,22 +25,16 @@
                     <rect key="frame" x="0.0" y="0.0" width="320" height="250"/>
                     <color key="backgroundColor" red="0.38637868328486979" green="1" blue="0.14312787127605031" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="250" id="IPF-gR-InF"/>
+                        <constraint firstAttribute="width" constant="320" id="U5M-IB-ZxN"/>
                     </constraints>
                 </imageView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cib-US-Mi8">
-                    <rect key="frame" x="189" y="307" width="96" height="100"/>
-                    <color key="backgroundColor" red="1" green="0.69703944780000004" blue="0.20154638220000001" alpha="1" colorSpace="calibratedRGB"/>
-                    <state key="normal" backgroundImage="cats.png">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <connections>
-                        <action selector="SelectedCat:" destination="-1" eventType="touchUpInside" id="pqE-iA-ExX"/>
-                    </connections>
-                </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jKn-Lj-BpR">
-                    <rect key="frame" x="36" y="307" width="96" height="100"/>
+                    <rect key="frame" x="33" y="321" width="93" height="120"/>
                     <color key="backgroundColor" red="0.73338984419910613" green="0.37874002991641464" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="120" id="1NA-WH-cjk"/>
+                        <constraint firstAttribute="width" constant="93" id="emI-2h-5u0"/>
+                    </constraints>
                     <state key="normal" backgroundImage="dogs.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
@@ -51,45 +43,40 @@
                     </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I HAVE A" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ItE-hf-7Xy">
-                    <rect key="frame" x="119" y="263" width="82.5" height="19"/>
+                    <rect key="frame" x="119" y="277" width="83" height="19"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="83" id="Ht7-4v-Esu"/>
+                        <constraint firstAttribute="height" constant="19" id="Jyf-B3-Fug"/>
+                    </constraints>
                     <fontDescription key="fontDescription" name="Antenna-Regular" family="Antenna" pointSize="19"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P4C-Wb-zTB">
-                    <rect key="frame" x="0.0" y="430" width="320" height="50"/>
-                    <color key="backgroundColor" red="1" green="0.20207175660000001" blue="0.16807516950000001" alpha="1" colorSpace="calibratedRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="50" id="abK-Uk-SdJ"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" name="Antenna-Regular" family="Antenna" pointSize="20"/>
-                    <state key="normal" title="EDIT">
-                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cib-US-Mi8">
+                    <rect key="frame" x="194" y="321" width="93" height="120"/>
+                    <color key="backgroundColor" red="1" green="0.69703944780000004" blue="0.20154638220000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" backgroundImage="cats.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
-                        <action selector="EditButtonclick:" destination="-1" eventType="touchUpInside" id="30i-na-wxy"/>
+                        <action selector="SelectedCat:" destination="-1" eventType="touchUpInside" id="pqE-iA-ExX"/>
                     </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" red="0.95686274510000002" green="0.93333333330000001" blue="0.88235294119999996" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstItem="jKn-Lj-BpR" firstAttribute="width" secondItem="cib-US-Mi8" secondAttribute="width" id="0Bd-gk-L8l"/>
-                <constraint firstItem="P4C-Wb-zTB" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="1ir-2H-THb"/>
+                <constraint firstItem="ItE-hf-7Xy" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="119" id="57A-9W-P6e"/>
                 <constraint firstItem="ODb-KH-NHI" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="EuG-tC-xmp"/>
-                <constraint firstItem="cib-US-Mi8" firstAttribute="leading" secondItem="jKn-Lj-BpR" secondAttribute="trailing" constant="57" id="GAm-iz-ZIf"/>
-                <constraint firstItem="jKn-Lj-BpR" firstAttribute="top" secondItem="ItE-hf-7Xy" secondAttribute="bottom" constant="25" id="Hcv-KL-RU4"/>
-                <constraint firstItem="ItE-hf-7Xy" firstAttribute="top" secondItem="ODb-KH-NHI" secondAttribute="bottom" constant="13" id="MSE-hP-rMm"/>
                 <constraint firstAttribute="trailing" secondItem="ODb-KH-NHI" secondAttribute="trailing" id="NgK-LD-qUp"/>
-                <constraint firstAttribute="trailing" secondItem="cib-US-Mi8" secondAttribute="trailing" constant="35" id="OdA-e5-NjF"/>
-                <constraint firstItem="jKn-Lj-BpR" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="36" id="SK9-LI-uS6"/>
+                <constraint firstAttribute="bottom" secondItem="jKn-Lj-BpR" secondAttribute="bottom" constant="39" id="TxV-Qq-0a2"/>
+                <constraint firstItem="jKn-Lj-BpR" firstAttribute="width" secondItem="cib-US-Mi8" secondAttribute="width" id="UXV-ea-UCM"/>
                 <constraint firstItem="ODb-KH-NHI" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Uwr-rs-OZh"/>
-                <constraint firstItem="cib-US-Mi8" firstAttribute="top" secondItem="ItE-hf-7Xy" secondAttribute="bottom" constant="25" id="WZ8-z2-g5U"/>
-                <constraint firstItem="jKn-Lj-BpR" firstAttribute="height" secondItem="cib-US-Mi8" secondAttribute="height" id="Yu5-DF-TSW"/>
-                <constraint firstAttribute="bottom" secondItem="P4C-Wb-zTB" secondAttribute="bottom" id="bXc-Lg-sUo"/>
-                <constraint firstAttribute="trailing" secondItem="P4C-Wb-zTB" secondAttribute="trailing" id="hzT-it-fRu"/>
-                <constraint firstAttribute="centerX" secondItem="ItE-hf-7Xy" secondAttribute="centerX" id="vsE-tz-zHY"/>
-                <constraint firstItem="jKn-Lj-BpR" firstAttribute="width" secondItem="cib-US-Mi8" secondAttribute="height" multiplier="24:25" id="xok-Pi-s6w"/>
+                <constraint firstAttribute="bottom" secondItem="cib-US-Mi8" secondAttribute="bottom" constant="39" id="XPi-Ja-RC5"/>
+                <constraint firstItem="cib-US-Mi8" firstAttribute="leading" secondItem="jKn-Lj-BpR" secondAttribute="trailing" constant="68" id="YLd-eT-Q20"/>
+                <constraint firstItem="ItE-hf-7Xy" firstAttribute="top" secondItem="ODb-KH-NHI" secondAttribute="bottom" constant="27" id="YQq-ik-Bsa"/>
+                <constraint firstItem="jKn-Lj-BpR" firstAttribute="height" secondItem="cib-US-Mi8" secondAttribute="height" id="ZIa-Vr-OIA"/>
+                <constraint firstItem="jKn-Lj-BpR" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="33" id="blA-3V-f0V"/>
+                <constraint firstItem="cib-US-Mi8" firstAttribute="top" secondItem="ItE-hf-7Xy" secondAttribute="bottom" constant="25" id="fZS-3s-NMv"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="161" y="153"/>

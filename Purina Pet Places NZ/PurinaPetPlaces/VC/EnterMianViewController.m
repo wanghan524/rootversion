@@ -136,6 +136,8 @@ typedef NS_ENUM(NSUInteger, OPETIONDBTYPE)
 
 -(void)dismissDarkView
 {
+    
+    NSLog(@"pop : %@  %@  %@",self.pop.name.text,self.pop.dateTimes.text,self.pop.breed.text);
     if(self.darkView != nil)
     {
         [self.darkView removeFromSuperview];
@@ -169,8 +171,8 @@ typedef NS_ENUM(NSUInteger, OPETIONDBTYPE)
             DLog(@"error");
         }
     }
-    EditViewController *edit = [[EditViewController alloc]initWithNibName:@"EditViewController" bundle:nil];
-    [self presentViewController:edit animated:YES completion:nil];
+//    EditViewController *edit = [[EditViewController alloc]initWithNibName:@"EditViewController" bundle:nil];
+//    [self presentViewController:edit animated:YES completion:nil];
     
 
 }
@@ -215,10 +217,11 @@ typedef NS_ENUM(NSUInteger, OPETIONDBTYPE)
 {
     
     globeSingle.globleCategory = @"dog";
-    EditViewController *main = [[EditViewController alloc]init];
+    MainViewController *main = [[MainViewController alloc]init];
 
     UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:main];
     [self presentViewController:nav animated:YES completion:nil];
+    //[self.navigationController pushViewController:nav animated:YES];
 
     
 }
@@ -227,9 +230,15 @@ typedef NS_ENUM(NSUInteger, OPETIONDBTYPE)
 {
     
     globeSingle.globleCategory = @"cat";
-    EditViewController *main = [[EditViewController alloc]init];
+    MainViewController *main = [[MainViewController alloc]init];
     
     UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:main];
     [self presentViewController:nav animated:YES completion:nil];
+    //[self.navigationController pushViewController:nav animated:YES];
  }
+
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
+    [self.view endEditing:YES];
+}
 @end

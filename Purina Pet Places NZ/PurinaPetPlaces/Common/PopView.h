@@ -15,7 +15,7 @@
 @end
 
 @interface PopView : UIView
-@property(nonatomic,assign)id<dismissDelegate>delegate;
+@property(nonatomic,weak)id<dismissDelegate>delegate;
 @property (weak, nonatomic) IBOutlet UITextField *name;
 @property (weak, nonatomic) IBOutlet UITextField *dateTimes;
 

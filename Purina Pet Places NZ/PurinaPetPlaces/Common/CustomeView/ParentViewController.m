@@ -123,6 +123,11 @@ CGFloat navHeight;
 
 -(void)backBtnClick:(UIButton *)sender
 {
+    
+    if ([self.flag isEqualToString:@"nav"]) {
+        [self dismissViewControllerAnimated:YES completion:nil];
+
+    }
     if([self.navigationController.viewControllers count] > 0)
     {
         [self.navigationController popViewControllerAnimated:YES];
