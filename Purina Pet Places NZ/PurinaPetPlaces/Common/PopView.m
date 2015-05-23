@@ -14,6 +14,7 @@
     if(self = [super initWithFrame:frame])
     {
         
+    
     }
     return self;
 }
@@ -24,12 +25,12 @@
     
     
     if (self.name.text.length == 0) {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"请输入Name" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Notices" message:@"Please enter Name" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
         [alert show];
         return;
     }
     if (self.dateTimes.text.length == 0) {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:@"请输入Brith" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Notices" message:@"Please enter Brith" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
         [alert show];
         return;
     }

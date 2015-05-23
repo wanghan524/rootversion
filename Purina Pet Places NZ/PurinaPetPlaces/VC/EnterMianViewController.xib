@@ -24,7 +24,17 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EnterMianViewController">
             <connections>
                 <outlet property="addBtn" destination="Jc4-CG-eXr" id="jmO-1i-Z3D"/>
+                <outlet property="catButton" destination="HUZ-tu-Xav" id="5ra-UO-yT0"/>
+                <outlet property="dogButton" destination="Pqu-Sj-vuz" id="d3x-MU-C3K"/>
+                <outlet property="edit1" destination="IBU-5r-zK8" id="rFo-MW-eAy"/>
+                <outlet property="edit2" destination="uin-Ag-9UT" id="G4f-jD-Yox"/>
+                <outlet property="edit3" destination="RhT-KS-Zqb" id="ZWZ-G7-Aak"/>
+                <outlet property="headerImage" destination="y9b-Up-Dgc" id="PDJ-aw-XYb"/>
                 <outlet property="one" destination="qGG-jR-213" id="rMQ-vs-fuK"/>
+                <outlet property="pet1" destination="VAi-08-bD3" id="NLk-cd-fTg"/>
+                <outlet property="pet2" destination="w8W-4k-Yaq" id="NWE-v8-5Ri"/>
+                <outlet property="pet3" destination="tI2-eT-cIY" id="nAX-NN-Xu9"/>
+                <outlet property="petView" destination="FeE-Vs-4De" id="yzv-gc-ww8"/>
                 <outlet property="three" destination="upM-Je-mEf" id="lcb-uB-ljD"/>
                 <outlet property="two" destination="VZb-kh-2nA" id="W9s-xb-Qgu"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -66,12 +76,6 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FeE-Vs-4De" userLabel="PetCatagory">
                     <rect key="frame" x="0.0" y="290" width="320" height="202"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pet 1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VAi-08-bD3">
-                            <rect key="frame" x="16" y="7" width="63" height="23"/>
-                            <fontDescription key="fontDescription" name="Antenna-ExtraLight" family="Antenna" pointSize="19"/>
-                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                            <nil key="highlightedColor"/>
-                        </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pet 2" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w8W-4k-Yaq">
                             <rect key="frame" x="16" y="51" width="63" height="23"/>
                             <fontDescription key="fontDescription" name="Antenna-ExtraLight" family="Antenna" pointSize="19"/>
@@ -150,6 +154,12 @@
                                 <action selector="petThreeBtnClick:" destination="-1" eventType="touchUpInside" id="zSO-T7-l07"/>
                             </connections>
                         </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pet 1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VAi-08-bD3">
+                            <rect key="frame" x="16" y="8" width="63" height="23"/>
+                            <fontDescription key="fontDescription" name="Antenna-ExtraLight" family="Antenna" pointSize="19"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                     </subviews>
                     <color key="backgroundColor" red="0.94901960780000005" green="0.93333333330000001" blue="0.87450980389999999" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>

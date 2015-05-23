@@ -16,6 +16,18 @@
 @property (weak, nonatomic) IBOutlet UILabel *one;
 @property (weak, nonatomic) IBOutlet UIButton *addBtn;
 
+@property (weak, nonatomic) IBOutlet UIView *petView;
+@property (weak, nonatomic) IBOutlet UILabel *pet1;
+@property (weak, nonatomic) IBOutlet UILabel *pet2;
+@property (weak, nonatomic) IBOutlet UILabel *pet3;
+@property (weak, nonatomic) IBOutlet UIButton *edit1;
+@property (weak, nonatomic) IBOutlet UIButton *edit2;
+@property (weak, nonatomic) IBOutlet UIButton *edit3;
+@property (weak, nonatomic) IBOutlet UIImageView *headerImage;
+@property (weak, nonatomic) IBOutlet UIButton *dogButton;
+@property (weak, nonatomic) IBOutlet UIButton *catButton;
+
+
 
 - (IBAction)petAddBtnClick:(id)sender;
 
