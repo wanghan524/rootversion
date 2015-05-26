@@ -42,26 +42,41 @@
     self.bottom.backgroundColor = [UIColor whiteColor];
     [self.bgView addSubview:self.bottom];
     
-    UILabel *share = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 40)];
+    CGFloat bottomHeight = CGRectGetHeight(self.bottom.frame);
+    CGFloat perHeightBottom = bottomHeight/3.f;
+    
+    
+    self.saveBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [self.saveBtn setFrame:CGRectMake((SCREEN_WIDTH-perHeightBottom)/2,5,perHeightBottom, perHeightBottom )];
+    //    [self.saveBtn setImage:[UIImage imageNamed:@"bang.png"] forState:UIControlStateNormal];
+    [self.saveBtn setTitle:@"SAVE" forState:UIControlStateNormal];
+    self.saveBtn.titleLabel.adjustsFontSizeToFitWidth = YES;
+    [self.saveBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [self.saveBtn setBackgroundColor:[UIColor redColor]];
+    [self.saveBtn addTarget:self action:@selector(saveBtn:) forControlEvents:UIControlEventTouchUpInside];
+    [self.bottom addSubview:self.saveBtn];
+
+    
+    UILabel *share = [[UILabel alloc]initWithFrame:CGRectMake(0, perHeightBottom+5, SCREEN_WIDTH, perHeightBottom)];
     share.text = @"Share";
     [share setFont:[UIFont fontWithName:@"Antenna" size:20]];
     share.textAlignment = NSTextAlignmentCenter;
     [self.bottom addSubview:share];
     
     self.facebookBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    [self.facebookBtn setFrame:CGRectMake((SCREEN_WIDTH - 200)/2+20, 50, 50, 50)];
+    [self.facebookBtn setFrame:CGRectMake((SCREEN_WIDTH - perHeightBottom*3-40)/2+10, CGRectGetMaxY(share.frame)-5, perHeightBottom-5, perHeightBottom-5)];
     [self.facebookBtn setImage:[UIImage imageNamed:@"fb.png"] forState:UIControlStateNormal];
 //    [self.facebookBtn setBackgroundColor:[UIColor redColor]];
     [self.bottom addSubview:self.facebookBtn];
     
     self.cameraBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    [self.cameraBtn setFrame:CGRectMake(CGRectGetMaxX(self.facebookBtn.frame)+20, 50, 50, 50)];
+    [self.cameraBtn setFrame:CGRectMake(CGRectGetMaxX(self.facebookBtn.frame)+20, CGRectGetMaxY(share.frame)-5, perHeightBottom-5, perHeightBottom-5)];
     [self.cameraBtn setImage:[UIImage imageNamed:@"insta.png"] forState:UIControlStateNormal];
 //    [self.cameraBtn setBackgroundColor:[UIColor redColor]];
     [self.bottom addSubview:self.cameraBtn];
     
     self.twitterBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    [self.twitterBtn setFrame:CGRectMake(CGRectGetMaxX(self.cameraBtn.frame)+20, 50, 50, 50)];
+    [self.twitterBtn setFrame:CGRectMake(CGRectGetMaxX(self.cameraBtn.frame)+20, CGRectGetMaxY(share.frame)-5, perHeightBottom-5, perHeightBottom-5)];
     [self.twitterBtn setImage:[UIImage imageNamed:@"twitter.png"] forState:UIControlStateNormal];
 //    [self.twitterBtn setBackgroundColor:[UIColor redColor]];
     [self.bottom addSubview:self.twitterBtn];
@@ -80,7 +95,7 @@
     [self.bgView addSubview:self.dogFrameview];
     
     self.dogBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    [self.dogBtn setFrame:CGRectMake((SCREEN_WIDTH-130)/2, 10, 30, 30)];
+    [self.dogBtn setFrame:CGRectMake((SCREEN_WIDTH-80)/2, 10, 30, 30)];
     [self.dogBtn setImage:[UIImage imageNamed:@"dogtu.png"] forState:UIControlStateNormal];
     [self.dogBtn addTarget:self action:@selector(dogBtn:) forControlEvents:UIControlEventTouchUpInside];
     [self.dogFrameview addSubview:self.dogBtn];
@@ -91,14 +106,6 @@
     [self.frameBtn addTarget:self action:@selector(frameBtn:) forControlEvents:UIControlEventTouchUpInside];
     [self.dogFrameview addSubview:self.frameBtn];
     
-    self.saveBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    [self.saveBtn setFrame:CGRectMake(CGRectGetMaxX(self.frameBtn.frame)+20, 10, 60, 30 )];
-//    [self.saveBtn setImage:[UIImage imageNamed:@"bang.png"] forState:UIControlStateNormal];
-    [self.saveBtn setTitle:@"SAVE" forState:UIControlStateNormal];
-    [self.saveBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    [self.saveBtn setBackgroundColor:[UIColor redColor]];
-    [self.saveBtn addTarget:self action:@selector(saveBtn:) forControlEvents:UIControlEventTouchUpInside];
-    [self.dogFrameview addSubview:self.saveBtn];
     
     UIView *line = [[UIView alloc]initWithFrame:CGRectMake(0, CGRectGetMaxY(self.scroller.frame), SCREEN_WIDTH, 1)];
     [line setBackgroundColor:[UIColor blackColor]];
