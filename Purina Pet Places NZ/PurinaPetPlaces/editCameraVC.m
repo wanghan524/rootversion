@@ -24,9 +24,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self showCustomeNav];
-    [self.view setBackgroundColor:[UIColor colorWithRed:244/255.f green:241/255.f blue:230/255.f alpha:1]];
+    [self.view setBackgroundColor:[UIColor colorWithRed:244/255.f green:241/255.f blue:230/255.f alpha:0.8]];
     [self createBgView];
-    [self createEditLabel];
+//    [self createEditLabel];
     [self createImageView];
 //    [self createCurrent];
     [self createScroller];
@@ -75,7 +75,7 @@
 
 -(void)createDogFrame
 {
-    self.dogFrameview = [[UIView alloc]initWithFrame:CGRectMake(0, CGRectGetMaxY(self.dogImageView.frame), SCREEN_WIDTH, 50)];
+    self.dogFrameview = [[UIView alloc]initWithFrame:CGRectMake(0, CGRectGetMaxY(self.scroller.frame), SCREEN_WIDTH, 50)];
     [self.dogFrameview  setBackgroundColor:[UIColor colorWithRed:244/255.f green:241/255.f blue:230/255.f alpha:1]];
     [self.bgView addSubview:self.dogFrameview];
     
@@ -92,12 +92,15 @@
     [self.dogFrameview addSubview:self.frameBtn];
     
     self.saveBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    [self.saveBtn setFrame:CGRectMake(CGRectGetMaxX(self.frameBtn.frame)+20, 10, 30, 30 )];
-    [self.saveBtn setImage:[UIImage imageNamed:@"bang.png"] forState:UIControlStateNormal];
+    [self.saveBtn setFrame:CGRectMake(CGRectGetMaxX(self.frameBtn.frame)+20, 10, 60, 30 )];
+//    [self.saveBtn setImage:[UIImage imageNamed:@"bang.png"] forState:UIControlStateNormal];
+    [self.saveBtn setTitle:@"SAVE" forState:UIControlStateNormal];
+    [self.saveBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [self.saveBtn setBackgroundColor:[UIColor redColor]];
     [self.saveBtn addTarget:self action:@selector(saveBtn:) forControlEvents:UIControlEventTouchUpInside];
     [self.dogFrameview addSubview:self.saveBtn];
     
-    UIView *line = [[UIView alloc]initWithFrame:CGRectMake(0, 1+CGRectGetMaxY(self.dogFrameview.frame), SCREEN_WIDTH, 1)];
+    UIView *line = [[UIView alloc]initWithFrame:CGRectMake(0, CGRectGetMaxY(self.scroller.frame), SCREEN_WIDTH, 1)];
     [line setBackgroundColor:[UIColor blackColor]];
     [self.bgView addSubview:line];
     
@@ -194,12 +197,14 @@
 
 -(void)createScroller
 {
-    UIView *big = [[UIView alloc]initWithFrame:CGRectMake(0, CGRectGetMaxY(self.dogImageView.frame) - 50 , SCREEN_WIDTH, 50)];
-    [big setBackgroundColor:[UIColor blackColor]];
-    big.alpha = 0.6;
+    UIView *big = [[UIView alloc]initWithFrame:CGRectMake(0, CGRectGetMaxY(self.dogImageView.frame) , SCREEN_WIDTH, 50)];
+    [big setBackgroundColor:[UIColor lightGrayColor]];
+//    big.layer.backgroundColor = [UIColor blackColor].CGColor;
+//    big.alpha = 0.4;
+
     [self.bgView addSubview:big];
     
-    self.scroller = [[UIScrollView alloc]initWithFrame:CGRectMake(30, CGRectGetMaxY(self.dogImageView.frame) - 50 , SCREEN_WIDTH-50, 50)];
+    self.scroller = [[UIScrollView alloc]initWithFrame:CGRectMake(25, CGRectGetMaxY(self.dogImageView.frame), SCREEN_WIDTH-50, 50)];
     self.scroller.backgroundColor = [UIColor clearColor];
     self.scroller.alpha = 1;
     self.scroller.bounces = YES;
@@ -275,7 +280,7 @@
 
 -(void)createImageView
 {
-    self.dogImageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, CGRectGetMaxY(self.editLabel.frame), SCREEN_WIDTH, 200)];
+    self.dogImageView = [[UIImageView alloc]initWithFrame:CGRectMake(0,0, SCREEN_WIDTH, 200)];
     self.dogImageView.layer.masksToBounds = YES;
     self.dogImageView.userInteractionEnabled = YES;
 
@@ -306,7 +311,7 @@
 -(void)createBgView
 {
     self.bgView = [[UIView alloc]initWithFrame:CGRectMake(0, 64, SCREEN_WIDTH, SCREEN_HEIGHT - 64)];
-    [self.bgView setBackgroundColor:[UIColor colorWithRed:244/255.f green:241/255.f blue:230/255.f alpha:1]];
+//    [self.bgView setBackgroundColor:[UIColor colorWithRed:244/255.f green:241/255.f blue:230/255.f alpha:1]];
     [self.view addSubview:self.bgView];
 }
 

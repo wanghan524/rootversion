@@ -8,6 +8,7 @@
 
 #import "photoFunViewController.h"
 #import "editCameraVC.h"
+#import "SaveDImageVC.h"
 
 @interface photoFunViewController ()
 
@@ -34,6 +35,7 @@
 
     DBHelper *single = [DBHelper sharedInstance];
     self.imageArray = [single browseImageItem];
+ 
 }
 
 #pragma mark collection delegate end
@@ -225,6 +227,8 @@
 
 
 - (IBAction)savedImageBtnClicked:(id)sender {
+    SaveDImageVC *save = [[SaveDImageVC alloc]init];
+    [self.navigationController pushViewController:save animated:YES];
 }
 
 - (IBAction)cameraBtnClicked:(id)sender
@@ -254,9 +258,7 @@
         [files createDirectoryAtPath:imagePath withIntermediateDirectories:YES attributes:nil error:nil];
     }
     
-
     ImageItem *model = [[ImageItem alloc]init];
-
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc]init];
     [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
     model.dateTimes = [dateFormatter stringFromDate:[NSDate date]];
@@ -267,8 +269,8 @@
     DBHelper *db = [DBHelper sharedInstance];
     if([db insertImageItem:model])
     {
-        [self makeArray];
-        [self.toolCollection reloadData];
+//        [self makeArray];
+//        [self.toolCollection reloadData];
         
     }
     

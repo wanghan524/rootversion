@@ -262,6 +262,7 @@
 		8ADDAEA61845A2F10068ED72 /* Icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8ADDAEA51845A2F10068ED72 /* Icon-60@2x.png */; };
 		8AF8150C183D768200088BE9 /* icon_7@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AF8150B183D768200088BE9 /* icon_7@2x.png */; };
 		8AF8150E183DA9D900088BE9 /* button_currentLocation_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 8AF8150D183DA9D900088BE9 /* button_currentLocation_selected.png */; };
+		A47FBC611B14B71B00224600 /* SaveDImageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A47FBC601B14B71B00224600 /* SaveDImageVC.m */; };
 		A4CEB7441AFD12E6005BBEA0 /* Antenna-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = A4CEB73F1AFD12E6005BBEA0 /* Antenna-Bold.otf */; };
 		A4CEB7451AFD12E6005BBEA0 /* Antenna-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = A4CEB7401AFD12E6005BBEA0 /* Antenna-ExtraLight.otf */; };
 		A4CEB7461AFD12E6005BBEA0 /* Antenna-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = A4CEB7411AFD12E6005BBEA0 /* Antenna-Regular.otf */; };
@@ -812,6 +813,8 @@
 		8ADDAEA51845A2F10068ED72 /* Icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60@2x.png"; sourceTree = "<group>"; };
 		8AF8150B183D768200088BE9 /* icon_7@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon_7@2x.png"; path = "../icon_7@2x.png"; sourceTree = "<group>"; };
 		8AF8150D183DA9D900088BE9 /* button_currentLocation_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = button_currentLocation_selected.png; path = Images/button_currentLocation_selected.png; sourceTree = "<group>"; };
+		A47FBC5F1B14B71B00224600 /* SaveDImageVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SaveDImageVC.h; sourceTree = "<group>"; };
+		A47FBC601B14B71B00224600 /* SaveDImageVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SaveDImageVC.m; sourceTree = "<group>"; };
 		A4CEB73F1AFD12E6005BBEA0 /* Antenna-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Antenna-Bold.otf"; sourceTree = "<group>"; };
 		A4CEB7401AFD12E6005BBEA0 /* Antenna-ExtraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Antenna-ExtraLight.otf"; sourceTree = "<group>"; };
 		A4CEB7411AFD12E6005BBEA0 /* Antenna-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Antenna-Regular.otf"; sourceTree = "<group>"; };
@@ -1874,6 +1877,8 @@
 				EFC41CA21ADB866000978240 /* photoFunViewController.xib */,
 				A4CEB76E1AFE087F005BBEA0 /* editCameraVC.h */,
 				A4CEB76F1AFE087F005BBEA0 /* editCameraVC.m */,
+				A47FBC5F1B14B71B00224600 /* SaveDImageVC.h */,
+				A47FBC601B14B71B00224600 /* SaveDImageVC.m */,
 				A4CEB7B31AFE98EE005BBEA0 /* dogtu.png */,
 				A4CEB7B41AFE98EE005BBEA0 /* bang.png */,
 				A4CEB7B51AFE98EE005BBEA0 /* kuagn.png */,
@@ -2570,6 +2575,7 @@
 				2082520815B63FEB00BDA88D /* PCServices.m in Sources */,
 				2082520915B63FEB00BDA88D /* Soap+Prefix.m in Sources */,
 				2082520A15B63FEB00BDA88D /* NSData+Base64.m in Sources */,
+				A47FBC611B14B71B00224600 /* SaveDImageVC.m in Sources */,
 				2082520B15B63FEB00BDA88D /* NSMutableArray+Soap.m in Sources */,
 				2082520C15B63FEB00BDA88D /* Soap.m in Sources */,
 				A4CEB7611AFDE08F005BBEA0 /* FMDatabasePool.m in Sources */,
