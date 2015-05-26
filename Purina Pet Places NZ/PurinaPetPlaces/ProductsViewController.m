@@ -74,6 +74,9 @@
     
     //NSArray *titleArray = @[@"Photo Fun",@"Pet Friendly Places",@"Stockists",@"Tools",@"Pet Services",@"Tips",@"Products"];
     NSArray *imageNameArray = @[@"pro-plan",@"purina-one",@"tux",@"dog-chow",@"mighty-dog",@"beneful",@"beggin"];
+    
+    
+    NSArray *catImageNameArray = @[@"cat-chow",@"cat-fancy-feast",@"cat-friskies",@"cat-one",@"cat-pro-plan",@"cat-treats"];
     static NSString *iden = @"UICollectionViewCell";
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:iden forIndexPath:indexPath];
     if(cell == nil)
@@ -87,7 +90,13 @@
     backView.layer.borderWidth = 0.3;
     backView.backgroundColor = [UIColor whiteColor];
     UIImageView *backGroundImage = [[UIImageView alloc] initWithFrame:CGRectMake(cell.contentView.center.x - 51, cell.contentView.center.y - 24, 102, 46)];
-    backGroundImage.image = [UIImage imageNamed:[NSString stringWithFormat:@"products-%@.jpg",imageNameArray[indexPath.row]]];
+    
+    if ([globelSingle.globleCategory isEqualToString:@"dog"]) {
+        backGroundImage.image = [UIImage imageNamed:[NSString stringWithFormat:@"products-%@.jpg",imageNameArray[indexPath.row]]];
+    }else{
+        backGroundImage.image = [UIImage imageNamed:[NSString stringWithFormat:@"products-%@.jpg",catImageNameArray[indexPath.row]]];
+    }
+    
     [backView addSubview:backGroundImage];
     
     //cell.backgroundColor = [UIColor colorWithRed:((10 * indexPath.row) / 255.0) green:((20 * indexPath.row)/255.0) blue:((30 * indexPath.row)/255.0) alpha:1.0f];
@@ -136,8 +145,16 @@
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     NSArray *imageNameArray = @[@"pro-plan",@"purina-one",@"tux",@"dog-chow",@"mighty-dog",@"beneful",@"beggin"];
+    
+    NSArray *catImageNameArray = @[@"cat-chow",@"cat-fancy-feast",@"cat-friskies",@"cat-one",@"cat-pro-plan",@"cat-treats"];
     ProductDetailViewController *productDetailVC = [[ProductDetailViewController alloc] init];
-    productDetailVC.animalFlag = imageNameArray[indexPath.row];
+    
+    if ([globelSingle.globleCategory isEqualToString:@"dog"]) {
+        productDetailVC.animalFlag = imageNameArray[indexPath.row];
+    }else{
+        productDetailVC.animalFlag = catImageNameArray[indexPath.row];
+    }
+    
     productDetailVC.num = indexPath.row;
     [self.navigationController pushViewController:productDetailVC animated:YES];
 
@@ -156,10 +173,19 @@
 -(void)makeArray
 {
     self.imageArray = [[NSMutableArray alloc]initWithCapacity:0];
-    for(NSUInteger i = 0; i < 7; i++)
-    {
-        [self.imageArray addObject:[NSString stringWithFormat:@"%lu",(unsigned long)i]];
+    if ([globelSingle.globleCategory isEqualToString:@"dog"]) {
+        for(NSUInteger i = 0; i < 7; i++)
+        {
+            [self.imageArray addObject:[NSString stringWithFormat:@"%lu",(unsigned long)i]];
+        }
+    }else{
+        for(NSUInteger i = 0; i < 6; i++)
+        {
+            [self.imageArray addObject:[NSString stringWithFormat:@"%lu",(unsigned long)i]];
+        }
     }
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
