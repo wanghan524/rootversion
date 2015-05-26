@@ -316,6 +316,12 @@
 		EF047EED1AF3A98F00DADFCA /* PieChatView.m in Sources */ = {isa = PBXBuildFile; fileRef = EF047EEC1AF3A98F00DADFCA /* PieChatView.m */; };
 		EF3EEDEC1AE2175000B3B7F8 /* ToolsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3EEDEB1AE2175000B3B7F8 /* ToolsViewController.m */; };
 		EF3EEDEE1AE2451000B3B7F8 /* tools-header0.png in Resources */ = {isa = PBXBuildFile; fileRef = EF3EEDED1AE2451000B3B7F8 /* tools-header0.png */; };
+		EF607C551B11AEAA00D547E7 /* cat-chow.html in Resources */ = {isa = PBXBuildFile; fileRef = EF607C4F1B11AEAA00D547E7 /* cat-chow.html */; };
+		EF607C561B11AEAA00D547E7 /* cat-fancy-feast.html in Resources */ = {isa = PBXBuildFile; fileRef = EF607C501B11AEAA00D547E7 /* cat-fancy-feast.html */; };
+		EF607C571B11AEAA00D547E7 /* cat-friskies.html in Resources */ = {isa = PBXBuildFile; fileRef = EF607C511B11AEAA00D547E7 /* cat-friskies.html */; };
+		EF607C581B11AEAA00D547E7 /* cat-one.html in Resources */ = {isa = PBXBuildFile; fileRef = EF607C521B11AEAA00D547E7 /* cat-one.html */; };
+		EF607C591B11AEAA00D547E7 /* cat-pro-plan.html in Resources */ = {isa = PBXBuildFile; fileRef = EF607C531B11AEAA00D547E7 /* cat-pro-plan.html */; };
+		EF607C5A1B11AEAA00D547E7 /* cat-treats.html in Resources */ = {isa = PBXBuildFile; fileRef = EF607C541B11AEAA00D547E7 /* cat-treats.html */; };
 		EF62CCBF1AE3812B00296A73 /* PetHealthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF62CCBE1AE3812B00296A73 /* PetHealthViewController.m */; };
 		EF62CCC21AE3813F00296A73 /* WhatShouldViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF62CCC11AE3813F00296A73 /* WhatShouldViewController.m */; };
 		EF62CCC51AE38E6F00296A73 /* PetHealthDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF62CCC41AE38E6F00296A73 /* PetHealthDetailViewController.m */; };
@@ -874,6 +880,12 @@
 		EF3EEDEA1AE2175000B3B7F8 /* ToolsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToolsViewController.h; sourceTree = "<group>"; };
 		EF3EEDEB1AE2175000B3B7F8 /* ToolsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToolsViewController.m; sourceTree = "<group>"; };
 		EF3EEDED1AE2451000B3B7F8 /* tools-header0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tools-header0.png"; sourceTree = "<group>"; };
+		EF607C4F1B11AEAA00D547E7 /* cat-chow.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "cat-chow.html"; sourceTree = "<group>"; };
+		EF607C501B11AEAA00D547E7 /* cat-fancy-feast.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "cat-fancy-feast.html"; sourceTree = "<group>"; };
+		EF607C511B11AEAA00D547E7 /* cat-friskies.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "cat-friskies.html"; sourceTree = "<group>"; };
+		EF607C521B11AEAA00D547E7 /* cat-one.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "cat-one.html"; sourceTree = "<group>"; };
+		EF607C531B11AEAA00D547E7 /* cat-pro-plan.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "cat-pro-plan.html"; sourceTree = "<group>"; };
+		EF607C541B11AEAA00D547E7 /* cat-treats.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "cat-treats.html"; sourceTree = "<group>"; };
 		EF62CCBD1AE3812B00296A73 /* PetHealthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PetHealthViewController.h; sourceTree = "<group>"; };
 		EF62CCBE1AE3812B00296A73 /* PetHealthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PetHealthViewController.m; sourceTree = "<group>"; };
 		EF62CCC01AE3813F00296A73 /* WhatShouldViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WhatShouldViewController.h; sourceTree = "<group>"; };
@@ -1494,6 +1506,7 @@
 		2097D7EA154E1E8B00972AD4 /* ViewControllers_PetInfo */ = {
 			isa = PBXGroup;
 			children = (
+				EF607C4E1B11AEAA00D547E7 /* every_cat_html */,
 				EFF9EBB41ADE846B00876341 /* every_dog_html */,
 				20C8F000170270610041533C /* HTML */,
 				20C8EFFC170175F50041533C /* CatInfo.html */,
@@ -1868,6 +1881,19 @@
 			name = Photo_Fun;
 			sourceTree = "<group>";
 		};
+		EF607C4E1B11AEAA00D547E7 /* every_cat_html */ = {
+			isa = PBXGroup;
+			children = (
+				EF607C4F1B11AEAA00D547E7 /* cat-chow.html */,
+				EF607C501B11AEAA00D547E7 /* cat-fancy-feast.html */,
+				EF607C511B11AEAA00D547E7 /* cat-friskies.html */,
+				EF607C521B11AEAA00D547E7 /* cat-one.html */,
+				EF607C531B11AEAA00D547E7 /* cat-pro-plan.html */,
+				EF607C541B11AEAA00D547E7 /* cat-treats.html */,
+			);
+			path = every_cat_html;
+			sourceTree = "<group>";
+		};
 		EFA1B5871AD8BB9B00F44CC1 /* parse-library-1.7.1 */ = {
 			isa = PBXGroup;
 			children = (
@@ -2113,6 +2139,7 @@
 				A4CEB79D1AFE130B005BBEA0 /* 18.png in Resources */,
 				8ADDAE9F18459E5D0068ED72 /* Icon-60.png in Resources */,
 				EFA56D0E1ADF890F00A915E8 /* tips-articles-cats14.jpg in Resources */,
+				EF607C561B11AEAA00D547E7 /* cat-fancy-feast.html in Resources */,
 				EFA56D161ADF890F00A915E8 /* tips-articles-cats7.jpg in Resources */,
 				A4CEB7521AFDD048005BBEA0 /* camera.png in Resources */,
 				EFCD3FD21AE0D2D1009CC7DA /* products-about-tux.jpg in Resources */,
@@ -2154,6 +2181,7 @@
 				8A986854183D61E700CE36C6 /* icon_PetInfo_7@2x.png in Resources */,
 				202F6351153665DC00F583C0 /* button_SuggestALocatoin@2x.png in Resources */,
 				A4CEB7941AFE130B005BBEA0 /* 39.png in Resources */,
+				EF607C551B11AEAA00D547E7 /* cat-chow.html in Resources */,
 				202F635415366A6800F583C0 /* feature_DogForRecommend.png in Resources */,
 				202F635515366A6800F583C0 /* feature_DogForRecommend@2x.png in Resources */,
 				EFCD3FB91AE0D2D1009CC7DA /* photo-fun-main.jpg in Resources */,
@@ -2320,6 +2348,7 @@
 				EFCD3FC01AE0D2D1009CC7DA /* photo-fun-share-twitter.jpg in Resources */,
 				A4CEB78C1AFE130B005BBEA0 /* 31.png in Resources */,
 				8AC9B5AB1987033600CA7FE5 /* cat-treats.jpg in Resources */,
+				EF607C581B11AEAA00D547E7 /* cat-one.html in Resources */,
 				EFCD3FBC1AE0D2D1009CC7DA /* photo-fun-ribbon.png in Resources */,
 				20717297155CA1000024C3D0 /* button_retry@2x.png in Resources */,
 				2048F1D0156094AE00F53848 /* background_gradient.png in Resources */,
@@ -2395,6 +2424,7 @@
 				20C8F0381702706D0041533C /* dog-products-small.jpg in Resources */,
 				EFCD3FB61AE0D2D1009CC7DA /* photo-fun-balloons.png in Resources */,
 				EFCC0ECE1ADCA7D8008676D7 /* menu-stockists.jpg in Resources */,
+				EF607C571B11AEAA00D547E7 /* cat-friskies.html in Resources */,
 				20C8F0391702706D0041533C /* dog-tips-header.png in Resources */,
 				EFCD3FC41AE0D2D1009CC7DA /* photo-fun-tool-frame-active.png in Resources */,
 				20C8F03A1702706D0041533C /* dog-tips-small.jpg in Resources */,
@@ -2418,6 +2448,7 @@
 				EFCC0EDA1ADCA7D8008676D7 /* products-dog-chow.jpg in Resources */,
 				EFA56D1F1ADF890F00A915E8 /* tips-articles-general11.jpg in Resources */,
 				EFCC0ED21ADCA7D8008676D7 /* pet-care-service-header.jpg in Resources */,
+				EF607C591B11AEAA00D547E7 /* cat-pro-plan.html in Resources */,
 				8AF8150C183D768200088BE9 /* icon_7@2x.png in Resources */,
 				EFA56D2B1ADF890F00A915E8 /* tips-articles-general4.jpg in Resources */,
 				EFCC0ED11ADCA7D8008676D7 /* next-btn.jpg in Resources */,
@@ -2441,6 +2472,7 @@
 				20C8F0451702706D0041533C /* tips_cat.html in Resources */,
 				20C8F0461702706D0041533C /* tips_dog.html in Resources */,
 				8AC9B5B6199DAAA500CA7FE5 /* icon-mail.png in Resources */,
+				EF607C5A1B11AEAA00D547E7 /* cat-treats.html in Resources */,
 				8ADDAEA018459E5D0068ED72 /* Icon-60@2x.png in Resources */,
 				EFCD3FCD1AE0D2D1009CC7DA /* products-about-friskies.jpg in Resources */,
 				20C8F0471702706D0041533C /* tips_general.html in Resources */,

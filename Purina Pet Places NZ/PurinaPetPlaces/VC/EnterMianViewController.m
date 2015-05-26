@@ -225,7 +225,7 @@ typedef NS_ENUM(NSUInteger, OPETIONDBTYPE)
                     self.pet4.font = [UIFont fontWithName:@"Antenna-ExtraLight" size:19];
                     [self.petView addSubview:self.pet4];
                     
-                    self.four = [[UILabel alloc] initWithFrame:CGRectMake(self.three.frame.origin.x, self.three.frame.origin.y + self.three.frame.size.height - (self.three.frame.origin.y - (self.two.frame.origin.y + self.two.frame.size.height)), self.three.frame.size.width, self.three.frame.size.height)];
+                    self.four = [[UILabel alloc] initWithFrame:CGRectMake(self.three.frame.origin.x, self.three.frame.origin.y + self.three.frame.size.height + (self.three.frame.origin.y - (self.two.frame.origin.y + self.two.frame.size.height)), self.three.frame.size.width, self.three.frame.size.height)];
                     self.four.font = [UIFont fontWithName:@"Antenna-Regular" size:16];
                     self.four.textAlignment = NSTextAlignmentLeft;
                     self.four.text = petItem.name;
@@ -236,6 +236,7 @@ typedef NS_ENUM(NSUInteger, OPETIONDBTYPE)
                     editButton.frame = CGRectMake(self.edit3.frame.origin.x, self.edit3.frame.origin.y + self.edit3.frame.size.height + (self.edit3.frame.origin.y - (self.edit2.frame.origin.y + self.edit2.frame.size.height)), self.edit3.frame.size.width, self.edit3.frame.size.height);
                     editButton.backgroundColor = [UIColor redColor];
                     [editButton setTitle:@"EDIT" forState:UIControlStateNormal];
+                
                     [editButton addTarget:self action:@selector(editBtnClicked:) forControlEvents:UIControlEventTouchUpInside];
                     editButton.tag = 13;
                     [self.petView addSubview:editButton];
@@ -455,7 +456,10 @@ typedef NS_ENUM(NSUInteger, OPETIONDBTYPE)
 
 - (void)textFieldDidBeginEditing:(UITextField *)textField{
     
+   
     if(textField.tag == 11){
+        
+         //[self.view endEditing:YES];
         [textField resignFirstResponder];
         if(!loadingFlag)
         {
@@ -484,11 +488,17 @@ typedef NS_ENUM(NSUInteger, OPETIONDBTYPE)
             
             
         }
+        
 
     }
     NSLog(@"textField.tag : %d",textField.tag);
 }
 
+- (void)textFieldDidEndEditing:(UITextField *)textField{
+    if (textField.tag == 10) {
+        [textField resignFirstResponder];
+    }
+}
 #pragma mark - 日期选择器的确定方法
 -(void)dateRightButtonClicked{
     loadingFlag = NO;
@@ -655,6 +665,8 @@ typedef NS_ENUM(NSUInteger, OPETIONDBTYPE)
             
             if (self.petModelArr.count == 4) {
                 
+                
+                //self.addBtn.frame = CGRectMake(self.edit3.frame.origin.x, self.edit3.frame.origin.y + self.edit3.frame.size.height + (self.edit3.frame.origin.y - (self.edit2.frame.origin.y + self.edit2.frame.size.height)) * 2 + self.edit3.frame.size.height, self.edit3.frame.size.width, self.edit3.frame.size.height);
                 if (0 == i) {
                     
                     self.one.text = petItem.name;
@@ -678,20 +690,23 @@ typedef NS_ENUM(NSUInteger, OPETIONDBTYPE)
                     self.pet4.font = [UIFont fontWithName:@"Antenna-ExtraLight" size:19];
                     [self.petView addSubview:self.pet4];
                     
-                    self.four = [[UILabel alloc] initWithFrame:CGRectMake(self.three.frame.origin.x, self.three.frame.origin.y + self.three.frame.size.height - (self.three.frame.origin.y - (self.two.frame.origin.y + self.two.frame.size.height)), self.three.frame.size.width, self.three.frame.size.height)];
+                    self.four = [[UILabel alloc] initWithFrame:CGRectMake(self.three.frame.origin.x, self.three.frame.origin.y + self.three.frame.size.height + (self.three.frame.origin.y - (self.two.frame.origin.y + self.two.frame.size.height)), self.three.frame.size.width, self.three.frame.size.height)];
+                    self.four.textColor = [UIColor colorWithRed:128/255.0 green:128/255.0 blue:128/255.0 alpha:1];
+                    self.four.backgroundColor = [UIColor whiteColor];
                     self.four.font = [UIFont fontWithName:@"Antenna-Regular" size:16];
                     self.four.textAlignment = NSTextAlignmentLeft;
                     self.four.text = petItem.name;
                     [self.petView addSubview:self.four];
                     
                     
-                    UIButton *editButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-                    editButton.frame = CGRectMake(self.edit3.frame.origin.x, self.edit3.frame.origin.y + self.edit3.frame.size.height - (self.edit3.frame.origin.y - (self.edit2.frame.origin.y + self.edit2.frame.size.height)), self.edit3.frame.size.width, self.edit3.frame.size.height);
-                    editButton.backgroundColor = [UIColor redColor];
-                    [editButton setTitle:@"EDIT" forState:UIControlStateNormal];
-                    [editButton addTarget:self action:@selector(editBtnClicked:) forControlEvents:UIControlEventTouchUpInside];
-                    editButton.tag = 13;
-                    [self.petView addSubview:editButton];
+                    self.edit4= [UIButton buttonWithType:UIButtonTypeRoundedRect];
+                    self.edit4.frame = CGRectMake(self.edit3.frame.origin.x, self.edit3.frame.origin.y + self.edit3.frame.size.height + (self.edit3.frame.origin.y - (self.edit2.frame.origin.y + self.edit2.frame.size.height)), self.edit3.frame.size.width, self.edit3.frame.size.height);
+                    self.edit4.backgroundColor = [UIColor redColor];
+                    [self.edit4 setTitle:@"EDIT" forState:UIControlStateNormal];
+                    [self.edit4 setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+                    [self.edit4 addTarget:self action:@selector(editBtnClicked:) forControlEvents:UIControlEventTouchUpInside];
+                    self.edit4.tag = 13;
+                    [self.petView addSubview:self.edit4];
                 }
                 
                 
@@ -714,26 +729,33 @@ typedef NS_ENUM(NSUInteger, OPETIONDBTYPE)
                     self.three.text = petItem.name;
                 }
                 else if (3 == i){
-                    self.pet4 = [[UILabel alloc] initWithFrame:CGRectMake(self.pet3.frame.origin.x, self.pet3.frame.origin.y + self.pet3.frame.size.height + (self.pet3.frame.origin.y - (self.pet2.frame.origin.y + self.pet2.frame.size.height)), self.pet3.frame.size.width, self.pet3.frame.size.height)];
-                    self.pet4.text = @"Pet 4";
-                    self.pet4.textAlignment = NSTextAlignmentLeft;
-                    self.pet4.font = [UIFont fontWithName:@"Antenna-ExtraLight" size:19];
-                    [self.petView addSubview:self.pet4];
                     
-                    self.four = [[UILabel alloc] initWithFrame:CGRectMake(self.three.frame.origin.x, self.three.frame.origin.y + self.three.frame.size.height - (self.three.frame.origin.y - (self.two.frame.origin.y + self.two.frame.size.height)), self.three.frame.size.width, self.three.frame.size.height)];
-                    self.four.font = [UIFont fontWithName:@"Antenna-Regular" size:16];
-                    self.four.textAlignment = NSTextAlignmentLeft;
-                    self.four.text = petItem.name;
-                    [self.petView addSubview:self.four];
+                    if (self.pet4 == nil) {
+                        self.pet4 = [[UILabel alloc] initWithFrame:CGRectMake(self.pet3.frame.origin.x, self.pet3.frame.origin.y + self.pet3.frame.size.height + (self.pet3.frame.origin.y - (self.pet2.frame.origin.y + self.pet2.frame.size.height)), self.pet3.frame.size.width, self.pet3.frame.size.height)];
+                        self.pet4.text = @"Pet 4";
+                        self.pet4.textAlignment = NSTextAlignmentLeft;
+                        self.pet4.font = [UIFont fontWithName:@"Antenna-ExtraLight" size:19];
+                        [self.petView addSubview:self.pet4];
+                        
+                        self.four = [[UILabel alloc] initWithFrame:CGRectMake(self.three.frame.origin.x, self.three.frame.origin.y + self.three.frame.size.height + (self.three.frame.origin.y - (self.two.frame.origin.y + self.two.frame.size.height)), self.three.frame.size.width, self.three.frame.size.height)];
+                        self.four.textColor = [UIColor colorWithRed:128/255.0 green:128/255.0 blue:128/255.0 alpha:1];
+                        self.four.backgroundColor = [UIColor whiteColor];
+                        self.four.font = [UIFont fontWithName:@"Antenna-Regular" size:16];
+                        self.four.textAlignment = NSTextAlignmentLeft;
+                        self.four.text = petItem.name;
+                        [self.petView addSubview:self.four];
+                        
+                        
+                        self.edit4= [UIButton buttonWithType:UIButtonTypeRoundedRect];
+                        self.edit4.frame = CGRectMake(self.edit3.frame.origin.x, self.edit3.frame.origin.y + self.edit3.frame.size.height + (self.edit3.frame.origin.y - (self.edit2.frame.origin.y + self.edit2.frame.size.height)), self.edit3.frame.size.width, self.edit3.frame.size.height);
+                        self.edit4.backgroundColor = [UIColor redColor];
+                        [self.edit4 setTitle:@"EDIT" forState:UIControlStateNormal];
+                         [self.edit4 setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+                        [self.edit4 addTarget:self action:@selector(editBtnClicked:) forControlEvents:UIControlEventTouchUpInside];
+                        self.edit4.tag = 13;
+                        [self.petView addSubview:self.edit4];
+                    }
                     
-                    
-                    UIButton *editButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-                    editButton.frame = CGRectMake(self.edit3.frame.origin.x, self.edit3.frame.origin.y + self.edit3.frame.size.height + (self.edit3.frame.origin.y - (self.edit2.frame.origin.y + self.edit2.frame.size.height)), self.edit3.frame.size.width, self.edit3.frame.size.height);
-                    editButton.backgroundColor = [UIColor redColor];
-                    [editButton setTitle:@"EDIT" forState:UIControlStateNormal];
-                    [editButton addTarget:self action:@selector(editBtnClicked:) forControlEvents:UIControlEventTouchUpInside];
-                    editButton.tag = 13;
-                    [self.petView addSubview:editButton];
                 }
                 else if (4 == i){
                     self.pet5 = [[UILabel alloc] initWithFrame:CGRectMake(self.pet3.frame.origin.x, self.pet3.frame.origin.y + self.pet3.frame.size.height + (self.pet3.frame.origin.y - (self.pet2.frame.origin.y + self.pet2.frame.size.height)) * 2 + self.pet3.frame.size.height, self.pet3.frame.size.width, self.pet3.frame.size.height)];
@@ -743,19 +765,22 @@ typedef NS_ENUM(NSUInteger, OPETIONDBTYPE)
                     [self.petView addSubview:self.pet5];
                     
                     self.five = [[UILabel alloc] initWithFrame:CGRectMake(self.three.frame.origin.x, self.three.frame.origin.y + self.three.frame.size.height + (self.three.frame.origin.y - (self.two.frame.origin.y + self.two.frame.size.height)) * 2 + self.three.frame.size.height , self.three.frame.size.width, self.three.frame.size.height)];
+                    self.five.textColor = [UIColor colorWithRed:128/255.0 green:128/255.0 blue:128/255.0 alpha:1];
+                    self.five.backgroundColor = [UIColor whiteColor];
                     self.five.font = [UIFont fontWithName:@"Antenna-Regular" size:16];
                     self.five.textAlignment = NSTextAlignmentLeft;
                     self.five.text = petItem.name;
                     [self.petView addSubview:self.five];
                     
                     
-                    UIButton *editButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-                    editButton.frame = CGRectMake(self.edit3.frame.origin.x, self.edit3.frame.origin.y + self.edit3.frame.size.height + (self.edit3.frame.origin.y - (self.edit2.frame.origin.y + self.edit2.frame.size.height)) * 2 + self.edit3.frame.size.height, self.edit3.frame.size.width, self.edit3.frame.size.height);
-                    editButton.backgroundColor = [UIColor redColor];
-                    [editButton setTitle:@"EDIT" forState:UIControlStateNormal];
-                    [editButton addTarget:self action:@selector(editBtnClicked:) forControlEvents:UIControlEventTouchUpInside];
-                    editButton.tag = 14;
-                    [self.petView addSubview:editButton];
+                    self.edit5 = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+                    self.edit5.frame = CGRectMake(self.edit3.frame.origin.x, self.edit3.frame.origin.y + self.edit3.frame.size.height + (self.edit3.frame.origin.y - (self.edit2.frame.origin.y + self.edit2.frame.size.height)) * 2 + self.edit3.frame.size.height, self.edit3.frame.size.width, self.edit3.frame.size.height);
+                    self.edit5.backgroundColor = [UIColor redColor];
+                    [self.edit5 setTitle:@"EDIT" forState:UIControlStateNormal];
+                    [self.edit5 setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+                    [self.edit5 addTarget:self action:@selector(editBtnClicked:) forControlEvents:UIControlEventTouchUpInside];
+                    self.edit5.tag = 14;
+                    [self.petView addSubview:self.edit5];
                 }
                 
             }

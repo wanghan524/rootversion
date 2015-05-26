@@ -27,6 +27,9 @@
 @property (weak, nonatomic) IBOutlet UIButton *dogButton;
 @property (weak, nonatomic) IBOutlet UIButton *catButton;
 
+@property (nonatomic, strong) UIButton *edit4;
+@property (nonatomic, strong) UIButton *edit5;
+
 
 
 - (IBAction)petAddBtnClick:(id)sender;
