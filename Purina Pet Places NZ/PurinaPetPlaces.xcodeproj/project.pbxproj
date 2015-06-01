@@ -2113,7 +2113,7 @@
 				LastUpgradeCheck = 0430;
 				TargetAttributes = {
 					2061F94A152BD84E0030E20F = {
-						DevelopmentTeam = GL424PRTYX;
+						DevelopmentTeam = CUS5A53T99;
 					};
 				};
 			};

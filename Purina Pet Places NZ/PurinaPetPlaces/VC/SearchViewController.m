@@ -310,7 +310,7 @@
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSArray *imageNameArray = @[@"menu-home.jpg",@"menu-dog-pet-places.jpg",@"menu-photo-fun.jpg",@"menu-pet-friendly-places.jpg",@"menu-stockists.jpg",@"menu-tools.jpg",@"menu-pet-service.jpg",@"menu-tips.jpg",@"menu-products.jpg"];
+    NSArray *imageNameArray = @[@"menu-home.jpg",@"menu-dog-pet-places.jpg",@"menu-photo-fun.jpg",@"menu-pet-friendly-places.jpg",@"menu-stockists.jpg",@"menu-tools.jpg",@"menu-pet-service.jpg",@"menu-tips.jpg"];
     static NSString *iden = @"cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:iden];
     if(nil == cell)
@@ -412,12 +412,12 @@
                 [self.navigationController pushViewController:tipsVC animated:YES];
             }
     
-            else if (indexPath.row == 8) {
-                ProductsViewController *photoFunVC =  [[ProductsViewController alloc ] init];
-                //[self presentViewController:photoFunVC animated:YES completion:nil];
-                [self.navigationController pushViewController:photoFunVC animated:YES];
-            }
-    DLog(@"%@",indexPath);
+//            else if (indexPath.row == 8) {
+//                ProductsViewController *photoFunVC =  [[ProductsViewController alloc ] init];
+//                //[self presentViewController:photoFunVC animated:YES completion:nil];
+//                [self.navigationController pushViewController:photoFunVC animated:YES];
+//            }
+//    DLog(@"%@",indexPath);
     
 
     

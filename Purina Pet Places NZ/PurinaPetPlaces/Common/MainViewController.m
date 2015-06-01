@@ -149,7 +149,7 @@
 #pragma mark collection delegate start
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return [self.imageArray count];
+    return [self.imageArray count]-1;
 }
 
 -(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView

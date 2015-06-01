@@ -180,7 +180,7 @@ CGFloat navHeight;
         [self.darkView addSubview:self.menusTable];
         
         self.menuArray = [[NSMutableArray alloc]initWithCapacity:0];
-        NSArray *arr = @[@"Home",@"Dog Pet Places",@"Photo Fun",@"Pet Friendly Places",@"Stockists",@"Tools",@"Pet Service",@"Tips",@"Products"];
+        NSArray *arr = @[@"Home",@"Dog Pet Places",@"Photo Fun",@"Pet Friendly Places",@"Stockists",@"Tools",@"Pet Service",@"Tips"];
         for(NSUInteger i = 0; i < [arr count]; i++)
         {
             [self.menuArray addObject:arr[i]];
@@ -197,7 +197,7 @@ CGFloat navHeight;
 {
     
     
-    NSArray *imageNameArray = @[@"menu-home.jpg",@"menu-dog-pet-places.jpg",@"menu-photo-fun.jpg",@"menu-pet-friendly-places.jpg",@"menu-stockists.jpg",@"menu-tools.jpg",@"menu-pet-service.jpg",@"menu-tips.jpg",@"menu-products.jpg"];
+    NSArray *imageNameArray = @[@"menu-home.jpg",@"menu-dog-pet-places.jpg",@"menu-photo-fun.jpg",@"menu-pet-friendly-places.jpg",@"menu-stockists.jpg",@"menu-tools.jpg",@"menu-pet-service.jpg",@"menu-tips.jpg"];
     static NSString *iden = @"cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:iden];
     if(nil == cell)
@@ -301,11 +301,11 @@ CGFloat navHeight;
         [self.navigationController pushViewController:tipsVC animated:YES];
     }
     
-    else if (indexPath.row == 8) {
-        ProductsViewController *photoFunVC =  [[ProductsViewController alloc ] init];
-        //[self presentViewController:photoFunVC animated:YES completion:nil];
-        [self.navigationController pushViewController:photoFunVC animated:YES];
-    }
+//    else if (indexPath.row == 8) {
+//        ProductsViewController *photoFunVC =  [[ProductsViewController alloc ] init];
+//        //[self presentViewController:photoFunVC animated:YES completion:nil];
+//        [self.navigationController pushViewController:photoFunVC animated:YES];
+//    }
     DLog(@"%@",indexPath);
     
     
