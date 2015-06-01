@@ -326,6 +326,9 @@
 		EF62CCBF1AE3812B00296A73 /* PetHealthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF62CCBE1AE3812B00296A73 /* PetHealthViewController.m */; };
 		EF62CCC21AE3813F00296A73 /* WhatShouldViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF62CCC11AE3813F00296A73 /* WhatShouldViewController.m */; };
 		EF62CCC51AE38E6F00296A73 /* PetHealthDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF62CCC41AE38E6F00296A73 /* PetHealthDetailViewController.m */; };
+		EF9C1AA01B1C83920026E959 /* BodyConditionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF9C1A9F1B1C83920026E959 /* BodyConditionViewController.m */; };
+		EF9C1AA31B1C87770026E959 /* BodyConditionDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF9C1AA21B1C87770026E959 /* BodyConditionDetailViewController.m */; };
+		EF9C1AA51B1C89DC0026E959 /* bodycondition.png in Resources */ = {isa = PBXBuildFile; fileRef = EF9C1AA41B1C89DC0026E959 /* bodycondition.png */; };
 		EFA1B58E1AD8BB9B00F44CC1 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFA1B5881AD8BB9B00F44CC1 /* Bolts.framework */; };
 		EFA1B58F1AD8BB9B00F44CC1 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFA1B5891AD8BB9B00F44CC1 /* Parse.framework */; };
 		EFA1B5901AD8BB9B00F44CC1 /* ParseCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFA1B58A1AD8BB9B00F44CC1 /* ParseCrashReporting.framework */; };
@@ -895,6 +898,11 @@
 		EF62CCC11AE3813F00296A73 /* WhatShouldViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WhatShouldViewController.m; sourceTree = "<group>"; };
 		EF62CCC31AE38E6F00296A73 /* PetHealthDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PetHealthDetailViewController.h; sourceTree = "<group>"; };
 		EF62CCC41AE38E6F00296A73 /* PetHealthDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PetHealthDetailViewController.m; sourceTree = "<group>"; };
+		EF9C1A9E1B1C83920026E959 /* BodyConditionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BodyConditionViewController.h; sourceTree = "<group>"; };
+		EF9C1A9F1B1C83920026E959 /* BodyConditionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BodyConditionViewController.m; sourceTree = "<group>"; };
+		EF9C1AA11B1C87770026E959 /* BodyConditionDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BodyConditionDetailViewController.h; sourceTree = "<group>"; };
+		EF9C1AA21B1C87770026E959 /* BodyConditionDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BodyConditionDetailViewController.m; sourceTree = "<group>"; };
+		EF9C1AA41B1C89DC0026E959 /* bodycondition.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bodycondition.png; sourceTree = "<group>"; };
 		EFA1B5881AD8BB9B00F44CC1 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		EFA1B5891AD8BB9B00F44CC1 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = "parse-library-1.7.1/Parse.framework"; sourceTree = "<group>"; };
 		EFA1B58A1AD8BB9B00F44CC1 /* ParseCrashReporting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseCrashReporting.framework; sourceTree = "<group>"; };
@@ -1834,6 +1842,11 @@
 				EF62CCBE1AE3812B00296A73 /* PetHealthViewController.m */,
 				EF047EEB1AF3A98F00DADFCA /* PieChatView.h */,
 				EF047EEC1AF3A98F00DADFCA /* PieChatView.m */,
+				EF9C1A9E1B1C83920026E959 /* BodyConditionViewController.h */,
+				EF9C1A9F1B1C83920026E959 /* BodyConditionViewController.m */,
+				EF9C1AA11B1C87770026E959 /* BodyConditionDetailViewController.h */,
+				EF9C1AA21B1C87770026E959 /* BodyConditionDetailViewController.m */,
+				EF9C1AA41B1C89DC0026E959 /* bodycondition.png */,
 				EF62CCC31AE38E6F00296A73 /* PetHealthDetailViewController.h */,
 				EF62CCC41AE38E6F00296A73 /* PetHealthDetailViewController.m */,
 				EF62CCC01AE3813F00296A73 /* WhatShouldViewController.h */,
@@ -2418,6 +2431,7 @@
 				EFF9EBC21ADE846B00876341 /* dog-tux.html in Resources */,
 				20C8F0351702706D0041533C /* dog-mighty.png in Resources */,
 				EFCC0EEA1ADCA7D8008676D7 /* tile6-tips.jpg in Resources */,
+				EF9C1AA51B1C89DC0026E959 /* bodycondition.png in Resources */,
 				EFCD3FC11AE0D2D1009CC7DA /* photo-fun-tennis-ball.png in Resources */,
 				8ADDAEA418459E5D0068ED72 /* Icon-Small@2x.png in Resources */,
 				751222791ADA5D6600A1506B /* EnterMianViewController.xib in Resources */,
@@ -2530,6 +2544,7 @@
 				202F6342153560CA00F583C0 /* MapDetailsViewController.m in Sources */,
 				751222631ADA5D4900A1506B /* ParentViewController.m in Sources */,
 				202F635915369DAF00F583C0 /* SearchTableViewController.m in Sources */,
+				EF9C1AA31B1C87770026E959 /* BodyConditionDetailViewController.m in Sources */,
 				203967121537A7E7009518F9 /* ResultsViewController.m in Sources */,
 				EFF9EBC51ADE849B00876341 /* ProductDetailViewController.m in Sources */,
 				203967171537AAC2009518F9 /* ResultsTableViewController.m in Sources */,
@@ -2609,6 +2624,7 @@
 				2082521E15B63FEB00BDA88D /* CXMLElement_ElementTreeExtensions.m in Sources */,
 				2082521F15B63FEB00BDA88D /* CXMLNamespaceNode.m in Sources */,
 				2082522015B63FEB00BDA88D /* CXMLNode.m in Sources */,
+				EF9C1AA01B1C83920026E959 /* BodyConditionViewController.m in Sources */,
 				2082522115B63FEB00BDA88D /* CXMLNode_CreationExtensions.m in Sources */,
 				2082522215B63FEB00BDA88D /* CXMLNode_PrivateExtensions.m in Sources */,
 				2082522315B63FEB00BDA88D /* CXMLNode_XPathExtensions.m in Sources */,

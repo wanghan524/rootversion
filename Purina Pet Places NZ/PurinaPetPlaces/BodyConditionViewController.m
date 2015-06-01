@@ -1,52 +1,60 @@
 //
-//  ToolsViewController.m
+//  BodyConditionViewController.m
 //  PurinaPetPlaces
 //
-//  Created by BlueApp on 15-4-18.
+//  Created by BlueApp on 15-6-1.
 //
 //
 
-#import "ToolsViewController.h"
-#import "PetHealthViewController.h"
-#import "WhatShouldViewController.h"
-#import "ProductsViewController.h"
-#import "TipsContentViewController.h"
-#import "SearchViewController.h"
-#import "photoFunViewController.h"
-#import "Singleton.h"
-#import "Categories.h"
-#import "NextPetFriendlyPlacesViewController.h"
-#import "ProductsViewController.h"
-#import "TipsViewController.h"
-#import "ToolsViewController.h"
-#import "PetFriendlyPlacesViewController.h"
 #import "BodyConditionViewController.h"
+#import "GrobleSingleton.h"
+#import "BodyConditionDetailViewController.h"
 
-@interface ToolsViewController ()<UITableViewDataSource,UITableViewDelegate>{
+@interface BodyConditionViewController ()<UITableViewDataSource,UITableViewDelegate>{
+    GrobleSingleton *globleSingleton;
     NSArray *titleArray;
+    
+    
+    
+    ///动物图片的数组
+    NSArray *animalImageArray;
+    
 }
-
 
 @property (nonatomic, strong) UITableView *myTableView;
 @end
 
-
-
-@implementation ToolsViewController
+@implementation BodyConditionViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    
+    
+    globleSingleton = [GrobleSingleton sharedGlobleInstance];
+    
+    if (animalImageArray == nil) {
+        animalImageArray = [[NSArray alloc] init];
+    }
+    if ([globleSingleton.globleCategory isEqualToString:@"dog"]) {
+        animalImageArray = @[@"1",@"2",@"3",@"4",@"5",@"6"];
+    }else{
+        animalImageArray = @[@"11",@"12",@"13",@"14",@"15",@"16"];
+    }
     
     
     [self showCustomeNav];
     
     self.view.backgroundColor = [UIColor colorWithRed:242/255.0 green:238/255.0 blue:223/255.0 alpha:1];
     
+    
     self.myTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 64, SCREEN_WIDTH, SCREEN_HEIGHT - 64) style:UITableViewStyleGrouped];
     self.myTableView.backgroundColor = [UIColor colorWithRed:242/255.0 green:238/255.0 blue:223/255.0 alpha:1];
     self.myTableView.dataSource = self;
     self.myTableView.delegate = self;
     [self.view addSubview:self.myTableView];
+    
+    
     // Do any additional setup after loading the view.
 }
 
@@ -57,7 +65,7 @@
         return 44;
     }
     
-    return (SCREEN_HEIGHT - 64 - 100) / 3.0;
+    return (SCREEN_HEIGHT - 64 - 100) / 5.0;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -73,12 +81,12 @@
     if (tableView == self.menusTable) {
         return [self.menuArray count];
     }
-    return 3;
+    return animalImageArray.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-     NSArray *imageNameArray = @[@"menu-home.jpg",@"menu-dog-pet-places.jpg",@"menu-photo-fun.jpg",@"menu-pet-friendly-places.jpg",@"menu-stockists.jpg",@"menu-tools.jpg",@"menu-pet-service.jpg",@"menu-tips.jpg"];
+    NSArray *imageNameArray = @[@"menu-home.jpg",@"menu-dog-pet-places.jpg",@"menu-photo-fun.jpg",@"menu-pet-friendly-places.jpg",@"menu-stockists.jpg",@"menu-tools.jpg",@"menu-pet-service.jpg",@"menu-tips.jpg"];
     
     titleArray = [[NSArray alloc] init];
     
@@ -101,20 +109,28 @@
         }
         
         if (tableView == self.myTableView) {
-            UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, (SCREEN_HEIGHT - 64 - 100) / 3.0 / 2.0- 20, cell.frame.size.width, 40)];
-            titleLabel.backgroundColor = [UIColor clearColor];
-            titleLabel.text = titleArray[indexPath.row];
-            titleLabel.textAlignment = NSTextAlignmentCenter;
-            titleLabel.font = [UIFont fontWithName:@"Antenna" size:20];
-            titleLabel.textColor = [UIColor grayColor];
-            [cell.contentView addSubview:titleLabel];
+            
+            UIImageView *animalImageView = [[UIImageView alloc] initWithFrame:CGRectMake(SCREEN_WIDTH / 2.0 -( (SCREEN_HEIGHT - 64 - 100) / 5.0 - 10) / 2.0, 5, (SCREEN_HEIGHT - 64 - 100) / 5.0 - 10, (SCREEN_HEIGHT - 64 - 100) / 5.0 - 10)];
+            animalImageView.backgroundColor = [UIColor yellowColor];
+            [cell.contentView addSubview:animalImageView];
+            
+            
+            
+            
+//            UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, (SCREEN_HEIGHT - 64 - 100) / 3.0 / 2.0- 20, cell.frame.size.width, 40)];
+//            titleLabel.backgroundColor = [UIColor clearColor];
+//            titleLabel.text = titleArray[indexPath.row];
+//            titleLabel.textAlignment = NSTextAlignmentCenter;
+//            titleLabel.font = [UIFont fontWithName:@"Antenna" size:20];
+//            titleLabel.textColor = [UIColor grayColor];
+//            [cell.contentView addSubview:titleLabel];
             //
             //        [iconTemplateView setFrame:CGRectMake(8, 8, 33, 33)];
             //        [cell addSubview:iconTemplateView];
-            [cell setIndentationLevel:4];
-            UIView *backView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, (SCREEN_HEIGHT - 64 - 100) / 3.0)];
-            backView.backgroundColor = [UIColor whiteColor];
-            cell.selectedBackgroundView = backView;
+           // [cell setIndentationLevel:4];
+//            UIView *backView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, (SCREEN_HEIGHT - 64 - 100) / 5.0)];
+//            backView.backgroundColor = [UIColor whiteColor];
+//            cell.selectedBackgroundView = backView;
         }
         
         
@@ -122,7 +138,7 @@
     
     
     
-    [cell setSelectionStyle:UITableViewCellSelectionStyleDefault];
+    [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
     //[cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
     
     
@@ -144,11 +160,11 @@
         return nil;
     }
     UIImageView * headerImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 100)];
-    headerImageView.image = [UIImage imageNamed:@"tools-header0.png"];
+    headerImageView.image = [UIImage imageNamed:@"bodycondition.png"];
     
     UILabel *titleLabel = [[UILabel alloc] initWithFrame:headerImageView.frame];
     titleLabel.backgroundColor = [UIColor clearColor];
-    titleLabel.text = @"Tools";
+    //titleLabel.text = @"Body Condition";
     titleLabel.textAlignment = NSTextAlignmentCenter;
     titleLabel.font = [UIFont fontWithName:@"Antenna" size:22];
     titleLabel.textColor = [UIColor whiteColor];
@@ -248,88 +264,23 @@
                     [self.navigationController pushViewController:photoFunVC animated:YES];
                 }
         DLog(@"%@",indexPath);
-
+        
         
         
     }
     
-    if(0 == indexPath.row){
-        PetHealthViewController *petHealthVC = [[PetHealthViewController alloc] init];
-        [self.navigationController pushViewController:petHealthVC animated:NO];
-        
-    }
-    else if (1 == indexPath.row){
-        WhatShouldViewController *whatShouldVC = [[WhatShouldViewController alloc] init];
-        [self.navigationController pushViewController:whatShouldVC animated:NO];
-    }
+    BodyConditionDetailViewController *bodyConditionDVC = [[BodyConditionDetailViewController alloc] init];
     
-    else if (2 == indexPath.row){
-        BodyConditionViewController *bodyConditionVC = [[BodyConditionViewController alloc] init];
-        [self.navigationController pushViewController:bodyConditionVC animated:NO];
-    }
-   
+    bodyConditionDVC.DisplayTipsCurrent = animalImageArray;
+    
+    bodyConditionDVC.indexNumber = indexPath.row;
+    
+    [self.navigationController pushViewController:bodyConditionDVC animated:YES];
+    
 }
 
-#pragma mark -
-#pragma mark - 侧滑
 
-//-(void)profileBtnClickOrGestureClip:(UIButton *)sender
-//{
-//    clickStatus = !clickStatus;
-//    if(clickStatus == YES)
-//    {[self makeDarkView];}
-//    else
-//    {
-//        [self.darkView removeFromSuperview];
-//        self.darkView = nil;
-//    }
-//    
-//}
-//
-//-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
-//{
-//    UITouch *touch = [touches anyObject];
-//    if(self.darkView != nil)
-//    {
-//        if(touch.view == self.darkView)
-//        {
-//            clickStatus = !clickStatus;
-//            [self.darkView removeFromSuperview];
-//            self.darkView = nil;
-//        }
-//    }
-//}
-//
-//
-//-(void)makeDarkView
-//{
-//    
-//    //[UIView animateWithDuration:2.0 animations:^{
-//    self.darkView = [[UIView alloc]initWithFrame:CGRectMake(0, navHeight, SCREEN_WIDTH, SCREEN_HEIGHT - navHeight)];
-//    [self.darkView setBackgroundColor:[UIColor colorWithRed:86/255.f green:86/255.f blue:86/255.f alpha:0.7]];
-//    
-//    
-//    [self.view addSubview:self.darkView];
-//    
-//    self.menusTable = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH / 2 + 30, SCREEN_HEIGHT - navHeight) style:UITableViewStylePlain];
-//    self.menusTable.tag = 100;
-//    self.menusTable.delegate = self;
-//    self.menusTable.dataSource = self;
-//    self.menusTable.separatorStyle = UITableViewCellSeparatorStyleNone;
-//    self.menusTable.tableFooterView = [[UIView alloc]initWithFrame:CGRectZero];
-//    [self.darkView addSubview:self.menusTable];
-//    
-//    self.menuArray = [[NSMutableArray alloc]initWithCapacity:0];
-//    NSArray *arr = @[@"Home",@"Dog Pet Places",@"Photo Fun",@"Pet Friendly Places",@"Stockists",@"Tools",@"Pet Service",@"Tips",@"Products"];
-//    for(NSUInteger i = 0; i < [arr count]; i++)
-//    {
-//        [self.menuArray addObject:arr[i]];
-//    }
-//    
-//    //}];
-//    
-//}
-//
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
