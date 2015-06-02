@@ -13,7 +13,7 @@
 #import "ProductsViewController.h"
 #import "TipsViewController.h"
 #import "ToolsViewController.h"
-
+#import "FreePetAdviceVC.h"
 
 @implementation MainViewController
 {
@@ -134,8 +134,16 @@
     [self.bottomButton setTitle:@"FREE PET ADVICE" forState:UIControlStateNormal];
     [self.bottomButton.titleLabel setFont:[UIFont fontWithName:@"Antenna" size:18]];
     [self.bottomButton setBackgroundColor:[UIColor redColor]];
+    [self.bottomButton addTarget:self action:@selector(freeBtnClick:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:self.bottomButton];
 }
+
+-(void)freeBtnClick:(UIButton *)sender
+{
+    FreePetAdviceVC *vc = [[FreePetAdviceVC alloc]init];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
 
 -(void)makeArray
 {

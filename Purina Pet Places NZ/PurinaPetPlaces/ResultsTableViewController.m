@@ -105,21 +105,21 @@
     [cell.textLabel setText:location.LocationName];
     [cell.textLabel setTextColor:[UIColor grayColor]];
     cell.textLabel.font = [UIFont fontWithName:@"Antenna" size:14];
-    if (location.LocationAddressLine1 != NULL) {
-        [cell.detailTextLabel setText:[NSString stringWithFormat:@"%@, %@, %@", location.LocationAddressLine1, location.LocationAddressLine2, location.LocationAddressLine3]];
-        [cell.detailTextLabel setTextColor:[UIColor grayColor]];
-        cell.detailTextLabel.font = [UIFont fontWithName:@"Antenna" size:10];
-    }else {
-        [cell.detailTextLabel setText:@"www.bookabach.co.nz"];
-        [cell.detailTextLabel setTextColor:[UIColor grayColor]];
-        cell.detailTextLabel.font = [UIFont fontWithName:@"Antenna" size:10];
-    }
-     
+//    if (location.LocationAddressLine1 != NULL) {
+//        [cell.detailTextLabel setText:[NSString stringWithFormat:@"%@, %@, %@", location.LocationAddressLine1, location.LocationAddressLine2, location.LocationAddressLine3]];
+//        [cell.detailTextLabel setTextColor:[UIColor grayColor]];
+//        cell.detailTextLabel.font = [UIFont fontWithName:@"Antenna" size:10];
+//    }else {
+//        [cell.detailTextLabel setText:@"www.bookabach.co.nz"];
+//        [cell.detailTextLabel setTextColor:[UIColor grayColor]];
+//        cell.detailTextLabel.font = [UIFont fontWithName:@"Antenna" size:10];
+//    }
+    
     return cell;
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 60;
+    return 50;
 }
 
 

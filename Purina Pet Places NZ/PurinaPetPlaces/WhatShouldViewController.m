@@ -40,7 +40,7 @@
     [self.view addSubview:titleBackImageView];
     
     UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 75 - 30, SCREEN_WIDTH, 60)];
-    titleLabel.text = @"What should I feed my dog";
+    titleLabel.text = @"Product selector";
     titleLabel.font = [UIFont fontWithName:@"Antenna" size:24];
     titleLabel.textAlignment = NSTextAlignmentCenter;
     titleLabel.textColor = [UIColor whiteColor];

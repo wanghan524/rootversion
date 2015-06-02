@@ -1,79 +1,71 @@
 //
-//  BodyConditionViewController.m
+//  FreePetAdviceVC.m
 //  PurinaPetPlaces
 //
-//  Created by BlueApp on 15-6-1.
+//  Created by 菁优数学 on 15/6/2.
 //
 //
 
-#import "BodyConditionViewController.h"
-#import "GrobleSingleton.h"
-#import "BodyConditionDetailViewController.h"
+#import "FreePetAdviceVC.h"
 
-@interface BodyConditionViewController ()<UITableViewDataSource,UITableViewDelegate>{
-    GrobleSingleton *globleSingleton;
-    NSArray *titleArray;
-    
-    
-    
-    ///动物图片的数组
-    NSArray *animalImageArray;
-    
-    NSArray *nextVCimageArray;
-    
-}
-
+@interface FreePetAdviceVC ()
+@property(nonatomic,strong)UIImageView *petImg;
 @property (nonatomic, strong) UITableView *myTableView;
 @end
 
-@implementation BodyConditionViewController
 
-- (void)viewDidLoad {
+@implementation FreePetAdviceVC
+
+- (void)viewDidLoad
+{
     [super viewDidLoad];
-    
-    
-    
-    globleSingleton = [GrobleSingleton sharedGlobleInstance];
-    
-    if (animalImageArray == nil) {
-        animalImageArray = [[NSArray alloc] init];
-    }
-    if(nextVCimageArray == nil)
-    {
-        nextVCimageArray = [[NSArray alloc]init];
-    }
-    if ([globleSingleton.globleCategory isEqualToString:@"dog"]) {
-        animalImageArray = @[@"dd1",@"dd2",@"dd3",@"dd4",@"dd5"];
-        nextVCimageArray = @[@"ddd1",@"ddd2",@"ddd3",@"ddd4",@"ddd5"];
-    }else{
-        animalImageArray = @[@"dd1",@"dd2",@"dd3",@"dd4",@"dd5"];
-        nextVCimageArray = @[@"ddd1",@"ddd2",@"ddd3",@"ddd4",@"ddd5"];
-    }
-    
     
     [self showCustomeNav];
     
     self.view.backgroundColor = [UIColor colorWithRed:242/255.0 green:238/255.0 blue:223/255.0 alpha:1];
-    
-    
+    [self makeTable];
+
+}
+
+
+-(void)makeTable
+{
     self.myTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 64, SCREEN_WIDTH, SCREEN_HEIGHT - 64) style:UITableViewStyleGrouped];
     self.myTableView.backgroundColor = [UIColor colorWithRed:242/255.0 green:238/255.0 blue:223/255.0 alpha:1];
     self.myTableView.dataSource = self;
     self.myTableView.delegate = self;
     [self.view addSubview:self.myTableView];
-    
-    
-    // Do any additional setup after loading the view.
-}
 
+}
 #pragma mark - Table view data source
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     if (tableView == self.menusTable) {
         return 44;
     }
-    
-    return (SCREEN_HEIGHT - 64 - 100) / 5.0;
+    switch (indexPath.row) {
+        case 0:
+        {
+        }
+        case 1:
+        {
+            
+        }
+        case 2:
+        {
+            return 72/2.0f+10;
+            break;
+            
+        }
+        case 3:
+        {
+            return 138/2.0f+30;
+            break;
+        }
+        default:
+            break;
+    }
+    return 50;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -89,16 +81,18 @@
     if (tableView == self.menusTable) {
         return [self.menuArray count];
     }
-    return animalImageArray.count;
+    return 4;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSArray *imageNameArray = @[@"menu-home.jpg",@"menu-dog-pet-places.jpg",@"menu-photo-fun.jpg",@"menu-pet-friendly-places.jpg",@"menu-stockists.jpg",@"menu-tools.jpg",@"menu-pet-service.jpg",@"menu-tips.jpg"];
     
-//    titleArray = [[NSArray alloc] init];
-//    
-//    titleArray = @[@"Pet health compass",@"Product selector",@"Body Condition"];
+    NSArray *btnArray = @[@"visit.png",@"email.png",@"www.png",@"call.png"];
+    
+    //    titleArray = [[NSArray alloc] init];
+    //
+    //    titleArray = @[@"Pet health compass",@"Product selector",@"Body Condition"];
     static NSString *CellIdentifier = @"Cell";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
@@ -116,32 +110,49 @@
             cell.textLabel.text = [self.menuArray objectAtIndex:indexPath.row];
         }
         
-        if (tableView == self.myTableView) {
+        if (tableView == self.myTableView)
+        {
+            CGFloat heightTmp = 0.0f;
+            CGFloat widthTmp = 0.0f;
+            switch (indexPath.row) {
+                case 0:
+                {
+                    widthTmp = 231/2.0f;
+                    heightTmp = 72/2.0f;
+                    break;
+                }
+                case 1:
+                {
+                    widthTmp = 334/2.0f;
+                    heightTmp = 72/2.0f;
+                    break;
+                }
+                case 2:
+                {
+                    heightTmp = 72/2.0f;
+                    widthTmp = 385/2.0f;
+                    break;
+                    
+                }
+                case 3:
+                {
+                    heightTmp = 138/2.0f;
+                    widthTmp = 431/2.0f;
+                    break;
+                }
+                default:
+                    break;
+            }
+
+            UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
             
-            UIImageView *animalImageView = [[UIImageView alloc] initWithFrame:CGRectMake(SCREEN_WIDTH / 2.0 -( (SCREEN_HEIGHT - 64 - 100) / 5.0 - 10) / 2.0, 5, (SCREEN_HEIGHT - 64 - 100) / 5.0 - 10, (SCREEN_HEIGHT - 64 - 100) / 5.0 - 10)];
-            animalImageView.image = [UIImage imageNamed:animalImageArray[indexPath.row]];
-            [cell.contentView addSubview:animalImageView];
-            
-            
-            
-            
-//            UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, (SCREEN_HEIGHT - 64 - 100) / 3.0 / 2.0- 20, cell.frame.size.width, 40)];
-//            titleLabel.backgroundColor = [UIColor clearColor];
-//            titleLabel.text = titleArray[indexPath.row];
-//            titleLabel.textAlignment = NSTextAlignmentCenter;
-//            titleLabel.font = [UIFont fontWithName:@"Antenna" size:20];
-//            titleLabel.textColor = [UIColor grayColor];
-//            [cell.contentView addSubview:titleLabel];
-            //
-            //        [iconTemplateView setFrame:CGRectMake(8, 8, 33, 33)];
-            //        [cell addSubview:iconTemplateView];
-           // [cell setIndentationLevel:4];
-//            UIView *backView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, (SCREEN_HEIGHT - 64 - 100) / 5.0)];
-//            backView.backgroundColor = [UIColor whiteColor];
-//            cell.selectedBackgroundView = backView;
+            btn.frame = CGRectMake((SCREEN_WIDTH - widthTmp)/2.0f, 3, widthTmp, heightTmp);
+            [btn setBackgroundImage:[UIImage imageNamed:btnArray[indexPath.row]] forState:UIControlStateNormal];
+            btn.tag = indexPath.row;
+            [btn addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
+            [cell.contentView addSubview:btn];
+    
         }
-        
-        
     }
     
     
@@ -152,11 +163,44 @@
     
     return cell;
 }
+
+
+-(void)btnClick:(UIButton *)sender
+{
+    switch (sender.tag) {
+        case 0:
+        {
+            [[UIApplication sharedApplication]openURL:[NSURL URLWithString:@"http://www.purina.co.nz"]];
+            break;
+        }
+        case 1:
+        {
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"mailto://askpurina@nz.nestle.com"]];
+            
+            break;
+        }
+        case 2:
+        {
+            [[UIApplication sharedApplication]openURL:[NSURL URLWithString:@"http://www.facebook.com/purinanz"]];
+            break;
+        }
+        case 3:
+        {
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"tel://0800738847"]];
+            break;
+        }
+        default:
+            break;
+    }
+
+}
+
+
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
     if (tableView == self.menusTable) {
         return 1;
     }
-    return 100.0f;
+    return 962/2.f;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
@@ -167,9 +211,9 @@
     if (tableView == self.menusTable) {
         return nil;
     }
-    UIImageView * headerImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 150)];
-    headerImageView.image = [UIImage imageNamed:@"bodycondition.png"];
-
+    UIImageView * headerImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 962/2.f)];
+    headerImageView.image = [UIImage imageNamed:@"freepetadvice.png"];
+    
     return headerImageView;
 }
 
@@ -269,33 +313,43 @@
         
         
     }
+    else
+    {
+        switch (indexPath.row) {
+            case 0:
+            {
+                [[UIApplication sharedApplication]openURL:[NSURL URLWithString:@"http://www.purina.co.nz"]];
+                break;
+            }
+            case 1:
+            {
+                [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"mailto://askpurina@nz.nestle.com"]];
+                
+                break;
+            }
+            case 2:
+            {
+                [[UIApplication sharedApplication]openURL:[NSURL URLWithString:@"http://www.facebook.com/purinanz"]];
+                break;
+            }
+            case 3:
+            {
+                [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"tel://0800738847"]];
+                break;
+            }
+            default:
+                break;
+        }
+    }
     
-    BodyConditionDetailViewController *bodyConditionDVC = [[BodyConditionDetailViewController alloc] init];
     
-    bodyConditionDVC.DisplayTipsCurrent = nextVCimageArray;
     
-    bodyConditionDVC.indexNumber = indexPath.row;
     
-    [self.navigationController pushViewController:bodyConditionDVC animated:YES];
+    
+    
     
 }
 
 
-
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

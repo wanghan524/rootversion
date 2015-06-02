@@ -18,6 +18,7 @@
 }
 
 @property (nonatomic, strong) UIButton *nextButton;
+@property (nonatomic,strong )UIImageView *viewImg;
 
 @end
 
@@ -30,33 +31,9 @@
     
     self.view.backgroundColor = [UIColor colorWithRed:242/255.0 green:238/255.0 blue:223/255.0 alpha:1];
     
-    headerImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 64, SCREEN_WIDTH, 200)];
-    
-    
-    headerImageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"tips-articles-general%d.jpg",self.indexNumber + 1]];
-  
-    [self.view addSubview:headerImageView];
-    
-    
-    titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 200 / 2.0 - 20, SCREEN_WIDTH, 40)];
-    titleLabel.text = [self.DisplayTipsCurrent objectAtIndex:self.indexNumber];
-    titleLabel.textColor = [UIColor whiteColor];
-    titleLabel.textAlignment = NSTextAlignmentCenter;
-    titleLabel.font = [UIFont fontWithName:@"Antenna" size:22];
-    [headerImageView addSubview:titleLabel];
-    
-    
-    UIView *contentBackView = [[UIView alloc] initWithFrame:CGRectMake(0, 64 + 200, SCREEN_WIDTH, SCREEN_HEIGHT - 64 - 200 - 60)];
-    contentBackView.backgroundColor = [UIColor whiteColor];
-    [self.view addSubview:contentBackView];
-    
-    contentLabel = [[UILabel alloc] initWithFrame:CGRectMake(40, 0, SCREEN_WIDTH - 80, SCREEN_HEIGHT - 64 - 200 - 60)];
-    contentLabel.text = [self.DisplayTipsCurrent objectAtIndex:self.indexNumber] ;
-    contentLabel.numberOfLines = 0;
-    
-    contentLabel.font = [UIFont fontWithName:@"Antenna" size:15];
-    [contentBackView addSubview:contentLabel];
-    
+    self.viewImg = [[UIImageView alloc]initWithFrame:CGRectMake(0, 64, SCREEN_WIDTH, SCREEN_HEIGHT -64 - 60)];
+    self.viewImg.image = [UIImage imageNamed:self.DisplayTipsCurrent[self.indexNumber]];
+    [self.view addSubview:self.viewImg];
     
     self.nextButton = [UIButton buttonWithType:UIButtonTypeCustom];
     self.nextButton.frame = CGRectMake(0, SCREEN_HEIGHT - 60, SCREEN_WIDTH , 60);
@@ -83,12 +60,8 @@
     
     if (self.indexNumber <= self.DisplayTipsCurrent.count - 2) {
         self.indexNumber ++;
-        titleLabel.text = [self.DisplayTipsCurrent objectAtIndex:self.indexNumber];
-        
-        titleLabel.font = [UIFont fontWithName:@"Antenna" size:22];
-        contentLabel.text = [self.DisplayTipsCurrent objectAtIndex:self.indexNumber];
-        contentLabel.font = [UIFont fontWithName:@"Antenna" size:20];
-        
+        [self.viewImg setImage:[UIImage imageNamed:self.DisplayTipsCurrent[self.indexNumber]]];
+
         
     }else{
         nextLabel.text = @"LAST ONE";
