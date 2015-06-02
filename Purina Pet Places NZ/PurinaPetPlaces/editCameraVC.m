@@ -7,10 +7,11 @@
 //
 
 #import "editCameraVC.h"
-
-@interface editCameraVC ()
+#import <Social/Social.h>
+@interface editCameraVC ()<UIDocumentInteractionControllerDelegate>
 @property(nonatomic,strong)NSMutableArray *imageArrForDog;
 
+@property (nonatomic, strong) UIDocumentInteractionController *documentController;
 @property(nonatomic,strong)UIButton *dogBtn;
 @property(nonatomic,strong)UIButton *frameBtn;
 @property(nonatomic,strong)UIButton *saveBtn;
@@ -20,6 +21,9 @@
 @end
 
 @implementation editCameraVC
+{
+    NSString *resultStr;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -66,18 +70,23 @@
     self.facebookBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     [self.facebookBtn setFrame:CGRectMake((SCREEN_WIDTH - perHeightBottom*3-40)/2+10, CGRectGetMaxY(share.frame)-5, perHeightBottom-5, perHeightBottom-5)];
     [self.facebookBtn setImage:[UIImage imageNamed:@"fb.png"] forState:UIControlStateNormal];
+    [self.facebookBtn addTarget:self action:@selector(faceBookShare:) forControlEvents:UIControlEventTouchUpInside];
 //    [self.facebookBtn setBackgroundColor:[UIColor redColor]];
     [self.bottom addSubview:self.facebookBtn];
     
     self.cameraBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     [self.cameraBtn setFrame:CGRectMake(CGRectGetMaxX(self.facebookBtn.frame)+20, CGRectGetMaxY(share.frame)-5, perHeightBottom-5, perHeightBottom-5)];
+    
     [self.cameraBtn setImage:[UIImage imageNamed:@"insta.png"] forState:UIControlStateNormal];
 //    [self.cameraBtn setBackgroundColor:[UIColor redColor]];
+    
+    [self.cameraBtn addTarget:self action:@selector(instaGramWallPost) forControlEvents:UIControlEventTouchUpInside];
     [self.bottom addSubview:self.cameraBtn];
     
     self.twitterBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     [self.twitterBtn setFrame:CGRectMake(CGRectGetMaxX(self.cameraBtn.frame)+20, CGRectGetMaxY(share.frame)-5, perHeightBottom-5, perHeightBottom-5)];
     [self.twitterBtn setImage:[UIImage imageNamed:@"twitter.png"] forState:UIControlStateNormal];
+    [self.twitterBtn addTarget:self action:@selector(twitterShare:) forControlEvents:UIControlEventTouchUpInside];
 //    [self.twitterBtn setBackgroundColor:[UIColor redColor]];
     [self.bottom addSubview:self.twitterBtn];
     
@@ -87,6 +96,128 @@
 
 
 
+
+-(void)instaGramWallPost
+{
+    NSURL *instagramURL = [NSURL URLWithString:@"instagram://app"];
+    if([[UIApplication sharedApplication] canOpenURL:instagramURL]) //check for App is install or not
+    {
+        NSData *imageData = UIImagePNGRepresentation(self.dogImageView.image); //convert image into .png format.
+        NSFileManager *fileManager = [NSFileManager defaultManager];//create instance of NSFileManager
+        NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES); //create an array and store result of our search for the documents directory in it
+        NSString *documentsDirectory = [paths objectAtIndex:0]; //create NSString object, that holds our exact path to the documents directory
+        NSString *fullPath = [documentsDirectory stringByAppendingPathComponent:[NSString stringWithFormat:@"insta.igo"]]; //add our image to the path
+        [fileManager createFileAtPath:fullPath contents:imageData attributes:nil]; //finally save the path (image)
+        NSLog(@"image saved");
+        
+        CGRect rect = CGRectMake(0 ,0 , 0, 0);
+        UIGraphicsBeginImageContextWithOptions(self.view.bounds.size, self.view.opaque, 0.0);
+        [self.view.layer renderInContext:UIGraphicsGetCurrentContext()];
+        UIGraphicsEndImageContext();
+        NSString *fileNameToSave = [NSString stringWithFormat:@"Documents/insta.igo"];
+        NSString  *jpgPath = [NSHomeDirectory() stringByAppendingPathComponent:fileNameToSave];
+        NSLog(@"jpg path %@",jpgPath);
+        NSString *newJpgPath = [NSString stringWithFormat:@"file://%@",jpgPath];
+        NSLog(@"with File path %@",newJpgPath);
+        NSURL *igImageHookFile = [[NSURL alloc]initFileURLWithPath:newJpgPath];
+        NSLog(@"url Path %@",igImageHookFile);
+        
+        self.documentController.UTI = @"com.instagram.exclusivegram";
+        self.documentController = [self setupControllerWithURL:igImageHookFile usingDelegate:self];
+        self.documentController=[UIDocumentInteractionController interactionControllerWithURL:igImageHookFile];
+        NSString *caption = @"#Your Text"; //settext as Default Caption
+        self.documentController.annotation=[NSDictionary dictionaryWithObjectsAndKeys:[NSString stringWithFormat:@"%@",caption],@"InstagramCaption", nil];
+        [self.documentController presentOpenInMenuFromRect:rect inView: self.view animated:YES];
+    }
+    else
+    {
+        NSLog (@"Instagram not found");
+        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Error" message:@"Instagram not found" delegate:self cancelButtonTitle:@"ok" otherButtonTitles:nil];
+        [alert show];
+    }
+}
+
+- (UIDocumentInteractionController *) setupControllerWithURL: (NSURL*) fileURL usingDelegate: (id <UIDocumentInteractionControllerDelegate>) interactionDelegate {
+    NSLog(@"file url %@",fileURL);
+    UIDocumentInteractionController *interactionController = [UIDocumentInteractionController interactionControllerWithURL: fileURL];
+    interactionController.delegate = interactionDelegate;
+    
+    return interactionController;
+}
+
+
+-(void)instagramShare:(UIButton *)sender
+{
+    NSURL *instagramURL = [NSURL URLWithString:@"instagram://app"];
+    if([[UIApplication sharedApplication] canOpenURL:instagramURL])
+    {
+//        CGFloat cropVal = (imageMain.image.size.height > imageMain.image.size.width ? imageMain.image.size.width : imageMain.image.size.height);
+//        
+//        cropVal *= [imageMain.image scale];
+//        
+//        CGRect cropRect = (CGRect){.size.height = cropVal, .size.width = cropVal};
+//        CGImageRef imageRef = CGImageCreateWithImageInRect([imageMain.image CGImage], cropRect);
+//        
+//        NSData *imageData = UIImageJPEGRepresentation([UIImage imageWithCGImage:imageRef], 1.0);
+//        CGImageRelease(imageRef);
+//        
+//        NSString *writePath = [NSTemporaryDirectory() stringByAppendingPathComponent:@"instagram.igo"];
+//        if (![imageData writeToFile:writePath atomically:YES]) {
+//            // failure
+//            NSLog(@"image save failed to path %@", writePath);
+//            return;
+//        } else {
+//            // success.
+//        }
+        
+        // send it to instagram.
+        NSURL *fileURL = [NSURL fileURLWithPath:resultStr];
+        self.documentController = [UIDocumentInteractionController interactionControllerWithURL:fileURL];
+        self.documentController.delegate = self;
+        [self.documentController setUTI:@"com.instagram.exclusivegram"];
+        [self.documentController setAnnotation:@{@"InstagramCaption" : @"We are making fun"}];
+        [self.documentController presentOpenInMenuFromRect:CGRectMake(0, 0, 320, 480) inView:self.view animated:YES];
+    }
+    else
+    {
+        NSLog (@"Instagram not found");
+        
+    }
+}
+
+
+-(void)faceBookShare:(UIButton *)sender
+{
+    if([SLComposeViewController isAvailableForServiceType:SLServiceTypeFacebook])
+    {
+        SLComposeViewController *facebook = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
+        [facebook setInitialText:@"share pet Space"];
+        [self presentViewController:facebook animated:YES completion:nil];
+    }
+    else
+    {
+        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Error" message:@"FaceBook not found" delegate:self cancelButtonTitle:@"ok" otherButtonTitles:nil];
+        [alert show];
+    }
+    
+}
+
+-(void)twitterShare:(UIButton *)sender
+{
+    if([SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter])
+    {
+        SLComposeViewController *twitterSheet = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
+        [twitterSheet setInitialText:@"share pet Space"];
+        [self presentViewController:twitterSheet animated:YES completion:nil];
+    }
+    else
+    {
+        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Error" message:@"Twitter not found" delegate:self cancelButtonTitle:@"ok" otherButtonTitles:nil];
+        [alert show];
+
+    }
+
+}
 
 -(void)createDogFrame
 {
@@ -292,7 +423,7 @@
     self.dogImageView.userInteractionEnabled = YES;
 
     NSURL *docsUrl = [[[NSFileManager defaultManager]URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask]lastObject];
-    NSString *resultStr = [[docsUrl path]stringByAppendingPathComponent:[NSString stringWithFormat:@"dogOrcatImage/%@",[self.model.path lastPathComponent]]];
+    resultStr = [[docsUrl path]stringByAppendingPathComponent:[NSString stringWithFormat:@"dogOrcatImage/%@",[self.model.path lastPathComponent]]];
     self.dogImageView.image = [UIImage imageWithContentsOfFile:resultStr];
     [self.bgView addSubview:self.dogImageView];
     

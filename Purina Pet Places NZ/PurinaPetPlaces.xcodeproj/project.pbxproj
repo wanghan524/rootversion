@@ -333,6 +333,7 @@
 		A4F9EAF71B1CC0730045EB03 /* email.png in Resources */ = {isa = PBXBuildFile; fileRef = A4F9EAF31B1CC0730045EB03 /* email.png */; };
 		A4F9EAF81B1CC0730045EB03 /* call.png in Resources */ = {isa = PBXBuildFile; fileRef = A4F9EAF41B1CC0730045EB03 /* call.png */; };
 		A4F9EAF91B1CC0730045EB03 /* www.png in Resources */ = {isa = PBXBuildFile; fileRef = A4F9EAF51B1CC0730045EB03 /* www.png */; };
+		A4F9EAFF1B1D899D0045EB03 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4F9EAFE1B1D899D0045EB03 /* Social.framework */; };
 		EF02735F1ADBF85800B89609 /* ResultPetFriendlyPlacesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF02735E1ADBF85800B89609 /* ResultPetFriendlyPlacesViewController.m */; };
 		EF0273621ADC013400B89609 /* LocationPetFriendlyPlacesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF0273611ADC013400B89609 /* LocationPetFriendlyPlacesViewController.m */; };
 		EF047EED1AF3A98F00DADFCA /* PieChatView.m in Sources */ = {isa = PBXBuildFile; fileRef = EF047EEC1AF3A98F00DADFCA /* PieChatView.m */; };
@@ -920,6 +921,7 @@
 		A4F9EAF31B1CC0730045EB03 /* email.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = email.png; sourceTree = "<group>"; };
 		A4F9EAF41B1CC0730045EB03 /* call.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = call.png; sourceTree = "<group>"; };
 		A4F9EAF51B1CC0730045EB03 /* www.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = www.png; sourceTree = "<group>"; };
+		A4F9EAFE1B1D899D0045EB03 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		EF02735D1ADBF85800B89609 /* ResultPetFriendlyPlacesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultPetFriendlyPlacesViewController.h; sourceTree = "<group>"; };
 		EF02735E1ADBF85800B89609 /* ResultPetFriendlyPlacesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultPetFriendlyPlacesViewController.m; sourceTree = "<group>"; };
 		EF0273601ADC013400B89609 /* LocationPetFriendlyPlacesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationPetFriendlyPlacesViewController.h; sourceTree = "<group>"; };
@@ -1113,6 +1115,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4F9EAFF1B1D899D0045EB03 /* Social.framework in Frameworks */,
 				8A99385116E04CD200614AAF /* AudioToolbox.framework in Frameworks */,
 				8A99384F16E04CC800614AAF /* StoreKit.framework in Frameworks */,
 				8A99384D16E04CBC00614AAF /* Accounts.framework in Frameworks */,
@@ -1447,6 +1450,7 @@
 		208251BA15B6397100BDA88D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A4F9EAFE1B1D899D0045EB03 /* Social.framework */,
 				EFA1B5891AD8BB9B00F44CC1 /* Parse.framework */,
 				EFA1B5871AD8BB9B00F44CC1 /* parse-library-1.7.1 */,
 				8A99385016E04CD000614AAF /* AudioToolbox.framework */,
