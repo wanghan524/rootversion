@@ -31,4 +31,6 @@
 #define CATEGORIES @"categories"
 #define DOGS @"dogs"
 #define CATS @"cats"
+
+#define SELECTEDPRODUCTREQUEST @"https://www.purina.co.nz/petplaces.json"
 #endif

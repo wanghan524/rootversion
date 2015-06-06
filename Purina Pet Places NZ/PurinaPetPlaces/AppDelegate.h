@@ -9,8 +9,12 @@
 #import <UIKit/UIKit.h>
 #import "ViewController.h"
 #import "SearchTableViewController.h"
+#import "GrobleSingleton.h"
+
+
 
 @class ViewController;
+
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate> {
     UITabBarController              *tabBarController;
@@ -19,6 +23,8 @@
     SearchTableViewController       *searchTableViewController;
     ViewController                  *temp2locationsViewController;
     UIView                          *progressBackgroundView;
+    
+    GrobleSingleton                 *grobleSingleton;
 }
 @property (nonatomic, retain) UITabBarController *tabBarController;
 @property (nonatomic, retain) ViewController *locationsViewController;

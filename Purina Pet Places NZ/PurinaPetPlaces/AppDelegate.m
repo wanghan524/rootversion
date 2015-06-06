@@ -16,9 +16,16 @@
 #import "Reachability.h"
 #import <Parse/Parse.h>
 #import "EditViewController.h"
+#import "AFNetworking.h"
+
+
+
+
+
 
 
 @implementation AppDelegate
+
 
 @synthesize window = _window;
 @synthesize tabBarController, locationsViewController, temp2locationsViewController, searchTableViewController, progressBackgroundView;
@@ -37,7 +44,9 @@
 {
     
     
+    grobleSingleton = [GrobleSingleton sharedGlobleInstance];
     
+    [self getAllSelectedProduct];
     
     [Parse setApplicationId:@"63djxv7dFYyhSC0jfMRTxIUAAbOKYh3oJyHpTB07" clientKey:@"2nytrJ095cqeJKoF4Xzp6ufzY1fKDc0b6asQ6NF7"];
     
@@ -220,5 +229,26 @@ void uncaughtExceptionHandler(NSException *exception) {
     return customizedNavController;
 }
 
+
+#pragma mark - 获取 all product
+
+- (void)getAllSelectedProduct{
+
+    
+    
+    AFHTTPRequestOperationManager *manger = [AFHTTPRequestOperationManager manager];
+    
+    [manger GET:SELECTEDPRODUCTREQUEST parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        DLog(@"selecte reponseObject : %@",responseObject);
+        
+        
+        NSArray *infoArray = (NSArray *)responseObject;
+        
+        grobleSingleton.selectedArray = [[NSMutableArray alloc] initWithArray:infoArray];
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        DLog(@"selected error : %@",error);
+    }];
+    
+}
 @end 
 
