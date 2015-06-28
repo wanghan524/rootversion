@@ -451,6 +451,39 @@ typedef NS_ENUM(NSUInteger, OPETIONDBTYPE)
 
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
+    
+    /*
+     CGRectMake((SCREEN_WIDTH - 300)/2, (SCREEN_HEIGHT - 390)/2, 300, 390)
+     
+     */
+    
+    //判断点击区域是否在弹出的区域内
+    UITouch *touch = [touches anyObject];
+    
+    CGPoint clickPoint = [touch locationInView:self.view];
+    
+    CGMutablePathRef pathRef = CGPathCreateMutable();
+    
+    CGPathMoveToPoint(pathRef, NULL, (SCREEN_WIDTH - 300)/2, (SCREEN_HEIGHT - 390)/2);
+    
+    CGPathAddLineToPoint(pathRef, NULL, (SCREEN_WIDTH - 300)/2, (SCREEN_HEIGHT - 390)/2 + 390);
+    
+    CGPathAddLineToPoint(pathRef, NULL, (SCREEN_HEIGHT - 390)/2 + 390, (SCREEN_WIDTH - 300)/2 + 300);
+    CGPathAddLineToPoint(pathRef, NULL, (SCREEN_WIDTH - 300)/2 + 300, (SCREEN_HEIGHT - 390)/2);
+    
+    CGPathAddLineToPoint(pathRef, NULL,  (SCREEN_WIDTH - 300)/2, (SCREEN_HEIGHT - 390)/2);
+    
+    if (CGPathContainsPoint(pathRef, NULL, clickPoint, NO)) {
+        
+    }else{
+        if(self.darkView != nil)
+        {
+            [self.darkView removeFromSuperview];
+            self.darkView = nil;
+        }
+    }
+    
+    
     [self.view endEditing:YES];
 }
 
@@ -469,13 +502,13 @@ typedef NS_ENUM(NSUInteger, OPETIONDBTYPE)
             [self.view addSubview:backView];
             UIButton *rightButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
             rightButton.frame = CGRectMake(250, 0, 40, 30);
-            [rightButton setTitle:@"确定" forState:UIControlStateNormal];
+            [rightButton setTitle:@"Sure" forState:UIControlStateNormal];
             [rightButton addTarget:self action:@selector(dateRightButtonClicked) forControlEvents:UIControlEventTouchUpInside];
             [backView addSubview:rightButton];
             
             UIButton *leftButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-            leftButton.frame = CGRectMake(30, 0, 40, 30);
-            [leftButton setTitle:@"取消" forState:UIControlStateNormal];
+            leftButton.frame = CGRectMake(30, 0, 50, 30);
+            [leftButton setTitle:@"Cancel" forState:UIControlStateNormal];
             [leftButton addTarget:self action:@selector(dateLeftButtonClicked) forControlEvents:UIControlEventTouchUpInside];
             [backView addSubview:leftButton];
             

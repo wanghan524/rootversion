@@ -14,14 +14,21 @@
 #import "TipsViewController.h"
 #import "ToolsViewController.h"
 #import "FreePetAdviceVC.h"
+#import "GrobleSingleton.h"
+
 
 @implementation MainViewController
 {
     BOOL clickStatus;
+    
+    GrobleSingleton *globeSingle;
 }
 -(void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    globeSingle = [GrobleSingleton sharedGlobleInstance];
+    
     self.flag = @"nav";
     [self showCustomeNav];
     [self makeArray];
@@ -168,28 +175,44 @@
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     
+    //globeSingle.globleCategory = @"dog";
+    
     NSArray *titleArray = @[@"Photo Fun",@"Pet Friendly Places",@"Stockists",@"Tools",@"Pet Services",@"Tips",@"Products"];
-    NSArray *imageNameArray = @[@"tile1-photo-fun.jpg",@"tile2-pet-friendly-places.jpg",@"tile3-stockist.jpg",@"tile4-tools.jpg",@"tile5-pet-service.jpg",@"tile6-tips.jpg",@"tile7-products.jpg"];
+    NSArray *imageNameArray = [[NSArray alloc] init];
+  
+    if ([globeSingle.globleCategory isEqualToString:@"dog"]) {
+        imageNameArray = @[@"tile1-photo-fun.jpg",@"tile2-pet-friendly-places.jpg",@"tile3-stockist.jpg",@"tile4-tools.jpg",@"tile5-pet-service.jpg",@"tile6-tips.jpg",@"tile7-products.jpg"];
+    }
+    else{
+        imageNameArray = @[@"tile1-pet-service1.jpg",@"tile2-pet-service1.jpg",@"tile3-pet-service1.jpg",@"tile4-pet-service1.jpg",@"tile5-pet-service1.jpg",@"tile6-pet-service1.jpg"];
+    }
+  
     static NSString *iden = @"UICollectionViewCell";
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:iden forIndexPath:indexPath];
     if(cell == nil)
     {
         cell = [[UICollectionViewCell alloc]initWithFrame:CGRectMake(0,0,SCREEN_WIDTH/2, (SCREEN_HEIGHT - 64 - 70)/(self.imageArray.count))];
     }
-    UIImageView *backGroundImage = [[UIImageView alloc] initWithFrame:CGRectMake(0,0,SCREEN_WIDTH/2, (SCREEN_HEIGHT - 64 - 70)/(self.imageArray.count))];
-    backGroundImage.image = [UIImage imageNamed:imageNameArray[indexPath.row]];
-    cell.backgroundView = backGroundImage;
-    //cell.backgroundColor = [UIColor colorWithRed:((10 * indexPath.row) / 255.0) green:((20 * indexPath.row)/255.0) blue:((30 * indexPath.row)/255.0) alpha:1.0f];
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(cell.contentView.center.x - (cell.contentView.frame.size.width / 2.0), cell.contentView.center.y - (cell.contentView.frame.size.height / 2.0) + 30, cell.contentView.frame.size.width, cell.contentView.frame.size.height)];
-    label.textColor = [UIColor whiteColor];
-    label.textAlignment = NSTextAlignmentCenter;
-    label.font = [UIFont fontWithName:@"Antenna" size:15];
-    label.text = [NSString stringWithFormat:@"%@",titleArray[indexPath.row]];
     
     for (id subView in cell.contentView.subviews) {
         [subView removeFromSuperview];
     }
-    [cell.contentView addSubview:label];
+    
+    UIImageView *backGroundImage = [[UIImageView alloc] initWithFrame:CGRectMake(0,0,SCREEN_WIDTH/2, (SCREEN_HEIGHT - 64 - 70)/(self.imageArray.count))];
+    backGroundImage.image = [UIImage imageNamed:imageNameArray[indexPath.row]];
+    cell.backgroundView = backGroundImage;
+    //cell.backgroundColor = [UIColor colorWithRed:((10 * indexPath.row) / 255.0) green:((20 * indexPath.row)/255.0) blue:((30 * indexPath.row)/255.0) alpha:1.0f];
+    
+    if ([globeSingle.globleCategory isEqualToString:@"dog"]) {
+        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(cell.contentView.center.x - (cell.contentView.frame.size.width / 2.0), cell.contentView.center.y - (cell.contentView.frame.size.height / 2.0) + 30, cell.contentView.frame.size.width, cell.contentView.frame.size.height)];
+        label.textColor = [UIColor whiteColor];
+        label.textAlignment = NSTextAlignmentCenter;
+        label.font = [UIFont fontWithName:@"Antenna" size:15];
+        label.text = [NSString stringWithFormat:@"%@",titleArray[indexPath.row]];
+        [cell.contentView addSubview:label];
+    }
+    
+    
     return cell;
 }
 

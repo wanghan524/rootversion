@@ -156,7 +156,7 @@
     if (tableView == self.menusTable) {
         return 1;
     }
-    return 100.0f;
+    return 180.0f;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
@@ -167,7 +167,7 @@
     if (tableView == self.menusTable) {
         return nil;
     }
-    UIImageView * headerImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 150)];
+    UIImageView * headerImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 180)];
     headerImageView.image = [UIImage imageNamed:@"bodycondition.png"];
 
     return headerImageView;

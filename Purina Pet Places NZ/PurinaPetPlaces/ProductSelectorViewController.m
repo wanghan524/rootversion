@@ -9,6 +9,8 @@
 #import "ProductSelectorViewController.h"
 #import "GrobleSingleton.h"
 
+#import "ProductDetailViewController.h"
+
 @interface ProductSelectorViewController ()<UITableViewDataSource,UITableViewDelegate>{
     GrobleSingleton *globleSingleton;
     
@@ -19,6 +21,7 @@
 @property (nonatomic, strong) UITableView *myTableView;
 
 @property (nonatomic, strong) NSMutableArray *contentArray;
+
 @end
 
 @implementation ProductSelectorViewController
@@ -45,15 +48,191 @@
     
     self.view.backgroundColor = [UIColor colorWithRed:242/255.0 green:238/255.0 blue:223/255.0 alpha:1];
     
+    if(self.contentArray.count == 0){
+        UILabel *displayLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, self.view.center.y - 30, self.view.frame.size.width, 60)];
+        displayLabel.text = @"No food for your choice";
+        displayLabel.font = [UIFont systemFontOfSize:17];
+        displayLabel.textAlignment = NSTextAlignmentCenter;
+        [self.view addSubview:displayLabel];
+    }else{
+//        self.myTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 64, SCREEN_WIDTH, SCREEN_HEIGHT - 64) style:UITableViewStyleGrouped];
+//        self.myTableView.backgroundColor = [UIColor colorWithRed:242/255.0 green:238/255.0 blue:223/255.0 alpha:1];
+//        self.myTableView.dataSource = self;
+//        self.myTableView.delegate = self;
+//        [self.view addSubview:self.myTableView];
+        
+        [self makeArray];
+        [self makeCollectionView];
+        [self makeBottomButton];
+    }
     
-    self.myTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 64, SCREEN_WIDTH, SCREEN_HEIGHT - 64) style:UITableViewStyleGrouped];
-    self.myTableView.backgroundColor = [UIColor colorWithRed:242/255.0 green:238/255.0 blue:223/255.0 alpha:1];
-    self.myTableView.dataSource = self;
-    self.myTableView.delegate = self;
-    [self.view addSubview:self.myTableView];
+    
     // Do any additional setup after loading the view.
 }
 
+#pragma mark collection delegate end
+-(void)makeCollectionView
+{
+    UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc]init];
+    [flowLayout setItemSize:CGSizeMake(SCREEN_WIDTH/2, (SCREEN_HEIGHT - 64 - 70)/((self.contentArray.count)/2))];
+    [flowLayout setScrollDirection:UICollectionViewScrollDirectionVertical];
+    
+    flowLayout.headerReferenceSize = CGSizeMake(SCREEN_WIDTH, 50);
+    flowLayout.sectionInset = UIEdgeInsetsMake(0, 0, 0, 0);
+    flowLayout.minimumInteritemSpacing = 0;
+    flowLayout.minimumLineSpacing = 0;
+    self.collectionView = [[UICollectionView alloc]initWithFrame:CGRectMake(0,64, SCREEN_WIDTH, SCREEN_HEIGHT - 64 - 70) collectionViewLayout:flowLayout];
+    self.collectionView.delegate = self;
+    self.collectionView.dataSource = self;
+    
+    
+    [self.collectionView setBackgroundColor:[UIColor colorWithRed:242/255.0 green:238/255.0 blue:223/255.0 alpha:1]];
+    
+    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"UICollectionViewCell"];
+    [self.collectionView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"ReusableView"];
+    
+    [self.view addSubview:self.collectionView];
+    
+}
+
+
+#pragma mark collection delegate start
+
+-(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+{
+    return [self.imageArray count];
+}
+
+-(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
+{
+    return 1;
+}
+
+-(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    //NSArray *titleArray = @[@"Photo Fun",@"Pet Friendly Places",@"Stockists",@"Tools",@"Pet Services",@"Tips",@"Products"];
+    NSArray *imageNameArray = @[@"pro-plan",@"purina-one",@"tux",@"dog-chow",@"mighty-dog",@"beneful",@"beggin"];
+    
+    
+    NSArray *catImageNameArray = @[@"cat-chow",@"cat-fancy-feast",@"cat-friskies",@"cat-one",@"cat-pro-plan",@"cat-treats"];
+    static NSString *iden = @"UICollectionViewCell";
+    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:iden forIndexPath:indexPath];
+    if(cell == nil)
+    {
+        cell = [[UICollectionViewCell alloc]initWithFrame:CGRectMake(0,0,SCREEN_WIDTH/2 , (SCREEN_HEIGHT - 64 - 70)/3.0)];
+        cell.contentView.backgroundColor = [UIColor whiteColor];
+        
+    }
+    UIView *backView = [[UIView alloc] initWithFrame:CGRectMake(0,0,SCREEN_WIDTH/2, (SCREEN_HEIGHT - 64 - 70)/3.0)];
+    backView.layer.borderColor = [UIColor grayColor].CGColor;
+    backView.layer.borderWidth = 0.3;
+    backView.backgroundColor = [UIColor whiteColor];
+    UIImageView *backGroundImage = [[UIImageView alloc] initWithFrame:CGRectMake(cell.contentView.center.x - 51, cell.contentView.center.y - 24, 102, 46)];
+    
+    if ([globleSingleton.globleCategory isEqualToString:@"dog"]) {
+        backGroundImage.image = [UIImage imageNamed:[NSString stringWithFormat:@"products-%@.jpg",imageNameArray[indexPath.row]]];
+    }else{
+        backGroundImage.image = [UIImage imageNamed:[NSString stringWithFormat:@"products-%@.jpg",catImageNameArray[indexPath.row]]];
+    }
+    
+    [backView addSubview:backGroundImage];
+    
+    //cell.backgroundColor = [UIColor colorWithRed:((10 * indexPath.row) / 255.0) green:((20 * indexPath.row)/255.0) blue:((30 * indexPath.row)/255.0) alpha:1.0f];
+    //    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(cell.contentView.center.x - (cell.contentView.frame.size.width / 2.0), cell.contentView.center.y - (cell.contentView.frame.size.height / 2.0) + 30, cell.contentView.frame.size.width, cell.contentView.frame.size.height)];
+    //    label.textColor = [UIColor whiteColor];
+    //    label.textAlignment = NSTextAlignmentCenter;
+    //    label.text = [NSString stringWithFormat:@"%@",titleArray[indexPath.row]];
+    
+    for (id subView in cell.contentView.subviews) {
+        [subView removeFromSuperview];
+    }
+    [cell.contentView addSubview:backView];
+    //[cell.contentView addSubview:label];
+    return cell;
+}
+
+
+//头部显示的内容
+- (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath{
+    
+    UICollectionReusableView *headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"ReusableView" forIndexPath:indexPath];
+    
+//    UIImageView * headerImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 50)];
+//    headerImageView.image = [UIImage imageNamed:@"products-header.jpg"];
+    
+    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 50)];
+    titleLabel.backgroundColor = [UIColor clearColor];
+    titleLabel.text = [NSString stringWithFormat:@"You have %ld matches",(unsigned long)self.imageArray.count];
+    titleLabel.textAlignment = NSTextAlignmentCenter;
+    titleLabel.font = [UIFont fontWithName:@"Antenna" size:22];
+    titleLabel.textColor = [UIColor blackColor];
+    //[headerImageView addSubview:titleLabel];
+    [headerView addSubview:titleLabel];
+    
+    return headerView;
+}
+
+-(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    return CGSizeMake(SCREEN_WIDTH/2, (SCREEN_HEIGHT - 64 - 70)/3);
+}
+-(UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
+{
+    return UIEdgeInsetsMake(0, 0, 0, 0);
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    NSArray *imageNameArray = @[@"pro-plan",@"purina-one",@"tux",@"dog-chow",@"mighty-dog",@"beneful",@"beggin"];
+    
+    NSArray *catImageNameArray = @[@"cat-chow",@"cat-fancy-feast",@"cat-friskies",@"cat-one",@"cat-pro-plan",@"cat-treats"];
+    ProductDetailViewController *productDetailVC = [[ProductDetailViewController alloc] init];
+    
+    if ([globleSingleton.globleCategory isEqualToString:@"dog"]) {
+        productDetailVC.animalFlag = imageNameArray[indexPath.row];
+    }else{
+        productDetailVC.animalFlag = catImageNameArray[indexPath.row];
+    }
+    
+    productDetailVC.num = indexPath.row;
+    [self.navigationController pushViewController:productDetailVC animated:YES];
+    
+    
+}
+
+-(void)makeArray
+{
+    self.imageArray = [[NSMutableArray alloc]initWithCapacity:0];
+    if ([globleSingleton.globleCategory isEqualToString:@"dog"]) {
+        for(NSUInteger i = 0; i < 7; i++)
+        {
+            
+            
+            //[self.imageArray addObject:[NSString stringWithFormat:@"%lu",(unsigned long)i]];
+        }
+        [self.imageArray addObjectsFromArray:self.contentArray];
+    }else{
+        for(NSUInteger i = 0; i < 6; i++)
+        {
+            
+            //[self.imageArray addObject:[NSString stringWithFormat:@"%lu",(unsigned long)i]];
+        }
+        [self.imageArray addObjectsFromArray:self.contentArray];
+    }
+    
+    
+}
+
+
+-(void)makeBottomButton
+{
+    self.bottomButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [self.bottomButton setFrame:CGRectMake(0, CGRectGetMaxY(self.collectionView.frame), SCREEN_WIDTH, 70)];
+    [self.bottomButton setTitle:@"START OVER" forState:UIControlStateNormal];
+    [self.bottomButton.titleLabel setFont:[UIFont fontWithName:@"Antenna" size:18]];
+    [self.bottomButton setBackgroundColor:[UIColor redColor]];
+    [self.view addSubview:self.bottomButton];
+}
 
 #pragma mark - Table view data source
 

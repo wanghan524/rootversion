@@ -72,7 +72,7 @@
     
     UILabel *detail = [[UILabel alloc]initWithFrame:CGRectMake(0, 95, SCREEN_WIDTH, 15)];
     detail.text = @"Select tile to check off";
-    detail.font = [UIFont fontWithName:@"Antenna" size:10];
+    detail.font = [UIFont fontWithName:@"Antenna" size:13];
     detail.textAlignment = NSTextAlignmentCenter;
     detail.textColor = [UIColor grayColor];
     [self.view addSubview:detail];
@@ -80,32 +80,36 @@
     two.textColor = [UIColor grayColor];
     two.text = @"tasks as you go";
     two.textAlignment = NSTextAlignmentCenter;
-    two.font = [UIFont fontWithName:@"Antenna" size:10];
+    two.font = [UIFont fontWithName:@"Antenna" size:13];
     [self.view addSubview:two];
     
     
     //
     pieview = [[PieChatView alloc] initWithFrame:CGRectMake(0.0, 64+60, SCREEN_WIDTH , SCREEN_HEIGHT-64-180)  withNum:[floatarray count] withArray:floatarray];
     //pieview.center = CGPointMake(160, 240);
+    pieview.delegate = self;
     [self.view addSubview:pieview];
     
-    UILabel *more = [[UILabel alloc]initWithFrame:CGRectMake(10, CGRectGetMaxY(pieview.frame), SCREEN_WIDTH-20, 30 )];
-    more.numberOfLines = 2;
-    more.font = [UIFont fontWithName:@"Antenna" size:8];
+    UILabel *more = [[UILabel alloc]initWithFrame:CGRectMake(10, CGRectGetMaxY(pieview.frame), SCREEN_WIDTH-20, 80 )];
+    more.numberOfLines = 0;
+    more.font = [UIFont fontWithName:@"Antenna" size:13];
     more.textColor = [UIColor grayColor];
-    more.text = @"*Lorem ipsum dolor sit amet,consectetur adipiscing elit.Nam mattis magna sit amet tristique cursus.Morbi viverra lobortis sodales.";
+    more.text = @"*We recommend speaking to your local Veterinarian about any health related queries for your pet. The health compass is a friendly reminder application and is not to be used as a substitute for Veterinary advice.";
     more.backgroundColor = [UIColor clearColor];
     [self.view addSubview:more];
 
     
     self.oneBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    self.oneBtn.frame = CGRectMake(0, SCREEN_HEIGHT - 42 - 40, SCREEN_WIDTH, 40);
+    self.oneBtn.frame = CGRectMake(0, SCREEN_HEIGHT - 40, SCREEN_WIDTH, 40);
     [self.oneBtn setTitle:@"TURN OFF PUSH NOTIFICATIONS" forState:UIControlStateNormal];
     self.oneBtn.titleLabel.textAlignment = NSTextAlignmentCenter;
-    self.oneBtn.titleLabel.font = [UIFont fontWithName:@"Antenna" size:10];
+    self.oneBtn.titleLabel.font = [UIFont fontWithName:@"Antenna" size:13];
     [self.oneBtn addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
     [self.oneBtn setBackgroundColor:[UIColor redColor]];
     [self.view addSubview:self.oneBtn];
+    
+    
+#if 0
     
     self.twoBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     self.twoBtn.frame = CGRectMake(0, SCREEN_HEIGHT - 40, SCREEN_WIDTH, 40);
@@ -115,10 +119,16 @@
     [self.twoBtn addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
     [self.twoBtn setBackgroundColor:[UIColor redColor]];
     [self.view addSubview:self.twoBtn];
-    
+#endif
     
     
     // Do any additional setup after loading the view.
+}
+
+- (void)transformIndex:(NSInteger)index{
+//    MoreActionView *view = [[MoreActionView alloc]initWithFrame:self.view.frame];
+//    [self.view addSubview:view];
+    NSLog(@"index : %ld",(long)index);
 }
 
 

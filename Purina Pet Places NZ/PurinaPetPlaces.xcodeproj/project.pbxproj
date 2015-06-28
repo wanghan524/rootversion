@@ -340,6 +340,8 @@
 		EF3EEDEC1AE2175000B3B7F8 /* ToolsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3EEDEB1AE2175000B3B7F8 /* ToolsViewController.m */; };
 		EF3EEDEE1AE2451000B3B7F8 /* tools-header0.png in Resources */ = {isa = PBXBuildFile; fileRef = EF3EEDED1AE2451000B3B7F8 /* tools-header0.png */; };
 		EF46693E1B22F0DC004B1824 /* ProductSelectorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF46693D1B22F0DC004B1824 /* ProductSelectorViewController.m */; };
+		EF574DD81B3FCACC00A63BC3 /* StockistsWebviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF574DD71B3FCACC00A63BC3 /* StockistsWebviewViewController.m */; };
+		EF574DDB1B3FCD4200A63BC3 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = EF574DDA1B3FCD4200A63BC3 /* MBProgressHUD.m */; };
 		EF607C551B11AEAA00D547E7 /* cat-chow.html in Resources */ = {isa = PBXBuildFile; fileRef = EF607C4F1B11AEAA00D547E7 /* cat-chow.html */; };
 		EF607C561B11AEAA00D547E7 /* cat-fancy-feast.html in Resources */ = {isa = PBXBuildFile; fileRef = EF607C501B11AEAA00D547E7 /* cat-fancy-feast.html */; };
 		EF607C571B11AEAA00D547E7 /* cat-friskies.html in Resources */ = {isa = PBXBuildFile; fileRef = EF607C511B11AEAA00D547E7 /* cat-friskies.html */; };
@@ -472,6 +474,12 @@
 		EFCC0EF61ADD2D8B008676D7 /* loading-splash-page.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EFCC0EF51ADD2D8B008676D7 /* loading-splash-page.jpg */; };
 		EFCC0EFF1ADD42C8008676D7 /* GrobleSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCC0EFE1ADD42C8008676D7 /* GrobleSingleton.m */; };
 		EFCC0F031ADD4566008676D7 /* ProductsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCC0F021ADD4566008676D7 /* ProductsViewController.m */; };
+		EFCC8CBF1B301705007DB970 /* tile1-pet-service1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EFCC8CB91B301705007DB970 /* tile1-pet-service1.jpg */; };
+		EFCC8CC01B301705007DB970 /* tile2-pet-service1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EFCC8CBA1B301705007DB970 /* tile2-pet-service1.jpg */; };
+		EFCC8CC11B301705007DB970 /* tile3-pet-service1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EFCC8CBB1B301705007DB970 /* tile3-pet-service1.jpg */; };
+		EFCC8CC21B301705007DB970 /* tile4-pet-service1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EFCC8CBC1B301705007DB970 /* tile4-pet-service1.jpg */; };
+		EFCC8CC31B301705007DB970 /* tile5-pet-service1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EFCC8CBD1B301705007DB970 /* tile5-pet-service1.jpg */; };
+		EFCC8CC41B301705007DB970 /* tile6-pet-service1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EFCC8CBE1B301705007DB970 /* tile6-pet-service1.jpg */; };
 		EFCD3FB21AE0D2D1009CC7DA /* ellipsis.png in Resources */ = {isa = PBXBuildFile; fileRef = EFCD3F8E1AE0D2D1009CC7DA /* ellipsis.png */; };
 		EFCD3FB31AE0D2D1009CC7DA /* loading-splash-page.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EFCD3F8F1AE0D2D1009CC7DA /* loading-splash-page.jpg */; };
 		EFCD3FB41AE0D2D1009CC7DA /* pagination-square-active.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EFCD3F901AE0D2D1009CC7DA /* pagination-square-active.jpg */; };
@@ -951,6 +959,10 @@
 		EF3EEDED1AE2451000B3B7F8 /* tools-header0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tools-header0.png"; sourceTree = "<group>"; };
 		EF46693C1B22F0DC004B1824 /* ProductSelectorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductSelectorViewController.h; sourceTree = "<group>"; };
 		EF46693D1B22F0DC004B1824 /* ProductSelectorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductSelectorViewController.m; sourceTree = "<group>"; };
+		EF574DD61B3FCACC00A63BC3 /* StockistsWebviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StockistsWebviewViewController.h; sourceTree = "<group>"; };
+		EF574DD71B3FCACC00A63BC3 /* StockistsWebviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StockistsWebviewViewController.m; sourceTree = "<group>"; };
+		EF574DD91B3FCD4200A63BC3 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		EF574DDA1B3FCD4200A63BC3 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		EF607C4F1B11AEAA00D547E7 /* cat-chow.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "cat-chow.html"; sourceTree = "<group>"; };
 		EF607C501B11AEAA00D547E7 /* cat-fancy-feast.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "cat-fancy-feast.html"; sourceTree = "<group>"; };
 		EF607C511B11AEAA00D547E7 /* cat-friskies.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "cat-friskies.html"; sourceTree = "<group>"; };
@@ -1116,6 +1128,12 @@
 		EFCC0EFE1ADD42C8008676D7 /* GrobleSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GrobleSingleton.m; sourceTree = "<group>"; };
 		EFCC0F011ADD4566008676D7 /* ProductsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductsViewController.h; sourceTree = "<group>"; };
 		EFCC0F021ADD4566008676D7 /* ProductsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductsViewController.m; sourceTree = "<group>"; };
+		EFCC8CB91B301705007DB970 /* tile1-pet-service1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "tile1-pet-service1.jpg"; sourceTree = "<group>"; };
+		EFCC8CBA1B301705007DB970 /* tile2-pet-service1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "tile2-pet-service1.jpg"; sourceTree = "<group>"; };
+		EFCC8CBB1B301705007DB970 /* tile3-pet-service1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "tile3-pet-service1.jpg"; sourceTree = "<group>"; };
+		EFCC8CBC1B301705007DB970 /* tile4-pet-service1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "tile4-pet-service1.jpg"; sourceTree = "<group>"; };
+		EFCC8CBD1B301705007DB970 /* tile5-pet-service1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "tile5-pet-service1.jpg"; sourceTree = "<group>"; };
+		EFCC8CBE1B301705007DB970 /* tile6-pet-service1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "tile6-pet-service1.jpg"; sourceTree = "<group>"; };
 		EFCD3F8E1AE0D2D1009CC7DA /* ellipsis.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ellipsis.png; sourceTree = "<group>"; };
 		EFCD3F8F1AE0D2D1009CC7DA /* loading-splash-page.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "loading-splash-page.jpg"; sourceTree = "<group>"; };
 		EFCD3F901AE0D2D1009CC7DA /* pagination-square-active.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "pagination-square-active.jpg"; sourceTree = "<group>"; };
@@ -1364,6 +1382,8 @@
 		2061F955152BD84E0030E20F /* PurinaPetPlaces */ = {
 			isa = PBXGroup;
 			children = (
+				EF574DD91B3FCD4200A63BC3 /* MBProgressHUD.h */,
+				EF574DDA1B3FCD4200A63BC3 /* MBProgressHUD.m */,
 				EF8E01A11B2137E100B0CF6A /* AFNetworking */,
 				EF8E01B51B2137E100B0CF6A /* UIKit+AFNetworking */,
 				7512228E1ADE44B100A1506B /* MySearchView.h */,
@@ -1989,6 +2009,8 @@
 		EF46E4831ADA7D5900E59FD0 /* Stockists */ = {
 			isa = PBXGroup;
 			children = (
+				EF574DD61B3FCACC00A63BC3 /* StockistsWebviewViewController.h */,
+				EF574DD71B3FCACC00A63BC3 /* StockistsWebviewViewController.m */,
 			);
 			name = Stockists;
 			sourceTree = "<group>";
@@ -2188,6 +2210,7 @@
 				EFCC0EB31ADCA7D8008676D7 /* splash-page-dog.jpg */,
 				EFCC0EB41ADCA7D8008676D7 /* splash-page.jpg */,
 				EFCC0EB51ADCA7D8008676D7 /* stockists-header.jpg */,
+				EFCC8CB81B301705007DB970 /* 归档 2 */,
 				EFCC0EB61ADCA7D8008676D7 /* tile1-photo-fun.jpg */,
 				EFCC0EB71ADCA7D8008676D7 /* tile2-pet-friendly-places.jpg */,
 				EFCC0EB81ADCA7D8008676D7 /* tile3-stockist.jpg */,
@@ -2215,6 +2238,19 @@
 				EFF9EBC41ADE849B00876341 /* ProductDetailViewController.m */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		EFCC8CB81B301705007DB970 /* 归档 2 */ = {
+			isa = PBXGroup;
+			children = (
+				EFCC8CB91B301705007DB970 /* tile1-pet-service1.jpg */,
+				EFCC8CBA1B301705007DB970 /* tile2-pet-service1.jpg */,
+				EFCC8CBB1B301705007DB970 /* tile3-pet-service1.jpg */,
+				EFCC8CBC1B301705007DB970 /* tile4-pet-service1.jpg */,
+				EFCC8CBD1B301705007DB970 /* tile5-pet-service1.jpg */,
+				EFCC8CBE1B301705007DB970 /* tile6-pet-service1.jpg */,
+			);
+			path = "归档 2";
 			sourceTree = "<group>";
 		};
 		EFCD3F8D1AE0D2D1009CC7DA /* pet-places-app-new-images */ = {
@@ -2365,6 +2401,7 @@
 				A4CEB7B71AFE98EE005BBEA0 /* bang.png in Resources */,
 				EFA56D101ADF890F00A915E8 /* tips-articles-cats16.jpg in Resources */,
 				EFA56D2E1ADF890F00A915E8 /* tips-articles-general7.jpg in Resources */,
+				EFCC8CC31B301705007DB970 /* tile5-pet-service1.jpg in Resources */,
 				202F633E15355B0F00F583C0 /* pin_red@2x.png in Resources */,
 				202F6343153560CA00F583C0 /* MapDetailsViewController.xib in Resources */,
 				EFCC0ED31ADCA7D8008676D7 /* pet-care-service-purina-logo.jpg in Resources */,
@@ -2473,12 +2510,14 @@
 				200AEA58155254BD00CDBF8E /* icon_paw@2x.png in Resources */,
 				EFCD3FB81AE0D2D1009CC7DA /* photo-fun-gift.png in Resources */,
 				200AEA5A1552599200CDBF8E /* icon_holding1.png in Resources */,
+				EFCC8CC21B301705007DB970 /* tile4-pet-service1.jpg in Resources */,
 				EFCD3FBE1AE0D2D1009CC7DA /* photo-fun-share-facebook.jpg in Resources */,
 				EFCC0EDE1ADCA7D8008676D7 /* products-purina-one.jpg in Resources */,
 				EFCC0EEC1ADCA7D8008676D7 /* tips-article-separation-article.jpg in Resources */,
 				200AEA5D15525F0400CDBF8E /* icon_GeneralTips.png in Resources */,
 				8ABF8459183C65CA001B3E86 /* background_navbar_7@2x.png in Resources */,
 				200AEA5E15525F0400CDBF8E /* icon_GeneralTips@2x.png in Resources */,
+				EFCC8CC41B301705007DB970 /* tile6-pet-service1.jpg in Resources */,
 				20CB12391558D08E006D8C82 /* icon_CatTips.png in Resources */,
 				EFF9EBBC1ADE846B00876341 /* dog-beneful.html in Resources */,
 				20CB123A1558D08E006D8C82 /* icon_CatTips@2x.png in Resources */,
@@ -2491,6 +2530,7 @@
 				EFF9EBBD1ADE846B00876341 /* dog-dog-chow.html in Resources */,
 				EFCC0EE41ADCA7D8008676D7 /* stockists-header.jpg in Resources */,
 				20CB123C1558D08E006D8C82 /* icon_DogTips@2x.png in Resources */,
+				EFCC8CC11B301705007DB970 /* tile3-pet-service1.jpg in Resources */,
 				EFCC0EEF1ADCA7D8008676D7 /* tips-thumb-5.jpg in Resources */,
 				EFCC0EF11ADCA7D8008676D7 /* tips-thumb-3.jpg in Resources */,
 				EFCC0EC61ADCA7D8008676D7 /* btn-search.jpg in Resources */,
@@ -2515,6 +2555,7 @@
 				207458F7155A205E00DE6BF0 /* icon_PetTips.png in Resources */,
 				EFA56D1D1ADF890F00A915E8 /* tips-articles-general1.jpg in Resources */,
 				207458F8155A205E00DE6BF0 /* icon_PetTips@2x.png in Resources */,
+				EFCC8CBF1B301705007DB970 /* tile1-pet-service1.jpg in Resources */,
 				207458FC155A3A1500DE6BF0 /* background_tabbar.png in Resources */,
 				EFCD3FC31AE0D2D1009CC7DA /* photo-fun-tool-dog.png in Resources */,
 				A4F9EAE81B1CB6BA0045EB03 /* ddd1.png in Resources */,
@@ -2660,6 +2701,7 @@
 				A4CEB7951AFE130B005BBEA0 /* 40.png in Resources */,
 				8AC9B5B3199DA33200CA7FE5 /* icon-facebook.png in Resources */,
 				8AC9B5A41987033600CA7FE5 /* dog-treats.jpg in Resources */,
+				EFCC8CC01B301705007DB970 /* tile2-pet-service1.jpg in Resources */,
 				20C8F0401702706D0041533C /* icon-phone.png in Resources */,
 				EFCC0EDA1ADCA7D8008676D7 /* products-dog-chow.jpg in Resources */,
 				EFA56D1F1ADF890F00A915E8 /* tips-articles-general11.jpg in Resources */,
@@ -2799,6 +2841,7 @@
 				2082520615B63FEB00BDA88D /* PCLocationInfo.m in Sources */,
 				EF62CCC51AE38E6F00296A73 /* PetHealthDetailViewController.m in Sources */,
 				2082520715B63FEB00BDA88D /* PCPetCentricSvc.m in Sources */,
+				EF574DD81B3FCACC00A63BC3 /* StockistsWebviewViewController.m in Sources */,
 				2082520815B63FEB00BDA88D /* PCServices.m in Sources */,
 				2082520915B63FEB00BDA88D /* Soap+Prefix.m in Sources */,
 				2082520A15B63FEB00BDA88D /* NSData+Base64.m in Sources */,
@@ -2838,6 +2881,7 @@
 				EFA56D361ADFB3F000A915E8 /* DisplayTipsContentViewController.m in Sources */,
 				EF8E01CB1B2137E100B0CF6A /* AFSecurityPolicy.m in Sources */,
 				2082521E15B63FEB00BDA88D /* CXMLElement_ElementTreeExtensions.m in Sources */,
+				EF574DDB1B3FCD4200A63BC3 /* MBProgressHUD.m in Sources */,
 				2082521F15B63FEB00BDA88D /* CXMLNamespaceNode.m in Sources */,
 				2082522015B63FEB00BDA88D /* CXMLNode.m in Sources */,
 				EF9C1AA01B1C83920026E959 /* BodyConditionViewController.m in Sources */,

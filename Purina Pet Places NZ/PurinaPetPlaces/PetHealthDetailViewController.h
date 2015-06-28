@@ -9,7 +9,7 @@
 #import "ParentViewController.h"
 #import "PieChatView.h"
 
-@interface PetHealthDetailViewController : ParentViewController
+@interface PetHealthDetailViewController : ParentViewController<actionDelegate>
 
 
 @property (nonatomic, strong) PieChatView *pieview;

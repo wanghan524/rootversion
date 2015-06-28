@@ -12,6 +12,7 @@
 #import "Singleton.h"
 #import "PCPetCentricSvc.h"
 #import "AppDelegate.h"
+#import "StockistsWebviewViewController.h"
 
 @interface NextPetFriendlyPlacesViewController ()
 
@@ -94,6 +95,15 @@
     [self.navigationController pushViewController:resultPetVC animated:YES];
     
     
+}
+
+- (void)nextButtonClickWith:(NSString *)flagString{
+    StockistsWebviewViewController *stockWebVC = [[StockistsWebviewViewController alloc] init];
+    stockWebVC.webString = @"http://www.pet.co.nz/dog/food-2/filter/pro-plan-2-b-70";
+    
+    //[self presentViewController:stockWebVC animated:NO completion:nil];
+    
+    [self.navigationController pushViewController:stockWebVC animated:YES];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

@@ -35,4 +35,8 @@
 @property (nonatomic, retain) UIView *progressBackgroundView;
 
 +(BOOL)isVersion6AndBelow;
+
+- (void) removeLocalNotication;
+
+- (void)createLocalNotification;
 @end

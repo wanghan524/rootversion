@@ -12,6 +12,8 @@
 #import "Categories.h"
 #import "ResultPetFriendlyPlacesViewController.h"
 
+
+
 @interface NextPetFriendlyPlacesViewController : ParentViewController{
     SubCategoriesTableViewController    *subCategoriesTableViewController;
     UILabel                             *lblHeading;

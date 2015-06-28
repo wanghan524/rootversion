@@ -11,6 +11,11 @@
 
 @protocol SubCategoriesTableViewControllerDelegate <NSObject>
 -(void)itemSelected:(Categories*)category;
+
+
+- (void)nextButtonClickWith:(NSString *)flagString;
+
+
 @end
 
 @interface SubCategoriesTableViewController : UITableViewController {

@@ -43,6 +43,38 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     
+    NSUserDefaults *users = [NSUserDefaults standardUserDefaults];
+    
+    if ([users stringForKey:@"first1"] == nil) {
+        
+        //实例化一个NSDateFormatter对象
+        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+        //设定时间格式,这里可以设置成自己需要的格式
+        [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+        //用[NSDate date]可以获取系统当前时间
+        NSString *currentDateStr = [dateFormatter stringFromDate:[NSDate date]];
+        
+        [users setObject:currentDateStr forKey:@"time"];
+        [users setObject:@"first" forKey:@"first1"];
+    }
+    
+    NSString *nowDate = [users objectForKey:@"time"];
+    
+    
+    
+    //NSString *nowString = nowDate.description;
+    
+    NSString *timeString = [self intervalSinceNow:nowDate];
+    
+    
+    if ([timeString containsString:@"天"]) {
+        NSInteger judgeDay = [[[timeString componentsSeparatedByString:@"天"] objectAtIndex:0] integerValue];
+        
+        if (judgeDay >= 30) {
+            [self createLocalNotification];
+        }
+    }
+    DLog(@"timestring :%@  time : %@  %@  %@",timeString,[users objectForKey:@"time"],nowDate,[NSDate date]);
     
     grobleSingleton = [GrobleSingleton sharedGlobleInstance];
     
@@ -250,5 +282,212 @@ void uncaughtExceptionHandler(NSException *exception) {
     }];
     
 }
-@end 
+
+
+- (void)createLocalNotification {
+    
+    
+    if ([UIApplication instancesRespondToSelector:@selector(registerUserNotificationSettings:)]) {
+        [[UIApplication sharedApplication] registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert|UIUserNotificationTypeSound categories:nil]];
+    }
+    // 创建一个本地推送
+    
+    UILocalNotification *notification = [[UILocalNotification alloc] init];
+    
+    
+    
+    if (notification != nil) {
+        
+        // 设置推送时间
+        
+        
+        notification.fireDate = [[[NSDate alloc] init] dateByAddingTimeInterval:5];;
+        
+        
+        // 设置时区
+        
+        
+        notification.timeZone = [NSTimeZone defaultTimeZone];
+        
+        
+//        // 设置重复间隔
+//        
+//        
+//        notification.repeatInterval = kCFCalendarUnitDay;
+        
+        
+//        // 推送声音
+//        
+//        
+//        notification.soundName = UILocalNotificationDefaultSoundName;
+        
+        
+        // 推送内容
+        
+        
+        notification.alertBody = @"YOU CAN DO SOME PET HEALTH COMPASS!";
+        
+        
+        //显示在icon上的红色圈中的数子
+        
+        
+        notification.applicationIconBadgeNumber = 1;
+        
+        
+        //设置userinfo 方便在之后需要撤销的时候使用
+        
+        
+        NSDictionary *info = [NSDictionary dictionaryWithObject:@"name"forKey:@"key"];
+        
+        
+        notification.userInfo = info;
+        
+        
+        //添加推送到UIApplication       
+        
+        
+        UIApplication *app = [UIApplication sharedApplication];
+        
+        
+        [app scheduleLocalNotification:notification];
+        
+    }
+    
+}
+
+- (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"NOTIFICATION" message:notification.alertBody delegate:nil cancelButtonTitle:@"YES" otherButtonTitles:nil];
+    [alert show];
+    
+    application.applicationIconBadgeNumber -= 1;
+}
+
+
+- (void) removeLocalNotication {
+    
+    // 获得 UIApplication
+    
+    UIApplication *app = [UIApplication sharedApplication];
+    
+    //获取本地推送数组
+    
+    NSArray *localArray = [app scheduledLocalNotifications];
+    
+    //声明本地通知对象
+    
+    UILocalNotification *localNotification;
+    
+    if (localArray) {
+        
+        
+        for (UILocalNotification *noti in localArray) {
+            
+            
+            NSDictionary *dict = noti.userInfo;
+            
+            
+            if (dict) {
+                
+                
+                NSString *inKey = [dict objectForKey:@"key"];
+                
+                
+                if ([inKey isEqualToString:@"name"]) {
+                    
+                    
+                    if (localNotification){
+                        
+                        
+                    
+                        localNotification = nil;
+                        
+                    }
+                    
+                    break;
+                    
+                    
+                }
+                
+                
+            }
+            
+            
+        }
+        
+        
+        //判断是否找到已经存在的相同key的推送
+        
+        
+        if (!localNotification) {
+            
+            
+            //不存在初始化
+            
+            
+            localNotification = [[UILocalNotification alloc] init];
+            
+            
+        }
+        
+        
+        
+        
+        if (localNotification) {
+            
+            
+            //不推送 取消推送
+            
+            
+            [app cancelLocalNotification:localNotification];
+            
+        
+            
+            
+            return;
+            
+            
+        }
+        
+    }
+    
+}
+
+- (NSString *)intervalSinceNow: (NSString *) theDate
+{
+    
+    NSDateFormatter *date=[[NSDateFormatter alloc] init];
+    [date setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+    NSDate *d=[date dateFromString:theDate];
+    
+    NSTimeInterval late=[d timeIntervalSince1970]*1;
+    
+    
+    NSDate* dat = [NSDate dateWithTimeIntervalSinceNow:0];
+    NSTimeInterval now=[dat timeIntervalSince1970]*1;
+    NSString *timeString=@"";
+    
+    NSTimeInterval cha=now-late;
+    
+    if (cha/3600<1) {
+        timeString = [NSString stringWithFormat:@"%f", cha/60];
+        timeString = [timeString substringToIndex:timeString.length-7];
+        timeString=[NSString stringWithFormat:@"%@分钟前", timeString];
+        
+    }
+    if (cha/3600>1&&cha/86400<1) {
+        timeString = [NSString stringWithFormat:@"%f", cha/3600];
+        timeString = [timeString substringToIndex:timeString.length-7];
+        timeString=[NSString stringWithFormat:@"%@小时前", timeString];
+    }
+    if (cha/86400>1)
+    {
+        timeString = [NSString stringWithFormat:@"%f", cha/86400];
+        timeString = [timeString substringToIndex:timeString.length-7];
+        timeString=[NSString stringWithFormat:@"%@天前", timeString];
+        
+    }
+    
+    return timeString;
+}
+@end
 

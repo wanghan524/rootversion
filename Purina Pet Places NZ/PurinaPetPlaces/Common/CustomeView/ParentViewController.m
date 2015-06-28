@@ -85,7 +85,7 @@ CGFloat navHeight;
     [backGroundView addSubview:self.backButton];
     
     CGPoint point = self.view.center;
-    [self.petPlaceImageView setFrame:CGRectMake(point.x - 46, CGRectGetMaxY(self.lineImageView.frame) + 5, 92, 27)];
+    [self.petPlaceImageView setFrame:CGRectMake(point.x - 45, CGRectGetMaxY(self.lineImageView.frame) + 5, 90, 33)];
     self.petPlaceImageView.image = [UIImage imageNamed:@"petcentric2-logo.png"];
     //[self.petPlaceImageView setBackgroundColor:[UIColor blueColor]];
     [backGroundView addSubview:self.petPlaceImageView];

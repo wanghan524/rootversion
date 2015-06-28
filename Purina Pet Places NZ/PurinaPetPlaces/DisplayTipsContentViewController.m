@@ -29,7 +29,7 @@
     
     self.view.backgroundColor = [UIColor colorWithRed:242/255.0 green:238/255.0 blue:223/255.0 alpha:1];
     
-    headerImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 64, SCREEN_WIDTH, 200)];
+    headerImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 64, SCREEN_WIDTH, (506 * SCREEN_WIDTH) / 750.0)];
     
     if ([self.currentCategory isEqualToString:@"General"]) {
         headerImageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"tips-articles-general%d.jpg",self.indexNumber + 1]];
@@ -48,19 +48,20 @@
     
     
     
-    titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 200 / 2.0 - 20, SCREEN_WIDTH, 40)];
+    titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 200 / 2.0 - 30, SCREEN_WIDTH, 60)];
     titleLabel.text = [[self.DisplayTipsCurrent objectAtIndex:self.indexNumber] objectAtIndex:0];
+    titleLabel.numberOfLines = 0;
     titleLabel.textColor = [UIColor whiteColor];
     titleLabel.textAlignment = NSTextAlignmentCenter;
     titleLabel.font = [UIFont fontWithName:@"Antenna" size:22];
     [headerImageView addSubview:titleLabel];
     
     
-    UIView *contentBackView = [[UIView alloc] initWithFrame:CGRectMake(0, 64 + 200, SCREEN_WIDTH, SCREEN_HEIGHT - 64 - 200 - 60)];
+    UIView *contentBackView = [[UIView alloc] initWithFrame:CGRectMake(0, 64 + (506 * SCREEN_WIDTH) / 750.0, SCREEN_WIDTH, SCREEN_HEIGHT - 64 - 200 - 60)];
     contentBackView.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:contentBackView];
     
-    contentLabel = [[UILabel alloc] initWithFrame:CGRectMake(40, 0, SCREEN_WIDTH - 80, SCREEN_HEIGHT - 64 - 200 - 60)];
+    contentLabel = [[UILabel alloc] initWithFrame:CGRectMake(40, 0, SCREEN_WIDTH - 80, SCREEN_HEIGHT - 64 - (506 * SCREEN_WIDTH) / 750.0 - 60)];
     contentLabel.text = [[self.DisplayTipsCurrent objectAtIndex:self.indexNumber] objectAtIndex:1];
     contentLabel.numberOfLines = 0;
     

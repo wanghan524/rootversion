@@ -79,29 +79,30 @@
     if (self.resultMutArray == nil) {
         self.resultMutArray = [[NSMutableArray alloc] init];
     }
-    NSArray *segmentAllArray =  @[@"weight-management",@"sensitive-system",@"active",@"hair-ball",@"urinary-tract",@"indoor"];
-    
-    self.fitSegmentMutArray = [[NSMutableArray alloc] initWithArray:segmentAllArray];
-    //这里面是判断选择的食物的
+        //这里面是判断选择的食物的
     
     for (NSDictionary *everyInfoDic in globleSingleton.selectedArray) {
         NSString *typeString = [everyInfoDic objectForKey:@"pet_type"];
         
+        DLog(@"pet_type :%@",typeString);
+        
         if ([globleSingleton.globleCategory isEqualToString:typeString]) {
             [self.finalSelectContentArray addObject:everyInfoDic];
             [self.resultMutArray addObject:everyInfoDic];
+            
+            DLog(@"finalSelection : %@",self.finalSelectContentArray);
         }
         
     }
     
     if ([globleSingleton.globleCategory isEqualToString:@"dog"]) {
-        self.allSelectNameArray = @[@"age",@"I'm looking for",@"Size",@"Does your pet need specialty food?",@"Sort by price"];
+        self.allSelectNameArray = @[@"Select Profile",@"Age",@"I'm looking for",@"Size",@"Does your pet need specialty food?",@"Sort by price"];
         
-        self.allSelectContontArray = @[@[@"puppy",@"adult",@"senior"],@[@"Wet",@"Dry"],@[@"Toy",@"Small",@"Medium",@"Large",@"Giant"],@[@"Weight-Management",@"Sensitive-System",@"Active",@"Hair-Ball",@"Urinary-Tract",@"Indoor"],@[@"$$",@"$$$",@"$$$$",@"See All"]];
+        self.allSelectContontArray = @[@[@"Cassius",@"Miffy",@"Jazz"],@[@"puppy",@"adult",@"senior"],@[@"Wet/canned dog food",@"Dry dog food"],@[@"Toy(up to 3.5kg)",@"Small(up to 10kg)",@"Medium(10kg - 22kg)",@"Large(22kg-45kg)",@"Giant(45+kg)"],@[@"Weight Management",@"Sensitive System",@"Active & Performance"],@[@"$$",@"$$$",@"$$$$",@"See All"]];
     }else{
-       self.allSelectNameArray = @[@"age",@"I'm looking for",@"Does your pet need specialty food?",@"Sort by price"];
+       self.allSelectNameArray = @[@"Select Profile",@"age",@"I'm looking for",@"Does your pet need specialty food?",@"Sort by price"];
         
-        self.allSelectContontArray = @[@[@"puppy",@"adult",@"senior"],@[@"Wet",@"Dry"],@[@"Weight-Management",@"Sensitive-System",@"Active",@"Hair-Ball",@"Urinary-Tract",@"Indoor"],@[@"$$",@"$$$",@"$$$$",@"See All"]];
+        self.allSelectContontArray = @[@[@"Cassius",@"Miffy",@"Jazz"],@[@"puppy",@"adult",@"senior"],@[@"Wet/canned cat food",@"Dry cat food"],@[@"Weight Management",@"Sensitive System",@"Indoor Cat",@"Hairball Formula",@"Urinary Tract Health"],@[@"$$",@"$$$",@"$$$$",@"See All"]];
     }
     self.view.backgroundColor = [UIColor colorWithRed:242/255.0 green:238/255.0 blue:223/255.0 alpha:1];
     
@@ -141,8 +142,8 @@
     
     for (int i = 0; i < self.allSelectContontArray.count; i ++) {
         UIButton *selectedButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        selectedButton.frame = CGRectMake((SCREEN_WIDTH / 2.0 - 20.5)  + 10 * i, SCREEN_HEIGHT - 50 - 40, 5, 5);
-        selectedButton.tag = 300 + i;
+        selectedButton.frame = CGRectMake((SCREEN_WIDTH / 2.0 - 20.5)  + 10 * i, SCREEN_HEIGHT - 50 - 30, 5, 5);
+        selectedButton.tag = 3000 + i;
         selectedButton.backgroundColor = [UIColor grayColor];
         [selectedButton setBackgroundImage:[UIImage imageNamed:@""] forState:UIControlStateNormal];
         [selectedButton setBackgroundImage:[UIImage imageNamed:@""] forState:UIControlStateSelected];
@@ -170,120 +171,169 @@
     
     nextLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, (SCREEN_WIDTH / 5.0) * 3.5, 50)];
     nextLabel.backgroundColor = [UIColor redColor];
-    nextLabel.text = @"CHECK RESULT";
+    nextLabel.text = @"NEXT";
     nextLabel.textColor = [UIColor whiteColor];
     nextLabel.textAlignment = NSTextAlignmentCenter;
     nextLabel.font = [UIFont fontWithName:@"Antenna" size:15];
     nextLabel.numberOfLines = 0;
     [self.nextButton addSubview:nextLabel];
     
-//    nextImage = [[UIImageView alloc] initWithFrame:CGRectMake((SCREEN_WIDTH / 5.0) * 3.5 - 80, 17.5, 15, 15)];
-//    nextImage.image = [UIImage imageNamed:@"next-btn.jpg"];
-//    [self.nextButton addSubview:nextImage];
+    nextImage = [[UIImageView alloc] initWithFrame:CGRectMake((SCREEN_WIDTH / 5.0) * 3.5 - 80, 17.5, 15, 15)];
+    nextImage.image = [UIImage imageNamed:@"next-btn.jpg"];
+    [self.nextButton addSubview:nextImage];
     
     // Do any additional setup after loading the view.
 }
 
 -(void)nextButtonClick:(UIButton *)sender
 {
-    if (self.selectorMutDic.count == 0) {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil message:@"请选择条件" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
-        [alert show];
-    }else{
-        
-        NSArray *allKeyArray = self.selectorMutDic.allKeys;
-        
-        for (NSString *keyString in allKeyArray) {
-            if ([keyString isEqualToString:@"product_specialty"]) {
-                NSArray *nowResultArray = [self.selectorMutDic objectForKey:keyString];
-                
-                if (self.resultMutArray.count != 0) {
-                    for (NSDictionary *nowDic in self.finalSelectContentArray) {
-                        NSArray *nowSelectArray = [nowDic objectForKey:keyString];
-                        
-                        if (![nowSelectArray isEqualToArray:nowResultArray]) {
-                            [self.resultMutArray removeObject:nowDic];
-                        }
-                        
-                    }
-                }
-                
-                
-                
-                
-            }
-            else if ([keyString isEqualToString:@"product_price"]){
-                NSString *nowPriceString = [self.selectorMutDic objectForKey:keyString];
-                
-                if (self.resultMutArray.count != 0) {
-                    for (NSDictionary *nowDic in self.finalSelectContentArray) {
-                        NSString *nowSelectPriceString = [nowDic objectForKey:keyString];
-                        if ([nowPriceString isEqualToString:@"0-9"]) {
-                            if (![nowSelectPriceString intValue] >= 0 && [nowSelectPriceString intValue] <= 9) {
+    
+    
+    /**
+     
+     
+     
+     if ([globleSingleton.globleCategory isEqualToString:@"dog"]) {
+     self.allSelectNameArray = @[@"Select Profile",@"I'm looking for",@"Size",@"Does your pet need specialty food?",@"Sort by price"];
+     
+     self.allSelectContontArray = @[@[@"puppy",@"adult",@"senior"],@[@"Wet/canned dog food",@"Dry dog food"],@[@"Toy(up to 3.5kg)",@"Small(up to 10kg)",@"Medium(10kg - 22kg)",@"Large(22kg-45kg)",@"Giant(45+kg)"],@[@"Weight Management",@"Sensitive System",@"Active & Performance"],@[@"$$",@"$$$",@"$$$$",@"See All"]];
+     }else{
+     self.allSelectNameArray = @[@"age",@"I'm looking for",@"Does your pet need specialty food?",@"Sort by price"];
+     
+     self.allSelectContontArray = @[@[@"puppy",@"adult",@"senior"],@[@"Wet/canned cat food",@"Dry cat food"],@[@"Weight-Management",@"Sensitive-System",@"Active",@"Hair-Ball",@"Urinary-Tract",@"Indoor"],@[@"$$",@"$$$",@"$$$$",@"See All"]];
+     }
+     */
+    DLog(@"%lf",selectedScrollView.contentOffset.x);
+    NSInteger nowPage = selectedScrollView.contentOffset.x / self.view.frame.size.width ;
+    if (nowPage == self.allSelectNameArray.count - 1) {
+        if (self.selectorMutDic.count == 0) {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil message:@"请选择条件" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+            [alert show];
+            
+            return;
+        }else{
+            
+            NSArray *allKeyArray = self.selectorMutDic.allKeys;
+            
+            for (NSString *keyString in allKeyArray) {
+                if ([keyString isEqualToString:@"product_specialty"]) {
+                    NSArray *nowResultArray = [self.selectorMutDic objectForKey:keyString];
+                    
+                    if (self.resultMutArray.count != 0) {
+                        for (NSDictionary *nowDic in self.finalSelectContentArray) {
+                            NSArray *nowSelectArray = [nowDic objectForKey:keyString];
+                            
+                            if (![nowSelectArray isEqualToArray:nowResultArray]) {
                                 [self.resultMutArray removeObject:nowDic];
                             }
-                        }
-                        else if ([nowPriceString isEqualToString:@"10-99"]){
-                            if (![nowSelectPriceString intValue] >= 10 && [nowSelectPriceString intValue] <= 99) {
-                                [self.resultMutArray removeObject:nowDic];
-                            }
-                        }
-                        else if ([nowPriceString isEqualToString:@"100-999"]){
-                            if (![nowSelectPriceString intValue] >= 100 && [nowSelectPriceString intValue] <= 999) {
-                                [self.resultMutArray removeObject:nowDic];
-                            }
-                        }
-                        else if ([nowPriceString isEqualToString:@"all"]){
                             
                         }
                         
+                        DLog(@"product_specialty resultMutArray : %@",self.resultMutArray);
+                        
                     }
+                    
+                    
+                    
+                    
+                }
+                else if ([keyString isEqualToString:@"product_price"]){
+                    NSString *nowPriceString = [self.selectorMutDic objectForKey:keyString];
+                    
+                    if (self.resultMutArray.count != 0) {
+                        for (NSDictionary *nowDic in self.finalSelectContentArray) {
+                            NSString *nowSelectPriceString = [nowDic objectForKey:keyString];
+                            if ([nowPriceString isEqualToString:@"0-9"]) {
+                                if (![nowSelectPriceString intValue] >= 0 && [nowSelectPriceString intValue] <= 9) {
+                                    [self.resultMutArray removeObject:nowDic];
+                                }
+                            }
+                            else if ([nowPriceString isEqualToString:@"10-99"]){
+                                if (![nowSelectPriceString intValue] >= 10 && [nowSelectPriceString intValue] <= 99) {
+                                    [self.resultMutArray removeObject:nowDic];
+                                }
+                            }
+                            else if ([nowPriceString isEqualToString:@"100-999"]){
+                                if (![nowSelectPriceString intValue] >= 100 && [nowSelectPriceString intValue] <= 999) {
+                                    [self.resultMutArray removeObject:nowDic];
+                                }
+                            }
+                            else if ([nowPriceString isEqualToString:@"all"]){
+                                
+                            }
+                            
+                        }
+                        
+                        DLog(@"product_price resultMutArray : %@",self.resultMutArray);
+                        
+                    }
+                    
+                    
+                    
+                    
                 }
                 
-                
-                
-                
+                else if ([keyString isEqualToString:@"pet_size"]){
+                    NSString *nowSizeString = [self.selectorMutDic objectForKey:keyString];
+                    if (self.resultMutArray.count != 0) {
+                        for (NSDictionary *nowDic in self.finalSelectContentArray){
+                            NSArray *nowSelectSizeArray = [nowDic objectForKey:keyString];
+                            if (![nowSelectSizeArray containsObject:nowSizeString]) {
+                                [self.resultMutArray removeObject:nowDic];
+                            }
+                        }
+                    }
+                    
+                    DLog(@"pet_size resultMutArray : %@",self.resultMutArray);
+                    
+                }
+                else{
+                    
+                    NSString *nowOtherCategoryString = [self.selectorMutDic objectForKey:keyString];
+                    if (self.resultMutArray.count != 0) {
+                        for (NSDictionary *nowDic in self.finalSelectContentArray) {
+                            NSString *nowSelectOtherCategoryString = [nowDic objectForKey:keyString];
+                            
+                            if (![nowSelectOtherCategoryString isEqualToString:nowOtherCategoryString]) {
+                                [self.resultMutArray removeObject:nowDic];
+                            }
+                            
+                        }
+                    }
+                    
+                    
+                    DLog(@"product_other resultMutArray : %@",self.resultMutArray);
+                    
+                }
             }
             
-            else if ([keyString isEqualToString:@"pet_size"]){
-                NSString *nowSizeString = [self.selectorMutDic objectForKey:keyString];
-                if (self.resultMutArray.count != 0) {
-                    for (NSDictionary *nowDic in self.finalSelectContentArray){
-                        NSArray *nowSelectSizeArray = [nowDic objectForKey:keyString];
-                        if (![nowSelectSizeArray containsObject:nowSizeString]) {
-                            [self.resultMutArray removeObject:nowDic];
-                        }
-                    }
-                }
-            }
-            else{
-                
-                NSString *nowOtherCategoryString = [self.selectorMutDic objectForKey:keyString];
-                if (self.resultMutArray.count != 0) {
-                    for (NSDictionary *nowDic in self.finalSelectContentArray) {
-                        NSString *nowSelectOtherCategoryString = [nowDic objectForKey:keyString];
-                        
-                        if (![nowSelectOtherCategoryString isEqualToString:nowOtherCategoryString]) {
-                            [self.resultMutArray removeObject:nowDic];
-                        }
-                        
-                    }
-                }
-                
-                
-                
-            }
         }
         
+        ProductSelectorViewController *productSelectorVC = [[ProductSelectorViewController alloc] init];
+        productSelectorVC.displayArray = self.resultMutArray;
+        
+        [self.navigationController pushViewController:productSelectorVC animated:YES];
+        
+        
+        DLog(@"\n\n\n\nSELECT DIC : %@   \n%@",self.selectorMutDic,self.resultMutArray);
     }
     
-    ProductSelectorViewController *productSelectorVC = [[ProductSelectorViewController alloc] init];
-    productSelectorVC.displayArray = self.resultMutArray;
+    else if (nowPage == self.allSelectNameArray.count - 2){
+        
+        nextLabel.text = @"CHECK RESULT";
+        nextImage.hidden = YES;
+        
+        [selectedScrollView setContentOffset:CGPointMake(SCREEN_WIDTH * (nowPage + 1), 0)];
+    }
     
-    [self.navigationController pushViewController:productSelectorVC animated:YES];
+    else{
+        nextImage.hidden = NO;
+        [selectedScrollView setContentOffset:CGPointMake(SCREEN_WIDTH * (nowPage + 1), 0)];
+        //selectedScrollView.backgroundColor = [UIColor redColor];
+    }
     
     
-    DLog(@"\n\n\n\nSELECT DIC : %@   \n%@",self.selectorMutDic,self.resultMutArray);
+    
     
 }
 
@@ -317,7 +367,10 @@
     if (tableView == self.menusTable) {
         return 44;
     }
-    return (SCREEN_HEIGHT - 64 - 150 - 50 - 40 - 80 - 30) / 4.0;
+    
+    
+    //DLog(@" table height : %lf ",tableView.frame.size.height);
+    return (tableView.frame.size.height - 80) / 5.0;
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
@@ -328,11 +381,11 @@
     NSArray *titleArray = [[NSArray alloc] init];
 
     if ([globleSingleton.globleCategory isEqualToString:@"dog"]) {
-        titleArray = @[@"age",@"I'm looking for",@"Size",@"Does your pet need specialty food?",@"Sort by price"];
+        titleArray = @[@"Select Profile",@"Age",@"I'm looking for",@"Size",@"Does your pet need specialty food?",@"Sort by price"];
         
         
     }else{
-        titleArray = @[@"age",@"I'm looking for",@"Does your pet need specialty food?",@"Sort by price"];
+        titleArray = @[@"Select Profile",@"Age",@"I'm looking for",@"Does your pet need specialty food?",@"Sort by price"];
     }
     
     
@@ -358,86 +411,85 @@
     NSLog(@"cell lable: %@",cell.textLabel.text);
     if(tableView == self.menusTable)
     {
-    if(self.darkView != nil)
-    {
+        if(self.darkView != nil)
+        {
         
-        clickStatus = !clickStatus;
-        [self.darkView removeFromSuperview];
-        self.darkView = nil;
+            clickStatus = !clickStatus;
+            [self.darkView removeFromSuperview];
+            self.darkView = nil;
         
-    }
+        }
     
     
-    if(indexPath.row == 0)
-    {
-        [self.navigationController popToRootViewControllerAnimated:YES];
-    }else
-        if(indexPath.row == 1)
+        if(indexPath.row == 0)
+        {
+            [self.navigationController popToRootViewControllerAnimated:YES];
+        }
+        else if(indexPath.row == 1)
         {
             
-        }else
-            
-            if (indexPath.row == 2) {
+        }
+        else if (indexPath.row == 2) {
                 
                 
-                photoFunViewController *photoFunVC =  [[photoFunViewController alloc] initWithNibName:@"photoFunViewController" bundle:nil];
-                //[self presentViewController:photoFunVC animated:YES completion:nil];
-                [self.navigationController pushViewController:photoFunVC animated:YES];
-            }
+            photoFunViewController *photoFunVC =  [[photoFunViewController alloc] initWithNibName:@"photoFunViewController" bundle:nil];
+            //[self presentViewController:photoFunVC animated:YES completion:nil];
+            [self.navigationController pushViewController:photoFunVC animated:YES];
+        }
     
-            else if (indexPath.row == 3) {
-                PetFriendlyPlacesViewController *petFriendlyPlacesVC =  [[PetFriendlyPlacesViewController alloc ] init];
+        else if (indexPath.row == 3) {
+            PetFriendlyPlacesViewController *petFriendlyPlacesVC =  [[PetFriendlyPlacesViewController alloc ] init];
                 //[self presentViewController:photoFunVC animated:YES completion:nil];
-                [self.navigationController pushViewController:petFriendlyPlacesVC animated:YES];
-            }
+            [self.navigationController pushViewController:petFriendlyPlacesVC animated:YES];
+        }
     
-            else if (indexPath.row == 4){
-                Singleton *singletonClass = [Singleton sharedInstance];
-                NSArray *currentCategories = [[NSArray alloc] initWithArray:singletonClass.currentCategories];
-                for (Categories *categories in currentCategories) {
-                    NSLog(@"Categories name : %@",categories.CategoryName);
+        else if (indexPath.row == 4){
+            Singleton *singletonClass = [Singleton sharedInstance];
+            NSArray *currentCategories = [[NSArray alloc] initWithArray:singletonClass.currentCategories];
+            for (Categories *categories in currentCategories) {
+                NSLog(@"Categories name : %@",categories.CategoryName);
                     
-                    if ([categories.CategoryName isEqualToString:@"Stockists"]) {
-                        [singletonClass setSelectedCategories:categories];
-                        NextPetFriendlyPlacesViewController *stockists = [[NextPetFriendlyPlacesViewController alloc] init];
-                        stockists.headerImageFlag = categories.CategoryName;
-                        [self.navigationController pushViewController:stockists animated:YES];
+                if ([categories.CategoryName isEqualToString:@"Stockists"]) {
+                    [singletonClass setSelectedCategories:categories];
+                    NextPetFriendlyPlacesViewController *stockists = [[NextPetFriendlyPlacesViewController alloc] init];
+                    stockists.headerImageFlag = categories.CategoryName;
+                    [self.navigationController pushViewController:stockists animated:YES];
                         
-                    }
                 }
-                
-                
             }
-    
-            else if (indexPath.row == 5) {
-                ToolsViewController *toolsVC =  [[ToolsViewController alloc ] init];
                 
-                [self.navigationController pushViewController:toolsVC animated:YES];
-            }
+                
+        }
     
-            else if (indexPath.row == 6){
-                Singleton *singletonClass = [Singleton sharedInstance];
-                NSArray *currentCategories = [[NSArray alloc] initWithArray:singletonClass.currentCategories];
-                for (Categories *categories in currentCategories) {
-                    NSLog(@"Categories name : %@",categories.CategoryName);
+        else if (indexPath.row == 5) {
+            ToolsViewController *toolsVC =  [[ToolsViewController alloc ] init];
+                
+            [self.navigationController pushViewController:toolsVC animated:YES];
+        }
+    
+        else if (indexPath.row == 6){
+            Singleton *singletonClass = [Singleton sharedInstance];
+            NSArray *currentCategories = [[NSArray alloc] initWithArray:singletonClass.currentCategories];
+            for (Categories *categories in currentCategories) {
+                NSLog(@"Categories name : %@",categories.CategoryName);
                     
-                    if ([categories.CategoryName isEqualToString:@"Pet Services"]) {
+                if ([categories.CategoryName isEqualToString:@"Pet Services"]) {
                         [singletonClass setSelectedCategories:categories];
-                        NextPetFriendlyPlacesViewController *stockists = [[NextPetFriendlyPlacesViewController alloc] init];
-                        stockists.headerImageFlag = categories.CategoryName;
-                        [self.navigationController pushViewController:stockists animated:YES];
+                    NextPetFriendlyPlacesViewController *stockists = [[NextPetFriendlyPlacesViewController alloc] init];
+                    stockists.headerImageFlag = categories.CategoryName;
+                    [self.navigationController pushViewController:stockists animated:YES];
                         
-                    }
                 }
-                
-                
             }
+                
+                
+        }
     
-            else if (indexPath.row == 7) {
-                TipsViewController *tipsVC =  [[TipsViewController alloc ] init];
-                //[self presentViewController:photoFunVC animated:YES completion:nil];
-                [self.navigationController pushViewController:tipsVC animated:YES];
-            }
+        else if (indexPath.row == 7) {
+            TipsViewController *tipsVC =  [[TipsViewController alloc ] init];
+            //[self presentViewController:photoFunVC animated:YES completion:nil];
+            [self.navigationController pushViewController:tipsVC animated:YES];
+        }
     
 //            else if (indexPath.row == 8) {
 //                ProductsViewController *photoFunVC =  [[ProductsViewController alloc ] init];
@@ -460,6 +512,8 @@
         
         
        
+        
+        
         
         
         //进行分类讨论
@@ -515,35 +569,115 @@
              @[@"age",@"I'm looking for",@"Size",@"Does your pet need specialty food?",@"Sort by price"];
              */
             
-            if (tableView.tag == 200) {
+            
+            /**
+             
+             
+             
+             if ([globleSingleton.globleCategory isEqualToString:@"dog"]) {
+             self.allSelectNameArray = @[@"Select Profile",@"I'm looking for",@"Size",@"Does your pet need specialty food?",@"Sort by price"];
+             
+             self.allSelectContontArray = @[@[@"puppy",@"adult",@"senior"],@[@"Wet/canned dog food",@"Dry dog food"],@[@"Toy(up to 3.5kg)",@"Small(up to 10kg)",@"Medium(10kg - 22kg)",@"Large(22kg-45kg)",@"Giant(45+kg)"],@[@"Weight Management",@"Sensitive System",@"Active & Performance"],@[@"$$",@"$$$",@"$$$$",@"See All"]];
+             }else{
+             self.allSelectNameArray = @[@"age",@"I'm looking for",@"Does your pet need specialty food?",@"Sort by price"];
+             
+             self.allSelectContontArray = @[@[@"puppy",@"adult",@"senior"],@[@"Wet/canned cat food",@"Dry cat food"],@[@"Weight-Management",@"Sensitive-System",@"Active",@"Hair-Ball",@"Urinary-Tract",@"Indoor"],@[@"$$",@"$$$",@"$$$$",@"See All"]];
+             }
+             */
+            
+            /**
+             
+             if ([globleSingleton.globleCategory isEqualToString:@"dog"]) {
+             self.allSelectNameArray = @[@"Select Profile",@"Age",@"I'm looking for",@"Size",@"Does your pet need specialty food?",@"Sort by price"];
+             
+             self.allSelectContontArray = @[@[@"Cassius",@"Miffy",@"Jazz"],@[@"puppy",@"adult",@"senior"],@[@"Wet/canned dog food",@"Dry dog food"],@[@"Toy(up to 3.5kg)",@"Small(up to 10kg)",@"Medium(10kg - 22kg)",@"Large(22kg-45kg)",@"Giant(45+kg)"],@[@"Weight Management",@"Sensitive System",@"Active & Performance"],@[@"$$",@"$$$",@"$$$$",@"See All"]];
+             }else{
+             self.allSelectNameArray = @[@"Select Profile",@"age",@"I'm looking for",@"Does your pet need specialty food?",@"Sort by price"];
+             
+             self.allSelectContontArray = @[@[@"Cassius",@"Miffy",@"Jazz"],@[@"puppy",@"adult",@"senior"],@[@"Wet/canned cat food",@"Dry cat food"],@[@"Weight Management",@"Sensitive System",@"Indoor Cat",@"Hairball Formula",@"Urinary Tract Health"],@[@"$$",@"$$$",@"$$$$",@"See All"]];
+             }
+             
+             */
+            
+            if (tableView.tag == 201) {
                 UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
                 
                 //NSDictionary *ageDic = [[NSDictionary alloc] initWithObjectsAndKeys:[cell.textLabel.text lowercaseString], @"pet_age",nil];
                 //NSLog(@"ageDic : %@",ageDic);
                 //[self.selectorMutArray addObject:ageDic];
+            
+                
+                
+                
+                
                 [self.selectorMutDic setObject:[cell.textLabel.text lowercaseString] forKey:@"pet_age"];
                 
-            }
-            
-            if (tableView.tag == 201) {
-                UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-                
-//                NSDictionary *productTypeDic = [[NSDictionary alloc] initWithObjectsAndKeys:[cell.textLabel.text lowercaseString],@"product_type", nil];
-//                [self.selectorMutArray addObject:productTypeDic];
-                
-                [self.selectorMutDic setObject:[cell.textLabel.text lowercaseString] forKey:@"product_type"];
             }
             
             if (tableView.tag == 202) {
                 UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
                 
+//                NSDictionary *productTypeDic = [[NSDictionary alloc] initWithObjectsAndKeys:[cell.textLabel.text lowercaseString],@"product_type", nil];
+//                [self.selectorMutArray addObject:productTypeDic];
+                
+                NSString *typeString;
+                
+                if ([globleSingleton.globleCategory isEqualToString:@"dog"]) {
+                    if ([cell.textLabel.text isEqualToString:@"Wet/canned dog food"]) {
+                        typeString = @"wet";
+                    }
+                    
+                    else if ([cell.textLabel.text isEqualToString:@"Dry dog food"]) {
+                        typeString = @"dry";
+                    }
+                }
+                else{
+                    if ([cell.textLabel.text isEqualToString:@"Wet/canned cat food"]) {
+                        typeString = @"wet";
+                    }
+                    
+                    else if ([cell.textLabel.text isEqualToString:@"Dry cat food"]) {
+                        typeString = @"dry";
+                    }
+                }
+                
+                [self.selectorMutDic setObject:typeString forKey:@"product_type"];
+            }
+            
+            if (tableView.tag == 203) {
+                UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+                
 //                NSDictionary *sizeDic = [[NSDictionary alloc] initWithObjectsAndKeys:[cell.textLabel.text lowercaseString],@"pet_size", nil];
 //                [self.selectorMutArray addObject:sizeDic];
                 
-                [self.selectorMutDic setObject:[cell.textLabel.text lowercaseString] forKey:@"pet_size"];
+                
+                NSString *sizeString;
+                
+                
+                if ([cell.textLabel.text isEqualToString:@"Toy(up to 3.5kg)"]) {
+                    sizeString = @"toy";
+                }
+                
+                else if ([cell.textLabel.text isEqualToString:@"Small(up to 10kg)"]) {
+                    sizeString = @"small";
+                }
+                
+                else if ([cell.textLabel.text isEqualToString:@"Medium(10kg - 22kg)"]) {
+                    sizeString = @"medium";
+                }
+                
+                else if ([cell.textLabel.text isEqualToString:@"Large(22kg-45kg)"]) {
+                    sizeString = @"large";
+                }
+                
+                else if ([cell.textLabel.text isEqualToString:@"Giant(45+kg)"]) {
+                    sizeString = @"giant";
+                }
+                
+                [self.selectorMutDic setObject:sizeString forKey:@"pet_size"];
             }
             
-            if (tableView.tag == 204) {
+            if (tableView.tag == 205) {
                 NSString *priceString;
                 
                 if (indexPath.row == 0) {
@@ -573,22 +707,47 @@
              */
             
             
-            if (tableView.tag == 200) {
+            if (tableView.tag == 201) {
                 UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+                
+                
+               
                 
                 [self.selectorMutDic setObject:[cell.textLabel.text lowercaseString] forKey:@"pet_age"];
                 
             }
             
             
-            if (tableView.tag == 201) {
+            if (tableView.tag == 202) {
                 UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
                 
-                [self.selectorMutDic setObject:[cell.textLabel.text lowercaseString] forKey:@"product_type"];
+                
+                NSString *typeString;
+                
+                if ([globleSingleton.globleCategory isEqualToString:@"dog"]) {
+                    if ([cell.textLabel.text isEqualToString:@"Wet/canned dog food"]) {
+                        typeString = @"wet";
+                    }
+                    
+                    else if ([cell.textLabel.text isEqualToString:@"Dry dog food"]) {
+                        typeString = @"dry";
+                    }
+                }
+                else{
+                    if ([cell.textLabel.text isEqualToString:@"Wet/canned cat food"]) {
+                        typeString = @"wet";
+                    }
+                    
+                    else if ([cell.textLabel.text isEqualToString:@"Dry cat food"]) {
+                        typeString = @"dry";
+                    }
+                }
+                
+                [self.selectorMutDic setObject:typeString forKey:@"product_type"];
             }
             
             
-            if (tableView.tag == 203) {
+            if (tableView.tag == 204) {
                 NSString *priceString;
                 
                 if (indexPath.row == 0) {
@@ -642,7 +801,7 @@
         iconTemplateView.image = [UIImage imageNamed:imageNameArray[indexPath.row]];
         [cell.contentView addSubview:iconTemplateView];
         [cell setIndentationLevel:4];
-        cell.textLabel.font = [UIFont fontWithName:@"Antenna" size:10];
+        cell.textLabel.font = [UIFont fontWithName:@"Antenna" size:15];
         cell.textLabel.text = [self.menuArray objectAtIndex:indexPath.row];
     }else{
         NSArray *nowContentArray = [[NSArray alloc] init];
@@ -663,12 +822,12 @@
         
         
         if ([globleSingleton.globleCategory isEqualToString:@"dog"]) {
-            if(tableView.tag == 203){
+            if(tableView.tag == 204){
                 
-                UILabel *contentLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, (SCREEN_WIDTH / 3.0) * 2, (SCREEN_HEIGHT - 64 - 150 - 50 - 40 - 80 - 30) / 3.0)];
+                UILabel *contentLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, (SCREEN_WIDTH / 3.0) * 2, (tableView.frame.size.height - 80) / 5.0)];
                 contentLabel.textColor = [UIColor grayColor];
                 contentLabel.text = [nowContentArray objectAtIndex:indexPath.row];
-                contentLabel.font = [UIFont fontWithName:@"Antenna" size:13];
+                contentLabel.font = [UIFont fontWithName:@"Antenna" size:15];
                 contentLabel.textAlignment = NSTextAlignmentCenter;
                 [cell.contentView addSubview:contentLabel];
                 
@@ -676,7 +835,7 @@
                 
                 UISegmentedControl *seg = [[UISegmentedControl alloc] initWithItems:titleArr];
                 seg.tag = 300 + indexPath.row;
-                seg.frame = CGRectMake((SCREEN_WIDTH / 3.0) * 2, 10, (SCREEN_WIDTH / 3.0) - 20, (SCREEN_HEIGHT - 64 - 150 - 50 - 40 - 80 - 30) / 3.0 - 20);
+                seg.frame = CGRectMake((SCREEN_WIDTH / 3.0) * 2, 3, (SCREEN_WIDTH / 3.0) - 20, (tableView.frame.size.height - 80) / 5.0 - 6);
                 seg.selectedSegmentIndex = 0;
                 seg.tintColor = [UIColor redColor];
                 [seg addTarget:self action:@selector(segmentValueChanged:) forControlEvents:UIControlEventValueChanged];
@@ -695,16 +854,16 @@
                 cell.textLabel.text = [nowContentArray objectAtIndex:indexPath.row];
                 cell.textLabel.textAlignment = NSTextAlignmentCenter;
                 cell.textLabel.textColor = [UIColor grayColor];
-                cell.textLabel.font = [UIFont fontWithName:@"Antenna" size:10];
+                cell.textLabel.font = [UIFont fontWithName:@"Antenna" size:15];
             }
 
         }else{
-            if(tableView.tag == 202){
+            if(tableView.tag == 203){
                 
-                UILabel *contentLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, (SCREEN_WIDTH / 3.0) * 2, (SCREEN_HEIGHT - 64 - 150 - 50 - 40 - 80 - 30) / 3.0)];
+                UILabel *contentLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, (SCREEN_WIDTH / 3.0) * 2, (tableView.frame.size.height - 80) / 5.0)];
                 contentLabel.textColor = [UIColor grayColor];
                 contentLabel.text = [[self.allSelectContontArray objectAtIndex:tableView.tag-200] objectAtIndex:indexPath.row];
-                contentLabel.font = [UIFont fontWithName:@"Antenna" size:13];
+                contentLabel.font = [UIFont fontWithName:@"Antenna" size:15];
                 contentLabel.textAlignment = NSTextAlignmentCenter;
                 [cell.contentView addSubview:contentLabel];
                 
@@ -712,7 +871,7 @@
                 
                 UISegmentedControl *seg = [[UISegmentedControl alloc] initWithItems:titleArr];
                 seg.tag = 300 + indexPath.row;
-                seg.frame = CGRectMake((SCREEN_WIDTH / 3.0) * 2, 10, (SCREEN_WIDTH / 3.0) - 20, (SCREEN_HEIGHT - 64 - 150 - 50 - 40 - 80 - 30) / 3.0 - 20);
+                seg.frame = CGRectMake((SCREEN_WIDTH / 3.0) * 2, 3, (SCREEN_WIDTH / 3.0) - 20, (tableView.frame.size.height - 80) / 5.0 - 6);
                 seg.selectedSegmentIndex = 0;
                 seg.tintColor = [UIColor redColor];
                 [seg addTarget:self action:@selector(segmentValueChanged:) forControlEvents:UIControlEventValueChanged];
@@ -730,7 +889,7 @@
                 }
                 cell.textLabel.textAlignment = NSTextAlignmentCenter;
                 cell.textLabel.textColor = [UIColor grayColor];
-                cell.textLabel.font = [UIFont fontWithName:@"Antenna" size:10];
+                cell.textLabel.font = [UIFont fontWithName:@"Antenna" size:15];
             }
 
         }
@@ -786,24 +945,48 @@
     
     NSString *segmentNameString;
     
-    if (seg.tag == 300) {
-        segmentNameString = @"weight-management";
+    if ([globleSingleton.globleCategory isEqualToString:@"dog"]) {
+        
+        NSArray *segmentAllArray =  @[@"weight-management",@"sensitive-system",@"active"];
+        
+        self.fitSegmentMutArray = [[NSMutableArray alloc] initWithArray:segmentAllArray];
+
+        if (seg.tag == 300) {
+            segmentNameString = @"weight-management";
+        }
+        if (seg.tag == 301) {
+            segmentNameString = @"sensitive-system";
+        }
+        if (seg.tag == 302) {
+            segmentNameString = @"active";
+        }
     }
-    if (seg.tag == 301) {
-        segmentNameString = @"sensitive-system";
+    else{
+        
+        
+        NSArray *segmentAllArray =  @[@"weight-management",@"sensitive-system",@"active",@"hair-ball",@"urinary-tract",@"indoor"];
+        
+        self.fitSegmentMutArray = [[NSMutableArray alloc] initWithArray:segmentAllArray];
+
+        if (seg.tag == 300) {
+            segmentNameString = @"weight-management";
+        }
+        if (seg.tag == 301) {
+            segmentNameString = @"sensitive-system";
+        }
+        if (seg.tag == 302) {
+            segmentNameString = @"indoor";
+        }
+        if (seg.tag == 303) {
+            segmentNameString = @"hair-ball";
+        }
+        if (seg.tag == 304) {
+            segmentNameString = @"urinary-tract";
+        }
     }
-    if (seg.tag == 302) {
-        segmentNameString = @"active";
-    }
-    if (seg.tag == 303) {
-        segmentNameString = @"hair-ball";
-    }
-    if (seg.tag == 304) {
-        segmentNameString = @"urinary-tract";
-    }
-    if (seg.tag == 305) {
-        segmentNameString = @"indoor";
-    }
+    
+    
+    
     
     
     if(seg.selectedSegmentIndex == 0){

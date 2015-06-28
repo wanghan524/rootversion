@@ -11,6 +11,8 @@
 
 
 
+
+
 @interface BptPieChart : UIView{
 
 @private
@@ -359,10 +361,17 @@
 
 #pragma mark - 得到颜色值
 - (void)getRGBForIndex:(int)index red:(float *)red green:(float *)green blue:(float *)blue{
+    
+    if (index > 3) {
+        index = index - 4;
+    }
     int i = 6 - index;
     *red = 0.5  + 0.5 *cos(i);
     *green = 0.5 + 0.5 * sin(i);
     *blue = 0.5 + 0.5 * cos(1.5 * i + M_PI / 4.0);
+    
+    
+    DLog(@"color red : %lf  green : %lf  blue : %lf  index : %d",*red,*green,*blue,index);
 }
 
 - (float)pointAtIndex:(int)index{
@@ -387,6 +396,12 @@ static float deltaAngle;
     CGFloat radius;
     BptPieChart *chart;
     NSArray *nameArr;
+    
+    CGPoint clickPoint;
+    
+    int clickNum;
+    
+    int shadowNum;
 }
 @synthesize startTransform,container,cloves,wheelCenter;
 @synthesize pie;
@@ -430,8 +445,15 @@ static float deltaAngle;
 #pragma mark - 点击圆形区域
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
     
+    
+    
+//    UIGestureRecognizer *gesture = [[UITapGestureRecognizer alloc] init];
+//    [gesture addTarget:self action:@selector(hideWindew:)];
+//    [_uiWindow addGestureRecognizer:gesture];
+    
     UITouch *touch = [touches anyObject];
     CGPoint delta = [touch locationInView:self];
+    clickPoint = delta;
     
     CGMutablePathRef path = CGPathCreateMutable();
     CGPathAddArc(path, NULL, centerX, centerY, radius, 0 ,2 * M_PI, 0);
@@ -440,6 +462,15 @@ static float deltaAngle;
     
     if (CGPathContainsPoint(path, NULL, delta, NO)) {
         NSLog(@"包含这个点");
+        
+        MoreActionView *view = [[MoreActionView alloc]initWithFrame:[UIScreen mainScreen].bounds];
+        view.delegate = self;
+        
+        _uiWindow = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+        _uiWindow.windowLevel = UIWindowLevelNormal;
+        _uiWindow.backgroundColor = [UIColor clearColor];
+        _uiWindow.hidden = NO;
+        [_uiWindow addSubview:view];
         
         //[self setNeedsDisplay];
         float distanceX = delta.x - centerX;
@@ -456,23 +487,43 @@ static float deltaAngle;
         if ((centerY - delta.y) > 0 ) {
             if(angle >= 67.5 && angle <= 90.0f){
                 index = 0;
+                
+                [self.delegate transformIndex:index];
                 NSLog(@"0");
+                clickNum = 0;
+                shadowNum = index;
             }
             else if (angle >= 22.5 && angle < 67.5){
                 index = 7;
+                
+                [self.delegate transformIndex:index];
                 NSLog(@"1");
+                clickNum = 1;
+                shadowNum = index;
             }
             else if (angle >= -22.5 && angle < 22.5){
                 index = 6;
+                
+                [self.delegate transformIndex:index];
                 NSLog(@"2");
+                clickNum = 2;
+                shadowNum = index;
             }
             else if (angle >= -67.5 && angle < -22.5){
                 index = 5;
+                
+                [self.delegate transformIndex:index];
                 NSLog(@"3");
+                clickNum = 3;
+                shadowNum = index;
             }
             else if (angle >= -90.0 && angle < -67.5){
                 index = 4;
+                
+                [self.delegate transformIndex:index];
                 NSLog(@"4");
+                clickNum = 4;
+                shadowNum = index;
             }
             
                 
@@ -482,27 +533,49 @@ static float deltaAngle;
             
             if(angle >= 67.5 && angle <= 90.0f){
                 index = 0;
+                
+                [self.delegate transformIndex:index];
                 NSLog(@"0");
+                clickNum = 0;
+                shadowNum = index;
             }
             else if (angle >= 22.5 && angle < 67.5){
                 index = 1;
+                
+                [self.delegate transformIndex:index];
                 NSLog(@"7");
+                clickNum = 7;
+                shadowNum = index;
             }
             else if (angle >= -22.5 && angle < 22.5){
                 index = 2;
+                
+                [self.delegate transformIndex:index];
                 NSLog(@"6");
+                clickNum = 6;
+                shadowNum = index;
             }
             else if (angle >= -67.5 && angle < -22.5){
                 index = 3;
+                
+                [self.delegate transformIndex:index];
                 NSLog(@"5");
+                clickNum = 5;
+                shadowNum = index;
             }
             else if (angle >= -90.0 && angle < -67.5){
                 index = 4;
+                
+                [self.delegate transformIndex:index];
                 NSLog(@"4");
+                clickNum = 4;
+                shadowNum = index;
             }
             
             
         }
+        
+        NSLog(@"click : %ld",clickNum);
         
         
         
@@ -580,6 +653,86 @@ static float deltaAngle;
 
 }
 
+- (void)clickPieWithBool:(BOOL)nowBool{
+    _uiWindow.hidden = YES;
+    _uiWindow = nil;
+    
+    if (nowBool) {
+        
+                    UIGraphicsBeginImageContext(CGSizeMake(SCREEN_WIDTH, SCREEN_HEIGHT - 64));
+                    CGContextRef context = UIGraphicsGetCurrentContext();
+                    CGFloat startAngle = 2 * M_PI * shadowNum / 8 - ((22.5) / 180.0 * M_PI);//开始的角度
+                    CGFloat endAngle = 2* M_PI * (shadowNum + 1) / 8 - ((22.5) / 180.0 * M_PI);//结束的角度
+                    NSLog(@"startAngle : %f  endAngle: %f",RADIANS_TO_DEGREES(startAngle),RADIANS_TO_DEGREES(endAngle));
+                    CGMutablePathRef path = CGPathCreateMutable();//创建一个类型为CGMutablePathRef的可变路径，并返回其句柄。每次使用完这个路径，我们都应该为它做善后工作
+        
+                    /*
+        
+                     CGPathAddArc函数是通过圆心和半径定义一个圆，然后通过两个弧度确定一个弧线。注意弧度是以当前坐标环境的X轴开始的。
+        
+                     需要注意的是由于iOS中的坐标体系是和Quartz坐标体系中Y轴相反的，所以iOS UIView在做Quartz绘图时，Y轴已经做了Scale为-1的转换，因此造成CGPathAddArc函数最后一个是否是顺时针的参数结果正好是相反的，也就是说如果设置最后的参数为YES，根据参数定义应该是顺时针的，但实际绘图结果会是逆时针的！
+        
+        
+                     CGContextAddArcToPoint:
+                     它是通过画两个虚拟的线来完成绘图的，这两条线是通过当前CGContextRef的点，和CGContextAddArcToPoint函数本身定义的两个点来完成的。而弧线会从当前CGContextRef的点开始，画到中心圆与第二条线的交点处。这样的画弧方式，在某些情况下可以使CGContextAddArcToPoint函数比CGPathAddArc用起来更加方便些
+                     */
+                    //CGAffineTransform transform = CGAffineTransformMakeRotation((22.5f * M_PI) / 180.0f);
+                    CGPathAddArc(path, NULL, centerX, centerY, radius, startAngle, endAngle, 0);
+                    CGPathAddLineToPoint(path,NULL, centerX, centerY);
+                    CGPathCloseSubpath(path);//关闭该path
+        
+                    //Draw the shadowed slice (画弧形的阴影)
+        
+                    CGContextSaveGState(context);
+                    CGContextAddPath(context, path);
+        
+        
+                    CGContextSetRGBFillColor(context, 0.5, 0.5, 0.5, 0.9);//填充颜色
+                    CGContextFillPath(context);
+                    CGContextRestoreGState(context);
+        
+        
+                    //Draw the left-right gradient(画左右边的渐变)
+        
+                    //Draw the slice outline (画轮廓)
+                    CGContextSaveGState(context);
+                    CGContextAddPath(context, path);
+        
+                    CGContextClip(context);
+                    CGContextAddPath(context, path);
+                    CGContextSetLineWidth(context, 0.5);
+                    UIColor *darken = [UIColor colorWithWhite:0.0 alpha:0.2];
+                    CGContextSetStrokeColorWithColor(context, darken.CGColor);
+                    CGContextStrokePath(context);
+                    CGContextRestoreGState(context);
+        
+                    CGPathRelease(path);
+        
+                  UIImageView *imageView = [[UIImageView alloc]initWithImage:  UIGraphicsGetImageFromCurrentImageContext()];
+                    [self addSubview:imageView];
+        DLog(@"frame : %@",NSStringFromCGRect(imageView.frame));
+        
+                    [chart addLabelForLastName:clickNum];
+        
+        float distanceX = clickPoint.x - centerX;
+        float distanceY = centerY - clickPoint.y;
+        
+//                    CGSize textSize = [nameArr[clickNum] sizeWithFont:[UIFont boldSystemFontOfSize:11]];
+//                    UILabel *lab = [[UILabel alloc]initWithFrame:CGRectMake(imageView.frame.origin.x, imageView.frame.origin.y, textSize.width, textSize.height)];
+//                    lab.center = CGPointMake(centerX+distanceX, centerY+distanceY);
+//                    lab.textColor = [UIColor whiteColor];
+//                    lab.text = nameArr[clickNum];
+//                    [self addSubview:lab];
+//        
+
+    }
+    NSLog(@"成功");
+}
+
+//- (void)hideWindow:(UIGestureRecognizer *)gesture{
+//    _uiWindow.hidden = YES;
+//    _uiWindow = nil;
+//}
 
 /*
 // Only override drawRect: if you perform custom drawing.

@@ -10,6 +10,7 @@
 #import "Categories.h"
 #import <QuartzCore/QuartzCore.h>
 #import "Singleton.h"
+#import "StockistsWebviewViewController.h"
 
 @interface SubCategoriesTableViewController ()
 
@@ -85,23 +86,37 @@
 - (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
     
     if ([self.currentHeaderImageFlag isEqualToString:@"Pet Services"] || [self.currentHeaderImageFlag isEqualToString:@"Stockists"]) {
-        UIImageView *footerImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 50)];
-        footerImageView.backgroundColor = [UIColor redColor];
         
-        UILabel *titleLabel = [[UILabel alloc] initWithFrame:footerImageView.frame];
-        titleLabel.backgroundColor = [UIColor clearColor];
-        titleLabel.text = @"RECOMMEND A PET FRIENDLY PLACE";
-        titleLabel.textAlignment = NSTextAlignmentCenter;
-        titleLabel.font = [UIFont fontWithName:@"Antenna" size:14];
-        titleLabel.textColor = [UIColor whiteColor];
-        [footerImageView addSubview:titleLabel];
-        return footerImageView;
+        
+        UIButton *footerButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        footerButton.frame = CGRectMake(0, 0, SCREEN_WIDTH, 50);
+        footerButton.backgroundColor = [UIColor redColor];
+        [footerButton setTitle:@"RECOMMEND A PET FRIENDLY PLACE" forState:UIControlStateNormal];
+        footerButton.titleLabel.font = [UIFont systemFontOfSize:14];
+        [footerButton addTarget:self action:@selector(footerButtonClick) forControlEvents:UIControlEventTouchUpInside];
+        
+//        UIImageView *footerImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 50)];
+//        footerImageView.backgroundColor = [UIColor redColor];
+//        
+//        UILabel *titleLabel = [[UILabel alloc] initWithFrame:footerImageView.frame];
+//        titleLabel.backgroundColor = [UIColor clearColor];
+//        titleLabel.text = @"RECOMMEND A PET FRIENDLY PLACE";
+//        titleLabel.textAlignment = NSTextAlignmentCenter;
+//        titleLabel.font = [UIFont fontWithName:@"Antenna" size:14];
+//        titleLabel.textColor = [UIColor whiteColor];
+//        [footerImageView addSubview:titleLabel];
+        return footerButton;
     }else{
         return nil;
     }
     
 }
 
+- (void)footerButtonClick{
+    [self.delegate nextButtonClickWith:@""];
+    
+    NSLog(@"footerButton");
+}
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
