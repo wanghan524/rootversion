@@ -13,6 +13,7 @@
 
 
 
+
 @interface BptPieChart : UIView{
 
 @private
@@ -402,12 +403,15 @@ static float deltaAngle;
     int clickNum;
     
     int shadowNum;
+    GrobleSingleton *globleSingleTon;
 }
 @synthesize startTransform,container,cloves,wheelCenter;
 @synthesize pie;
 
 - (id)initWithFrame:(CGRect)frame withNum:(int)num withArray:(NSMutableArray *)array{
     if (self == [super initWithFrame:frame]) {
+        
+        globleSingleTon = [GrobleSingleton sharedGlobleInstance];
         centerX = frame.size.width / 2;
         centerY = frame.size.height / 2;
         radius = centerX < centerY ? centerX : centerY;
@@ -463,14 +467,7 @@ static float deltaAngle;
     if (CGPathContainsPoint(path, NULL, delta, NO)) {
         NSLog(@"包含这个点");
         
-        MoreActionView *view = [[MoreActionView alloc]initWithFrame:[UIScreen mainScreen].bounds];
-        view.delegate = self;
         
-        _uiWindow = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-        _uiWindow.windowLevel = UIWindowLevelNormal;
-        _uiWindow.backgroundColor = [UIColor clearColor];
-        _uiWindow.hidden = NO;
-        [_uiWindow addSubview:view];
         
         //[self setNeedsDisplay];
         float distanceX = delta.x - centerX;
@@ -644,7 +641,28 @@ static float deltaAngle;
 ////            lab.text = nameArr[index];
 ////            [self addSubview:lab];
 //        }
-//        
+        
+        
+//
+        NSString *clickNumber = [NSString stringWithFormat:@"%d",shadowNum];
+        
+        
+        if ([globleSingleTon.pieClickArray containsObject:clickNumber]) {
+            return;
+        }else{
+            [globleSingleTon.pieClickArray addObject:clickNumber];
+        }
+        
+        
+        
+        MoreActionView *view = [[MoreActionView alloc]initWithFrame:[UIScreen mainScreen].bounds];
+        view.delegate = self;
+        
+        _uiWindow = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+        _uiWindow.windowLevel = UIWindowLevelNormal;
+        _uiWindow.backgroundColor = [UIColor clearColor];
+        _uiWindow.hidden = NO;
+        [_uiWindow addSubview:view];
         
     }
     else{
@@ -712,7 +730,7 @@ static float deltaAngle;
                     [self addSubview:imageView];
         DLog(@"frame : %@",NSStringFromCGRect(imageView.frame));
         
-                    [chart addLabelForLastName:clickNum];
+                    [chart addLabelForLastName:shadowNum];
         
         float distanceX = clickPoint.x - centerX;
         float distanceY = centerY - clickPoint.y;
@@ -727,6 +745,10 @@ static float deltaAngle;
 
     }
     NSLog(@"成功");
+}
+
+- (void)dealloc{
+    [globleSingleTon.pieClickArray removeAllObjects];
 }
 
 //- (void)hideWindow:(UIGestureRecognizer *)gesture{

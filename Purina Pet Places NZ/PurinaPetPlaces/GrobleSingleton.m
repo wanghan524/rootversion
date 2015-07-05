@@ -18,6 +18,7 @@ static GrobleSingleton * single = nil;
         single = [[GrobleSingleton alloc] init];
         single.animalArray = [[NSMutableArray alloc] init];
         single.selectedArray = [[NSMutableArray alloc] init];
+        single.pieClickArray = [[NSMutableArray alloc] init];
     });
     return single;
 }

@@ -15,6 +15,8 @@
 
 - (void)nextButtonClickWith:(NSString *)flagString;
 
+- (void)onlineButtonClick;
+
 
 @end
 

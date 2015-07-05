@@ -590,25 +590,36 @@ typedef NS_ENUM(NSUInteger, OPETIONDBTYPE)
     //    }
     if([self.petModelArr count] == 0)
     {
-        [self.petModelArr removeAllObjects];
-        PetItem *mode1 = [[PetItem alloc]init];
-        mode1.name = currentArray[0];
-        mode1.dateTimes = @"2015-05-10 03:42:21";
-        mode1.breed = @"apple";
+//        [self.petModelArr removeAllObjects];
+//        PetItem *mode1 = [[PetItem alloc]init];
+//        mode1.name = currentArray[0];
+//        mode1.dateTimes = @"2015-05-10 03:42:21";
+//        mode1.breed = @"apple";
+//        
+//        PetItem *mode2 = [[PetItem alloc]init];
+//        mode2.name = currentArray[1];
+//        mode2.dateTimes = @"2015-05-10 03:42:21";
+//        mode2.breed = @"bread";
+//        
+//        PetItem *mode3 = [[PetItem alloc]init];
+//        mode3.name = currentArray[2];
+//        mode3.dateTimes = @"2015-05-10 03:42:21";
+//        mode3.breed = @"app";
+//        [self.petModelArr addObject:mode1];
+//        [self.petModelArr addObject:mode2];
+//        [self.petModelArr addObject:mode3];
+        self.one.hidden = YES;
+        self.edit1.hidden = YES;
+        self.pet1.hidden = YES;
         
-        PetItem *mode2 = [[PetItem alloc]init];
-        mode2.name = currentArray[1];
-        mode2.dateTimes = @"2015-05-10 03:42:21";
-        mode2.breed = @"bread";
+        self.two.hidden = YES;
+        self.edit2.hidden = YES;
+        self.pet2.hidden = YES;
         
-        PetItem *mode3 = [[PetItem alloc]init];
-        mode3.name = currentArray[2];
-        mode3.dateTimes = @"2015-05-10 03:42:21";
-        mode3.breed = @"app";
-        [self.petModelArr addObject:mode1];
-        [self.petModelArr addObject:mode2];
-        [self.petModelArr addObject:mode3];
-        
+        self.three.hidden = YES;
+        self.edit3.hidden = YES;
+        self.pet3.hidden = YES;
+//
     }
     globeSingle.animalArray = self.petModelArr;
     
@@ -617,6 +628,11 @@ typedef NS_ENUM(NSUInteger, OPETIONDBTYPE)
         for (int i = 0; i < self.petModelArr.count; i++) {
             PetItem * petItem = self.petModelArr[i];
             if (self.petModelArr.count == 1) {
+                
+                self.one.hidden = NO;
+                self.edit1.hidden = NO;
+                self.pet1.hidden = NO;
+                
                 self.one.text = petItem.name;
                 
                 self.two.hidden = YES;

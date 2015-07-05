@@ -11,6 +11,9 @@
 
 #import "ProductDetailViewController.h"
 
+
+#import "ProductsViewController.h"
+
 @interface ProductSelectorViewController ()<UITableViewDataSource,UITableViewDelegate>{
     GrobleSingleton *globleSingleton;
     
@@ -21,6 +24,8 @@
 @property (nonatomic, strong) UITableView *myTableView;
 
 @property (nonatomic, strong) NSMutableArray *contentArray;
+
+@property (nonatomic, strong) UIButton *productButton;
 
 @end
 
@@ -54,6 +59,8 @@
         displayLabel.font = [UIFont systemFontOfSize:17];
         displayLabel.textAlignment = NSTextAlignmentCenter;
         [self.view addSubview:displayLabel];
+        
+        [self makeBottomButton];
     }else{
 //        self.myTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 64, SCREEN_WIDTH, SCREEN_HEIGHT - 64) style:UITableViewStyleGrouped];
 //        self.myTableView.backgroundColor = [UIColor colorWithRed:242/255.0 green:238/255.0 blue:223/255.0 alpha:1];
@@ -74,14 +81,14 @@
 -(void)makeCollectionView
 {
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc]init];
-    [flowLayout setItemSize:CGSizeMake(SCREEN_WIDTH/2, (SCREEN_HEIGHT - 64 - 70)/((self.contentArray.count)/2))];
+    [flowLayout setItemSize:CGSizeMake(SCREEN_WIDTH/2, (SCREEN_HEIGHT - 64 - 70 - 100)/((self.contentArray.count)/2))];
     [flowLayout setScrollDirection:UICollectionViewScrollDirectionVertical];
     
     flowLayout.headerReferenceSize = CGSizeMake(SCREEN_WIDTH, 50);
     flowLayout.sectionInset = UIEdgeInsetsMake(0, 0, 0, 0);
     flowLayout.minimumInteritemSpacing = 0;
     flowLayout.minimumLineSpacing = 0;
-    self.collectionView = [[UICollectionView alloc]initWithFrame:CGRectMake(0,64, SCREEN_WIDTH, SCREEN_HEIGHT - 64 - 70) collectionViewLayout:flowLayout];
+    self.collectionView = [[UICollectionView alloc]initWithFrame:CGRectMake(0,64, SCREEN_WIDTH, SCREEN_HEIGHT - 64 - 70 - 100) collectionViewLayout:flowLayout];
     self.collectionView.delegate = self;
     self.collectionView.dataSource = self;
     
@@ -120,11 +127,11 @@
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:iden forIndexPath:indexPath];
     if(cell == nil)
     {
-        cell = [[UICollectionViewCell alloc]initWithFrame:CGRectMake(0,0,SCREEN_WIDTH/2 , (SCREEN_HEIGHT - 64 - 70)/3.0)];
+        cell = [[UICollectionViewCell alloc]initWithFrame:CGRectMake(0,0,SCREEN_WIDTH/2 , (SCREEN_HEIGHT - 64 - 70 - 100)/2.0)];
         cell.contentView.backgroundColor = [UIColor whiteColor];
         
     }
-    UIView *backView = [[UIView alloc] initWithFrame:CGRectMake(0,0,SCREEN_WIDTH/2, (SCREEN_HEIGHT - 64 - 70)/3.0)];
+    UIView *backView = [[UIView alloc] initWithFrame:CGRectMake(0,0,SCREEN_WIDTH/2, (SCREEN_HEIGHT - 64 - 70 - 100)/2.0)];
     backView.layer.borderColor = [UIColor grayColor].CGColor;
     backView.layer.borderWidth = 0.3;
     backView.backgroundColor = [UIColor whiteColor];
@@ -175,7 +182,7 @@
 
 -(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    return CGSizeMake(SCREEN_WIDTH/2, (SCREEN_HEIGHT - 64 - 70)/3);
+    return CGSizeMake(SCREEN_WIDTH/2, (SCREEN_HEIGHT - 64 - 70 - 100)/2);
 }
 -(UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
 {
@@ -226,12 +233,27 @@
 
 -(void)makeBottomButton
 {
+    
+    self.productButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [self.productButton setFrame:CGRectMake(0, SCREEN_HEIGHT - 100 - 70, SCREEN_WIDTH, 95)];
+    [self.productButton setTitle:@"ALL PRODUCT" forState:UIControlStateNormal];
+    [self.productButton.titleLabel setFont:[UIFont fontWithName:@"Antenna" size:18]];
+    [self.productButton addTarget:self action:@selector(productButtonClick) forControlEvents:UIControlEventTouchUpInside];
+    [self.productButton setBackgroundColor:[UIColor redColor]];
+    [self.view addSubview:self.productButton];
+    
     self.bottomButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [self.bottomButton setFrame:CGRectMake(0, CGRectGetMaxY(self.collectionView.frame), SCREEN_WIDTH, 70)];
+    [self.bottomButton setFrame:CGRectMake(0, SCREEN_HEIGHT - 70, SCREEN_WIDTH, 70)];
     [self.bottomButton setTitle:@"START OVER" forState:UIControlStateNormal];
     [self.bottomButton.titleLabel setFont:[UIFont fontWithName:@"Antenna" size:18]];
     [self.bottomButton setBackgroundColor:[UIColor redColor]];
     [self.view addSubview:self.bottomButton];
+}
+
+- (void)productButtonClick{
+    ProductsViewController *photoFunVC =  [[ProductsViewController alloc ] init];
+    //[self presentViewController:photoFunVC animated:YES completion:nil];
+    [self.navigationController pushViewController:photoFunVC animated:YES];
 }
 
 #pragma mark - Table view data source
@@ -241,7 +263,7 @@
         return 44;
     }
     
-    return (SCREEN_HEIGHT - 64 - 100) / 5.0;
+    return (SCREEN_HEIGHT - 64 - 100 -100 - 70) / 5.0;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView

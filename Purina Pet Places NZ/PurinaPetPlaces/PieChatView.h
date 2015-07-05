@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 #import "MoreActionView.h"
+#import "GrobleSingleton.h"
 
 
 #define RADIANS_TO_DEGREES(radians) ((radians) * (180.0 / M_PI)) //弧度转化为角度

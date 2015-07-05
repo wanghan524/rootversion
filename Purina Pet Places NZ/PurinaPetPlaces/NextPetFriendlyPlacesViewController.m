@@ -16,6 +16,8 @@
 
 @interface NextPetFriendlyPlacesViewController ()
 
+@property (nonatomic, strong) NSMutableArray *dataArray;
+
 @end
 
 @implementation NextPetFriendlyPlacesViewController
@@ -47,7 +49,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
+    if (self.dataArray == nil) {
+        self.dataArray = [[NSMutableArray alloc] init];
+    }
     
     [self showCustomeNav];
     
@@ -68,6 +72,7 @@
     NSLog(@"subCategories : %@",self.headerImageFlag);
     subCategoriesTableViewController.currentHeaderImageFlag = self.headerImageFlag;
     [subCategoriesTableViewController setDelegate:self];
+    
     [subCategoriesTableViewController setDataSource:singleton.currentSubCategories];
     [self setDelegateByParentId:singleton.currentSubCategories withParentId:singleton.selectedCategories.CategoryId];
     [self.view addSubview:subCategoriesTableViewController.view];
@@ -95,6 +100,16 @@
     [self.navigationController pushViewController:resultPetVC animated:YES];
     
     
+}
+- (void)onlineButtonClick{
+    
+    StockistsWebviewViewController *stockWebVC = [[StockistsWebviewViewController alloc] init];
+    stockWebVC.webString = @"http://www.animates.co.nz/search/purina/";
+    
+    //[self presentViewController:stockWebVC animated:NO completion:nil];
+    
+    [self.navigationController pushViewController:stockWebVC animated:YES];
+    //NSLog(@"headerButton");
 }
 
 - (void)nextButtonClickWith:(NSString *)flagString{

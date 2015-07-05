@@ -46,7 +46,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pqu-Sj-vuz">
-                    <rect key="frame" x="0.0" y="504" width="160" height="64"/>
+                    <rect key="frame" x="0.0" y="524" width="160" height="44"/>
                     <color key="backgroundColor" red="1" green="0.20207175660000001" blue="0.16807516950000001" alpha="1" colorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" name="Antenna-Regular" family="Antenna" pointSize="15"/>
                     <state key="normal" title="DOG">
@@ -58,7 +58,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HUZ-tu-Xav">
-                    <rect key="frame" x="161" y="504" width="160" height="64"/>
+                    <rect key="frame" x="161" y="524" width="160" height="44"/>
                     <color key="backgroundColor" red="1" green="0.20207175660000001" blue="0.16807516950000001" alpha="1" colorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" name="Antenna-Regular" family="Antenna" pointSize="15"/>
                     <state key="normal" title="CAT">
@@ -70,47 +70,47 @@
                     </connections>
                 </button>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash-page.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="y9b-Up-Dgc">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="283"/>
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="310"/>
                     <color key="backgroundColor" red="0.047058828179999998" green="0.1411764771" blue="0.98431378599999997" alpha="1" colorSpace="deviceRGB"/>
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FeE-Vs-4De" userLabel="PetCatagory">
-                    <rect key="frame" x="0.0" y="290" width="320" height="202"/>
+                    <rect key="frame" x="0.0" y="317" width="320" height="202"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pet 2" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w8W-4k-Yaq">
-                            <rect key="frame" x="16" y="51" width="63" height="23"/>
+                            <rect key="frame" x="16" y="42" width="63" height="23"/>
                             <fontDescription key="fontDescription" name="Antenna-ExtraLight" family="Antenna" pointSize="19"/>
                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pet 3" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tI2-eT-cIY">
-                            <rect key="frame" x="16" y="95" width="63" height="23"/>
+                            <rect key="frame" x="16" y="83" width="63" height="23"/>
                             <fontDescription key="fontDescription" name="Antenna-ExtraLight" family="Antenna" pointSize="19"/>
                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="   Cassius" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qGG-jR-213">
-                            <rect key="frame" x="105" y="1" width="122" height="35"/>
+                            <rect key="frame" x="105" y="1" width="122" height="30"/>
                             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <fontDescription key="fontDescription" name="Antenna-Regular" family="Antenna" pointSize="16"/>
                             <color key="textColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="   Miffy" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VZb-kh-2nA">
-                            <rect key="frame" x="105" y="45" width="122" height="35"/>
+                            <rect key="frame" x="105" y="39" width="122" height="30"/>
                             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <fontDescription key="fontDescription" name="Antenna-Regular" family="Antenna" pointSize="16"/>
                             <color key="textColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="   Jazz" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="upM-Je-mEf">
-                            <rect key="frame" x="105" y="89" width="122" height="35"/>
+                            <rect key="frame" x="105" y="80" width="122" height="30"/>
                             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <fontDescription key="fontDescription" name="Antenna-Regular" family="Antenna" pointSize="16"/>
                             <color key="textColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IBU-5r-zK8">
-                            <rect key="frame" x="227" y="1" width="70" height="35"/>
+                            <rect key="frame" x="227" y="1" width="70" height="30"/>
                             <color key="backgroundColor" red="1" green="0.20207175660000001" blue="0.16807516950000001" alpha="1" colorSpace="calibratedRGB"/>
                             <state key="normal" title="EDIT">
                                 <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -121,7 +121,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uin-Ag-9UT">
-                            <rect key="frame" x="227" y="45" width="70" height="35"/>
+                            <rect key="frame" x="227" y="39" width="70" height="30"/>
                             <color key="backgroundColor" red="1" green="0.20207175660000001" blue="0.16807516950000001" alpha="1" colorSpace="calibratedRGB"/>
                             <state key="normal" title="EDIT">
                                 <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -132,7 +132,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RhT-KS-Zqb">
-                            <rect key="frame" x="227" y="89" width="70" height="35"/>
+                            <rect key="frame" x="227" y="80" width="70" height="30"/>
                             <color key="backgroundColor" red="1" green="0.20207175660000001" blue="0.16807516950000001" alpha="1" colorSpace="calibratedRGB"/>
                             <state key="normal" title="EDIT">
                                 <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -143,16 +143,16 @@
                             </connections>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pet 1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VAi-08-bD3">
-                            <rect key="frame" x="16" y="8" width="63" height="23"/>
+                            <rect key="frame" x="16" y="4" width="63" height="23"/>
                             <fontDescription key="fontDescription" name="Antenna-ExtraLight" family="Antenna" pointSize="19"/>
                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jc4-CG-eXr">
-                            <rect key="frame" x="16" y="178" width="281" height="24"/>
-                            <color key="backgroundColor" red="0.60050752737226276" green="0.58188868613138689" blue="0.49341354927007297" alpha="1" colorSpace="calibratedRGB"/>
+                            <rect key="frame" x="125" y="164" width="70" height="30"/>
+                            <color key="backgroundColor" red="1" green="0.20207175660000001" blue="0.16807516950000001" alpha="1" colorSpace="calibratedRGB"/>
                             <fontDescription key="fontDescription" name="Antenna-Regular" family="Antenna" pointSize="17"/>
-                            <state key="normal" title="Add +">
+                            <state key="normal" title="ADD">
                                 <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
@@ -171,10 +171,10 @@
             <constraints>
                 <constraint firstItem="FeE-Vs-4De" firstAttribute="top" secondItem="y9b-Up-Dgc" secondAttribute="bottom" constant="7" id="1M0-VP-uoi"/>
                 <constraint firstAttribute="trailing" secondItem="FeE-Vs-4De" secondAttribute="trailing" id="1fv-qL-aTG"/>
-                <constraint firstItem="HUZ-tu-Xav" firstAttribute="top" secondItem="FeE-Vs-4De" secondAttribute="bottom" constant="12" id="7ac-qY-X7T"/>
+                <constraint firstItem="HUZ-tu-Xav" firstAttribute="top" secondItem="FeE-Vs-4De" secondAttribute="bottom" constant="5" id="7ac-qY-X7T"/>
                 <constraint firstItem="FeE-Vs-4De" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="FdI-Ma-Syd"/>
                 <constraint firstItem="Pqu-Sj-vuz" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Gn0-CI-Rcg"/>
-                <constraint firstItem="Pqu-Sj-vuz" firstAttribute="width" secondItem="HUZ-tu-Xav" secondAttribute="height" multiplier="5:2" id="HnU-hM-Mzh"/>
+                <constraint firstItem="Pqu-Sj-vuz" firstAttribute="width" secondItem="HUZ-tu-Xav" secondAttribute="height" multiplier="5:2" constant="50" id="HnU-hM-Mzh"/>
                 <constraint firstAttribute="trailing" secondItem="HUZ-tu-Xav" secondAttribute="trailing" constant="-1" id="JSy-so-e78"/>
                 <constraint firstAttribute="bottom" secondItem="Pqu-Sj-vuz" secondAttribute="bottom" id="MxA-zP-eLR"/>
                 <constraint firstItem="HUZ-tu-Xav" firstAttribute="leading" secondItem="Pqu-Sj-vuz" secondAttribute="trailing" constant="1" id="TDW-Wr-AsU"/>

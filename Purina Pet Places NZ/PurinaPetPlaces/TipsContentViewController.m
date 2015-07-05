@@ -194,18 +194,18 @@
         cell.textLabel.font = [UIFont fontWithName:@"Antenna" size:10];
     }
     if(tableView == self.myTableView){
-        UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake((SCREEN_HEIGHT - 64 - 100) / 4.0, 0, cell.frame.size.width - (SCREEN_HEIGHT - 64 - 100) / 4.0, (SCREEN_HEIGHT - 64 - 100) / 4.0)];
+        UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake((SCREEN_HEIGHT - 64 - 100) / 4.0 *(750 / 506.0), 0, cell.frame.size.width - (SCREEN_HEIGHT - 64 - 100) / 4.0 *(750 / 506.0), (SCREEN_HEIGHT - 64 - 100) / 4.0)];
         titleLabel.backgroundColor = [UIColor clearColor];
         titleLabel.text = [currentTipsArray objectAtIndex:0];;
         titleLabel.textAlignment = NSTextAlignmentCenter;
-        titleLabel.font = [UIFont fontWithName:@"Antenna" size:20];
+        titleLabel.font = [UIFont fontWithName:@"Antenna" size:17];
         titleLabel.textColor = [UIColor grayColor];
         titleLabel.numberOfLines = 0;
         [cell.contentView addSubview:titleLabel];
         //[cell setIndentationLevel:4];
         
         
-        UIImageView *currentTitleImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, (SCREEN_HEIGHT - 64 - 100) / 4.0, (SCREEN_HEIGHT - 64 - 100) / 4.0)];
+        UIImageView *currentTitleImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, (SCREEN_HEIGHT - 64 - 100) / 4.0 *(750 / 506.0), (SCREEN_HEIGHT - 64 - 100) / 4.0)];
         
         if ([self.currentTitle isEqualToString:@"General"]) {
             currentTitleImageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"tips-articles-general%d.jpg",indexPath.row + 1]];

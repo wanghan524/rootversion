@@ -20,6 +20,8 @@
 
 @property (nonatomic, strong) NSString *selectedProfile;
 
+@property (nonatomic, strong) NSMutableArray *pieClickArray;
+
 +(id)sharedGlobleInstance;
 
 - (void)insertAnimalName:(NSString *)animalName;
