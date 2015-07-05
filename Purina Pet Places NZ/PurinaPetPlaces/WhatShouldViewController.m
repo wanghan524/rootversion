@@ -144,7 +144,13 @@
         UIButton *selectedButton = [UIButton buttonWithType:UIButtonTypeCustom];
         selectedButton.frame = CGRectMake((SCREEN_WIDTH / 2.0 - 20.5)  + 10 * i, SCREEN_HEIGHT - 50 - 30, 5, 5);
         selectedButton.tag = 3000 + i;
-        selectedButton.backgroundColor = [UIColor grayColor];
+        if (i == 0) {
+            selectedButton.backgroundColor = [UIColor whiteColor];
+        }else{
+            selectedButton.backgroundColor = [UIColor grayColor];
+        }
+        
+        
         [selectedButton setBackgroundImage:[UIImage imageNamed:@""] forState:UIControlStateNormal];
         [selectedButton setBackgroundImage:[UIImage imageNamed:@""] forState:UIControlStateSelected];
         [self.view addSubview:selectedButton];
@@ -185,6 +191,40 @@
     // Do any additional setup after loading the view.
 }
 
+#pragma mark - scrollerView delegate
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView{
+    
+}
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
+    
+    int nowPage = scrollView.contentOffset.x / SCREEN_WIDTH;
+    if (scrollView == selectedScrollView) {
+        
+        UIButton *nowButton = (UIButton *)[self.view viewWithTag:3000 + nowPage];
+        
+        for (int i = 0; i < 6; i++) {
+            UIButton *tempButton = (UIButton *)[self.view viewWithTag:3000 + i];
+            if (tempButton == nowButton) {
+                tempButton.backgroundColor = [UIColor whiteColor];
+            }else{
+                tempButton.backgroundColor = [UIColor grayColor];
+            }
+        }
+        
+        DLog(@"%d",nowPage);
+    }
+    
+    if (nowPage == self.allSelectNameArray.count - 1) {
+        nextLabel.text = @"CHECK RESULT";
+        nextImage.hidden = YES;
+    }else{
+        nextLabel.text = @"NEXT";
+        nextImage.hidden = NO;
+    }
+    
+}
+
 -(void)nextButtonClick:(UIButton *)sender
 {
     
@@ -205,6 +245,10 @@
      */
     DLog(@"%lf",selectedScrollView.contentOffset.x);
     NSInteger nowPage = selectedScrollView.contentOffset.x / self.view.frame.size.width ;
+    
+    
+   
+    
     if (nowPage == self.allSelectNameArray.count - 1) {
         if (self.selectorMutDic.count == 0) {
             UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil message:@"请选择条件" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
@@ -320,6 +364,17 @@
     
     else if (nowPage == self.allSelectNameArray.count - 2){
         
+        UIButton *nowButton = (UIButton *)[self.view viewWithTag:3000 + nowPage + 1];
+        
+        for (int i = 0; i < 6; i++) {
+            UIButton *tempButton = (UIButton *)[self.view viewWithTag:3000 + i];
+            if (tempButton == nowButton) {
+                tempButton.backgroundColor = [UIColor whiteColor];
+            }else{
+                tempButton.backgroundColor = [UIColor grayColor];
+            }
+        }
+        
         nextLabel.text = @"CHECK RESULT";
         nextImage.hidden = YES;
         
@@ -327,6 +382,18 @@
     }
     
     else{
+        
+        
+        UIButton *nowButton = (UIButton *)[self.view viewWithTag:3000 + nowPage + 1];
+        
+        for (int i = 0; i < 6; i++) {
+            UIButton *tempButton = (UIButton *)[self.view viewWithTag:3000 + i];
+            if (tempButton == nowButton) {
+                tempButton.backgroundColor = [UIColor whiteColor];
+            }else{
+                tempButton.backgroundColor = [UIColor grayColor];
+            }
+        }
         nextImage.hidden = NO;
         [selectedScrollView setContentOffset:CGPointMake(SCREEN_WIDTH * (nowPage + 1), 0)];
         //selectedScrollView.backgroundColor = [UIColor redColor];
@@ -818,7 +885,12 @@
 //        }
     
         cell.backgroundColor = [UIColor clearColor];
-        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        
+        
+        UIView *selectView = [[UIView alloc] initWithFrame:cell.frame];
+        selectView.backgroundColor = [UIColor whiteColor];
+        cell.selectedBackgroundView = selectView;
+        //cell.selectionStyle = UITableViewCellSelectionStyleNone;
         
         
         if ([globleSingleton.globleCategory isEqualToString:@"dog"]) {
@@ -843,7 +915,12 @@
                 
                 
             }else{
-                cell.selectionStyle = UITableViewCellSelectionStyleNone;
+                
+                UIView *selectView = [[UIView alloc] initWithFrame:cell.frame];
+                selectView.backgroundColor = [UIColor whiteColor];
+                cell.selectedBackgroundView = selectView;
+                
+                //cell.selectionStyle = UITableViewCellSelectionStyleNone;
 //                if(tableView.tag == 200)
 //                {
 //                    cell.textLabel.text = [nowContentArray objectAtIndex:indexPath.row];
@@ -879,7 +956,10 @@
                 
                 
             }else{
-                cell.selectionStyle = UITableViewCellSelectionStyleNone;
+                UIView *selectView = [[UIView alloc] initWithFrame:cell.frame];
+                selectView.backgroundColor = [UIColor whiteColor];
+                cell.selectedBackgroundView = selectView;
+                //cell.selectionStyle = UITableViewCellSelectionStyleNone;
                 if(tableView.tag == 200)
                 {
                     cell.textLabel.text = [nowContentArray objectAtIndex:indexPath.row];
